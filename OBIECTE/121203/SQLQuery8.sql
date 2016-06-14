@@ -1,0 +1,1 @@
+SELECT * FROM pozdoc P where p.Cont_de_stoc like '44%'

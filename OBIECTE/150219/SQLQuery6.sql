@@ -1,0 +1,1 @@
+select top 100 * from sysspcon p order by p.Data_stergerii desc

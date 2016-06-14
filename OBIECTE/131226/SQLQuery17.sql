@@ -1,0 +1,1 @@
+alter table facturi disable trigger yso_tr_validfacturi

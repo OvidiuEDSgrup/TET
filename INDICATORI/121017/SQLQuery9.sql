@@ -1,0 +1,1 @@
+select sum(suma) from pozincon p inner join calstd c on c.data=p.data where p.cont_debitor like '6%' and left(p.cont_debitor,3) not in ('607','609','665','666','667') EXPANDEZ({DATA_LUNII})

@@ -1,0 +1,1 @@
+select * from yso_LegComisionVanzari l

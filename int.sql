@@ -1,0 +1,2 @@
+from pozdoc p inner join pozadoc pa on p.subunitate=pa.subunitate and p.tert= pa.tert and p.factura= pa.factura_dreapta where pa.subunitate=avnefac.subunitate and pozadoc.tip=avnefac.tip and pozadoc.Numar_document=avnefac.numar and avnefac.data=pozadoc.data
+over(partition by pozadoc.Subunitate, pozadoc.Tip, pozadoc.Numar_document, pozadoc.Data)

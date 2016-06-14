@@ -1,0 +1,1 @@
+select p.Gestiune_primitoare,* from pozdoc p where p.Tip='AC' and p.Numar='is100001' and p.Data='2014-05-27'

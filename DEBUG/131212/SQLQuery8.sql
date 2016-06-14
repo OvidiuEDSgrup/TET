@@ -1,0 +1,1 @@
+select MIN(valoare) from proprietati where tip='UTILIZATOR' and cod='FILIALA_IS' and cod_proprietate='GESTPV' and Valoare like '%.%'

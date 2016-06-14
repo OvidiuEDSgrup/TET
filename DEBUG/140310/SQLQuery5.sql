@@ -1,0 +1,1 @@
+select * from par p where p.Denumire_		parametru like '%nefol%'

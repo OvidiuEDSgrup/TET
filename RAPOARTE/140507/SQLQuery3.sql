@@ -1,0 +1,4 @@
+declare @p2 xml
+set @p2=convert(xml,N'<row subunitate="1" tip="RE" cont="5311.SV" dencont="Casa in lei SV" data="05/07/2014" valuta="" curs="0.0000" marca="" denmarca="" decont="" tert="" dentert="" efect="" totalplati="26530.00" totalplativaluta="0.00" totalincasari="3992.36" totalincasarivaluta="0.00" totalsold="1363.31" soldinitial="23900.95" soldinitialvaluta="0.00" rulajdebit="3992.36" rulajcredit="26530.00" soldfinal="1363.31" soldfinalvaluta="0.00" numarpozitii="5" tipdocument="PI" nrdocument="5311.SV" _cautare="20" _refresh="0"/>')
+select @p2
+exec wIaPozplin @sesiune='C6CB287E51CE5',@parXML=@p2

@@ -1,0 +1,2 @@
+--select * from sysspd p where p.Data_stergerii between '2013-12-01' and '2014-01-06'
+--and p.Tip='AS' and p.Gestiune<>'' --and p.Stergator='ASIS'

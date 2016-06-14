@@ -1,0 +1,1 @@
+exec wOPReincadrareIesiri @sesiune='', @parXML='<row gestiune="211.1" dataj="2012-07-01" datas="2012-08-31" cugolire="0"/>'

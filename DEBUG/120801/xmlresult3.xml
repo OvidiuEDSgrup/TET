@@ -1,0 +1,89 @@
+﻿<row subunitate="1" tip="TE" numar="15      " data="08/01/2012" gestiune="212" gestprim="700" contract="" categpret="4" lm="1MKT20   " factura="9820293">
+  <row cod="10310012" cantitate="20" pamanunt="4383.648" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="10310014" cantitate="20" pamanunt="0.36" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="10310015" cantitate="20" pamanunt="0.632" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="10310033" cantitate="6" pamanunt="2.902" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="10410000" cantitate="5" pamanunt="1.91" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="10420045" cantitate="1" pamanunt="10.825" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="1507CU3" cantitate="42" pamanunt="13.057" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="1807CU3" cantitate="18" pamanunt="17.038" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="2207CU3" cantitate="30" pamanunt="22.134" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="237D0138" cantitate="1" pamanunt="4870.72" valuta="   " curs="0" lm="1MKT20   " discount="1.0000000e+001"/>
+  <row cod="2808CU3" cantitate="12" pamanunt="36.7164" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="35900" cantitate="3" pamanunt="7.316" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="4300902525621" cantitate="5" pamanunt="0.608" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="45225" cantitate="2" pamanunt="45.632" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="45255" cantitate="3" pamanunt="48.856" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5002G015004000" cantitate="2" pamanunt="6.423" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5002G018006000" cantitate="4" pamanunt="8.531" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5040 015000000" cantitate="4" pamanunt="0.93" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5040 018000000" cantitate="4" pamanunt="2.802" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5040 022000000" cantitate="2" pamanunt="2.926" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5041 015000000" cantitate="4" pamanunt="1.166" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5041 018000000" cantitate="4" pamanunt="2.567" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5041 022000000" cantitate="2" pamanunt="3.15" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5090 015000000" cantitate="80" pamanunt="0.818" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5090 018000000" cantitate="40" pamanunt="1.29" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5090 022000000" cantitate="40" pamanunt="2.108" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5090 028000000" cantitate="6" pamanunt="3.98" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5092 015000000" cantitate="10" pamanunt="1.166" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5092 018000000" cantitate="4" pamanunt="2.344" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5092 022000000" cantitate="6" pamanunt="3.856" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5092 028000000" cantitate="2" pamanunt="7.13" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5130 015015015" cantitate="4" pamanunt="1.401" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5130 018015015" cantitate="8" pamanunt="4.91" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5130 018015018" cantitate="4" pamanunt="2.926" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5130 018018018" cantitate="8" pamanunt="2.802" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5130 022015022" cantitate="8" pamanunt="4.092" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5130 022022022" cantitate="16" pamanunt="4.563" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5130 028028028" cantitate="4" pamanunt="10.639" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5240 018015000" cantitate="6" pamanunt="1.872" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5240 022015000" cantitate="6" pamanunt="4.092" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5240 022018000" cantitate="8" pamanunt="2.691" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5240 028022000" cantitate="4" pamanunt="4.91" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5243 018015000" cantitate="2" pamanunt="1.29" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5243 022015000" cantitate="2" pamanunt="1.984" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5243 022018000" cantitate="2" pamanunt="2.344" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5243 028022000" cantitate="2" pamanunt="3.732" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5243G015004000" cantitate="8" pamanunt="5.964" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5243G018006000" cantitate="2" pamanunt="12.859" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5243G022006000" cantitate="4" pamanunt="10.515" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5243G028008000" cantitate="2" pamanunt="16.132" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5270 015000000" cantitate="20" pamanunt="0.583" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5270 018000000" cantitate="10" pamanunt="0.818" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5270 022000000" cantitate="20" pamanunt="1.29" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5270 028000000" cantitate="2" pamanunt="2.926" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5270G015004000" cantitate="2" pamanunt="9.585" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5270G018006000" cantitate="2" pamanunt="15.314" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5270G022006000" cantitate="16" pamanunt="17.31" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="5359G022008000" cantitate="1" pamanunt="13.33" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="EFC-H34" cantitate="2" pamanunt="11.321" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="EFC-M11" cantitate="2" pamanunt="7.638" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="EFC-M12" cantitate="2" pamanunt="3.063" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="EFC-N11242" cantitate="2" pamanunt="13.541" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="EFC-N1228" cantitate="10" pamanunt="2.158" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="EFC-R11112" cantitate="2" pamanunt="11.495" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="RB-FY11" cantitate="1" pamanunt="24.155" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="RB-FY12" cantitate="1" pamanunt="10.478" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="RB-HMF11" cantitate="3" pamanunt="42.569" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="RB-HMF34" cantitate="3" pamanunt="21.526" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="RJ-DFF34" cantitate="3" pamanunt="17.199" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="RJ-DMF12" cantitate="2" pamanunt="13.38" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0003" cantitate="10" pamanunt="3.05" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0004" cantitate="4" pamanunt="1.364" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0008" cantitate="2" pamanunt="2.009" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0013" cantitate="4" pamanunt="3.447" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0018" cantitate="2" pamanunt="2.319" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0021" cantitate="2" pamanunt="28.284" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0044" cantitate="2" pamanunt="4.972" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0046" cantitate="2" pamanunt="2.654" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0051" cantitate="1" pamanunt="1.525" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0073" cantitate="16" pamanunt="2.17" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0078" cantitate="10" pamanunt="1.525" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0107" cantitate="2" pamanunt="1.922" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0108" cantitate="4" pamanunt="1.922" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0120" cantitate="8" pamanunt="1.277" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0143" cantitate="10" pamanunt="3.931" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0144" cantitate="2" pamanunt="1.773" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+  <row cod="TR0148" cantitate="6" pamanunt="2.492" valuta="   " curs="0" lm="1MKT20   " discount="0.0000000e+000"/>
+</row>

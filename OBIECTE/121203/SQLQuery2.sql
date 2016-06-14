@@ -1,0 +1,1 @@
+select dbo.funcColTVAVanz(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)

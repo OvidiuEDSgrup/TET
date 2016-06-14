@@ -1,0 +1,1 @@
+select * from webConfigMeniu m where m.Meniu in ('mf','ag')

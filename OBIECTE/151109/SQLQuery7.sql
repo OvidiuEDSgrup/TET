@@ -1,0 +1,1 @@
+select * from pozcon p where p.Contract like '55858'

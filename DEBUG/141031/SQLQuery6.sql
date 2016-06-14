@@ -1,0 +1,1 @@
+SELECT * from bt where IdAntetBon=8252

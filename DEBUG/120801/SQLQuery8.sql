@@ -1,0 +1,1 @@
+select * from pozcon p where p.Tip='bk' and p.Contract='9820290'

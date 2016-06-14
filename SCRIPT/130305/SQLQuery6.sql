@@ -1,0 +1,1 @@
+alter database tet set multi_user with rollback immediate

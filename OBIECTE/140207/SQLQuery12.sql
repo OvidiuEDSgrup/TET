@@ -1,0 +1,1 @@
+select * from webConfigSTDGrid g where g.Meniu='T' and g.Tip='PC'

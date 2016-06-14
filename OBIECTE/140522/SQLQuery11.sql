@@ -1,0 +1,1 @@
+select distinct idAntetBon, data from bt where Casa_de_marcat=1

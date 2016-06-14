@@ -1,0 +1,1 @@
+alter table pozincon disable trigger tr_validpozincon

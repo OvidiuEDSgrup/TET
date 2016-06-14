@@ -1,0 +1,1 @@
+select * from comenzi c where c.Comanda like 'RO26650988'

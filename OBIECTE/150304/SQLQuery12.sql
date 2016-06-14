@@ -1,0 +1,1 @@
+select * from necesaraprov n where n.Numar like 'CJ910003'

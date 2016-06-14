@@ -1,0 +1,3 @@
+declare @p2 xml
+set @p2=convert(xml,N'<row numar="" data="08/12/2012" gestiune="212" gestprim="" tert="RO9175570" lm="1" explicatii="" info1="" info2="0" denstare="" valoare="0" valtva="0" valtotala="0" contr_cadru="RO9175570" tip="BK"><row cod="3862022" codfarastoc="0" cantitate="1" pret="0" categpret="4" discount="10" explicatii="0" subtip="BK"/></row>')
+exec wScriuPozCon @sesiune='ACCCEC386DBF1',@parXML=@p2

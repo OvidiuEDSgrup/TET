@@ -1,0 +1,1 @@
+select * from con c where c.Tert='RO14317824'

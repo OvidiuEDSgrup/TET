@@ -1,0 +1,1 @@
+select * from Judete j where j.cod_judet='nt'

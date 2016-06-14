@@ -1,0 +1,1 @@
+SELECT * from Expval e where e.Cod_indicator like '%mnic%'

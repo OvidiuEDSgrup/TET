@@ -1,0 +1,1 @@
+select * from yso_DetTabInl d where d.Camp_Magic='pozdoc' --and d.Conditie_de_inlocuire<>''

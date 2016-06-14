@@ -1,0 +1,1 @@
+SELECT 'truncate table '+o.name,* FROM SYS.objects O where o.name like 'webconfig[^s]%'

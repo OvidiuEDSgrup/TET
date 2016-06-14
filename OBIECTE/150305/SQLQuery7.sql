@@ -1,0 +1,3 @@
+declare @p2 xml
+set @p2=convert(xml,N'<row idContract="52" tip="RN" numar="BN910003" data="02/25/2015" gestiune="211.BN" dengestiune="BN SHOWROOM BISTRITA NASAUD" lm="1VZ_BN_00" denlm="BISTRITA NASAUD SHOW-ROOM" denvaluta="RON" explicatii="Salauta SRL" pozitii="1" stare="-10" culoare="#FF0000" denstare="Sters (respins)" valoare="184.00" valoareRON="184.00" valoarecutva="228.16" _refresh="1"/>')
+exec wIaPozContracte @sesiune='294693812F570',@parXML=@p2

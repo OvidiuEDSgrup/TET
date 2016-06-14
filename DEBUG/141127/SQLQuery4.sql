@@ -1,0 +1,2 @@
+--Doc:TE GL930108 27/11/2014 Gest:211.GL        Cod:10310033             Codi:1141091007A  Cont doc:357 
+select * from stocuri s where s.Cod_gestiune='211.GL' and s.Cod='10310033' and s.Cod_intrare='1141091007A' 

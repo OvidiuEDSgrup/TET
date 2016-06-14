@@ -1,0 +1,1 @@
+select * from infotert i where i.Tert='1750630170319'

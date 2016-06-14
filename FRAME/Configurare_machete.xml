@@ -1,0 +1,247 @@
+<machete>
+<meniuri Meniu="CFGMACHETE" Nume="Configurare machete" MeniuParinte="CONFIGURARI" Icoana="tbconfig" TipMacheta="E" NrOrdine="561.00" Componenta="" Semnatura="" vizibil="1"/>
+<tipuri Meniu="CFGMACHETE" Tip="NI" Subtip="" Ordine="1" Nume="Configurare meniuri" Descriere="" TextAdaugare="" TextModificare="" ProcDate="wIaConfigurareMachete" ProcScriere="" ProcStergere="" ProcDatePoz="----" ProcScrierePoz="----" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="CFGMACHETE" Tip="NI" Ordine="1" Vizibil="1" TipObiect="" Descriere="Nume" Prompt1="Parte din nume" DataField1="@f_nume" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="CFGMACHETE" Tip="NI" Ordine="2" Vizibil="1" TipObiect="" Descriere="Meniu" Prompt1="strict sau cu &quot;%&quot;" DataField1="@f_meniu" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="CFGMACHETE" Tip="NI" Ordine="3" Vizibil="1" TipObiect="" Descriere="Tip macheta" Prompt1="C,D,E,G,GT,H,M,O" DataField1="@f_tipmacheta" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="CFGMACHETE" Tip="NI" Ordine="4" Vizibil="1" TipObiect="" Descriere="Tip" Prompt1="strict sau cu &quot;%&quot;" DataField1="@f_tip" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="CFGMACHETE" Tip="NI" Ordine="5" Vizibil="1" TipObiect="" Descriere="Subtip" Prompt1="strict sau cu &quot;%&quot;" DataField1="@f_subtip" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="CFGMACHETE" Tip="NI" Ordine="6" Vizibil="1" TipObiect="" Descriere="Fel" Prompt1="R, O" DataField1="@f_fel" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="CFGMACHETE" Tip="NI" Ordine="7" Vizibil="1" TipObiect="" Descriere="Vizibil" Prompt1="Da / Nu" DataField1="@f_vizibil" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="CFGMACHETE" Tip="NI" Ordine="8" Vizibil="1" Descriere="Procedura" Prompt1="strict sau cu &quot;%&quot;" DataField1="@f_procedura" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="CFGMACHETE" Tip="NI" Ordine="9" Vizibil="1" TipObiect="" Descriere="Expandare" Prompt1="Da / Nu / Nivel exp" DataField1="@f_expandare" Interval="0" Prompt2="" DataField2=""/>
+</filtre>
+<griduri>
+<grid Meniu="CFGMACHETE" Tip="NI" Subtip="" InPozitii="0" NumeCol="Nume" DataField="@nume" TipObiect="G" Latime="300" Ordine="1" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGMACHETE" Tip="NI" Subtip="" InPozitii="0" NumeCol="Meniu" DataField="@meniu" TipObiect="C" Latime="200" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGMACHETE" Tip="NI" Subtip="" InPozitii="0" NumeCol="Tip macheta" DataField="@tip_macheta_" TipObiect="C" Latime="100" Ordine="3" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGMACHETE" Tip="NI" Subtip="" InPozitii="0" NumeCol="Tip" DataField="@tip_m" TipObiect="C" Latime="100" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGMACHETE" Tip="NI" Subtip="" InPozitii="0" NumeCol="Subtip" DataField="@subtip_m" TipObiect="C" Latime="100" Ordine="5" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGMACHETE" Tip="NI" Subtip="" InPozitii="0" NumeCol="Fel subtip" DataField="@fel_" TipObiect="C" Latime="100" Ordine="6" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGMACHETE" Tip="NI" Subtip="" InPozitii="0" NumeCol="Vizibil" DataField="@vizibil_" TipObiect="C" Latime="100" Ordine="7" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGMACHETE" Tip="NI" Subtip="" InPozitii="0" NumeCol="Ordine" DataField="@nrordine" TipObiect="N" Latime="50" Ordine="9" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+<taburi>
+<tab MeniuSursa="CFGMACHETE" TipSursa="NI" NumeTab="Meniu" Icoana="" TipMachetaNoua="F" MeniuNou="CFGMACHETEADD" TipNou="NI" ProcPopulare="wOPAdaugaMeniuConfig_p" Ordine="1" Vizibil="1"/>
+<tab MeniuSursa="CFGMACHETE" TipSursa="NI" NumeTab="Tipuri" Icoana="" TipMachetaNoua="C" MeniuNou="CFGTIPURI" TipNou="" ProcPopulare="" Ordine="3" Vizibil="1"/>
+<tab MeniuSursa="CFGMACHETE" TipSursa="NI" NumeTab="Grid" Icoana="" TipMachetaNoua="C" MeniuNou="CFGGRID" TipNou="" ProcPopulare="" Ordine="4" Vizibil="1"/>
+<tab MeniuSursa="CFGMACHETE" TipSursa="NI" NumeTab="Form" Icoana="" TipMachetaNoua="C" MeniuNou="CFGFORM" TipNou="" ProcPopulare="" Ordine="5" Vizibil="1"/>
+<tab MeniuSursa="CFGMACHETE" TipSursa="NI" NumeTab="Filtre" Icoana="" TipMachetaNoua="C" MeniuNou="CFGFILTRE" TipNou="" ProcPopulare="" Ordine="6" Vizibil="1"/>
+<tab MeniuSursa="CFGMACHETE" TipSursa="NI" NumeTab="Taburi" Icoana="" TipMachetaNoua="C" MeniuNou="CFGTAB" TipNou="" ProcPopulare="" Ordine="7" Vizibil="1"/>
+</taburi>
+</tipuri>
+<tipuri Meniu="CFGMACHETE" Tip="SM" Subtip="" Ordine="2" Nume="Grid la import" Descriere="" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="0" Fel="O" procPopulare="" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri"/>
+<meniuri Meniu="CFGMACHETEADD" Nume="Meniu - tab admodif" MeniuParinte="CFGMACHETE" Icoana="" TipMacheta="C" NrOrdine="100.00" Componenta="" Semnatura="" vizibil="0"/>
+<meniuri Meniu="CFGFORM" Nume="Form - tab configurare" MeniuParinte="CFGMACHETE" Icoana="" TipMacheta="C" NrOrdine="10.00" Componenta="" Semnatura="" vizibil="0"/>
+<meniuri Meniu="CFGGRID" Nume="Grid - tab" MeniuParinte="CFGMACHETE" Icoana="" TipMacheta="C" NrOrdine="101.00" Componenta="" Semnatura="" vizibil="0"/>
+<meniuri Meniu="CFGTIPURI" Nume="Tipuri - tab" MeniuParinte="CFGMACHETE" Icoana="" TipMacheta="C" NrOrdine="102.00" Componenta="" Semnatura="" vizibil="0"/>
+<meniuri Meniu="CFGFILTRE" Nume="Filtre - tab" MeniuParinte="cfgmachete" Icoana="" TipMacheta="C" NrOrdine="103.00" Componenta="" Semnatura="" vizibil="0"/>
+<meniuri Meniu="CFGTAB" Nume="Taburi - tab" MeniuParinte="CFGMACHETE" Icoana="" TipMacheta="C" NrOrdine="104.00" Componenta="" Semnatura="" vizibil="0"/>
+<tipuri Meniu="CFGMACHETE" Tip="NI" Subtip="IF" Ordine="1" Nume="Import" Descriere="" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="wOPFisierImport" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="O" procPopulare="" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="CFGMACHETE" Tip="NI" Subtip="IF" Ordine="1" Nume="Cale fisier" TipObiect="IN" DataField="@cale_fisier" LabelField="" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cale fisier" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGMACHETE" Tip="NI" Subtip="IF" Ordine="2" Nume="Init selectare" TipObiect="CB" DataField="@selSelectare" LabelField="" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="T,N,E,I" ListaEtichete="Toate,Niciuna,Doar existente,Doar inexistente" Initializare="T" Prompt="" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGMACHETE" Tip="NI" Subtip="IF" Ordine="3" Nume="Init suprascriere" TipObiect="CB" DataField="@selSuprascriere" LabelField="" Latime="305" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="0,1" ListaEtichete="Niciuna,Toate existente" Initializare="0" Prompt="" Procesare="" Tooltip="" formula=""/>
+</formuri>
+</tipuri>
+<tipuri Meniu="CFGMACHETE" Tip="NI" Subtip="EX" Ordine="2" Nume="Export" Descriere="" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="wOPExportMachete" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="O" procPopulare="wOPExportMachete_p" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="CFGMACHETE" Tip="NI" Subtip="EX" Ordine="2" Nume="Fisier" TipObiect="C" DataField="@fisier" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Denumire fisier" Procesare="" Tooltip="" formula=""/>
+</formuri>
+</tipuri>
+<tipuri Meniu="CFGMACHETE" Tip="NI" Subtip="ST" Ordine="5" Nume="Stergere meniu (nu e gata)" Descriere="&lt;b&gt;in lucru&lt;/b&gt;&#x0A;Sterge meniul selectat; stergerea configurarilor asociate se efectueaza doar daca nu sunt folosite si in alte machete care nu sunt subordonate in mod unic meniului de sters.&lt;br&gt;&#x0A;&lt;b&gt;Se recomanda exportul meniului in prealabil pentru ca operatia de stergere sa fie reversibila.&lt;/b&gt;&lt;br&gt;&#x0A;&lt;b&gt;webconfigtipuri_tab&lt;/b&gt; desemneaza linie din webconfigtipuri care este folosita ca tab.&lt;br&gt;&#x0A;&lt;b&gt;webconfigtipuri_reftab&lt;/b&gt; desemneaza o linie din webconfigtaburi care refera o linie de sters." TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="wOPStergereMeniuri" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="0" Fel="O" procPopulare="wOPStergereMeniuri_p" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="CFGMACHETE" Tip="NI" Subtip="ST" Ordine="1" Nume="Export inainte de stergere" TipObiect="CHB" DataField="@export" LabelField="" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+</formuri>
+<griduri>
+<grid Meniu="CFGMACHETE" Tip="NI" Subtip="ST" InPozitii="1" NumeCol="Meniu" DataField="@meniu" TipObiect="C" Latime="200" Ordine="1" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGMACHETE" Tip="NI" Subtip="ST" InPozitii="1" NumeCol="Tip" DataField="@tip" TipObiect="C" Latime="100" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGMACHETE" Tip="NI" Subtip="ST" InPozitii="1" NumeCol="Subtip" DataField="@subtip" TipObiect="C" Latime="100" Ordine="3" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGMACHETE" Tip="NI" Subtip="ST" InPozitii="1" NumeCol="Tabela" DataField="@tabela" TipObiect="C" Latime="200" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGMACHETE" Tip="NI" Subtip="ST" InPozitii="1" NumeCol="Denumire tab" DataField="@denumire" TipObiect="C" Latime="200" Ordine="5" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="CFGMACHETE" Tip="SM" Subtip="SM" Ordine="1" Nume="Selectare machete" Descriere="&lt;br&gt;&lt;b&gt;Existent&lt;/b&gt; = Macheta exista inainte de a fi preluata&lt;br&gt;&lt;b&gt;Selectare&lt;/b&gt; = In absenta bifei macheta va fi ignorata, nu se va prelua&lt;br&gt;&lt;b&gt;Suprascriere&lt;/b&gt; = Determina stergerea inainte de import a machetei corespunzatoare, altfel nu se sterge nimic, doar se adauga obiectele noi" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="wOPImportMachete" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="O" procPopulare="wOPImportMachete_p" tasta=" " ProcInchidereMacheta="" sursa="webConfigTipuri">
+<griduri>
+<grid Meniu="CFGMACHETE" Tip="SM" Subtip="SM" InPozitii="0" NumeCol="Meniu" DataField="@s_meniu" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="CFGMACHETE" Tip="SM" Subtip="SM" InPozitii="0" NumeCol="Tip" DataField="@s_tip" TipObiect="C" Latime="100" Ordine="2" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="CFGMACHETE" Tip="SM" Subtip="SM" InPozitii="0" NumeCol="Subtip" DataField="@s_subtip" TipObiect="C" Latime="100" Ordine="3" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="CFGMACHETE" Tip="SM" Subtip="SM" InPozitii="0" NumeCol="Fel" DataField="@s_fel" TipObiect="C" Latime="100" Ordine="4" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="CFGMACHETE" Tip="SM" Subtip="SM" InPozitii="0" NumeCol="Nume" DataField="@s_nume" TipObiect="C" Latime="200" Ordine="5" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="CFGMACHETE" Tip="SM" Subtip="SM" InPozitii="0" NumeCol="Tabela" DataField="@s_sursa" TipObiect="C" Latime="200" Ordine="6" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="CFGMACHETE" Tip="SM" Subtip="SM" InPozitii="0" NumeCol="Existent" DataField="@s_existent" TipObiect="C" Latime="100" Ordine="7" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="CFGMACHETE" Tip="SM" Subtip="SM" InPozitii="0" NumeCol="Selectare" DataField="@s_selectare" TipObiect="CHB" Latime="100" Ordine="8" Vizibil="1" modificabil="1" formula=" "/>
+<grid Meniu="CFGMACHETE" Tip="SM" Subtip="SM" InPozitii="0" NumeCol="Suprascriere" DataField="@s_suprascriere" TipObiect="CHB" Latime="120" Ordine="9" Vizibil="1" modificabil="1" formula=" "/>
+</griduri>
+</tipuri>
+<tipuri Meniu="CFGMACHETEADD" Tip="NI" Subtip="" Ordine="1" Nume="Adaugare meniu" Descriere="" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="wOPAdaugaMeniuConfig" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="O" procPopulare="wOPAdaugaMeniuConfig_p" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="CFGMACHETEADD" Tip="NI" Subtip="" Ordine="1" Nume="Meniu" TipObiect="C" DataField="@meniu" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Meniu" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGMACHETEADD" Tip="NI" Subtip="" Ordine="2" Nume="Nume" TipObiect="C" DataField="@nume" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Nume" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGMACHETEADD" Tip="NI" Subtip="" Ordine="3" Nume="Meniu parinte" TipObiect="AC" DataField="@parinte" LabelField="@parinte" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACMeniuri" ListaValori="" ListaEtichete="" Initializare="" Prompt="Parinte" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGMACHETEADD" Tip="NI" Subtip="" Ordine="4" Nume="Tip macheta" TipObiect="CB" DataField="@tip_macheta" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori=",B2B,C,D,E,G,GT,H,M,MC,O" ListaEtichete=",B2B,Catalog (C),Document (D),Catalog doc (E),Grafic TB (G),Grafic Gantt (GT),Harta (H),Mobil (M),MC,Operatie (O)" Initializare="" Prompt="Tip macheta" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGMACHETEADD" Tip="NI" Subtip="" Ordine="5" Nume="Ordine" TipObiect="N" DataField="@nrordine" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Ordine" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGMACHETEADD" Tip="NI" Subtip="" Ordine="6" Nume="Icoana" TipObiect="C" DataField="@icoana" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Icoana" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGMACHETEADD" Tip="NI" Subtip="" Ordine="7" Nume="Vizibil" TipObiect="CHB" DataField="@vizibil" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Vizibil" Procesare="" Tooltip="" formula=""/>
+</formuri>
+</tipuri>
+<tipuri Meniu="CFGFORM" Tip="" Subtip="" Ordine="1" Nume="Form" Descriere="" TextAdaugare="Adaugare form" TextModificare="Modificare form" ProcDate="wIaConfigMachete_Form" ProcScriere="wScriuConfigMachete_Form" ProcStergere="wStergConfigMachete_Form" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="wScriuConfigMachete_Form_p" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="1" Nume="Meniu" TipObiect="C" DataField="@r_meniu" LabelField="" Latime="200" Vizibil="1" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Meniu" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="2" Nume="Tip" TipObiect="C" DataField="@r_tip" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tip" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="3" Nume="Subtip" TipObiect="C" DataField="@r_subtip" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Subtip" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="4" Nume="Ordine" TipObiect="N" DataField="@r_ordine" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Ordine" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="5" Nume="Nume" TipObiect="C" DataField="@r_nume" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Nume" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="6" Nume="Tip obiect" TipObiect="CB" DataField="@r_tip_obiect" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="C,D,N,T,AC,CB,CF,CHB,IN" ListaEtichete="Alfanumeric,Data calendaristica,Numeric,TextArea,AutoComplete,ComboBox,Cod fiscal,CheckBox,Input (upload fisiere)" Initializare="C" Prompt="Tip obiect" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="7" Nume="DataField" TipObiect="C" DataField="@r_datafield" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Datafield" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="8" Nume="LabelField" TipObiect="C" DataField="@r_labelfield" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Labelfield" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="9" Nume="Latime" TipObiect="N" DataField="@r_latime" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Latime" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="10" Nume="ProcSQL" TipObiect="C" DataField="@r_procsql" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="ProcSQL" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="11" Nume="ListaValori" TipObiect="C" DataField="@r_listavalori" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="ListaValori" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="12" Nume="ListaEtichete" TipObiect="C" DataField="@r_listaetichete" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="ListaEtichete" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="13" Nume="Initializare" TipObiect="C" DataField="@r_initializare" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Initializare" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="14" Nume="Prompt" TipObiect="C" DataField="@r_prompt" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Prompt" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="15" Nume="Formula" TipObiect="T" DataField="@r_formula" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="120" ListaEtichete="" Initializare="" Prompt="Formula" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="16" Nume="Vizibil" TipObiect="CHB" DataField="@r_vizibil" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Vizibil" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFORM" Tip="" Subtip="" Ordine="17" Nume="Modificabil" TipObiect="CHB" DataField="@r_modificabil" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Modificabil" Procesare="" Tooltip="" formula=""/>
+</formuri>
+<griduri>
+<grid Meniu="CFGFORM" Tip="" Subtip="" InPozitii="0" NumeCol="Meniu" DataField="@r_meniu" TipObiect="C" Latime="70" Ordine="1" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFORM" Tip="" Subtip="" InPozitii="0" NumeCol="Tip" DataField="@r_tip" TipObiect="C" Latime="65" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFORM" Tip="" Subtip="" InPozitii="0" NumeCol="Subtip" DataField="@r_subtip" TipObiect="C" Latime="70" Ordine="3" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFORM" Tip="" Subtip="" InPozitii="0" NumeCol="Ordine" DataField="@r_ordine" TipObiect="N" Latime="65" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFORM" Tip="" Subtip="" InPozitii="0" NumeCol="Nume" DataField="@r_nume" TipObiect="C" Latime="100" Ordine="5" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFORM" Tip="" Subtip="" InPozitii="0" NumeCol="Tip obiect" DataField="@r_tip_obiect" TipObiect="C" Latime="85" Ordine="6" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFORM" Tip="" Subtip="" InPozitii="0" NumeCol="DataField" DataField="@r_datafield" TipObiect="C" Latime="95" Ordine="7" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFORM" Tip="" Subtip="" InPozitii="0" NumeCol="LabelField" DataField="@r_labelfield" TipObiect="C" Latime="95" Ordine="8" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFORM" Tip="" Subtip="" InPozitii="0" NumeCol="Latime" DataField="@r_latime" TipObiect="N" Latime="75" Ordine="9" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFORM" Tip="" Subtip="" InPozitii="0" NumeCol="Vizibil" DataField="@r_vizibil_" TipObiect="C" Latime="60" Ordine="10" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFORM" Tip="" Subtip="" InPozitii="0" NumeCol="Modificabil" DataField="@r_modificabil_" TipObiect="C" Latime="90" Ordine="11" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFORM" Tip="" Subtip="" InPozitii="0" NumeCol="ProcSQL" DataField="@r_procsql" TipObiect="C" Latime="80" Ordine="12" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="CFGGRID" Tip="" Subtip="" Ordine="2" Nume="Grid" Descriere="" TextAdaugare="Adaugare grid" TextModificare="Modificare grid" ProcDate="wIaConfigMachete_Grid" ProcScriere="wScriuConfigMachete_Grid" ProcStergere="wStergConfigMachete_Grid" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="wScriuConfigMachete_Grid_p" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="CFGGRID" Tip="" Subtip="" Ordine="1" Nume="Meniu" TipObiect="C" DataField="@g_meniu" LabelField="" Latime="200" Vizibil="1" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Meniu" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGGRID" Tip="" Subtip="" Ordine="2" Nume="Tip" TipObiect="C" DataField="@g_tip" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tip" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGGRID" Tip="" Subtip="" Ordine="3" Nume="Subtip" TipObiect="C" DataField="@g_subtip" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Subtip" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGGRID" Tip="" Subtip="" Ordine="4" Nume="In pozitii" TipObiect="CHB" DataField="@g_in_pozitii" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="In pozitii" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGGRID" Tip="" Subtip="" Ordine="5" Nume="Nume" TipObiect="C" DataField="@g_nume_col" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Nume" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGGRID" Tip="" Subtip="" Ordine="6" Nume="DataField" TipObiect="C" DataField="@g_data_field" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="DataField" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGGRID" Tip="" Subtip="" Ordine="7" Nume="Tip obiect" TipObiect="CB" DataField="@g_tip_obiect" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="C,D,N,T,G,AC,CB,CHB,HTML" ListaEtichete="Alfanumeric,Data calendaristica,Numeric,TextArea,Date ierarhice,AutoComplete,ComboBox,CheckBox,HTML" Initializare="C" Prompt="Tip obiect" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGGRID" Tip="" Subtip="" Ordine="8" Nume="Latime" TipObiect="N" DataField="@g_latime" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Latime" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGGRID" Tip="" Subtip="" Ordine="9" Nume="Ordine" TipObiect="N" DataField="@g_ordine" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Ordine" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGGRID" Tip="" Subtip="" Ordine="10" Nume="Formula" TipObiect="T" DataField="@g_formula" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="120" ListaEtichete="" Initializare="" Prompt="Formula" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGGRID" Tip="" Subtip="" Ordine="11" Nume="Vizibil" TipObiect="CHB" DataField="@g_vizibil" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Vizibil" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGGRID" Tip="" Subtip="" Ordine="12" Nume="Modificabil" TipObiect="CHB" DataField="@g_modificabil" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Modificabil" Procesare="" Tooltip="" formula=""/>
+</formuri>
+<griduri>
+<grid Meniu="CFGGRID" Tip="" Subtip="" InPozitii="0" NumeCol="Meniu" DataField="@g_meniu" TipObiect="C" Latime="70" Ordine="1" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGGRID" Tip="" Subtip="" InPozitii="0" NumeCol="Tip" DataField="@g_tip" TipObiect="C" Latime="70" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGGRID" Tip="" Subtip="" InPozitii="0" NumeCol="Subtip" DataField="@g_subtip" TipObiect="C" Latime="70" Ordine="3" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGGRID" Tip="" Subtip="" InPozitii="0" NumeCol="In pozitii" DataField="@g_in_pozitii_" TipObiect="C" Latime="75" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGGRID" Tip="" Subtip="" InPozitii="0" NumeCol="NumeCol" DataField="@g_nume_col" TipObiect="C" Latime="130" Ordine="5" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGGRID" Tip="" Subtip="" InPozitii="0" NumeCol="DataField" DataField="@g_data_field" TipObiect="C" Latime="95" Ordine="6" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGGRID" Tip="" Subtip="" InPozitii="0" NumeCol="Tip obiect" DataField="@g_tip_obiect_" TipObiect="C" Latime="80" Ordine="7" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGGRID" Tip="" Subtip="" InPozitii="0" NumeCol="Latime" DataField="@g_latime" TipObiect="C" Latime="75" Ordine="8" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGGRID" Tip="" Subtip="" InPozitii="0" NumeCol="Ordine" DataField="@g_ordine" TipObiect="N" Latime="65" Ordine="9" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGGRID" Tip="" Subtip="" InPozitii="0" NumeCol="Vizibil" DataField="@g_vizibil_" TipObiect="C" Latime="60" Ordine="10" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGGRID" Tip="" Subtip="" InPozitii="0" NumeCol="Modificabil" DataField="@g_modificabil_" TipObiect="C" Latime="90" Ordine="11" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGGRID" Tip="" Subtip="" InPozitii="0" NumeCol="Formula" DataField="@g_formula" TipObiect="C" Latime="80" Ordine="12" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="3" Nume="Tipuri" Descriere="" TextAdaugare="Adaugare tip" TextModificare="Modificare tip" ProcDate="wIaConfigMachete_Tipuri" ProcScriere="wScriuConfigMachete_Tipuri" ProcStergere="wStergConfigMachete_Tipuri" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="wScriuConfigMachete_Tipuri_p" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="1" Nume="Meniu" TipObiect="C" DataField="@p_meniu" LabelField="" Latime="200" Vizibil="1" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Meniu" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="2" Nume="Tip" TipObiect="C" DataField="@p_tip" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tip" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="3" Nume="Subtip" TipObiect="C" DataField="@p_subtip" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Subtip" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="4" Nume="Fel" TipObiect="CB" DataField="@p_fel" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori=",R,O" ListaEtichete=",Raport,Operatie" Initializare="" Prompt="Fel" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="5" Nume="Ordine" TipObiect="N" DataField="@p_ordine" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Ordine" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="6" Nume="Nume" TipObiect="C" DataField="@p_nume" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Nume" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="8" Nume="Text adaugare" TipObiect="C" DataField="@p_textadaugare" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Text adaugare" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="9" Nume="Text modificare" TipObiect="C" DataField="@p_textmodificare" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Text modificare" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="10" Nume="ProcPopulare" TipObiect="C" DataField="@p_procpopulare" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="ProcPopulare" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="11" Nume="ProcDate" TipObiect="C" DataField="@p_procdate" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="ProcDate" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="12" Nume="ProcScriere" TipObiect="C" DataField="@p_procscriere" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="ProcScriere" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="13" Nume="ProcStergere" TipObiect="C" DataField="@p_procstergere" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="ProcStergere" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="14" Nume="ProcDatePoz" TipObiect="C" DataField="@p_procdatepoz" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="ProcDatePoz" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="15" Nume="ProcScrierePoz" TipObiect="C" DataField="@p_procscrierepoz" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="ProcScrierePoz" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="16" Nume="ProcStergerePoz" TipObiect="C" DataField="@p_procstergerepoz" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="ProcStergerePoz" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="17" Nume="ProcInchidereMacheta" TipObiect="C" DataField="@p_procinchideremacheta" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="ProcInchidereMacheta" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="18" Nume="Tasta" TipObiect="C" DataField="@p_tasta" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tasta" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="19" Nume="Vizibil" TipObiect="CHB" DataField="@p_vizibil" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Vizibil" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTIPURI" Tip="" Subtip="" Ordine="20" Nume="Descriere" TipObiect="T" DataField="@p_descriere" LabelField="" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="100" ListaEtichete="" Initializare="" Prompt="Descriere" Procesare="" Tooltip="" formula=""/>
+</formuri>
+<griduri>
+<grid Meniu="CFGTIPURI" Tip="" Subtip="" InPozitii="0" NumeCol="Meniu" DataField="@p_meniu" TipObiect="C" Latime="70" Ordine="1" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTIPURI" Tip="" Subtip="" InPozitii="0" NumeCol="Tip" DataField="@p_tip" TipObiect="C" Latime="50" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTIPURI" Tip="" Subtip="" InPozitii="0" NumeCol="Subtip" DataField="@p_subtip" TipObiect="C" Latime="50" Ordine="3" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTIPURI" Tip="" Subtip="" InPozitii="0" NumeCol="Fel" DataField="@p_fel" TipObiect="C" Latime="40" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTIPURI" Tip="" Subtip="" InPozitii="0" NumeCol="Ordine" DataField="@p_ordine" TipObiect="N" Latime="50" Ordine="5" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTIPURI" Tip="" Subtip="" InPozitii="0" NumeCol="Nume" DataField="@p_nume" TipObiect="C" Latime="150" Ordine="6" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTIPURI" Tip="" Subtip="" InPozitii="0" NumeCol="ProcPopulare" DataField="@p_procpopulare" TipObiect="C" Latime="100" Ordine="7" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTIPURI" Tip="" Subtip="" InPozitii="0" NumeCol="ProcDate" DataField="@p_procdate" TipObiect="C" Latime="100" Ordine="8" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTIPURI" Tip="" Subtip="" InPozitii="0" NumeCol="ProcScriere" DataField="@p_procscriere" TipObiect="C" Latime="100" Ordine="9" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTIPURI" Tip="" Subtip="" InPozitii="0" NumeCol="ProcStergere" DataField="@p_procstergere" TipObiect="C" Latime="100" Ordine="10" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTIPURI" Tip="" Subtip="" InPozitii="0" NumeCol="ProcDatePoz" DataField="@p_procdatepoz" TipObiect="C" Latime="100" Ordine="11" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTIPURI" Tip="" Subtip="" InPozitii="0" NumeCol="ProcScrierePoz" DataField="@p_procscrierepoz" TipObiect="C" Latime="100" Ordine="12" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTIPURI" Tip="" Subtip="" InPozitii="0" NumeCol="ProcStergerePoz" DataField="@p_procstergerepoz" TipObiect="C" Latime="100" Ordine="13" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTIPURI" Tip="" Subtip="" InPozitii="0" NumeCol="Vizibil" DataField="@p_vizibil_" TipObiect="C" Latime="40" Ordine="14" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="CFGFILTRE" Tip="" Subtip="" Ordine="4" Nume="Filtre" Descriere="" TextAdaugare="Adaugare filtru" TextModificare="Modificare filtru" ProcDate="wIaConfigMachete_Filtre" ProcScriere="wScriuConfigMachete_Filtre" ProcStergere="wStergConfigMachete_Filtre" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="wScriuConfigMachete_Filtre_p" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="CFGFILTRE" Tip="" Subtip="" Ordine="1" Nume="Meniu" TipObiect="C" DataField="@t_meniu" LabelField="" Latime="200" Vizibil="1" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Meniu" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFILTRE" Tip="" Subtip="" Ordine="2" Nume="Tip" TipObiect="C" DataField="@t_tip" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tip" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFILTRE" Tip="" Subtip="" Ordine="3" Nume="Ordine" TipObiect="N" DataField="@t_ordine" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Ordine" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFILTRE" Tip="" Subtip="" Ordine="4" Nume="Descriere" TipObiect="C" DataField="@t_descriere" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Descriere" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFILTRE" Tip="" Subtip="" Ordine="5" Nume="Prompt1" TipObiect="C" DataField="@t_prompt1" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Prompt1" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFILTRE" Tip="" Subtip="" Ordine="6" Nume="DataField1" TipObiect="C" DataField="@t_datafield1" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="DataField1" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFILTRE" Tip="" Subtip="" Ordine="7" Nume="Interval" TipObiect="CHB" DataField="@t_interval" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Interval" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFILTRE" Tip="" Subtip="" Ordine="8" Nume="Prompt2" TipObiect="C" DataField="@t_prompt2" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Prompt2" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFILTRE" Tip="" Subtip="" Ordine="9" Nume="DataField2" TipObiect="C" DataField="@t_datafield2" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="DataField2" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGFILTRE" Tip="" Subtip="" Ordine="10" Nume="Vizibil" TipObiect="CHB" DataField="@t_vizibil" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Vizibil" Procesare="" Tooltip="" formula=""/>
+</formuri>
+<griduri>
+<grid Meniu="CFGFILTRE" Tip="" Subtip="" InPozitii="0" NumeCol="Meniu" DataField="@t_meniu" TipObiect="C" Latime="70" Ordine="1" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFILTRE" Tip="" Subtip="" InPozitii="0" NumeCol="Tip" DataField="@t_tip" TipObiect="C" Latime="70" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFILTRE" Tip="" Subtip="" InPozitii="0" NumeCol="Ordine" DataField="@t_ordine" TipObiect="N" Latime="65" Ordine="3" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFILTRE" Tip="" Subtip="" InPozitii="0" NumeCol="Vizibil" DataField="@t_vizibil_" TipObiect="C" Latime="60" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFILTRE" Tip="" Subtip="" InPozitii="0" NumeCol="Tip obiect" DataField="@t_tip_obiect" TipObiect="C" Latime="80" Ordine="5" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFILTRE" Tip="" Subtip="" InPozitii="0" NumeCol="Descriere" DataField="@t_descriere" TipObiect="C" Latime="100" Ordine="6" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFILTRE" Tip="" Subtip="" InPozitii="0" NumeCol="Prompt1" DataField="@t_prompt1" TipObiect="C" Latime="100" Ordine="7" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFILTRE" Tip="" Subtip="" InPozitii="0" NumeCol="DataField1" DataField="@t_datafield1" TipObiect="C" Latime="100" Ordine="8" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFILTRE" Tip="" Subtip="" InPozitii="0" NumeCol="Interval" DataField="@t_interval_" TipObiect="C" Latime="65" Ordine="9" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFILTRE" Tip="" Subtip="" InPozitii="0" NumeCol="Prompt2" DataField="@t_prompt2" TipObiect="C" Latime="100" Ordine="10" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGFILTRE" Tip="" Subtip="" InPozitii="0" NumeCol="DataField2" DataField="@t_datafield2" TipObiect="C" Latime="100" Ordine="11" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="CFGTAB" Tip="" Subtip="" Ordine="5" Nume="Tab" Descriere="" TextAdaugare="Adaugare tab" TextModificare="Modificare tab" ProcDate="wIaConfigMachete_Taburi" ProcScriere="wScriuConfigMachete_Taburi" ProcStergere="wStergConfigMachete_Taburi" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="wScriuConfigMachete_Taburi_p" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="CFGTAB" Tip="" Subtip="" Ordine="1" Nume="Meniu sursa" TipObiect="C" DataField="@b_meniu_sursa" LabelField="" Latime="200" Vizibil="1" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Meniu sursa" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTAB" Tip="" Subtip="" Ordine="2" Nume="Tip sursa" TipObiect="C" DataField="@b_tip_sursa" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tip sursa" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTAB" Tip="" Subtip="" Ordine="3" Nume="Nume tab" TipObiect="C" DataField="@b_nume_tab" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Nume tab" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTAB" Tip="" Subtip="" Ordine="4" Nume="Icoana" TipObiect="C" DataField="@b_icoana" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Icoana" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTAB" Tip="" Subtip="" Ordine="5" Nume="Tip macheta" TipObiect="CB" DataField="@b_tip_macheta" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="C,D,F,PozDoc,G" ListaEtichete="Catalog,Document,Form,PozDoc,Grafic" Initializare="C" Prompt="Tip macheta" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTAB" Tip="" Subtip="" Ordine="6" Nume="Cod meniu" TipObiect="C" DataField="@b_cod_meniu" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cod meniu" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTAB" Tip="" Subtip="" Ordine="7" Nume="Tip document" TipObiect="C" DataField="@b_tip_doc" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tip document" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTAB" Tip="" Subtip="" Ordine="8" Nume="Proc populare" TipObiect="C" DataField="@b_proc_populare" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Proc populare" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTAB" Tip="" Subtip="" Ordine="9" Nume="Ordine" TipObiect="N" DataField="@b_ordine" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Ordine" Procesare="" Tooltip="" formula=""/>
+<form Meniu="CFGTAB" Tip="" Subtip="" Ordine="10" Nume="Vizibil" TipObiect="CHB" DataField="@b_vizibil" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Vizibil" Procesare="" Tooltip="" formula=""/>
+</formuri>
+<griduri>
+<grid Meniu="CFGTAB" Tip="" Subtip="" InPozitii="0" NumeCol="Meniu sursa" DataField="@b_meniu_sursa" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTAB" Tip="" Subtip="" InPozitii="0" NumeCol="Tip sursa" DataField="@b_tip_sursa" TipObiect="C" Latime="100" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTAB" Tip="" Subtip="" InPozitii="0" NumeCol="Nume tab" DataField="@b_nume_tab" TipObiect="C" Latime="150" Ordine="3" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTAB" Tip="" Subtip="" InPozitii="0" NumeCol="Icoana" DataField="@b_icoana" TipObiect="C" Latime="100" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTAB" Tip="" Subtip="" InPozitii="0" NumeCol="Tip mach. tab" DataField="@b_tip_macheta" TipObiect="C" Latime="80" Ordine="5" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTAB" Tip="" Subtip="" InPozitii="0" NumeCol="Cod meniu tab" DataField="@b_cod_meniu" TipObiect="C" Latime="80" Ordine="6" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTAB" Tip="" Subtip="" InPozitii="0" NumeCol="Tip doc" DataField="@b_tip_doc" TipObiect="C" Latime="60" Ordine="7" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTAB" Tip="" Subtip="" InPozitii="0" NumeCol="ProcPopulare" DataField="@b_proc_populare" TipObiect="C" Latime="100" Ordine="8" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTAB" Tip="" Subtip="" InPozitii="0" NumeCol="Ordine" DataField="@b_ordine" TipObiect="N" Latime="50" Ordine="9" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="CFGTAB" Tip="" Subtip="" InPozitii="0" NumeCol="Vizibil" DataField="@b_vizibil_" TipObiect="C" Latime="60" Ordine="10" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+</tipuri>
+</machete>
+

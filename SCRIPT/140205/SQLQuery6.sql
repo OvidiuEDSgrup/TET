@@ -1,0 +1,1 @@
+select * from proprietati p where p.Tip='PROPUTILIZ' and p.Cod_proprietate='NUMEDELEGAT'

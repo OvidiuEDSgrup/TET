@@ -1,0 +1,1 @@
+select p.Contract,p.Factura,p.Locatie,* from pozdoc p where p.Numar like '1007816'

@@ -1,0 +1,13 @@
+--delete pozdoc 
+--where Contract='BN980381'
+--select * from stocuri s where s.Cod='TR0115              ' and s.Cod_gestiune='211.bn'
+select * from pozdoc p join stocuri s on s.Subunitate=p.Subunitate and s.Cod_gestiune=p.Gestiune and s.Cod=p.Cod and s.Cod_intrare=p.Cod_intrare and s.Stoc>0
+where p.Tert='RO11234961' and p.Gestiune='211.bn' --
+and p.Cod='TR0115              ' --08029114
+--order by p.idPozDoc desc 
+--select * from istoricstocuri i order by i.Data_lunii desc
+BEGIN TRAN
+declare @p2 xml
+set @p2=convert(xml,N'<parametri subunitate="1" tip="BK" numar="BN980381" data="10/31/2014" explicatii="" termen="10/31/2014" dengestiune="BN SHOWROOM BISTRITA NASAUD" gestiune="211.BN" dentert="RO11234961 - STILEXPRIMA SRL" factura="" tert="RO11234961" contractcor="" punctlivrare="" denpunctlivrare="" denlm="BISTRITA1" lm="1VZ_BN_01" dengestprim="" gestprim="" valuta="" curs="0.0000" valoare="-75.00" valtva="-18.00" valtotala="-93.00" scadenta="0" contclient="" procpen="0" contr_cadru="" ext_camp4="" ext_camp5="01/01/1901" ext_modificari="" ext_clauze="" valabilitate="01/01/1901" pozitii="1" discount="0.0000000e+000" comspec="0" operat="10/31/2014" stare="1" categpret="1" dencategpret="Lista unica-Pret catalog  RON (1)" denstare="1-Facturabil" info1="" info2="0.00" info3="0.000000000000000e+000" info4="0.0000000e+000" info5="10.00" info6="" culoare="#0000FF" _nemodificabil="1" numardoc="BN940099" iddelegat="1" numedelegat="ANDREICA                                                              HORATIU                                                                 " prenumedelegat="HORATIU" nrmijltransp="" seriebuletin="" numarbuletin="" eliberatbuletin="" data_expedierii="10/31/2014" ora_expedierii="10:02:11" o_tert="RO11234961" o_numardoc="" o_iddelegat="1" o_prenumedelegat="HORATIU" o_seriebuletin="" o_numarbuletin="" o_eliberatbuletin="" o_nrmijltransp="" update="1" datadoc="10/31/2014" aviznefacturat="0" noudelegat="0" observatii="" tipMacheta="D" codMeniu="CO" TipDetaliere="BK" subtip="GF"><o_DateGrid><row cod="TR0115" cantitate_factura="-1.000" cantitate_disponibila="-1.000" gestiune="211.BN" denumire="FIV-Filtru Y 1&quot;&quot;1/4" cant_aprobata="-1.000" cant_realizata="0.000" subunitate="1" tip="BK" data="10/31/2014" contract="BN980381" tert="RO11234961" numar_pozitie="1"/></o_DateGrid><DateGrid><row cod="TR0115" cantitate_factura="-1.000" cantitate_disponibila="-1.000" gestiune="211.BN" denumire="FIV-Filtru Y 1&quot;&quot;1/4" cant_aprobata="-1.000" cant_realizata="0.000" subunitate="1" tip="BK" data="10/31/2014" contract="BN980381" tert="RO11234961" numar_pozitie="1"/></DateGrid></parametri>')
+exec wOPGenerareUnAPdinBK @sesiune='',@parXML=@p2
+ROLLBACK TRAN

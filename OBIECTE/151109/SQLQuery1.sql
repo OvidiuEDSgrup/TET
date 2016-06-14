@@ -1,0 +1,2 @@
+select * from webConfigMeniuUtiliz
+DOCUMENTE_FILIALE

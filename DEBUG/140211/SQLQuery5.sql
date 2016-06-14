@@ -1,0 +1,1 @@
+select * from webconfigform f where f.Meniu='CO' and f.Tip='BK' and f.Subtip='GT'

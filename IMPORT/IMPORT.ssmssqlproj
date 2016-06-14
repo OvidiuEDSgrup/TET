@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="IMPORT">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="ASIS:TET\ASIS">
+          <Created>2012-03-20T15:35:40.1149619+02:00</Created>
+          <Type>SQL</Type>
+          <Server>ASIS</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IaIstoricStocuri.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>IaIstoricStocuri.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Nomencl.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Nomencl.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UM.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>UM.sql</FullPath>
+        </FileNode>
+        <FileNode Name="tehnpoz.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>tehnpoz.sql</FullPath>
+        </FileNode>
+        <FileNode Name="tehn.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>tehn.sql</FullPath>
+        </FileNode>
+        <FileNode Name="codvama.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>codvama.sql</FullPath>
+        </FileNode>
+        <FileNode Name="condcol.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>condcol.sql</FullPath>
+        </FileNode>
+        <FileNode Name="selcol.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>selcol.sql</FullPath>
+        </FileNode>
+        <FileNode Name="wIaFormulareSP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>wIaFormulareSP.sql</FullPath>
+        </FileNode>
+        <FileNode Name="preturi.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>preturi.sql</FullPath>
+        </FileNode>
+        <FileNode Name="xIaStoclimLocatii.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>xIaStoclimLocatii.sql</FullPath>
+        </FileNode>
+        <FileNode Name="xIaGestiuni.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>xIaGestiuni.sql</FullPath>
+        </FileNode>
+        <FileNode Name="xIaLocatii.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>xIaLocatii.sql</FullPath>
+        </FileNode>
+        <FileNode Name="xIaCodProprietati.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>xIaCodProprietati.sql</FullPath>
+        </FileNode>
+        <FileNode Name="grupe.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>grupe.sql</FullPath>
+        </FileNode>
+        <FileNode Name="terti.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>terti.sql</FullPath>
+        </FileNode>
+        <FileNode Name="xIaPreturi.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>xIaPreturi.sql</FullPath>
+        </FileNode>
+        <FileNode Name="pozcon.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>pozcon.sql</FullPath>
+        </FileNode>
+        <FileNode Name="vnomencl.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>vnomencl.sql</FullPath>
+        </FileNode>
+        <FileNode Name="importexcel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>importexcel.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

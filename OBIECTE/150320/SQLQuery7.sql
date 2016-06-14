@@ -1,0 +1,1 @@
+alter table pozcontracte alter column stare 

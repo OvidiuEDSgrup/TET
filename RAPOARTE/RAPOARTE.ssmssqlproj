@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="RAPOARTE">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="10.0.0.10:TET\ASIS">
+          <Created>2012-02-27T15:39:38.4625446+02:00</Created>
+          <Type>SQL</Type>
+          <Server>10.0.0.10</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="ASIS:TET\ASIS">
+          <Created>2012-02-16T10:08:03.0785468+02:00</Created>
+          <Type>SQL</Type>
+          <Server>ASIS</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="REGCASA.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>REGCASA.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IntFctBen.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>IntFctBen.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery10.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery10.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sitvanzari.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sitvanzari.sql</FullPath>
+        </FileNode>
+        <FileNode Name="respectATP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>respectATP.sql</FullPath>
+        </FileNode>
+        <FileNode Name="intrfurniz.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>intrfurniz.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rapBorderouFacturi.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>rapBorderouFacturi.sql</FullPath>
+        </FileNode>
+        <FileNode Name="inventarSTD.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>inventarSTD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="centrintrfurniz.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>centrintrfurniz.sql</FullPath>
+        </FileNode>
+        <FileNode Name="necesarCS.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>necesarCS.sql</FullPath>
+        </FileNode>
+        <FileNode Name="fisaconttert.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>fisaconttert.sql</FullPath>
+        </FileNode>
+        <FileNode Name="decontsal.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>decontsal.sql</FullPath>
+        </FileNode>
+        <FileNode Name="comisvanzag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>comisvanzag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="tertiefecte.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>tertiefecte.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sitcentriesclienti.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sitcentriesclienti.sql</FullPath>
+        </FileNode>
+        <FileNode Name="intriesterti.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>intriesterti.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery9.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery9.sql</FullPath>
+        </FileNode>
+        <FileNode Name="comlivrtermen.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>comlivrtermen.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:10.0.0.10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>10.0.0.10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery3.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery3.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery4.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery4.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery5.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:10.0.0.10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>10.0.0.10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery5.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery6.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery6.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery7.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery7.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery8.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery8.sql</FullPath>
+        </FileNode>
+        <FileNode Name="comaprovdef.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>comaprovdef.sql</FullPath>
+        </FileNode>
+        <FileNode Name="necesar.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>necesar.sql</FullPath>
+        </FileNode>
+        <FileNode Name="wTipFormular.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>wTipFormular.sql</FullPath>
+        </FileNode>
+        <FileNode Name="balstoc.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>balstoc.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BalantaStocuri.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>BalantaStocuri.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rapavize.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>rapavize.sql</FullPath>
+        </FileNode>
+        <FileNode Name="avize.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>avize.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RegistruDeCasa.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>RegistruDeCasa.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

@@ -1,0 +1,1 @@
+select * from TvaPeTerti t where t.tip_tva='i'

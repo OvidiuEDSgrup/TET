@@ -1,0 +1,1 @@
+select * from webConfigSTDForm f where f.Meniu='PJ' and f.Tip='' order by f.Ordine

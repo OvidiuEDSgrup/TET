@@ -1,0 +1,1 @@
+select * from antetBonuri a where a.Casa_de_marcat=7 and a.Data_bon='2014-08-14'

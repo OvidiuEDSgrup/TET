@@ -1,0 +1,1 @@
+select * from stoclim s where s.Data='2999-12-31' 

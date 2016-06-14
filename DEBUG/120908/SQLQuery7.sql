@@ -1,0 +1,1 @@
+select * from formular f where f.expresie like '%PROC%'

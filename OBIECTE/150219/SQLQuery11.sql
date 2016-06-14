@@ -1,0 +1,1 @@
+select * from sys.dm_tran_locks l where l.resource_database_id=DB_ID()

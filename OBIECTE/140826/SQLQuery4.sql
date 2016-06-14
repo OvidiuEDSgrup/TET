@@ -1,0 +1,5 @@
+alter table webConfigMeniuUtiliz drop column This_Is_My_Ident_Col_Name
+alter table webConfigGrid drop column This_Is_My_Ident_Col_Name
+alter table webConfigMeniu_vechi drop column This_Is_My_Ident_Col_Name
+alter table webConfigForm drop column This_Is_My_Ident_Col_Name
+alter table webConfigTipuri drop column This_Is_My_Ident_Col_Name

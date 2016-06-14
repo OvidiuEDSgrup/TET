@@ -1,0 +1,1 @@
+select * from antetBonuri p where p.Factura='9460047'

@@ -1,0 +1,1 @@
+select * from utilizatoriRIA  u where u.BD='TESTOV'

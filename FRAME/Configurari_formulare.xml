@@ -1,0 +1,50 @@
+<machete>
+<meniuri Meniu="FM" Nume="Configurari formulare" MeniuParinte="CONFIGURARI" Icoana="tbconfig" TipMacheta="C" NrOrdine="559.00" Componenta="" Semnatura="" vizibil="1" publicabil="1"/>
+<tipuri Meniu="FM" Tip="" Subtip="" Ordine="1" Nume="Formulare" Descriere="&lt;t&gt;Pentru formular, se va completa Cale formular, si nu Procedura. Pentru procedura, invers.&#x0A;Tipul 'Altele' se configureaza din ASiSplus.&#x0A;&lt;p&gt;Pentru asociere formulare se va folosi operatia de Configurare asocieri din detalierea machetei.&lt;/p&gt;&lt;p&gt;Daca se introduce calea spre un formular inexistent, ulterior, acel formular va trebui pus pe Report Server.&lt;/p&gt;" TextAdaugare="Adaugare formular" TextModificare="Modificare formular" ProcDate="wIaCfgFormulare" ProcScriere="wScriuCfgFormulare" ProcStergere="wStergCfgFormulare" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel=" " procPopulare="" tasta=" " ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="FM" Subtip="" Ordine="1" Nume="Cod formular" TipObiect="C" DataField="@formular" LabelField=" " Latime="100" Vizibil="1" Modificabil="1" ProcSQL=" " Prompt="Formular"/>
+<form Meniu="FM" Subtip="" Ordine="2" Nume="Denumire" TipObiect="C" DataField="@denumire" Latime="300" Vizibil="1" Modificabil="1" Prompt="Denumire"/>
+<form Meniu="FM" Subtip="" Ordine="3" Nume="Tip formular" TipObiect="CB" DataField="@tipformular" Latime="100" Vizibil="1" Modificabil="1" ListaValori="Raport,Procedura,Altele" ListaEtichete="Raport,Procedura,Altele" Initializare="Raport" Prompt="Tip formular"/>
+<form Meniu="FM" Subtip="" Ordine="5" Nume="Procedura" TipObiect="C" DataField="@procedura" Latime="200" Vizibil="1" Modificabil="1" Prompt="Procedura"/>
+<form Meniu="FM" Subtip="" Ordine="7" Nume="Sablon" TipObiect="IN" DataField="@sablon" Latime="400" Vizibil="1" Modificabil="1" Prompt="Sablon"/>
+<form Meniu="FM" Subtip="" Ordine="8" Nume="Tip" TipObiect="C" DataField="@tip" Latime="50" Vizibil="0" Modificabil="1" Prompt="Tip"/>
+<form Meniu="FM" Tip="" Subtip="" Ordine="4" Nume="Cale formular" TipObiect="AC" DataField="@cale_raport" LabelField="@dencale_raport" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="wACCaleFormular" ListaValori=" " ListaEtichete="" Initializare=" " Prompt="Selectati/Introduceti calea formularului" formula=""/>
+<form Meniu="FM" Tip=" " Subtip=" " Ordine="6" Nume="Cu sablon" TipObiect="CHB" DataField="@exml" LabelField=" " Latime="200" Vizibil="1" Modificabil="1" Prompt=" "/>
+</formuri>
+<filtre>
+<filtre Meniu="FM" Tip="FM" Ordine="1" Vizibil="1" Descriere="Nume formular" Prompt1="Denumire" DataField1="@denFormular" Interval="0"/>
+<filtre Meniu="FM" Tip="FM" Ordine="2" Vizibil="1" Descriere="Nume sablon" Prompt1="Fisier" DataField1="@fisier" Interval="0"/>
+<filtre Meniu="FM" Tip="FM" Ordine="3" Vizibil="1" Descriere="Procedura" Prompt1="Procedura formular" DataField1="@procedura" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="FM" Tip="FM" Ordine="4" Vizibil="1" Descriere="Tip formular" Prompt1="R, P, A" DataField1="@filtru_tip" Interval="0"/>
+<filtre Meniu="FM" Tip="FM" Ordine="5" Vizibil="1" Descriere="Cale" Prompt1="Cale formular" DataField1="@filtru_raport" Interval="0" Prompt2="" DataField2=""/>
+</filtre>
+<griduri>
+<grid Meniu="FM" InPozitii="0" NumeCol="Formular" DataField="@formular" TipObiect="C" Latime="70" Ordine="1" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="FM" InPozitii="0" NumeCol="Denumire" DataField="@denumire" TipObiect="C" Latime="200" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="FM" InPozitii="0" NumeCol="Procedura" DataField="@procedura" TipObiect="C" Latime="100" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="FM" InPozitii="0" NumeCol="Tip" DataField="@tip" TipObiect="C" Latime="50" Ordine="6" Vizibil="0" modificabil="0" formula=""/>
+<grid Meniu="FM" InPozitii="0" NumeCol="E XML" DataField="@exml" TipObiect="C" Latime="50" Ordine="7" Vizibil="0" modificabil="0" formula=""/>
+<grid Meniu="FM" Tip="" Subtip="" InPozitii="0" NumeCol="Tip formular" DataField="@tipformular" TipObiect="C" Latime="80" Ordine="3" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="FM" Tip="" Subtip="" InPozitii="0" NumeCol="Cale formular" DataField="@cale_raport" TipObiect="C" Latime="150" Ordine="5" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="FM" Tip="" Subtip="" InPozitii="0" NumeCol="Sablon" DataField="@sablon" TipObiect="C" Latime="270" Ordine="8" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="FM" Tip="UF" Subtip="" Ordine="1" Nume="Configurare asocieri" ProcDate="wIaAsociereFormulare" ProcScriere="wScriuAsociereFormulare" ProcStergere="wStergAsociereFormulare" Vizibil="1" Fel=" " tasta=" " sursa="webConfigTipuri">
+<formuri>
+<form Meniu="FM" Tip="UF" Subtip="" Ordine="1" Nume="Meniu" TipObiect="AC" DataField="@meniu" LabelField="@denmeniu" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACMeniuri" ListaValori="" ListaEtichete="" Initializare="" Prompt="Meniu" Procesare="" Tooltip=""/>
+<form Meniu="FM" Tip="UF" Subtip="" Ordine="2" Nume="Tip document" TipObiect="AC" DataField="@tipDoc" LabelField="@dentip" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACTipuriDocument" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tip" Procesare="" Tooltip=""/>
+</formuri>
+<griduri>
+<grid Meniu="FM" Tip="UF" Subtip="" InPozitii="0" NumeCol="Meniu" DataField="@denmeniu" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="FM" Tip="UF" Subtip="" InPozitii="0" NumeCol="Tip document" DataField="@dentip" TipObiect="C" Latime="100" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="FM" Tip="UF" Subtip="" InPozitii="0" NumeCol="Cod formular" DataField="@formular" TipObiect="C" Latime="100" Ordine="3" Vizibil="0" formula=""/>
+<grid Meniu="FM" Tip="UF" Subtip="" InPozitii="0" NumeCol="Formular" DataField="@denformular" TipObiect="C" Latime="100" Ordine="4" Vizibil="0" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="FM" Tip="FM" Subtip="EX" Ordine="1" Nume="Export sablon" Descriere="" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="wDownloadSablonFormular" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="O" procPopulare="wDownloadSablonFormular_p" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="FM" Tip="FM" Subtip="EX" Ordine="1" Nume="Fisier" TipObiect="C" DataField="@fisier" LabelField="" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+</formuri>
+</tipuri>
+</machete>
+

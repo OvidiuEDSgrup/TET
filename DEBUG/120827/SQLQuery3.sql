@@ -1,0 +1,1 @@
+(@sesiune as varchar(max), @parXML as xml, @numeTabelTemp as varchar(1000) output, @maxrand as int output)exec formularFacturaPV @sesiune=@sesiune, @parXML=@parXML, @numeTabelTemp=@numeTabelTemp output

@@ -1,0 +1,1 @@
+select * from sys.dm_exec_sessions s where s.session_id in (64,66n)

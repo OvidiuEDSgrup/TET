@@ -1,0 +1,1 @@
+sp_helptext valoare_minima

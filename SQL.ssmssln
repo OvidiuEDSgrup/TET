@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "IMPL", "IMPL\IMPL.ssmssqlproj", "{31315EFE-B9E0-44DB-86F4-C92B2A63433E}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "OBIECTE", "OBIECTE\OBIECTE.ssmssqlproj", "{91F35E54-8928-4C41-8C29-B555E8FEECD9}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "CODSURSA", "CODSURSA\CODSURSA.ssmssqlproj", "{4B3BF484-0768-4B11-9D8B-0BD8F8303BB0}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "FRAME", "FRAME\FRAME.ssmssqlproj", "{087C85DD-EFF1-4BCA-88BC-6F2B25552D08}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "RAPOARTE", "RAPOARTE\RAPOARTE.ssmssqlproj", "{1D6044E5-C196-495C-A831-2823CFB50688}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DEBUG", "DEBUG\DEBUG.ssmssqlproj", "{90FAF567-8CD3-48AE-B82A-E63BBF2D48C6}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "IMPORT", "IMPORT\IMPORT.ssmssqlproj", "{BA39C8AC-DBE5-42F1-B40A-2E5DF3D07622}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31315EFE-B9E0-44DB-86F4-C92B2A63433E}.Default|Default.ActiveCfg = Default
+		{91F35E54-8928-4C41-8C29-B555E8FEECD9}.Default|Default.ActiveCfg = Default
+		{4B3BF484-0768-4B11-9D8B-0BD8F8303BB0}.Default|Default.ActiveCfg = Default
+		{087C85DD-EFF1-4BCA-88BC-6F2B25552D08}.Default|Default.ActiveCfg = Default
+		{1D6044E5-C196-495C-A831-2823CFB50688}.Default|Default.ActiveCfg = Default
+		{90FAF567-8CD3-48AE-B82A-E63BBF2D48C6}.Default|Default.ActiveCfg = Default
+		{00000000-0000-0000-0000-000000000000}.Default|Default.ActiveCfg = Default
+		{BA39C8AC-DBE5-42F1-B40A-2E5DF3D07622}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

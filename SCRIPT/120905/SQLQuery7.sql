@@ -1,0 +1,1 @@
+select * from preturi p where p.Cod_produs='1'

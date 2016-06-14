@@ -1,0 +1,1 @@
+select * from webConfigSTDMeniu m where m.id=985

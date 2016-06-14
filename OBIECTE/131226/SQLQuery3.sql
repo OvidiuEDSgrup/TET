@@ -1,0 +1,151 @@
+
+if exists (select 1 from webconfigmeniu where meniu='D_CL') begin raiserror('Acest meniu este configurat deja! Daca doriti, stergeti manual linia din webConfigMeniu',11,1) return end
+--delete from webconfigmeniu where tipMacheta='D' and meniu='D_CL'
+delete from webconfigfiltre where meniu='D_CL' and (''='' or isnull(tip,'')='')
+delete from webconfiggrid where meniu='D_CL' and (''='' or isnull(tip,'')='') and (''='' or isnull(subtip,'')='')
+delete from webconfigtipuri where meniu='D_CL' and (''='' or isnull(tip,'')='') and (''='' or isnull(subtip,'')='')
+delete from webconfigform where meniu='D_CL' and (''='' or isnull(tip,'')='') and (''='' or isnull(subtip,'')='')
+delete from webConfigTaburi where MeniuSursa='D_CL' and (''='' or isnull(TipSursa,'')='')
+
+insert into webconfigmeniu --(id,Nume,idParinte,Icoana,TipMacheta,Meniu,Modul)
+				(Meniu, Nume, MeniuParinte, Icoana, TipMacheta, NrOrdine, Componenta, Semnatura, Detalii, vizibil)
+select top 0 null,null,null,null,null,null,null,null,null,null
+union all select 'D_CL','Comenzi livrare','CONTRACTE','Comenzi livrare','D',1052.00,'','','<row><vechi><row id="1052" nume="Comenzi livrare" idparinte="1050" icoana="Comenzi livrare" tipmacheta="D" meniu="CL" modul="UC" publicabil="1"/></vechi></row>',1
+
+insert into webconfiggrid (Meniu, Tip, Subtip, InPozitii, NumeCol, DataField, TipObiect, Latime, Ordine, Vizibil, Modificabil, Formula) 
+select top 0 null,null,null,null,null,null,null,null,null,null,null,null
+union all select 'D_CL','CL','','1','Cantitate','@cantitate','N','50','5','1','0',''
+union all select 'D_CL','CL','','1','Cod','@cod','C','100','2','1','0',''
+union all select 'D_CL','CL',' ','1','Cod specific','@codspecific','C','100','1','0','0',''
+union all select 'D_CL','CL','','1','Cota tva','@cotatva','N','50','8','1','0',''
+union all select 'D_CL','CL','','0','Curs','@curs','N','30','13','0','0',''
+union all select 'D_CL','CL',' ','0','Data','@data','D','80','2','1','0',''
+union all select 'D_CL','CL','','0','Denumire gestiune','@dengestiune','C','80','7','1','0',''
+union all select 'D_CL','CL','','0','Denumire gest.prim.','@dengestiune_primitoare','C','80','9','0','0',''
+union all select 'D_CL','CL','','0','Denumire loc de munca','@denlm','C','80','11','0','0',''
+union all select 'D_CL','CL','','1','Periodicitate','@denperiodicitate','C','100','10','0','0',''
+union all select 'D_CL','CL','','0','Stare','@denstare','C','50','17','1','0',''
+union all select 'D_CL','CL','','0','Denumire tert','@dentert','C','150','4','1','0',''
+union all select 'D_CL','CL','','1','Denumire','@denumire','C','200','3','1','0',''
+union all select 'D_CL','CL','','1','Discount','@discount','N','50','9','1','0',''
+union all select 'D_CL','CL','','1','Explicatii','@explicatii','C','150','11','0','0',''
+union all select 'D_CL','CL','','0','Gestiune','@gestiune','C','30','6','0','0',''
+union all select 'D_CL','CL','','0','Gestiune primitoare','@gestiune_primitoare','C','30','8','0','0',''
+union all select 'D_CL','CL','','0','Loc de munca','@lm','C','30','10','0','0',''
+union all select 'D_CL','CL','','0','Numar','@numar','C','100','1','1','0',''
+union all select 'D_CL','CL','','0','Pozitii','@pozitii','N','30','18','1','0',''
+union all select 'D_CL','CL','','1','Pret','@pret','N','50','7','1','0',''
+union all select 'D_CL','CL','','0','Punct livrare','@punct_livrare','C','50','5','0','0',''
+union all select 'D_CL','CL','','0','Stare','@stare','C','50','16','0','0',''
+union all select 'D_CL','CL','','1','Termen','@termen','D','100','4','0','0',''
+union all select 'D_CL','CL','','0','Tert','@tert','C','50','3','0','0',''
+union all select 'D_CL','CL','','1','UM','@um','C','30','6','1','0',''
+union all select 'D_CL','CL','','0','Valabilitate','@valabilitate','D','80','14','0','0',''
+union all select 'D_CL','CL','','0','Valoare','@valoare','N','50','15','1','0',''
+union all select 'D_CL','CL','','0','Valuta','@valuta','C','30','12','0','0',''
+union all select 'D_CL','CL','GF','1','Cantitate','@cantitate','N','80','3','1','0',''
+union all select 'D_CL','CL','GF','1','Cod','@cod','C','70','1','1','0',''
+union all select 'D_CL','CL','GF','1','De facturat','@defacturat','N','100','7','1','1',''
+union all select 'D_CL','CL','GF','1','Denumire','@denumire','C','200','2','1','0',''
+union all select 'D_CL','CL','GF','1','Facturat','@facturat','N','80','6','1','0',''
+union all select 'D_CL','CL','GF','1','Rezervat','@rezervat','N','80','5','1','0',''
+union all select 'D_CL','CL','GF','1','Stoc in gest.','@stoc','N','80','4','1','0',''
+union all select 'D_CL','CL','GR','1','Cantitate','@cantitate','N','100','3','1','0',''
+union all select 'D_CL','CL','GR','1','Cod','@cod','C','100','1','1','0',''
+union all select 'D_CL','CL','GR','1','Denumire','@denumire','C','250','2','1','0',''
+union all select 'D_CL','CL','GR','1','De rezervat','@derezervat','N','100','6','1','1',''
+union all select 'D_CL','CL','GR','1','Rezervat','@rezervat','N','100','5','1','0',''
+union all select 'D_CL','CL','GR','1','Stoc in gest.','@stoc','N','100','4','1','0',''
+union all select 'D_CL','CL','GT','1','Cantitate','@cantitate','N','100','4','1','0',''
+union all select 'D_CL','CL','GT','1','Cod','@cod','C','120','1','1','0',''
+union all select 'D_CL','CL','GT','1','Denumire','@denumire','C','200','2','1','0',''
+union all select 'D_CL','CL','GT','1','De transferat','@detransferat','N','100','5','1','1',''
+union all select 'D_CL','CL','GT','1','Stoc','@stoc','N','100','3','1','0',''
+
+insert into webconfigFiltre (Meniu, Tip, Ordine, Vizibil, TipObiect, Descriere, Prompt1, DataField1, Interval, Prompt2, DataField2) 
+select top 0 null,null,null,null,null,null,null,null,null,null,null
+union all select 'D_CL','CL','3','0','','Denumire gest.','Denumire gestiune','@f_dengestiune','0','',''
+union all select 'D_CL','CL','5','0','','Denumire gest.prim.','Denumire gest. prim.','@f_dengestiune_primitoare','0','',''
+union all select 'D_CL','CL','9','0','','Denumire loc de munca','Denumire loc munca','@f_denlm','0','',''
+union all select 'D_CL','CL','6','1','','Denumire tert','Denumire tert','@f_dentert','0','',''
+union all select 'D_CL','CL','2','1','','Gestiune','Gestiune','@f_gestiune','0','',''
+union all select 'D_CL','CL','4','0','','Gestiune primitoare','Gestiune primitoare','@f_gestiune_primitoare','0','',''
+union all select 'D_CL','CL','8','0','','Loc de munca','Loc de munca','@f_lm','0','',''
+union all select 'D_CL','CL','1','1','','Numar','Numar comanda','@f_numar','0','',''
+union all select 'D_CL','CL','10','1','','Stare','Stare contract','@f_stare','0','',''
+
+insert into webconfigTipuri (Meniu, Tip, Subtip, Ordine, Nume, Descriere, TextAdaugare, TextModificare, ProcDate, ProcScriere, ProcStergere, ProcDatePoz, ProcScrierePoz, ProcStergerePoz, Vizibil, Fel, procPopulare,tasta) 
+select top 0 null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+union all select 'D_CL','CL','','1','Comenzi livrare','','','','wIaContracte','','wStergContracte','wIaPozContracte','wScriuPozContracte','wStergPozContracte','1',' ','',''
+union all select 'D_CL','CL','CL','8','Pozitie comanda','','','',' ','',' ',' ',' ',' ','1',' ','',''
+union all select 'D_CL','CL','DC','1','Definitivare comanda','Operatia va trece comanda in starea "Definitiva" care nu va mai permite modificari asupra comenzii in conditiile in care comanda se afla in starea "Operat"','','',' ','wOPDefinitivareContract','','','','','1','O','',''
+union all select 'D_CL','CL','GF','3','Generare factura','Operatia genereaza o factura cu pozitiile aferente si cantitatile modificabile din coloana "De facturat". Stocurile se vor descarca in urmatoarea ordine: daca exista rezervari pe comanda se va descarca gestiunea de rezervari, urmand ca diferentele (daca exista) sa fie descarcate din gestiunea comenzii.','','','','wOPGenerareFactura','','','','','1','O','wOPGenerareFactura_p',''
+union all select 'D_CL','CL','GR','2','Generare rezervare','Operatia genereaza un transfer catre gestiunea de rezervari setata, luand in calcul coloana modificabila "de rezervat". Rezervarile vor fi vizibile in tab-ul de Rezervari de pe comanda.','','','','wOPGenerareRezervare','','','','','1','O','wOPGenerareRezervare_p',''
+union all select 'D_CL','CL','GT','4','Generare transfer','Operatia realizeaza transferul articolelor din comanda selectata folosind ca gestiune sursa gestiunea indica in comanda, iar gestiunea primitoare ca si "destinatie".','','','','wOPGenerareTransfer','','','','','1','O','wOPGenerareTransfer_p',''
+union all select 'D_CL','CL','LS','6','Formular comanda','Opereaza genera un formular aferent comenzii selectate.','','','','wOPGenerareFormularComanda','','','','','1','O','',''
+union all select 'D_CL','CL','MA','5','Modificare comanda','Operatia permite modificarea datelor de antet a comenzii. Atentie, aceste modificari dau efect direct si sunt jurnalizate!','','','','wOPModificareContract','','','','','1','O','',''
+
+insert into webconfigForm (Meniu, Tip, Subtip, Ordine, Nume, TipObiect, DataField, LabelField, Latime, Vizibil, Modificabil, ProcSQL, ListaValori, ListaEtichete, Initializare, Prompt, Procesare, Tooltip, formula)
+select top 0 null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+union all select 'D_CL','CL','','10','Curs','N','@curs','','50','0','1','','','','','','','',''
+union all select 'D_CL','CL','','2','Data','D','@data',' ','100','1','1','','','','','','','',''
+union all select 'D_CL','CL','','12','Responsabil','C','@detalii_responsabil','','150','1','1','','','','','Persoana','','',''
+union all select 'D_CL','CL','','11','Explicatii','T','@explicatii','','200','1','1','','','','','','','',''
+union all select 'D_CL','CL','','3','Gestiune','AC','@gestiune','@dengestiune','200','1','1','wACGestiuni','','','','Gestiune','','',''
+union all select 'D_CL','CL','','8','Gestiune primitoare','AC','@gestiune_primitoare','@dengestiune_primitoare','200','1','1','wACGestiuni','','','','Gestiune primitoare','','',''
+union all select 'D_CL','CL','','20','Contract','AC','@idContractCorespondent','@denidContractCorespondent','250','1','1','wACContracteBeneficiar','','','','Contractul corespondent...','','',''
+union all select 'D_CL','CL','','7','Loc de munca','AC','@lm','@denlm','200','1','1','wACLocm','','','','Loc de munca','','',''
+union all select 'D_CL','CL','','1','Numar','C','@numar',' ','100','1','1','','','','','','','',''
+union all select 'D_CL','CL','','5','Punct livrare','AC','@punct_livrare','@denpunct_livrare','200','1','1','wACPuncteLivrare','','','','Punct livrare','','',''
+union all select 'D_CL','CL','','4','Tert','AC','@tert','@dentert','200','1','1','wACTerti','','','','Tert','','',''
+union all select 'D_CL','CL','','6','Valabilitate','D','@valabilitate',' ','100','0','1','','','','','','','',''
+union all select 'D_CL','CL','','9','Valuta','AC','@valuta','@denvaluta','200','0','1','wACValuta','','','','Valuta','','',''
+union all select 'D_CL','CL','CL','2','Cantitate','N','@cantitate',' ','50','1','1','','','','','','','',''
+union all select 'D_CL','CL','CL','1','Cod','AC','@cod','@dencod','350','1','1','wACNomenclator','','','','Articol','','',''
+union all select 'D_CL','CL','CL','1','Cod specific','AC','@codspecific','@dencodspecific','200','0','1','wACNomSpecif','','','','Articol specific','','',''
+union all select 'D_CL','CL','CL','4','Discount','N','@discount',' ','50','1','1','','','','','','','',''
+union all select 'D_CL','CL','CL','7','Explicatii','C','@explicatii','','200','0','1','','','','','','','',''
+union all select 'D_CL','CL','CL','6','Periodicitate','CB','@periodicitate','','120','0','1','','0,1,2,3,4,6,12','Fara periodicitate,Lunar,2 luni,Trimestrial,4 luni,Semestrial,Anual','0','','','',''
+union all select 'D_CL','CL','CL','3','Pret','N','@pret',' ','50','1','1','','','','','','','',''
+union all select 'D_CL','CL','CL','5','Termen','D','@termen',' ','100','0','1','','','','','','','',''
+union all select 'D_CL','CL','DC','1','Numar','C','@numar','','100','1','0','','','','','','','',''
+union all select 'D_CL','CL','GF','3','Aviz nefacturat','CHB','@aviznefacturat','','200','1','1','','','','','','','',''
+union all select 'D_CL','CL','GF','1','Data factura','D','@data','','200','1','1','','','','','','','',''
+union all select 'D_CL','CL','GF','17','Eliberat','C','@eliberat','','200','1','1','','','','','','','',''
+union all select 'D_CL','CL','GF','13','Mijloc transp.','C','@mijloctransport','','200','1','1','','','','','','','',''
+union all select 'D_CL','CL','GF','14','Numar mij.transp.','C','@nrmijloctransport','','200','1','1','','','','','','','',''
+union all select 'D_CL','CL','GF','16','Numar buletin','C','@numarbuletin','','100','1','1','','','','','','','',''
+union all select 'D_CL','CL','GF','12','Delegat','C','@numedelegat','','200','1','1','','','','','','','',''
+union all select 'D_CL','CL','GF','8','Observatii','C','@observatii','','200','1','1','','','','','','','',''
+union all select 'D_CL','CL','GF','15','Seria buletin','C','@seriabuletin','','100','1','1','','','','','','','',''
+union all select 'D_CL','CL','GR','1','Data','D','@data','','200','1','1','','','','','','','',''
+union all select 'D_CL','CL','GR','4','Gestiune','C','@dengestiune','','100','1','0','','','','','','','',''
+union all select 'D_CL','CL','GR','2','Beneficiar','C','@dentert','','200','1','0','','','','','','','',''
+union all select 'D_CL','CL','GR','5','Gestiune rezervari','C','@gestiunerezervari','','100','1','0','','','','','','','',''
+union all select 'D_CL','CL','GR','3','Comanda','C','@numar','','100','1','0','','','','','','','',''
+union all select 'D_CL','CL','GT','1','Data transfer','D','@data','','200','1','1','','','','','','','',''
+union all select 'D_CL','CL','GT','4','Explicatii','T','@explicatii','','200','1','1','','','','','','','',''
+union all select 'D_CL','CL','GT','2','Gestiune','AC','@gestiune','@dengestiune','200','1','0','wACGestiuni','','','','','','',''
+union all select 'D_CL','CL','GT','3','Gest. primitoare','AC','@gestiune_primitoare','@dengestiune_primitoare','200','1','0','wACGestiuni','','','','','','',''
+union all select 'D_CL','CL','LS','1','Data listare','D','@data','','200','1','0','','','','','','','',''
+union all select 'D_CL','CL','MA','9','Curs','N','@curs','','50','1','1','','','','','','','',''
+union all select 'D_CL','CL','MA','2','Data','D','@data','','200','1','1','','','','','','','',''
+union all select 'D_CL','CL','MA','11','Responsabil','C','@detalii_responsabil','','150','1','1','','','','','Resp.','','',''
+union all select 'D_CL','CL','MA','10','Explicatii','T','@explicatii','','200','1','1','','35','',' ','','','',''
+union all select 'D_CL','CL','MA','6','Gestiune','AC','@gestiune','@dengestiune','200','1','1','wACGestiuni','','','','Gestiune','','',''
+union all select 'D_CL','CL','MA','7','Gestiune primitoare','AC','@gestiune_primitoare','@dengestiune_primitoare','200','1','1','wACGestiuni','','','','Gestiune primitoare','','',''
+union all select 'D_CL','CL','MA','5','Loc munca','AC','@lm','@denlm','200','1','1','wACLocm','','','','Loc munca','','',''
+union all select 'D_CL','CL','MA','1','Contract','C','@numar','','200','1','0','','','','','','','',''
+union all select 'D_CL','CL','MA','4','Punct livrare','AC','@punct_livrare','@denpunct_livrare','200','1','1','wACPuncteLivrare','','','','Punct livrare','','',''
+union all select 'D_CL','CL','MA','3','Tert','AC','@tert','@dentert','200','1','1','wACTerti','','','','Tert','','',''
+union all select 'D_CL','CL','MA','8','Valuta','AC','@valuta','@denvaluta','200','1','1','wACValuta','','','','Valuta','','',''
+
+insert into webconfigtaburi (MeniuSursa,TipSursa,NumeTab,icoana,TipMachetaNoua,MeniuNou,TipNou,ProcPopulare,Ordine,Vizibil)
+select top 0 null,null,null,null,null,null,null,null,null,null
+union all select 'D_CL','CL','Comanda','','PozDoc','D_CL','CL','','1','1'
+union all select 'D_CL','CL','Documente comanda','','C','RA','RA','','3','1'
+union all select 'D_CL','CL','Fisiere comanda','','C','FF','FF','','4','1'
+union all select 'D_CL','CL','Jurnal comanda','','D','JB','JB','','2','1'
+union all select 'D_CL','CL','Transport','','C','TT','TT','','5','1'
+GO
+--Tab: Fisiere comanda ---- C ,FF, FF

@@ -1,0 +1,1 @@
+select Val_logica from par where parametru='MULTICDBK' 

@@ -1,0 +1,16 @@
+<machete>
+<tipuri Meniu="T" Tip="PO" Subtip="" Ordine="10" Nume="Proprietati" Descriere="" TextAdaugare="" TextModificare="" ProcDate="wIaProprietatiTerti" ProcScriere="wScriuProprietatiTerti" ProcStergere="wStergProprietatiTerti" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" procPopulare="" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="T" Tip="PO" Subtip="" Ordine="1" Nume="Proprietate" TipObiect="AC" DataField="@codproprietate" LabelField="@denproprietate" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACProprietati" ListaValori="" ListaEtichete="" Initializare="" Prompt="Selectati o proprietate" formula=""/>
+<form Meniu="T" Tip="PO" Subtip="" Ordine="2" Nume="Descriere" TipObiect="AC" DataField="@valoare" LabelField="@denumire" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACValoriProprietati" ListaValori="" ListaEtichete="" Initializare="" Prompt="Selectati o valoare" formula=""/>
+<form Meniu="T" Tip="PO" Subtip="" Ordine="3" Nume="Valoare" TipObiect="C" DataField="@valoare_tupla" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+</formuri>
+<griduri>
+<grid Meniu="T" Tip="PO" Subtip="" InPozitii="0" NumeCol="Cod" DataField="@codtert" TipObiect="C" Latime="50" Ordine="1" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PO" Subtip="" InPozitii="0" NumeCol="Proprietate" DataField="@denproprietate" TipObiect="C" Latime="100" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PO" Subtip="" InPozitii="0" NumeCol="Descriere" DataField="@denumire" TipObiect="C" Latime="100" Ordine="3" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PO" Subtip="" InPozitii="0" NumeCol="Valoare" DataField="@valoare_tupla" TipObiect="C" Latime="100" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+</tipuri>
+</machete>
+

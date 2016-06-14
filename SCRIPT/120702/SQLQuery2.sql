@@ -1,0 +1,1 @@
+select * from webConfigSTDForm f where f.TipMacheta='D' AND f.Meniu='DO' and f.Tip='TE' and f.Subtip='MA'

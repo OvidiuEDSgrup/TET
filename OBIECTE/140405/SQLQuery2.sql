@@ -1,0 +1,1 @@
+select * from syssWebConfigTipuri t --where t.Meniu='AD'

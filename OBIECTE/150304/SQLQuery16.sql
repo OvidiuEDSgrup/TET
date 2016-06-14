@@ -1,0 +1,6 @@
+begin tran
+declare @p2 xml
+set @p2=convert(xml,N'<row subunitate="1" tip="BK" numar="GL981884" data="03/04/2015" explicatii="" termen="03/04/2015" dengestiune="GL SHOWROOM  GALATI" gestiune="211.GL" dentert="DAMBU MARIAN" factura="" tert="1750629090094" contractcor="" punctlivrare="" denpunctlivrare="" denlm="GALATI1" lm="1VZ_GL_01" dengestprim="" gestprim="" valuta="" curs="0.0000" valoare="80.00" valtva="19.20" valtotala="99.20" scadenta="0" contclient="" procpen="0" contr_cadru="" ext_camp4="" ext_camp5="01/01/1901" ext_modificari="" ext_clauze="" valabilitate="01/01/1901" pozitii="1" discount="0.0000000e+000" comspec="0" operat="03/04/2015" stare="0" categpret="1" dencategpret="Lista unica-Pret catalog  RON (1)" denstare="0-Operat" info1="" info2="0.00" info3="0.000000000000000e+000" info4="0.0000000e+000" info5="10.00" info6="" culoare="#000000" _nemodificabil="0"><row cod="560G1/01/0" denumire="Cot alama NTM 1&quot; FI-FI" codfarastoc="0" cantitate="2" pret="0" discount="" explicatii="" subtip="BK"/></row>')
+exec wScriuPozCon @sesiune='24EA86F2F0C53',@parXML=@p2
+select * from pozcon p where p.Contract like 'GL981884'
+rollback tran

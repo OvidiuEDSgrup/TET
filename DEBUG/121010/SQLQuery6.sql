@@ -1,0 +1,1 @@
+select * from stocuri s where s.Cod='EFC-T12'

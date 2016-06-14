@@ -1,0 +1,1 @@
+select * from webconfigform f where f.TipObiect='AC' and isnull(f.LabelField,'')='' and f.Vizibil=1

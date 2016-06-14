@@ -1,0 +1,1 @@
+SELECT * FROM par P where p.Val_alfanumerica like '%418%'

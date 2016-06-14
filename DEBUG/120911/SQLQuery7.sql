@@ -1,0 +1,1 @@
+select * from stocuri s where s.cod_gestiune='211' and s.cod='02001014'

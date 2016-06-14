@@ -1,0 +1,1 @@
+SELECT * FROM pozdoc P where p.Tert='538352394' and p.Data between '2012-10-01' and '2012-10-30'

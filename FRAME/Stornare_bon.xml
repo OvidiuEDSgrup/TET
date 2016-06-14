@@ -1,0 +1,19 @@
+<machete>
+<tipuri Meniu="BO" Tip="BC" Subtip="SB" Ordine="4" Nume="Stornare bon" Descriere="Operatia realizeaza stornarea pozitiilor de pe bon generand o factura storno, o plata diverse si listeaza formularul de factura si plata. Campul cantitate storno este editabil si se completeaza cu valoarea zero daca nu se doreste stornarea pozitiei sau cu valori negative care sa nu depaseasca cantitatea de pe pozitia respectiva." ProcScriere="wOPStornareBon" Vizibil="1" Fel="O" procPopulare="wOPStornareBon_p" tasta=" " sursa="webConfigTipuri">
+<formuri>
+<form Meniu="BO" Tip="BC" Subtip="SB" Ordine="1" Nume="Tert" TipObiect="AC" DataField="@tert_storno" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACTerti" Prompt="Tert factura"/>
+<form Meniu="BO" Tip="BC" Subtip="SB" Ordine="2" Nume="Gestiune" TipObiect="AC" DataField="@gestiune_storno" LabelField="@dengestiune_storno" Latime="200" Vizibil="1" Modificabil="0" ProcSQL="wACGestiuni"/>
+<form Meniu="BO" Tip="BC" Subtip="SB" Ordine="3" Nume="Loc de munca" TipObiect="AC" DataField="@lm_storno" LabelField="@denlm_storno" Latime="200" Vizibil="1" Modificabil="0" ProcSQL="wACLocm"/>
+<form Meniu="BO" Tip="BC" Subtip="SB" Ordine="4" Nume="Data" TipObiect="D" DataField="@data_storno" Latime="200" Vizibil="1" Modificabil="0"/>
+</formuri>
+<griduri>
+<grid Meniu="BO" Tip="BC" Subtip="SB" InPozitii="1" NumeCol="Cod" DataField="@cod_produs" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="BO" Tip="BC" Subtip="SB" InPozitii="1" NumeCol="Denumire" DataField="@denumire" TipObiect="C" Latime="300" Ordine="2" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="BO" Tip="BC" Subtip="SB" InPozitii="1" NumeCol="Gestiune" DataField="@gestiune" TipObiect="C" Latime="150" Ordine="3" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="BO" Tip="BC" Subtip="SB" InPozitii="1" NumeCol="Cantitate" DataField="@cantitate" TipObiect="N" Latime="100" Ordine="4" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="BO" Tip="BC" Subtip="SB" InPozitii="1" NumeCol="Pret furnizor" DataField="@pret" TipObiect="N" Latime="100" Ordine="5" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="BO" Tip="BC" Subtip="SB" InPozitii="1" NumeCol="Cant. storno" DataField="@cant_storno" TipObiect="N" Latime="100" Ordine="6" Vizibil="1" modificabil="1" formula=" "/>
+</griduri>
+</tipuri>
+</machete>
+

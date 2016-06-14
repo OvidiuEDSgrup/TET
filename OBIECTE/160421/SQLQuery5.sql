@@ -1,0 +1,3 @@
+declare @p2 xml
+set @p2=convert(xml,N'<row numardoc="BH910085" data="04/12/2016" cod="9075030" denumire="SAB-Set picioare ptr MV/MVR, S0157" explicatii="211.BH                                  0000/00/00" cantitate="2.00" tipdocument="Necesar Aprovizionare" gestiune_primitoare="211.BH" gestiune="211.BH" idPozContractCorespondent="541930" idPozContract="-441131" idContractCorespondent="1349" idContract="-63590" valoare="47.73" tipMacheta="D" codMeniu="YSO_FA" tip="FA" TipDetaliere="FA" subtip="GT"/>')
+exec wOPGenerareTransferFundamenteComanda_p @sesiune='35F8B4A64CF64',@parXML=@p2

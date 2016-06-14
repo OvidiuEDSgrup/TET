@@ -1,0 +1,1 @@
+select * from webConfigGrid g where g.Meniu='KO' and g.Tip='BK' and isnull(g.Subtip,'')<>''

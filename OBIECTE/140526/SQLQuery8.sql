@@ -1,0 +1,3 @@
+declare @p2 xml
+set @p2=convert(xml,N'<row tip="BC" numar="2" data="05/23/2014" dengestiune="SB BON FISCAL SIBIU" gestiune="210.SB" dentert="FLOREA ADRIAN" tert="1770924323918" factura="SB940136" data_facturii="05/23/2014" valoare="393.92" tva="76.25" valtotala="393.92" numarpozitii="2" vanzator="FILIALA_SB" casam="5" ora="14:53" idantetbon="5271" culoare="#0000EE" _nemodificabil="1" contract="SB980486" nrdoc="SB50002" tipdoc="AC" datadoc="2014-05-23T00:00:00" _refresh="1"/>')
+exec wIaBonuri @sesiune='E120D71B0FB36',@parXML=@p2

@@ -1,0 +1,1 @@
+exec sp_executesql N'SELECT Subunitate,Tip,Tert,Sold,Sold_valuta,Factura FROM TET ..facturi WHERE Subunitate = @P1 AND Tert = @P2    ORDER BY Subunitate ASC ,Tert ASC ,Tip ASC ',N'@P1 char(9),@P2 char(13)','1        ','RO9175570    '

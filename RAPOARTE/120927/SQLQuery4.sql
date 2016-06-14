@@ -1,0 +1,1 @@
+exec CalculStoc '213', null, '08/31/2012', null, null, '', null

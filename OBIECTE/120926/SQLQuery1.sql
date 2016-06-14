@@ -1,0 +1,1 @@
+select p.Factura,p.Cont_factura,* from pozdoc p where '9430206' in (p.Factura,p.Numar)

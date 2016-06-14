@@ -1,0 +1,1 @@
+SELECT * from anexafac a where a.Numar_factura like '10000017'

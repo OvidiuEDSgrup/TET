@@ -1,0 +1,110 @@
+<machete>
+<meniuri Meniu="BO" Nume="Bonuri" MeniuParinte="VANZARE/FACTURARE" Icoana="Bonuri" TipMacheta="D" NrOrdine="31.00" Componenta="" Semnatura="" vizibil="1" publicabil="1">
+<Detalii>
+<row>
+<vechi>
+<row id="31" nume="Bonuri" idparinte="9" icoana="Bonuri" tipmacheta="D" meniu="BO" modul="0" publicabil="1"/>
+</vechi>
+</row>
+</Detalii>
+</meniuri>
+<tipuri Meniu="BO" Tip="BC" Subtip="" Ordine="1" Nume="Bon casa" Descriere="" TextAdaugare="" TextModificare="" ProcDate="wIaBonuri" ProcScriere="" ProcStergere="" ProcDatePoz="wIaPozBonuri" ProcScrierePoz=" " ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="BO" Tip="BC" Subtip="" Ordine="1" Nume="Numar bon" TipObiect="C" DataField="@numar" LabelField="" Latime="80" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="BO" Tip="BC" Subtip=" " Ordine="2" Nume="Data" TipObiect="D" DataField="@data" LabelField="" Latime="80" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="BO" Tip="BC" Subtip="" Ordine="3" Nume="Casa" TipObiect="N" DataField="@casam" LabelField="" Latime="40" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Nr. casa" Procesare="" Tooltip=""/>
+<form Meniu="BO" Tip="BC" Subtip="" Ordine="4" Nume="Vanzator" TipObiect="C" DataField="@vanzator" LabelField="" Latime="150" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Nume vanzator" Procesare="" Tooltip=""/>
+<form Meniu="BO" Tip="BC" Subtip="" Ordine="5" Nume="Beneficiar" TipObiect="C" DataField="@dentert" LabelField="" Latime="250" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Nume beneficiar" Procesare="" Tooltip=""/>
+<form Meniu="BO" Tip="BC" Subtip="" Ordine="6" Nume="Valoare" TipObiect="N" DataField="@valtotala" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Valoare cu TVA" Procesare="" Tooltip=""/>
+</formuri>
+<filtre>
+<filtre Meniu="BO" Tip="BC" Ordine="1" Vizibil="1" TipObiect="" Descriere="Numar" Prompt1="Numar bon" DataField1="@numar" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="BO" Tip="BC" Ordine="2" Vizibil="0" TipObiect="" Descriere="Data" Prompt1="Data bon" DataField1="@data" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="BO" Tip="BC" Ordine="3" Vizibil="1" TipObiect="" Descriere="Casa" Prompt1="Casa de marcat" DataField1="@f_casam" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="BO" Tip="BC" Ordine="4" Vizibil="0" TipObiect="" Descriere="Benenficiar" Prompt1="Tert" DataField1="@f_dentert" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="BO" Tip="BC" Ordine="5" Vizibil="0" TipObiect="" Descriere="Factura" Prompt1="Numar factura" DataField1="@f_factura" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="BO" Tip="BC" Ordine="6" Vizibil="1" TipObiect="" Descriere="Gestiunea" Prompt1="Cod gestiune" DataField1="@f_gestiune" Interval="0" Prompt2="" DataField2=""/>
+</filtre>
+<griduri>
+<grid Meniu="BO" Tip="BC" InPozitii="0" NumeCol="Ora" DataField="@ora" TipObiect="D" Latime="50" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="BO" Tip="BC" Subtip="" InPozitii="0" NumeCol="Numar bon" DataField="@numar" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BC" Subtip="" InPozitii="0" NumeCol="Data" DataField="@data" TipObiect="D" Latime="80" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BC" Subtip="" InPozitii="0" NumeCol="Valoare" DataField="@valtotala" TipObiect="N" Latime="120" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BC" Subtip="" InPozitii="0" NumeCol="Numar pozitii" DataField="@numarpozitii" TipObiect="N" Latime="100" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BC" Subtip="" InPozitii="0" NumeCol="Gestiune" DataField="@gestiune" TipObiect="C" Latime="80" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BC" Subtip="" InPozitii="0" NumeCol="Denumire gestiune" DataField="@dengestiune" TipObiect="C" Latime="200" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BC" Subtip="" InPozitii="0" NumeCol="Casa de marcat" DataField="@casam" TipObiect="N" Latime="100" Ordine="7" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BC" Subtip="" InPozitii="0" NumeCol="Vanzator" DataField="@vanzator" TipObiect="C" Latime="150" Ordine="8" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BC" Subtip="" InPozitii="0" NumeCol="Beneficiar" DataField="@dentert" TipObiect="C" Latime="250" Ordine="9" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BC" Subtip="" InPozitii="0" NumeCol="Factura" DataField="@factura" TipObiect="C" Latime="100" Ordine="10" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BC" Subtip="" InPozitii="1" NumeCol="Cod" DataField="@cod" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BC" Subtip="" InPozitii="1" NumeCol="Denumire" DataField="@denumire" TipObiect="C" Latime="250" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BC" Subtip="" InPozitii="1" NumeCol="Cantitate" DataField="@cantitate" TipObiect="N" Latime="80" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BC" Subtip="" InPozitii="1" NumeCol="Pret cu TVA" DataField="@pret" TipObiect="N" Latime="80" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BC" Subtip="" InPozitii="1" NumeCol="TVA" DataField="@tva" TipObiect="N" Latime="80" Ordine="5" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="BO" Tip="BY" Subtip="" Ordine="2" Nume="Factura" ProcDate="wIaBonuri" ProcDatePoz="wIaPozBonuri" ProcScrierePoz=" " Vizibil="0" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="BO" Tip="BY" Subtip="" Ordine="1" Nume="Numar factura" TipObiect="C" DataField="@numar" Latime="80" Vizibil="1" Modificabil="1" Prompt="Numar"/>
+<form Meniu="BO" Tip="BY" Subtip="" Ordine="2" Nume="Data" TipObiect="D" DataField="@data" Latime="100" Vizibil="1" Modificabil="1" Prompt="Data facturii"/>
+<form Meniu="BO" Tip="BY" Subtip="" Ordine="3" Nume="Casa" TipObiect="N" DataField="@casam" LabelField=" " Latime="40" Vizibil="1" Modificabil="1"/>
+<form Meniu="BO" Tip="BY" Subtip="" Ordine="5" Nume="Beneficiar" TipObiect="C" DataField="@dentert" Latime="250" Vizibil="1" Modificabil="1" Prompt="Denumire beneficiar"/>
+</formuri>
+<filtre>
+<filtre Meniu="BO" Tip="BY" Ordine="1" Vizibil="1" Descriere="Factura" Prompt1="Numar factura" DataField1="@f_factura" Interval="0"/>
+<filtre Meniu="BO" Tip="BY" Ordine="2" Vizibil="1" Descriere="Benenficiar" Prompt1="Denumire beneficiar" DataField1="@f_dentert" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="BO" Tip="BY" InPozitii="0" NumeCol="Factura" DataField="@factura" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BY" InPozitii="0" NumeCol="Numar bon" DataField="@numar" TipObiect="C" Latime="100" Ordine="1" Vizibil="0" formula=""/>
+<grid Meniu="BO" Tip="BY" InPozitii="0" NumeCol="Data facturii" DataField="@data" TipObiect="D" Latime="100" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BY" InPozitii="0" NumeCol="Valoarea totala" DataField="@valtotala" TipObiect="N" Latime="120" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BY" InPozitii="0" NumeCol="Numar pozitii" DataField="@numarpozitii" TipObiect="N" Latime="100" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BY" InPozitii="0" NumeCol="Casa de marcat" DataField="@casam" TipObiect="N" Latime="80" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BY" InPozitii="0" NumeCol="Vanzator" DataField="@vanzator" TipObiect="C" Latime="150" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BY" InPozitii="0" NumeCol="Beneficiar" DataField="@dentert" TipObiect="C" Latime="250" Ordine="7" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BY" InPozitii="1" NumeCol="Cod" DataField="@cod" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BY" InPozitii="1" NumeCol="Denumire" DataField="@denumire" TipObiect="C" Latime="250" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BY" InPozitii="1" NumeCol="Cantitate" DataField="@cantitate" TipObiect="N" Latime="80" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BY" InPozitii="1" NumeCol="Pret cu TVA" DataField="@pret" TipObiect="N" Latime="80" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="BO" Tip="BY" InPozitii="1" NumeCol="Valoare TVA" DataField="@tva" TipObiect="N" Latime="80" Ordine="5" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="BO" Tip="BC" Subtip="BC" Ordine="1" Nume="Pozitie bon" Descriere="" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="" sursa="webConfigTipuri"/>
+<tipuri Meniu="BO" Tip="BC" Subtip="AF" Ordine="1" Nume="Anulare bon" Descriere="Operatie de anulare bon! Operatia va sterge documente corespunzatoare CG: AC/TE." TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="wOPAnulareBon" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="O" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="BO" Tip="BC" Subtip="AF" Ordine="1" Nume="Numar bon" TipObiect="C" DataField="@numar" LabelField="" Latime="100" Vizibil="1" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="BO" Tip="BC" Subtip="AF" Ordine="2" Nume="Data" TipObiect="D" DataField="@data" LabelField="" Latime="100" Vizibil="1" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="BO" Tip="BC" Subtip="AF" Ordine="3" Nume="Valoare" TipObiect="N" DataField="@valtotala" LabelField="" Latime="80" Vizibil="1" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="BO" Tip="BC" Subtip="AF" Ordine="4" Nume="Vanzator" TipObiect="C" DataField="@vanzator" LabelField="" Latime="150" Vizibil="1" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="BO" Tip="BC" Subtip="AF" Ordine="5" Nume="Beneficiar" TipObiect="C" DataField="@dentert" LabelField="" Latime="250" Vizibil="1" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="BO" Tip="BC" Subtip="AF" Ordine="6" Nume="Anulare bon/factura" TipObiect="CHB" DataField="@anularefact" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Anulare bon/factura" Procesare="" Tooltip=""/>
+</formuri>
+</tipuri>
+<tipuri Meniu="BO" Tip="BC" Subtip="RF" Ordine="2" Nume="Refacere AC/TE" Descriere="Refacere AC/AP si TE din bonuri (bp) pe bonul si gestiunea bonului selectat. Se presupune ca gestiunea data apare si pe AP si pe AC, iar TE automat se face in ambele cazuri." TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="wOPRefacACTE" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="O" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="BO" Tip="BC" Subtip="RF" Ordine="1" Nume="Stergere documente" TipObiect="CHB" DataField="@stergere" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="BO" Tip="BC" Subtip="RF" Ordine="2" Nume="Generare documente" TipObiect="CHB" DataField="@generare" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+</formuri>
+</tipuri>
+<tipuri Meniu="BO" Tip="BC" Subtip="DB" Ordine="3" Nume="Dealocare bon" Descriere="Operatie de stergere date de factura de pe bonul selectat fara a sterge bonul!" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="wOPDealocareBon" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="O" procPopulare="wOPDealocareBon_p" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="BO" Tip="BC" Subtip="DB" Ordine="1" Nume="Bon nr:" TipObiect="C" DataField="@bon" LabelField="" Latime="100" Vizibil="1" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="BO" Tip="BC" Subtip="DB" Ordine="2" Nume="Data bon" TipObiect="D" DataField="@databon" LabelField="" Latime="100" Vizibil="1" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="BO" Tip="BC" Subtip="DB" Ordine="3" Nume="Client" TipObiect="C" DataField="@client" LabelField="" Latime="250" Vizibil="1" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="BO" Tip="BC" Subtip="DB" Ordine="4" Nume="Factura" TipObiect="C" DataField="@factura" LabelField="" Latime="100" Vizibil="1" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="BO" Tip="BC" Subtip="DB" Ordine="5" Nume="Data facturii" TipObiect="D" DataField="@datafacturii" LabelField="" Latime="100" Vizibil="1" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+</formuri>
+</tipuri>
+<tipuri Meniu="BO" Tip="BC" Subtip="SB" Ordine="4" Nume="Stornare bon" Descriere="Operatia realizeaza stornarea bonului selectat generand o factura storno,o plata diverse, si listeaza formularul de factura si plata." ProcScriere="wOPStornareBon" Vizibil="1" Fel="O" procPopulare="wOPStornareBon_p" tasta=" " sursa="webConfigTipuri">
+<formuri>
+<form Meniu="BO" Tip="BC" Subtip="SB" Ordine="1" Nume="Tert" TipObiect="AC" DataField="@tert_storno" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACTerti" Prompt="Tert factura"/>
+<form Meniu="BO" Tip="BC" Subtip="SB" Ordine="2" Nume="Gestiune" TipObiect="AC" DataField="@gestiune_storno" LabelField="@dengestiune_storno" Latime="200" Vizibil="1" Modificabil="0" ProcSQL="wACGestiuni"/>
+<form Meniu="BO" Tip="BC" Subtip="SB" Ordine="3" Nume="Loc de munca" TipObiect="AC" DataField="@lm_storno" LabelField="@denlm_storno" Latime="200" Vizibil="1" Modificabil="0" ProcSQL="wACLocm"/>
+<form Meniu="BO" Tip="BC" Subtip="SB" Ordine="4" Nume="Data" TipObiect="D" DataField="@data_storno" Latime="200" Vizibil="1" Modificabil="0"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="BO" Tip="BY" Subtip="BY" Ordine="1" Nume="Pozitie factura" Vizibil="1" sursa="webConfigTipuri"/>
+</machete>
+

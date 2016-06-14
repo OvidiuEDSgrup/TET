@@ -1,0 +1,1 @@
+select * from pozdoc p where p.Factura='119226'

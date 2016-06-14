@@ -1,0 +1,1 @@
+select * from stocuri s where s.Cod='FM 72268-006        ' and s.Cod_gestiune='700.sv'

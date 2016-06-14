@@ -1,0 +1,1 @@
+SELECT * FROM pozcon where Contract='TEST'

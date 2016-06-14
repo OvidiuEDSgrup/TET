@@ -1,0 +1,1 @@
+select * from antetBonuri a where a.IdAntetBon=1348

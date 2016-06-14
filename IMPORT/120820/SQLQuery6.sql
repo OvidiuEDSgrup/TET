@@ -1,0 +1,1 @@
+exec yso_xScriuNomencl '\\10.0.0.10\import\80_ASIS_import_pachete_20 august_2012_DC.xlsx'

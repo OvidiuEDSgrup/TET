@@ -1,0 +1,246 @@
+<machete>
+<tipuri Meniu="T" Tip="" Subtip="" Nume="Terti" TextAdaugare="Adaugare tert" TextModificare="Modificare tert" ProcDate="wIaTerti" ProcScriere="wScriuTerti" ProcStergere="wStergTerti" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="T" Subtip="" Ordine="1" Nume="Tert" TipObiect="C" DataField="@tert" LabelField="@dentert" Latime="120" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tert" Tooltip="Tert"/>
+<form Meniu="T" Subtip="" Ordine="13" Nume="Nomenclator special" TipObiect="CHB" DataField="@nomspec" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Nomenclator special" Tooltip="Nomenclator special"/>
+<form Meniu="T" Subtip="" Ordine="15" Nume="Strada" TipObiect="C" DataField="@strada" LabelField="" Latime="120" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Strada" Tooltip="Strada"/>
+<form Meniu="T" Subtip="" Ordine="16" Nume="Numar" TipObiect="C" DataField="@numar" LabelField="" Latime="120" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Numar" Tooltip="Numar"/>
+<form Meniu="T" Subtip="" Ordine="17" Nume="Bloc" TipObiect="C" DataField="@bloc" LabelField="" Latime="120" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Bloc" Tooltip="Bloc"/>
+<form Meniu="T" Subtip="" Ordine="18" Nume="Scara" TipObiect="C" DataField="@scara" LabelField="" Latime="120" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Scara" Tooltip="Scara"/>
+<form Meniu="T" Subtip="" Ordine="19" Nume="Apartament" TipObiect="C" DataField="@apartament" LabelField="" Latime="120" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Apartament" Tooltip="Apartament"/>
+<form Meniu="T" Subtip="" Ordine="20" Nume="Cod postal" TipObiect="C" DataField="@codpostal" LabelField="" Latime="120" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cod postal" Tooltip="Cod postal"/>
+<form Meniu="T" Subtip="" Ordine="27" Nume="Discount" TipObiect="N" DataField="@discount" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Discount" Tooltip="Discount"/>
+<form Meniu="T" Subtip="" Ordine="28" Nume="Sold maxim beneficiar" TipObiect="N" DataField="@soldmaxben" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Sold maxim beneficiar" Tooltip="Sold maxim beneficiar"/>
+<form Meniu="T" Subtip="" Ordine="29" Nume="Data tert" TipObiect="D" DataField="@datatert" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Data tert" Tooltip="Data tert"/>
+<form Meniu="T" Subtip="" Ordine="30" Nume="Neplatitor TVA" TipObiect="CHB" DataField="@neplatitortva" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Neplatitor TVA" Tooltip="Neplatitor TVA"/>
+<form Meniu="T" Subtip="" Ordine="30" Nume="Termen livrare" TipObiect="N" DataField="@termenlivrare" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Termen livrare" Tooltip="Termen livrare"/>
+<form Meniu="T" Subtip="" Ordine="32" Nume="Reprezentant" TipObiect="C" DataField="@reprezentant" LabelField="" Latime="120" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Reprezentant" Tooltip="Reprezentant"/>
+<form Meniu="T" Subtip="" Ordine="33" Nume="Functie reprezentant" TipObiect="C" DataField="@functiereprezentant" LabelField="" Latime="120" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Functie reprezentant" Tooltip="Functie reprezentant"/>
+<form Meniu="T" Subtip="" Ordine="36" Nume="Responsabil" TipObiect="AC" DataField="@responsabil" LabelField="@denresponsabil" Latime="200" Vizibil="0" Modificabil="1" ProcSQL="wACSalariati" ListaValori="" ListaEtichete="" Initializare="" Prompt="Responsabil" Tooltip="Responsabil"/>
+<form Meniu="T" Subtip="" Ordine="38" Nume="Info1" TipObiect="CB" DataField="@info1" LabelField="" Latime="120" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="D,N" ListaEtichete="Da,Nu" Initializare="" Prompt="Info 1" Tooltip="Info 1"/>
+<form Meniu="T" Subtip="" Ordine="39" Nume="Info2" TipObiect="N" DataField="@info2" LabelField="" Latime="120" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info 2" Tooltip="Info 2"/>
+<form Meniu="T" Subtip="" Ordine="40" Nume="Info 3" TipObiect="C" DataField="@info3" LabelField="" Latime="120" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info 3" Tooltip="Info 3"/>
+<form Meniu="T" Subtip="" Ordine="42" Nume="Cont ca furnizor" TipObiect="AC" DataField="@contfurn" LabelField="@dencontfurn" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACConturi" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cont ca furnizor" Tooltip="Cont ca furnizor"/>
+<form Meniu="T" Subtip="" Ordine="44" Nume="Cont ca beneficiar" TipObiect="AC" DataField="@contben" LabelField="@dencontben" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACConturi" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cont ca beneficiar" Tooltip="Cont ca beneficiar"/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="1" Nume="Cod fiscal" TipObiect="CF" DataField="@codfiscal" LabelField="" Latime="120" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cod fiscal" Tooltip="Cod fiscal"/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="2" Nume="Denumire" TipObiect="C" DataField="@dentert" Latime="200" Vizibil="1" Modificabil="1" Prompt="Denumire" Tooltip="Denumire"/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="3" Nume="Tip tert" TipObiect="CB" DataField="@tiptert" LabelField="" Latime="150" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="0,1,2" ListaEtichete="Intern,UE,Extern" Initializare="Intern" Prompt="Tip tert" Tooltip="Tip tert"/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="7" Nume="Nr. ord. reg." TipObiect="C" DataField="@nrordreg" LabelField="" Latime="120" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Nr. ord. reg." Tooltip="Nr. ord. reg."/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="7" Nume="Judet" TipObiect="AC" DataField="@judet" LabelField="@denjudet" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACJudete" ListaValori="" ListaEtichete="" Initializare="" Prompt="Judet" Tooltip="Judet"/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="9" Nume="Tara" TipObiect="AC" DataField="@tara" LabelField="@dentara" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACTari" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tara" Tooltip="Tara"/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="11" Nume="Localitate" TipObiect="AC" DataField="@localitate" LabelField="@denlocalitate" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACLocalitati" ListaValori="" ListaEtichete="" Initializare="" Prompt="Localitate" Tooltip="Localitate"/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="14" Nume="Adresa" TipObiect="C" DataField="@adresa" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Adresa" Tooltip="Adresa"/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="21" Nume="Telefon/fax" TipObiect="C" DataField="@telefonfax" LabelField="" Latime="120" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Telefon/fax" Tooltip="Telefon/fax"/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="22" Nume="Email" TipObiect="C" DataField="@email" Latime="200" Vizibil="1" Modificabil="1" Prompt="Email..."/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="23" Nume="Banca" TipObiect="AC" DataField="@banca" LabelField="@denbanca" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACBanci" ListaValori="" ListaEtichete="" Initializare="" Prompt="Banca" Tooltip="Banca"/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="24" Nume="Cont in banca" TipObiect="C" DataField="@continbanca" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cont in banca" Tooltip="Cont in banca"/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="25" Nume="Grupa" TipObiect="AC" DataField="@grupa" LabelField="@dengrupa" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACGterti" ListaValori="" ListaEtichete="" Initializare="" Prompt="Grupa" Tooltip="Grupa"/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="27" Nume="Termen scadenta" TipObiect="N" DataField="@termenscadenta" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Termen scadenta" Tooltip="Termen scadenta"/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="29" Nume="Decontari in valuta" TipObiect="CHB" DataField="@decontarivaluta" LabelField="" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Decontari in valuta" Tooltip="Decontari in valuta"/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="30" Nume="Tip TVA" TipObiect="CB" DataField="@tiptva" Latime="120" Vizibil="1" Modificabil="1" ListaValori="P,N,I" ListaEtichete="Platitor,Neplatitor,La incasare" Initializare="P" Prompt="Tip TVA"/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="34" Nume="Loc de munca" TipObiect="AC" DataField="@lm" LabelField="@denlm" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACLocm" ListaValori="" ListaEtichete="" Initializare="" Prompt="Loc de munca" Tooltip="Loc de munca"/>
+<form Meniu="T" Tip=" " Subtip="" Ordine="46" Nume="Categorie de pret" TipObiect="AC" DataField="@categpret" LabelField="@dencategpret" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACCategPret" ListaValori="" ListaEtichete="" Initializare="" Prompt="Categorie de pret" Tooltip="Categorie de pret"/>
+<form Meniu="T" Tip="" Subtip="" Ordine="100" Nume="Calcul provizioane" TipObiect="CB" DataField="@detalii_provizioane" LabelField="@detalii_denprovizioane" Latime="200" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="D,N,F" ListaEtichete="Da,Nu,Faliment" Initializare="D" Prompt="" formula=""/>
+<form Meniu="T" Tip="" Subtip="" Ordine="101" Nume="Data faliment" TipObiect="D" DataField="@detalii_data_faliment" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+<form Meniu="T" Tip="CB" Subtip="" Ordine="1" Nume="Banca" TipObiect="C" DataField="@banca" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="T" Tip="CB" Subtip="" Ordine="2" Nume="Cont bancar" TipObiect="C" DataField="@cont_in_banca" LabelField="" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="T" Tip="NS" Subtip="" Ordine="1" Nume="Cod" TipObiect="AC" DataField="@cod" LabelField="@dencod" Latime="400" Vizibil="1" Modificabil="1" ProcSQL="wACNomenclator" Prompt="Cod nomenclator"/>
+<form Meniu="T" Tip="NS" Subtip="" Ordine="2" Nume="Cod specific" TipObiect="C" DataField="@codspecific" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="T" Tip="NS" Subtip="" Ordine="3" Nume="Denumire" TipObiect="C" DataField="@denumire" Latime="200" Vizibil="1" Modificabil="1"/>
+<form Meniu="T" Tip="NS" Subtip="" Ordine="4" Nume="Pret" TipObiect="N" DataField="@pret" Latime="80" Vizibil="1" Modificabil="1"/>
+<form Meniu="T" Tip="NS" Subtip="" Ordine="5" Nume="Pret valuta" TipObiect="N" DataField="@pret_valuta" Latime="80" Vizibil="1" Modificabil="1"/>
+<form Meniu="T" Tip="NS" Subtip="" Ordine="6" Nume="Discount" TipObiect="N" DataField="@discount" Latime="80" Vizibil="1" Modificabil="1"/>
+<form Meniu="T" Tip="PC" Subtip="" Ordine="1" Nume="Nume" TipObiect="C" DataField="@nume" Latime="300" Vizibil="1" Modificabil="1"/>
+<form Meniu="T" Tip="PC" Subtip="" Ordine="2" Nume="Prenume" TipObiect="C" DataField="@prenume" Latime="300" Vizibil="1" Modificabil="1"/>
+<form Meniu="T" Tip="PC" Subtip="" Ordine="3" Nume="Serie buletin" TipObiect="C" DataField="@seriebuletin" LabelField="" Latime="150" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+<form Meniu="T" Tip="PC" Subtip="" Ordine="4" Nume="Numar buletin" TipObiect="C" DataField="@numarbuletin" LabelField="" Latime="150" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+<form Meniu="T" Tip="PC" Subtip="" Ordine="5" Nume="Eliberat buletin" TipObiect="C" DataField="@eliberatbuletin" LabelField="" Latime="150" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+<form Meniu="T" Tip="PC" Subtip=" " Ordine="6" Nume="Judet" TipObiect="AC" DataField="@judet" LabelField="@denjudet" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACJudete" ListaValori="" ListaEtichete="" Initializare="" Prompt="Judet" formula=""/>
+<form Meniu="T" Tip="PC" Subtip="" Ordine="7" Nume="Localitate" TipObiect="AC" DataField="@localitate" LabelField="@denlocalitate" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACLocalitati" ListaValori="" ListaEtichete="" Initializare="" Prompt="Localitate" formula=""/>
+<form Meniu="T" Tip="PC" Subtip="" Ordine="8" Nume="Adresa" TipObiect="C" DataField="@info2" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+<form Meniu="T" Tip="PC" Subtip="" Ordine="9" Nume="E-mail" TipObiect="C" DataField="@email" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+<form Meniu="T" Tip="PC" Subtip="" Ordine="10" Nume="Telefon" TipObiect="C" DataField="@telefon" LabelField="" Latime="150" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Telefon" formula=""/>
+<form Meniu="T" Tip="PC" Subtip="" Ordine="11" Nume="Mijloc de transport" TipObiect="C" DataField="@functie" LabelField="" Latime="150" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+<form Meniu="T" Tip="PC" Subtip="" Ordine="12" Nume="Observatii" TipObiect="C" DataField="@info7" LabelField="" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+<form Meniu="T" Tip="PL" Subtip="" Ordine="1" Nume="Cod" TipObiect="C" DataField="@punctlivrare" Latime="100" Vizibil="1" Modificabil="1" Prompt="Cod punct"/>
+<form Meniu="T" Tip="PL" Subtip="" Ordine="2" Nume="Denumire" TipObiect="C" DataField="@denpunctlivrare" Latime="250" Vizibil="1" Modificabil="1" Prompt="Descriere"/>
+<form Meniu="T" Tip="PL" Subtip="" Ordine="3" Nume="Localitate" TipObiect="AC" DataField="@localitate" LabelField="@denlocalitate" Latime="250" Vizibil="1" Modificabil="1" ProcSQL="wACLocalitati" Prompt="Selectati localitatea"/>
+<form Meniu="T" Tip="PL" Subtip="" Ordine="4" Nume="Adresa" TipObiect="C" DataField="@adresa" Latime="300" Vizibil="1" Modificabil="1" Prompt="Adresa"/>
+<form Meniu="T" Tip="PO" Subtip="" Ordine="1" Nume="Proprietate" TipObiect="AC" DataField="@codproprietate" LabelField="@denproprietate" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACProprietati" ListaValori="" ListaEtichete="" Initializare="" Prompt="Selectati o proprietate" formula=""/>
+<form Meniu="T" Tip="PO" Subtip="" Ordine="2" Nume="Descriere" TipObiect="AC" DataField="@valoare" LabelField="@denumire" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACValoriProprietati" ListaValori="" ListaEtichete="" Initializare="" Prompt="Selectati o valoare" formula=""/>
+<form Meniu="T" Tip="PO" Subtip="" Ordine="3" Nume="Valoare" TipObiect="C" DataField="@valoare_tupla" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+<form Meniu="T" Tip="TT" Subtip="" Ordine="1" Nume="De la data" TipObiect="D" DataField="@data_inceput" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="T" Tip="TT" Subtip="" Ordine="2" Nume="Tip plata TVA" TipObiect="CB" DataField="@cod_tip_tva" LabelField="@den_tip_tva" Latime="200" Vizibil="1" Modificabil="1" ListaValori="N,P,I" ListaEtichete="Neplatitor,Platitor,Incasare" Initializare="N"/>
+</formuri>
+<filtre>
+<filtre Meniu="T" Tip="T" Ordine="1" Vizibil="0" Descriere="Cod" Prompt1="Cod tert" DataField1="@tert" Interval="0"/>
+<filtre Meniu="T" Tip="T" Ordine="2" Vizibil="1" Descriere="Denumire" Prompt1="Denumire tert" DataField1="@dentert" Interval="0"/>
+<filtre Meniu="T" Tip="T" Ordine="3" Vizibil="1" Descriere="Cod fiscal" Prompt1="Cod fiscal" DataField1="@codfiscal" Interval="0"/>
+<filtre Meniu="T" Tip="T" Ordine="4" Vizibil="0" Descriere="Grupa" Prompt1="Grupa" DataField1="@grupa" Interval="0"/>
+<filtre Meniu="T" Tip="T" Ordine="5" Vizibil="0" Descriere="Grupa" Prompt1="Denumire grupa" DataField1="@dengrupa" Interval="0"/>
+<filtre Meniu="T" Tip="T" Ordine="6" Vizibil="0" Descriere="Judet" Prompt1="Judet" DataField1="@judet" Interval="0"/>
+<filtre Meniu="T" Tip="T" Ordine="7" Vizibil="0" Descriere="Judet" Prompt1="Denumire judet" DataField1="@denjudet" Interval="0"/>
+<filtre Meniu="T" Tip="T" Ordine="8" Vizibil="0" Descriere="Localitate" Prompt1="Localitate" DataField1="@localitate" Interval="0"/>
+<filtre Meniu="T" Tip="T" Ordine="9" Vizibil="1" Descriere="Localitate" Prompt1="Denumire localitate" DataField1="@denlocalitate" Interval="0"/>
+<filtre Meniu="T" Tip="T" Ordine="10" Vizibil="0" Descriere="Tara" Prompt1="Tara" DataField1="@tara" Interval="0"/>
+<filtre Meniu="T" Tip="T" Ordine="11" Vizibil="0" Descriere="Tara" Prompt1="Denumire tara" DataField1="@dentara" Interval="0"/>
+<filtre Meniu="T" Tip="T" Ordine="12" Vizibil="0" Descriere="Tip" Prompt1="Tip tert" DataField1="@tiptert" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="T" InPozitii="0" NumeCol="Tert" DataField="@tert" TipObiect="C" Latime="120" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Denumire" DataField="@dentert" TipObiect="C" Latime="200" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Tip tert" DataField="@denTiptert" TipObiect="C" Latime="100" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Tip tert" DataField="@tiptert" TipObiect="N" Latime="150" Ordine="3" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Decontari in valuta" DataField="@decontarivaluta" TipObiect="N" Latime="100" Ordine="4" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Tip Tva" DataField="@tiptva" TipObiect="C" Latime="100" Ordine="5" Vizibil="0" modificabil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Cod fiscal" DataField="@codfiscal" TipObiect="C" Latime="100" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Judet" DataField="@judet" TipObiect="C" Latime="200" Ordine="7" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Judet" DataField="@denjudet" TipObiect="C" Latime="120" Ordine="8" Vizibil="1" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Tara" DataField="@tara" TipObiect="C" Latime="200" Ordine="9" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Denumire tara" DataField="@dentara" TipObiect="C" Latime="120" Ordine="10" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Localitate" DataField="@localitate" TipObiect="C" Latime="200" Ordine="11" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Localitate" DataField="@denlocalitate" TipObiect="C" Latime="120" Ordine="12" Vizibil="1" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Nomenclator special" DataField="@nomspec" TipObiect="N" Latime="100" Ordine="13" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Strada" DataField="@strada" TipObiect="C" Latime="120" Ordine="15" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Numar" DataField="@numar" TipObiect="C" Latime="120" Ordine="16" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Bloc" DataField="@bloc" TipObiect="C" Latime="120" Ordine="17" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Scara" DataField="@scara" TipObiect="C" Latime="120" Ordine="18" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Apartament" DataField="@apartament" TipObiect="C" Latime="120" Ordine="19" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Cod postal" DataField="@codpostal" TipObiect="C" Latime="120" Ordine="20" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Telefon/fax" DataField="@telefonfax" TipObiect="C" Latime="120" Ordine="21" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Banca" DataField="@banca" TipObiect="C" Latime="200" Ordine="22" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Denumire banca" DataField="@denbanca" TipObiect="C" Latime="120" Ordine="23" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Cont in banca" DataField="@continbanca" TipObiect="C" Latime="120" Ordine="24" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Grupa" DataField="@grupa" TipObiect="C" Latime="200" Ordine="25" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Grupa" DataField="@dengrupa" TipObiect="C" Latime="120" Ordine="26" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Discount" DataField="@discount" TipObiect="N" Latime="100" Ordine="27" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Sold maxim beneficiar" DataField="@soldmaxben" TipObiect="N" Latime="100" Ordine="28" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Data tert" DataField="@datatert" TipObiect="D" Latime="100" Ordine="29" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Termen livrare" DataField="@termenlivrare" TipObiect="N" Latime="100" Ordine="30" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Termen scadenta" DataField="@termenscadenta" TipObiect="N" Latime="100" Ordine="31" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Reprezentant" DataField="@reprezentant" TipObiect="C" Latime="120" Ordine="32" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Functie reprezentant" DataField="@functiereprezentant" TipObiect="C" Latime="120" Ordine="33" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Loc de munca" DataField="@lm" TipObiect="C" Latime="200" Ordine="34" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Denumire loc de munca" DataField="@denlm" TipObiect="C" Latime="120" Ordine="35" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Responsabil" DataField="@responsabil" TipObiect="C" Latime="200" Ordine="36" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Nume responsabil" DataField="@denresponsabil" TipObiect="C" Latime="120" Ordine="37" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Info 1" DataField="@info1" TipObiect="C" Latime="120" Ordine="38" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Info 2" DataField="@info2" TipObiect="C" Latime="120" Ordine="39" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Info 3" DataField="@info3" TipObiect="C" Latime="120" Ordine="40" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Nr. ord. reg." DataField="@nrordreg" TipObiect="C" Latime="120" Ordine="41" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Cont ca furnizor" DataField="@contfurn" TipObiect="C" Latime="200" Ordine="42" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Denumire cont furnizor" DataField="@dencontfurn" TipObiect="C" Latime="120" Ordine="43" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Cont ca beneficiar" DataField="@contben" TipObiect="C" Latime="200" Ordine="44" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Denumire cont beneficiar" DataField="@dencontben" TipObiect="C" Latime="120" Ordine="45" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Categorie de pret" DataField="@categpret" TipObiect="C" Latime="200" Ordine="46" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Denumire categ. pret" DataField="@dencategpret" TipObiect="C" Latime="120" Ordine="47" Vizibil="0" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Sold ca furnizor" DataField="@soldfurn" TipObiect="N" Latime="100" Ordine="48" Vizibil="1" formula=""/>
+<grid Meniu="T" InPozitii="0" NumeCol="Sold ca beneficiar" DataField="@soldben" TipObiect="N" Latime="100" Ordine="49" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip=" " InPozitii="0" NumeCol="Adresa" DataField="@adresa" TipObiect="C" Latime="120" Ordine="14" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="CB" Subtip="" InPozitii="0" NumeCol="Banca" DataField="@banca" TipObiect="C" Latime="200" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="CB" Subtip="" InPozitii="0" NumeCol="Cont bancar" DataField="@cont_in_banca" TipObiect="C" Latime="300" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="FA" InPozitii="0" NumeCol="Tip" DataField="@tip" TipObiect="C" Latime="50" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="FA" InPozitii="0" NumeCol="Numar" DataField="@numar" TipObiect="C" Latime="100" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="FA" InPozitii="0" NumeCol="Data" DataField="@data" TipObiect="D" Latime="100" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="FA" InPozitii="0" NumeCol="Data scadentei" DataField="@datascadentei" TipObiect="D" Latime="100" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="FA" InPozitii="0" NumeCol="Cont" DataField="@cont" TipObiect="C" Latime="100" Ordine="5" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="T" Tip="FA" InPozitii="0" NumeCol="Valoare fara TVA" DataField="@valoare" TipObiect="N" Latime="100" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="FA" InPozitii="0" NumeCol="Valoare TVA" DataField="@TVA" TipObiect="N" Latime="100" Ordine="7" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="FA" InPozitii="0" NumeCol="Achitat" DataField="@achitat" TipObiect="N" Latime="100" Ordine="8" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="FA" InPozitii="0" NumeCol="Data achitarii" DataField="@dataachitarii" TipObiect="D" Latime="100" Ordine="9" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="FA" InPozitii="0" NumeCol="Sold" DataField="@sold" TipObiect="N" Latime="100" Ordine="10" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="FA" InPozitii="0" NumeCol="Valuta" DataField="@valuta" TipObiect="C" Latime="60" Ordine="11" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="FA" InPozitii="0" NumeCol="Curs" DataField="@curs" TipObiect="N" Latime="80" Ordine="12" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="FA" InPozitii="0" NumeCol="Sold valuta" DataField="@soldvaluta" TipObiect="N" Latime="100" Ordine="13" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="NS" InPozitii="0" NumeCol="Cod" DataField="@cod" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="NS" InPozitii="0" NumeCol="Cod specific" DataField="@codspecific" TipObiect="C" Latime="100" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="NS" InPozitii="0" NumeCol="Denumire" DataField="@denumire" TipObiect="C" Latime="200" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="NS" InPozitii="0" NumeCol="Pret" DataField="@pret" TipObiect="N" Latime="80" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="NS" InPozitii="0" NumeCol="Pret valuta" DataField="@pret_valuta" TipObiect="N" Latime="80" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="NS" InPozitii="0" NumeCol="Discount" DataField="@discount" TipObiect="N" Latime="80" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Tert" DataField="@tert" TipObiect="C" Latime="150" Ordine="1" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Den. tert" DataField="@dentert" TipObiect="C" Latime="150" Ordine="2" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Identificator" DataField="@identificator" TipObiect="C" Latime="150" Ordine="3" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Loc munca" DataField="@info3" TipObiect="C" Latime="150" Ordine="5" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Nume" DataField="@nume" TipObiect="C" Latime="150" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Telefon" DataField="@telefon" TipObiect="C" Latime="150" Ordine="14" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Email" DataField="@email" TipObiect="C" Latime="300" Ordine="15" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Strada" DataField="@strada" TipObiect="C" Latime="200" Ordine="16" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Cont" DataField="@info1" TipObiect="C" Latime="200" Ordine="17" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Numar" DataField="@numar" TipObiect="N" Latime="100" Ordine="18" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Bloc" DataField="@bloc" TipObiect="C" Latime="150" Ordine="19" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Scara" DataField="@scara" TipObiect="C" Latime="150" Ordine="20" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Apartament" DataField="@apartament" TipObiect="N" Latime="100" Ordine="21" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Cont" DataField="@info2" TipObiect="C" Latime="200" Ordine="22" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Indicator" DataField="@info4" TipObiect="C" Latime="200" Ordine="23" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Cod postal" DataField="@codpostal" TipObiect="N" Latime="150" Ordine="24" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Data nasterii" DataField="@datanasterii" TipObiect="D" Latime="100" Ordine="25" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Info5" DataField="@info5" TipObiect="C" Latime="100" Ordine="26" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Info6" DataField="@info6" TipObiect="N" Latime="150" Ordine="27" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" InPozitii="0" NumeCol="Info7" DataField="@info7" TipObiect="C" Latime="200" Ordine="28" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PC" Subtip="" InPozitii="0" NumeCol="Descriere" DataField="@descriere" TipObiect="C" Latime="150" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PC" Subtip="" InPozitii="0" NumeCol="Prenume" DataField="@prenume" TipObiect="C" Latime="150" Ordine="7" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PC" Subtip="" InPozitii="0" NumeCol="Serie buletin" DataField="@seriebuletin" TipObiect="C" Latime="120" Ordine="8" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PC" Subtip="" InPozitii="0" NumeCol="Nr. buletin" DataField="@numarbuletin" TipObiect="C" Latime="100" Ordine="9" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PC" Subtip="" InPozitii="0" NumeCol="Eliberat" DataField="@eliberatbuletin" TipObiect="C" Latime="180" Ordine="10" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PC" Subtip="" InPozitii="0" NumeCol="Mijloc transport" DataField="@functie" TipObiect="C" Latime="150" Ordine="11" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PC" Subtip="" InPozitii="0" NumeCol="Judet" DataField="@judet" TipObiect="C" Latime="150" Ordine="12" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PC" Subtip="" InPozitii="0" NumeCol="Localitate" DataField="@localitate" TipObiect="C" Latime="150" Ordine="13" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Tert" DataField="@tert" TipObiect="C" Latime="150" Ordine="1" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Den. tert" DataField="@dentert" TipObiect="C" Latime="250" Ordine="2" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Punct livrare" DataField="@punctlivrare" TipObiect="C" Latime="150" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Loc munca" DataField="@lm" TipObiect="C" Latime="150" Ordine="4" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Den. loc munca" DataField="@denlm" TipObiect="C" Latime="250" Ordine="5" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Pers. contact" DataField="@persoanacontact" TipObiect="C" Latime="150" Ordine="6" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Localitate" DataField="@localitate" TipObiect="C" Latime="150" Ordine="7" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Den. localitate" DataField="@denlocalitate" TipObiect="C" Latime="250" Ordine="8" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Nume delegat" DataField="@numedelegat" TipObiect="C" Latime="250" Ordine="9" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Serie buletin" DataField="@seriebuletin" TipObiect="C" Latime="100" Ordine="10" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Numar buletin" DataField="@numarbuletin" TipObiect="C" Latime="150" Ordine="11" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Denumire punct livrare" DataField="@denpunctlivrare" TipObiect="C" Latime="300" Ordine="11" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Eliberat buletin" DataField="@eliberatbuletin" TipObiect="C" Latime="150" Ordine="12" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Mijloc transp." DataField="@mijloctransport" TipObiect="C" Latime="150" Ordine="13" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Den. mijloc transp." DataField="@denmijloctransport" TipObiect="C" Latime="200" Ordine="14" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Adresa" DataField="@adresa2" TipObiect="C" Latime="200" Ordine="15" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Telefon" DataField="@telefonfax" TipObiect="C" Latime="150" Ordine="16" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Judet" DataField="@judet" TipObiect="C" Latime="150" Ordine="17" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Den. judet" DataField="@denjudet" TipObiect="C" Latime="150" Ordine="18" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Tara" DataField="@tara" TipObiect="C" Latime="150" Ordine="19" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Den. tara" DataField="@dentara" TipObiect="C" Latime="250" Ordine="20" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Email" DataField="@email" TipObiect="C" Latime="250" Ordine="21" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Adresa" DataField="@adresa" TipObiect="C" Latime="250" Ordine="22" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Banca" DataField="@banca" TipObiect="C" Latime="150" Ordine="23" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Cont in banca" DataField="@continbanca" TipObiect="C" Latime="250" Ordine="24" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Ruta" DataField="@ruta" TipObiect="C" Latime="150" Ordine="25" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Den. ruta" DataField="@denruta" TipObiect="C" Latime="250" Ordine="26" Vizibil="1" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Cont client" DataField="@contclient" TipObiect="C" Latime="200" Ordine="27" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Den cont client" DataField="@dencontclient" TipObiect="C" Latime="300" Ordine="28" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Indicator" DataField="@indicator" TipObiect="C" Latime="150" Ordine="29" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Grupa" DataField="@grupa13" TipObiect="C" Latime="150" Ordine="30" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Sold ben." DataField="@soldben" TipObiect="N" Latime="150" Ordine="32" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Discount" DataField="@discount" TipObiect="N" Latime="100" Ordine="33" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Zile inc." DataField="@zileincasare" TipObiect="C" Latime="150" Ordine="34" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PL" InPozitii="0" NumeCol="Observatii" DataField="@nrautorizatie" TipObiect="C" Latime="200" Ordine="35" Vizibil="0" formula=""/>
+<grid Meniu="T" Tip="PO" Subtip="" InPozitii="0" NumeCol="Cod" DataField="@codtert" TipObiect="C" Latime="50" Ordine="1" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PO" Subtip="" InPozitii="0" NumeCol="Proprietate" DataField="@denproprietate" TipObiect="C" Latime="100" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PO" Subtip="" InPozitii="0" NumeCol="Descriere" DataField="@denumire" TipObiect="C" Latime="100" Ordine="3" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PO" Subtip="" InPozitii="0" NumeCol="Valoare" DataField="@valoare_tupla" TipObiect="C" Latime="100" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="TT" InPozitii="0" NumeCol="De la data" DataField="@data_inceput" TipObiect="D" Latime="100" Ordine="1" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="TT" InPozitii="0" NumeCol="Tip TVA" DataField="@den_tip_tva" TipObiect="C" Latime="150" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="T" Tip="PO" Subtip="" Ordine="10" Nume="Proprietati" Descriere="" TextAdaugare="" TextModificare="" ProcDate="wIaProprietatiTerti" ProcScriere="wScriuProprietatiTerti" ProcStergere="wStergProprietatiTerti" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" procPopulare="" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="T" Tip="PO" Subtip="" Ordine="1" Nume="Proprietate" TipObiect="AC" DataField="@codproprietate" LabelField="@denproprietate" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACProprietati" ListaValori="" ListaEtichete="" Initializare="" Prompt="Selectati o proprietate" formula=""/>
+<form Meniu="T" Tip="PO" Subtip="" Ordine="2" Nume="Descriere" TipObiect="AC" DataField="@valoare" LabelField="@denumire" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACValoriProprietati" ListaValori="" ListaEtichete="" Initializare="" Prompt="Selectati o valoare" formula=""/>
+<form Meniu="T" Tip="PO" Subtip="" Ordine="3" Nume="Valoare" TipObiect="C" DataField="@valoare_tupla" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+</formuri>
+<griduri>
+<grid Meniu="T" Tip="PO" Subtip="" InPozitii="0" NumeCol="Cod" DataField="@codtert" TipObiect="C" Latime="50" Ordine="1" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PO" Subtip="" InPozitii="0" NumeCol="Proprietate" DataField="@denproprietate" TipObiect="C" Latime="100" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PO" Subtip="" InPozitii="0" NumeCol="Descriere" DataField="@denumire" TipObiect="C" Latime="100" Ordine="3" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="T" Tip="PO" Subtip="" InPozitii="0" NumeCol="Valoare" DataField="@valoare_tupla" TipObiect="C" Latime="100" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+</tipuri>
+</machete>
+

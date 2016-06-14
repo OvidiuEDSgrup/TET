@@ -1,0 +1,1 @@
+select * from sys.triggers t where t.is_disabled=1

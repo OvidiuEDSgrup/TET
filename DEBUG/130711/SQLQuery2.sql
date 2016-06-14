@@ -1,0 +1,1 @@
+select * from istoricstocuri i where i.Cod='UFH-0405-SC1        '

@@ -1,0 +1,1 @@
+select * from bt where bt.Cod_produs='5092'

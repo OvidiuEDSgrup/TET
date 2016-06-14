@@ -1,0 +1,1 @@
+delete s from sesiuniRIA s where s.utilizator='CAPSUC'

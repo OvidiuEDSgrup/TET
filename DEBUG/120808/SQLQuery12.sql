@@ -1,0 +1,1 @@
+select * from pozdoc p where MONTH(p.data)=8 and p.Cont_corespondent='354' and p.Tip='te'

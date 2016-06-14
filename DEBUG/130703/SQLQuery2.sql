@@ -1,0 +1,1 @@
+select * from factimpl f where f.Factura like 'test'

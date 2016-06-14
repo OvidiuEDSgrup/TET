@@ -1,0 +1,1 @@
+select distinct Tip_document from pozincon

@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "IMPL", "IMPL.ssmssqlproj", "{68FC3673-3CD7-42D9-9A0F-E9FFA4686264}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68FC3673-3CD7-42D9-9A0F-E9FFA4686264}.Default|Default.ActiveCfg = Default
+		{00000000-0000-0000-0000-000000000000}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

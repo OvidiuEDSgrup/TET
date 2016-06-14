@@ -1,0 +1,1 @@
+select * from pozdoc p where p.Cod='4300102000121' and p.Tip_miscare='i'

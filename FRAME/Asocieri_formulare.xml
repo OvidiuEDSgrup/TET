@@ -1,0 +1,22 @@
+<machete>
+<meniuri Meniu="UF" Nume="Asocieri formulare" MeniuParinte="CONFIGURARI" Icoana="tbconfig" TipMacheta="C" NrOrdine="560.00" Componenta="" Semnatura="" vizibil="0" publicabil="1"/>
+<tipuri Meniu="UF" Tip="" Subtip="" Ordine="1" Nume="Configurare formular" Descriere="Un formulare se poate asocia mai multor perechi de  (meniu,tip) dupa cum este sugerat de campurile de mai jos." TextAdaugare="" TextModificare="" ProcDate="wIaAsociereFormulare" ProcScriere="wScriuAsociereFormulare" ProcStergere="wStergAsociereFormulare" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel=" " procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="UF" Tip="" Subtip="" Ordine="1" Nume="Meniu" TipObiect="AC" DataField="@meniu" LabelField="@denmeniu" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACMeniuri" ListaValori="" ListaEtichete="" Initializare="" Prompt="Meniu" Procesare="" Tooltip=""/>
+<form Meniu="UF" Tip="" Subtip="" Ordine="2" Nume="Tip document" TipObiect="AC" DataField="@tipDoc" LabelField="@dentip" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACTipuriDocument" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tip" Procesare="" Tooltip=""/>
+<form Meniu="UF" Tip="" Subtip="" Ordine="3" Nume="Formular" TipObiect="AC" DataField="@formular" LabelField="@denformular" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACFormulare" ListaValori="" ListaEtichete="" Initializare="" Prompt="Formulare" Procesare="" Tooltip=""/>
+</formuri>
+<filtre>
+<filtre Meniu="UF" Tip="UF" Ordine="1" Vizibil="1" TipObiect="" Descriere="Meniu" Prompt1="Meniu" DataField1="@f_meniu" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="UF" Tip="UF" Ordine="2" Vizibil="1" TipObiect="" Descriere="Tip" Prompt1="Tip doc." DataField1="@f_tip" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="UF" Tip="UF" Ordine="3" Vizibil="1" TipObiect="" Descriere="Formular" Prompt1="Formular" DataField1="@f_formular" Interval="0" Prompt2="" DataField2=""/>
+</filtre>
+<griduri>
+<grid Meniu="UF" Tip="" Subtip="" InPozitii="0" NumeCol="Meniu" DataField="@denmeniu" TipObiect="C" Latime="80" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="UF" Tip="" Subtip="" InPozitii="0" NumeCol="Tip document" DataField="@dentip" TipObiect="C" Latime="80" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="UF" Tip="" Subtip="" InPozitii="0" NumeCol="Cod formular" DataField="@formular" TipObiect="C" Latime="150" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="UF" Tip="" Subtip="" InPozitii="0" NumeCol="Denumire formular" DataField="@denformular" TipObiect="C" Latime="200" Ordine="4" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+</machete>
+

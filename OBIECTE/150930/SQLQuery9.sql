@@ -1,0 +1,1 @@
+select * from antetBonuri a where a.UID='17ADADA4-A669-A304-D7DB-FDBE95F59363'

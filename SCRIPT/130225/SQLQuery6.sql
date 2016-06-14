@@ -1,0 +1,1 @@
+select * from pozdoc p where p.gestiune='211.2'

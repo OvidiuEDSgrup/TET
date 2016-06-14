@@ -1,0 +1,1 @@
+select * from facturi f where f.Factura like '9020036%'

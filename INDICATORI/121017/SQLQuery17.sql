@@ -1,0 +1,1 @@
+Sold_cur_debit=(case when Total_sume_debit-Total_sume_credit

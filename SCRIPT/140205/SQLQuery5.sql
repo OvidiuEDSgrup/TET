@@ -1,0 +1,1 @@
+select * from doc d where d.Tip='AP' and d.Gestiune_primitoare<>'' order by d.Data desc

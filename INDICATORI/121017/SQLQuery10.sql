@@ -1,0 +1,1 @@
+select * from compcategorii c where c.Cod_Categ like 'CAF'

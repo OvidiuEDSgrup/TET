@@ -1,0 +1,1 @@
+select a.Gestiune,* from bt inner join antetBonuri a on a.IdAntetBon=bt.idAntetBon

@@ -1,0 +1,1 @@
+select * from webConfigSTDForm f where f.Meniu='DO' and f.Tip='TE' and f.Subtip='' and f.DataField like '%gest%'

@@ -1,0 +1,1 @@
+select * from webConfigSTDTaburi t where t.MeniuNou='PI' and t.ProcPopulare<>''

@@ -1,0 +1,1 @@
+select * from stocuri s where s.Cod='510842' and abs(s.Stoc)>0

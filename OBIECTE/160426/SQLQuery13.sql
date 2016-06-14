@@ -1,0 +1,1 @@
+sp_trace_setstatus 1,2

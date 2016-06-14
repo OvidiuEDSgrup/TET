@@ -1,0 +1,3 @@
+declare @p2 xml
+set @p2=convert(xml,N'<parametri data="05/30/2014" ora="14:21:01" utilizator="ASIS" id="512605" datainf="05/01/2014" datasup="05/31/2014" RM="0" PP="0" CM="0" AP="0" AC="1" AS="0" TE="0" DF="1" PF="0" CI="0" AF="0" AI="0" AE="0" PI="0" AD="0" NC="0" o_datainf="05/01/2014" o_datasup="05/31/2014" o_RM="1" o_PP="1" o_CM="1" o_AP="1" o_AS="1" o_AC="1" o_TE="1" o_DF="1" o_PF="1" o_CI="1" o_AF="1" o_AI="1" o_AE="1" o_PI="1" o_AD="1" o_NC="1" update="1" tip="YJ" tipMacheta="D" codMeniu="OP_IG" TipDetaliere="YJ" subtip="YJ"/>')
+exec wOPRefacereInregistrariContabile @sesiune='',@parXML=@p2

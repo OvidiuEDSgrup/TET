@@ -1,0 +1,1 @@
+disable trigger necesaraprov.yso_tr_actualizeazaStareRN

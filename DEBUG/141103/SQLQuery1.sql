@@ -1,0 +1,3 @@
+declare @p2 xml
+set @p2=convert(xml,N'<parametri numar="2" data="11/03/2014" gestiune="210.DJ" dentert="CLIENT BON FISCAL DJ" tert="..." UID="205DD0D3-DC52-15C4-74B2-74A0A130FFE6" valoare="261.65" tva="50.64" valtotala="261.65" numarpozitii="1" vanzator="MAGAZIN_DJ" casam="3" ora="10:12" idantetbon="8296" stergere="1" generare="1" o_stergere="1" o_generare="1" update="1" tip="BN" tipMacheta="D" codMeniu="BO" TipDetaliere="BN" subtip="RF"/>')
+exec wOPRefacACTE @sesiune='C8D4F8271A4D2',@parXML=@p2

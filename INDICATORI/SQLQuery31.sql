@@ -1,0 +1,1 @@
+alter table indicatori alter column expresia varchar(3000) not null

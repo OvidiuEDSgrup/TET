@@ -1,0 +1,1 @@
+delete pozdoc  where Numar='0'

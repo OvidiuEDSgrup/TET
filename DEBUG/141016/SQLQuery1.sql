@@ -1,0 +1,1 @@
+exec faInregistrariContabile @dintabela=0, @subunitate='1', @tip='AC', @numar='BH120001', @data='2014-10-15'

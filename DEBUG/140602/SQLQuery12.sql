@@ -1,0 +1,2 @@
+select sum(pozdoc.detalii.value('(/row/@taxe_vama)[1]','float')) from pozdoc where Subunitate='1' and Tip='RM' and Numar='1140601'
+select sum(dvi.Suma_vama),SUM(dvi.Dif_vama) from dvi where Numar_receptie='1140601'

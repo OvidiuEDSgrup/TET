@@ -1,0 +1,29 @@
+<machete>
+<meniuri Meniu="BB" Nume="Bonuri nedescarcate" MeniuParinte="VANZARE/FACTURARE" Icoana="Bonuri" TipMacheta="D" NrOrdine="35.00" Componenta=" " Semnatura=" " vizibil="1"/>
+<tipuri Meniu="BB" Tip="BN" Subtip="" Ordine="1" Nume="Bon nedescarcat" ProcDate="wIaBonuriNedescarcate" ProcDatePoz=" " Vizibil="1" Fel=" " tasta=" " ProcInchidereMacheta=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="BB" Tip="BN" Ordine="1" Vizibil="1" Descriere="Numar bon" Prompt1="Numar bon" DataField1="@numar" Interval="0"/>
+<filtre Meniu="BB" Tip="BN" Ordine="2" Vizibil="1" Descriere="Casa" Prompt1="Casa de marcat" DataField1="@f_casam" Interval="0"/>
+<filtre Meniu="BB" Tip="BN" Ordine="3" Vizibil="1" Descriere="Gestiune" Prompt1="Cod gestiune" DataField1="@f_gestiune" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="BB" Tip="BN" InPozitii="0" NumeCol="Numar bon" DataField="@numar" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="BB" Tip="BN" InPozitii="0" NumeCol="Ora" DataField="@ora" TipObiect="D" Latime="50" Ordine="2" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="BB" Tip="BN" InPozitii="0" NumeCol="Data" DataField="@data" TipObiect="D" Latime="80" Ordine="3" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="BB" Tip="BN" InPozitii="0" NumeCol="Valoare" DataField="@valtotala" TipObiect="N" Latime="80" Ordine="4" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="BB" Tip="BN" InPozitii="0" NumeCol="Nr. pozitii" DataField="@numarpozitii" TipObiect="N" Latime="80" Ordine="5" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="BB" Tip="BN" InPozitii="0" NumeCol="Gestiune" DataField="@gestiune" TipObiect="C" Latime="100" Ordine="6" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="BB" Tip="BN" InPozitii="0" NumeCol="Casa de marcat" DataField="@casam" TipObiect="N" Latime="120" Ordine="7" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="BB" Tip="BN" InPozitii="0" NumeCol="Vanzator" DataField="@vanzator" TipObiect="C" Latime="150" Ordine="8" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="BB" Tip="BN" InPozitii="0" NumeCol="Beneficiar" DataField="@dentert" TipObiect="C" Latime="250" Ordine="9" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="BB" Tip="BN" InPozitii="0" NumeCol="Factura" DataField="@factura" TipObiect="C" Latime="100" Ordine="10" Vizibil="1" modificabil="0" formula=" "/>
+</griduri>
+</tipuri>
+<tipuri Meniu="BB" Tip="BN" Subtip="RF" Ordine="1" Nume="Refacere AC/TE" ProcScriere="wOPRefacACTE" Vizibil="1" Fel="O" tasta=" " ProcInchidereMacheta=" " sursa="webConfigTipuri">
+<formuri>
+<form Meniu="BB" Tip="BN" Subtip="RF" Ordine="1" Nume="Stergere document" TipObiect="CHB" DataField="@stergere" Latime="200" Vizibil="1" Modificabil="1"/>
+<form Meniu="BB" Tip="BN" Subtip="RF" Ordine="2" Nume="Generare document" TipObiect="CHB" DataField="@generare" Latime="200" Vizibil="1" Modificabil="1"/>
+</formuri>
+</tipuri>
+</machete>
+

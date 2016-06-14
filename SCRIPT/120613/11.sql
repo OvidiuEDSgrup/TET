@@ -1,0 +1,4 @@
+declare @p2 xml
+set @p2=convert(xml,N'<parametri tip="BC" numar="2" data="06/13/2012" dengestiune="MAGAZIN AMANUNT DJ" gestiune="213.1" dentert="DRAGOMIR EMIL" tert="1611106163230" factura="9430069" data_facturii="06/13/2012" valoare="3651.65" tva="706.77" valtotala="3651.65" numarpozitii="47" vanzator="MAGAZIN_DJ" casam="3" ora="10:38" idantetbon="705" culoare="#0000EE" _nemodificabil="1" o_tip="BC" o_numar="2" o_data="06/13/2012" o_dengestiune="MAGAZIN AMANUNT DJ" o_gestiune="213.1" o_dentert="DRAGOMIR EMIL" o_tert="1611106163230" o_factura="9430069" o_data_facturii="06/13/2012" o_valoare="3651.65" o_tva="706.77" o_valtotala="3651.65" o_numarpozitii="47" o_vanzator="MAGAZIN_DJ" o_casam="3" o_ora="10:38" o_idantetbon="705" o_culoare="#0000EE" o__nemodificabil="1" update="1" anularefact="1" tipMacheta="D" codMeniu="BO" TipDetaliere="BC" subtip="AF"/>')
+exec wOPAnulareBon @sesiune='E5C731C0F1315',@parXML=@p2
+--select * from docsters

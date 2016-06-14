@@ -1,0 +1,1 @@
+select * from webConfigstdTipuri t where t.Meniu like 'apc'

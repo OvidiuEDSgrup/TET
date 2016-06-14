@@ -1,0 +1,3 @@
+declare @p2 xml
+set @p2=convert(xml,N'<parametri idContract="39" tip="RN" numar="IF910001" data="02/19/2015" gestiune="211.IF" dengestiune="IF SHOWROOM BUCURESTI" lm="1VZ_IF_00" denlm="ILFOV SHOWROOM" denvaluta="RON" explicatii="comanda client EDI" pozitii="1" stare="1" culoare="" denstare="Operat" valoare="164.00" valoareRON="164.00" valoarecutva="203.36" o_numar="IF910001" o_stare="0" update="1" explicatii_jurnal="" tipMacheta="D" codMeniu="RN" TipDetaliere="RN" subtip="SS"/>')
+exec wOPSchimbareStareContractSP @sesiune='1802FFB4B2834',@parXML=@p2

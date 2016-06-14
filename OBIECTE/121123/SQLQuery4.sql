@@ -1,0 +1,1 @@
+select * from stocuri s where s.Cod_gestiune='700' and s.Stoc>0

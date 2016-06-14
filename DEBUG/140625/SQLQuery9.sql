@@ -1,0 +1,1 @@
+select s.Locatie,* from stocuri s where s.Cod_intrare like 's0%'

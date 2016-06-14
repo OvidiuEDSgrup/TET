@@ -1,0 +1,1 @@
+exec RefacereStocuri null,null,null,null,null,null

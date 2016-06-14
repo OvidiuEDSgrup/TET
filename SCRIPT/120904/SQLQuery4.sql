@@ -1,0 +1,1 @@
+select * from proprietati p where p.Tip='NOMENCL'

@@ -1,0 +1,1 @@
+select * from coduri_tbl_debug_tmp

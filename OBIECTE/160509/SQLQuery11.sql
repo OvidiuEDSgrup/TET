@@ -1,0 +1,3 @@
+declare @p2 xml
+set @p2=convert(xml,N'<row codMeniu="YSO_FA" idContract="-63744" tip="FA" numar="7794" data="04/18/2016" tert="BE0464842608" dentert="ACV INTERNATIONAL NV" gestiune="101" dengestiune="MARFURI SI PIESE DE SCHIMB" valuta="" denvaluta="" curs="0.0000" explicatii="28.04" nr="14" pozitii="14" stare="6" denstare="Realizat" valoare="1268.39" valoarePV="1268.39" totalcutva="1522.07" valoareRON="1268.39" cantitate="19.00" valoarecutva="1522.07" _refresh="1"><detalii><row Subunitate="1" Stare="6" Total_contractat="1163.25" Total_TVA="193.86" Data_rezilierii="01/01/1901"/></detalii></row>')
+exec yso_wIaFundamenteComanda @sesiune='7FC598934F8B5',@parXML=@p2

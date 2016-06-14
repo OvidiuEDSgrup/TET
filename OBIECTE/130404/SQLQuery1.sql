@@ -1,0 +1,1 @@
+exec sp_executesql N'SELECT TipF,Tert,dela,tip_tva,idTvaPeTert FROM TET .dbo.TvaPeTerti WHERE TipF = @P1 AND Tert = @P2    ORDER BY TipF DESC,Tert DESC,dela DESC',N'@P1 char(1),@P2 char(20)','F','140082528           '

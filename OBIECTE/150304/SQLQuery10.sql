@@ -1,0 +1,1 @@
+select distinct stare from necesaraprov n where n.Stare like '%*%'

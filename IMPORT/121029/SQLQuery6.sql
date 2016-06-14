@@ -1,0 +1,1 @@
+exec wIaPozCon '','<row subunitate="1" tip="BK" numar="9830379" data="10/29/2012" tert="1710107161059"/>'

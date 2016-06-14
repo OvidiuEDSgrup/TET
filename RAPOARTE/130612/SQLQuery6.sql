@@ -1,0 +1,1 @@
+select DATEADD(d,-day(getdate()),getdate())

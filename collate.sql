@@ -1,0 +1,1 @@
+select * from pozdoc p where p.Cod like N'%[a-z]%' COLLATE Latin1_General_BIN

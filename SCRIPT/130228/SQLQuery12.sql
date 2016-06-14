@@ -1,0 +1,1 @@
+--exec RefacereRulajeParinte '2012-01-01','2012-12-31','442',1,0,'',1

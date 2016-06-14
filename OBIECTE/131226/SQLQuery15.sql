@@ -1,0 +1,1 @@
+SELECT * FROM webConfigSTDGrid g where g.Tip='RE' and g.Subtip='PI'

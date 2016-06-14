@@ -1,0 +1,1 @@
+select * from sys.sql_modules m where m.definition like '%REZSTOCBK%'

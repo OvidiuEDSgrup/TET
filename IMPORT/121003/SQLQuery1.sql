@@ -1,0 +1,1 @@
+exec yso_xIaSysspd 65500,'2012-08-01','2012-10-02',';asis;marius;marius1;oradea;'

@@ -1,0 +1,1 @@
+select * from POZCON c where c.Tip='BF' and c.cod='C0' AND C.Discount<>30

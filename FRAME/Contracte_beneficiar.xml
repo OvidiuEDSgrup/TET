@@ -1,0 +1,262 @@
+<machete>
+<tipuri Meniu="KO" Tip="BF" Subtip="" Ordine="1" Nume="Contracte beneficiar" Descriere="" TextAdaugare="" TextModificare="" ProcDate="wIaCon" ProcScriere="" ProcStergere="wStergCon" ProcDatePoz="wIaPozCon" ProcScrierePoz="wScriuPozCon" ProcStergerePoz="wStergPozCon" Vizibil="0" Fel="" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="1" Nume="Tip" TipObiect="C" DataField="@tip" LabelField="" Latime="50" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tip" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip=" " Ordine="2" Nume="Contract" TipObiect="C" DataField="@numar" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Contract" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="3" Nume="Data intocm" TipObiect="D" DataField="@data" LabelField="" Latime="200" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Data" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="4" Nume="Gestiune" TipObiect="AC" DataField="@gestiune" LabelField="@dengestiune" Latime="200" Vizibil="0" Modificabil="1" ProcSQL="wACGestiuni" ListaValori=" " ListaEtichete=" " Initializare=" " Prompt="Gestiune" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip=" " Ordine="5" Nume="Gest. primitoare" TipObiect="AC" DataField="@gestprim" LabelField="@dengestprim" Latime="200" Vizibil="0" Modificabil="1" ProcSQL="wACGestiuni" ListaValori="" ListaEtichete="" Initializare="" Prompt="Gestiune primitoare" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="6" Nume="Cont client" TipObiect="AC" DataField="@contclient" LabelField="@contclient" Latime="300" Vizibil="0" Modificabil="1" ProcSQL="wACConturi" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cont client" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip=" " Ordine="6" Nume="Beneficiar" TipObiect="AC" DataField="@tert" LabelField="@dentert" Latime="250" Vizibil="0" Modificabil="1" ProcSQL="wACTerti" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tert" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip=" " Ordine="8" Nume="Factura" TipObiect="C" DataField="@factura" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL=" " ListaValori="" ListaEtichete="" Initializare="" Prompt="Factura" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="8" Nume="Proc. penalizare" TipObiect="N" DataField="@procpen" LabelField="" Latime="60" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Procent penalizare" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="9" Nume="Punct livrare" TipObiect="AC" DataField="@punctlivrare" LabelField="@punctlivrare" Latime="250" Vizibil="0" Modificabil="1" ProcSQL="wACPuncteLivrare" ListaValori="" ListaEtichete="" Initializare="" Prompt="Punct livrare" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="9" Nume="Termen" TipObiect="D" DataField="@termen" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Valabilitate" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="10" Nume="Loc munca" TipObiect="AC" DataField="@lm" LabelField="@denlm" Latime="250" Vizibil="0" Modificabil="1" ProcSQL="wACLocm" ListaValori="" ListaEtichete="" Initializare="" Prompt="Loc munca" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="10" Nume="Zile scadenta" TipObiect="N" DataField="@scadenta" LabelField="" Latime="50" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Scadenta" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="11" Nume="Explicatii" TipObiect="C" DataField="@explicatii" LabelField="" Latime="250" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Explicatii" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="12" Nume="Info1" TipObiect="C" DataField="@info1" LabelField="" Latime="150" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info1" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip=" " Ordine="13" Nume="Val. prel." TipObiect="N" DataField="@info2" LabelField="" Latime="150" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info2" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="14" Nume="Info3" TipObiect="N" DataField="@info3" LabelField="" Latime="150" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info3" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip=" " Ordine="15" Nume="Info4" TipObiect="N" DataField="@info4" LabelField="" Latime="150" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info4" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="16" Nume="Info5" TipObiect="N" DataField="@info5" LabelField="" Latime="150" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info5" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="18" Nume="Contract cadru" TipObiect="C" DataField="@contr_cadru" LabelField="" Latime="300" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Contract cadru" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="20" Nume="Valoare" TipObiect="N" DataField="@valoare" LabelField="" Latime="100" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Valoare" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="21" Nume="Periodicitate" TipObiect="CB" DataField="detalii.row.@periodicitate" LabelField="detalii.row.@periodicitate" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="1,2,3" ListaEtichete="Trimestrial,Semestrial,Anual" Initializare=" " Prompt="Alegeti periodicitatea facturarii" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="22" Nume="Val. preluata" TipObiect="N" DataField="detalii.row.@valoare_preluata" LabelField="detalii.row.@valoare_preluata" Latime="100" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip=" " Ordine="23" Nume="Responsabil" TipObiect="C" DataField="@info6" LabelField="" Latime="200" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info6" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="" Ordine="36" Nume="Stare" TipObiect="C" DataField="@denstare" LabelField=" " Latime="200" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+</formuri>
+<filtre>
+<filtre Meniu="KO" Tip="BF" Ordine="1" Vizibil="0" Descriere="An" Prompt1="Filtru pe an" DataField1="@f_an" Interval="0"/>
+<filtre Meniu="KO" Tip="BF" Ordine="2" Vizibil="1" TipObiect="" Descriere="Numar" Prompt1="Numar" DataField1="@f_numar" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="KO" Tip="BF" Ordine="4" Vizibil="0" TipObiect="" Descriere="Gestiune" Prompt1="Gestiune" DataField1="@f_gestiune" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="KO" Tip="BF" Ordine="5" Vizibil="0" TipObiect="" Descriere="Denumire gestiune" Prompt1="Denumire gestiune" DataField1="@f_dengestiune" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="KO" Tip="BF" Ordine="6" Vizibil="0" TipObiect="" Descriere="Gestiune primitoare" Prompt1="Gestiune primitoare" DataField1="@f_gestprim" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="KO" Tip="BF" Ordine="7" Vizibil="0" TipObiect="" Descriere="Den. gest. primitoare" Prompt1="Den. gest.primitoare" DataField1="@f_dengestprim" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="KO" Tip="BF" Ordine="9" Vizibil="0" TipObiect="" Descriere="Tert" Prompt1="Tert" DataField1="@f_tert" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="KO" Tip="BF" Ordine="10" Vizibil="1" TipObiect="" Descriere="Beneficiar" Prompt1="Beneficiar" DataField1="@f_dentert" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="KO" Tip="BF" Ordine="11" Vizibil="0" TipObiect="" Descriere="Loc munca" Prompt1="Loc munca" DataField1="@f_lm" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="KO" Tip="BF" Ordine="12" Vizibil="0" TipObiect="" Descriere="Denumire loc munca" Prompt1="Denumire loc munca" DataField1="@f_denlm" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="KO" Tip="BF" Ordine="13" Vizibil="0" TipObiect="" Descriere="Valoare jos" Prompt1="Valoare jos" DataField1="@f_valoarejos" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="KO" Tip="BF" Ordine="14" Vizibil="0" TipObiect="" Descriere="Valoare sus" Prompt1="Valoare sus" DataField1="@f_valoaresus" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="KO" Tip="BF" Ordine="15" Vizibil="1" TipObiect="" Descriere="Stare" Prompt1="Stare" DataField1="@f_stare" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="KO" Tip="BF" Ordine="16" Vizibil="1" TipObiect="" Descriere="Responsabil" Prompt1="Nume responsabil" DataField1="@f_info6" Interval="0" Prompt2="" DataField2=""/>
+</filtre>
+<griduri>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Tip" DataField="@tip" TipObiect="C" Latime="50" Ordine="1" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Numar" DataField="@numar" TipObiect="C" Latime="150" Ordine="2" Vizibil="1"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Data" DataField="@data" TipObiect="D" Latime="100" Ordine="3" Vizibil="1"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Explicatii" DataField="@explicatii" TipObiect="C" Latime="250" Ordine="4" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Termen" DataField="@termen" TipObiect="D" Latime="100" Ordine="5" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Gestiune" DataField="@gestiune" TipObiect="C" Latime="150" Ordine="6" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Den. gestiune" DataField="@dengestiune" TipObiect="C" Latime="250" Ordine="7" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Cod tert" DataField="@tert" TipObiect="C" Latime="150" Ordine="8" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Beneficiar" DataField="@dentert" TipObiect="C" Latime="250" Ordine="9" Vizibil="1"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Factura" DataField="@factura" TipObiect="C" Latime="150" Ordine="10" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Punct livrare" DataField="@punctlivrare" TipObiect="C" Latime="150" Ordine="11" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Loc munca" DataField="@lm" TipObiect="C" Latime="150" Ordine="12" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Den. loc munca" DataField="@denlm" TipObiect="C" Latime="250" Ordine="13" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Gest. primitoare" DataField="@gestprim" TipObiect="C" Latime="150" Ordine="14" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Den. gest. primitoare" DataField="@dengestprim" TipObiect="C" Latime="250" Ordine="15" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Valuta" DataField="@valuta" TipObiect="C" Latime="80" Ordine="16" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Curs" DataField="@curs" TipObiect="N" Latime="80" Ordine="17" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Valoare" DataField="@valoare" TipObiect="N" Latime="150" Ordine="18" Vizibil="1"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Pozitii" DataField="@pozitii" TipObiect="N" Latime="50" Ordine="19" Vizibil="1"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Discount" DataField="@discount" TipObiect="N" Latime="80" Ordine="20" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Stare" DataField="@stare" TipObiect="C" Latime="50" Ordine="21" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Stare" DataField="@denstare" TipObiect="C" Latime="100" Ordine="22" Vizibil="1"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Info1" DataField="@info1" TipObiect="C" Latime="100" Ordine="23" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Info2" DataField="@info2" TipObiect="N" Latime="100" Ordine="24" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Info3" DataField="@info3" TipObiect="N" Latime="100" Ordine="25" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Info4" DataField="@info4" TipObiect="N" Latime="100" Ordine="25" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Info5" DataField="@info5" TipObiect="N" Latime="100" Ordine="26" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="0" NumeCol="Responsabil" DataField="@info6" TipObiect="C" Latime="150" Ordine="27" Vizibil="1"/>
+<grid Meniu="KO" Tip="BF" InPozitii="1" NumeCol="Cod - Denumire - Cantitate" DataField="@codde" TipObiect="C" Latime="300" Ordine="2" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Tip" DataField="@tip" TipObiect="C" Latime="50" Ordine="1" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Data" DataField="@data" TipObiect="D" Latime="100" Ordine="2" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Numar" DataField="@numar" TipObiect="C" Latime="150" Ordine="2" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Cod" DataField="@cod" TipObiect="C" Latime="100" Ordine="3" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Cod - Denumire - Cantitate" DataField="@codsisursa" TipObiect="G" Latime="400" Ordine="3" Vizibil="1"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Denumire" DataField="@denumire" TipObiect="C" Latime="250" Ordine="4" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Sursa" DataField="@denmodplata" TipObiect="C" Latime="200" Ordine="4" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Gestiune" DataField="@gestiune" TipObiect="C" Latime="150" Ordine="5" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Tert" DataField="@tert" TipObiect="C" Latime="150" Ordine="6" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Cantitate" DataField="@cantitate" TipObiect="N" Latime="150" Ordine="7" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Valuta" DataField="@valuta" TipObiect="C" Latime="100" Ordine="8" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Cantitate" DataField="@Tcantitate" TipObiect="N" Latime="100" Ordine="9" Vizibil="1"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Termen" DataField="@termene" TipObiect="D" Latime="100" Ordine="10" Vizibil="1"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Termen" DataField="@Ttermen" TipObiect="D" Latime="100" Ordine="10" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Termen3" DataField="@Tdata1" TipObiect="C" Latime="100" Ordine="11" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Termen3" DataField="@data1" TipObiect="C" Latime="100" Ordine="11" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Termen4" DataField="@Tpret" TipObiect="N" Latime="100" Ordine="12" Vizibil="1"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Cantitate realiz." DataField="@Tcant_realizata" TipObiect="N" Latime="100" Ordine="13" Vizibil="1"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="UM" DataField="@um1" TipObiect="C" Latime="50" Ordine="14" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Valoare|Facturata" DataField="@Tfacturat" TipObiect="N" Latime="100" Ordine="14" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Cantitate" DataField="@cantitateum1" TipObiect="N" Latime="150" Ordine="15" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Valoare|Achitata" DataField="@Tachitat" TipObiect="N" Latime="100" Ordine="15" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="UM2" DataField="@um2" TipObiect="C" Latime="50" Ordine="16" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Coef. conv. UM2" DataField="@coefconvum2" TipObiect="N" Latime="100" Ordine="17" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Cantitate um2" DataField="@cantitateum2" TipObiect="N" Latime="150" Ordine="18" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="UM3" DataField="@um3" TipObiect="C" Latime="50" Ordine="19" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Coef. conv. UM3" DataField="@coefconvum3" TipObiect="N" Latime="100" Ordine="20" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Cantitate UM3" DataField="@cantitateum3" TipObiect="N" Latime="150" Ordine="21" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Pret" DataField="@pret" TipObiect="N" Latime="150" Ordine="22" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Cantit. transferata" DataField="@cant_transferata" TipObiect="N" Latime="150" Ordine="23" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Discount" DataField="@discount" TipObiect="N" Latime="150" Ordine="24" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Cota tva" DataField="@cotatva" TipObiect="N" Latime="100" Ordine="25" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Punct livrare" DataField="@punctlivrare" TipObiect="C" Latime="150" Ordine="26" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Den. gestiune" DataField="@dengestiune" TipObiect="C" Latime="250" Ordine="27" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Tip gestiune" DataField="@tipgestiune" TipObiect="C" Latime="50" Ordine="28" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Den. tert" DataField="@dentert" TipObiect="C" Latime="250" Ordine="29" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Cant. realizata" DataField="@cant_realizata" TipObiect="N" Latime="150" Ordine="30" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Cant. aprobata" DataField="@cant_aprobata" TipObiect="N" Latime="150" Ordine="31" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Termen poz." DataField="@termen_poz" TipObiect="D" Latime="150" Ordine="32" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Explicatii" DataField="@explicatii" TipObiect="N" Latime="250" Ordine="33" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Nr. pozitie" DataField="@numarpozitite" TipObiect="N" Latime="100" Ordine="34" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Lot" DataField="@lot" TipObiect="C" Latime="150" Ordine="35" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Data exp." DataField="@dataexpirarii" TipObiect="D" Latime="100" Ordine="36" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Obiect" DataField="@obiect" TipObiect="C" Latime="150" Ordine="37" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Den. obiect" DataField="@denobiect" TipObiect="C" Latime="250" Ordine="38" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Info1" DataField="@info1" TipObiect="N" Latime="150" Ordine="39" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Informatii|Pozitie kilometru" DataField="@info2" TipObiect="C" Latime="250" Ordine="40" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Info3" DataField="@info3" TipObiect="N" Latime="150" Ordine="41" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Info4" DataField="@info4" TipObiect="C" Latime="250" Ordine="42" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Info5" DataField="@info5" TipObiect="C" Latime="250" Ordine="43" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Info6" DataField="@info6" TipObiect="C" Latime="100" Ordine="44" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Info7" DataField="@info7" TipObiect="C" Latime="100" Ordine="45" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Info8" DataField="@info8" TipObiect="N" Latime="150" Ordine="46" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Info9" DataField="@info9" TipObiect="N" Latime="150" Ordine="47" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Info10" DataField="@info10" TipObiect="N" Latime="150" Ordine="48" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Info11" DataField="@info11" TipObiect="N" Latime="150" Ordine="49" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Info12" DataField="@info12" TipObiect="C" Latime="200" Ordine="50" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Info13" DataField="@info13" TipObiect="C" Latime="200" Ordine="51" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Info14" DataField="@info14" TipObiect="C" Latime="200" Ordine="52" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Info15" DataField="@info15" TipObiect="C" Latime="200" Ordine="53" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Info16" DataField="@info16" TipObiect="C" Latime="200" Ordine="54" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Info17" DataField="@info17" TipObiect="C" Latime="200" Ordine="55" Vizibil="0"/>
+<grid Meniu="KO" Tip="BF" Subtip="" InPozitii="1" NumeCol="Termen" DataField="@termen" TipObiect="D" Latime="100" Ordine="56" Vizibil="0"/>
+</griduri>
+</tipuri>
+<tipuri Meniu="KO" Tip="BF" Subtip="BA" Ordine="1" Nume="Adaugare contract" Descriere="" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="0" Fel=" " procPopulare="" sursa="webConfigTipuri"/>
+<tipuri Meniu="KO" Tip="BF" Subtip="GT" Ordine="1" Nume="Generare pozitie" Descriere="Generare pozitie contract si termenele corespunzatoare." TextAdaugare="" TextModificare="" ProcDate=" " ProcScriere="" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel=" " procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="KO" Tip="BF" Subtip="GT" Ordine="1" Nume="Contract" TipObiect="C" DataField="@numar" LabelField=" " Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Contract" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="GT" Ordine="2" Nume="Tert" TipObiect="AC" DataField="@tert" LabelField="@dentert" Latime="300" Vizibil="0" Modificabil="1" ProcSQL="wACTerti" ListaValori="" ListaEtichete="" Initializare="" Prompt="Beneficiar" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="GT" Ordine="3" Nume="Sursa" TipObiect="AC" DataField="@modplata" LabelField=" " Latime="350" Vizibil="0" Modificabil="1" ProcSQL="wIaSurse" ListaValori="" ListaEtichete="" Initializare="" Prompt="Sursa" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="GT" Ordine="4" Nume="Cod" TipObiect="AC" DataField="@cod" LabelField="@denumire" Latime="350" Vizibil="0" Modificabil="1" ProcSQL="wACNomenclatorCon" ListaValori="" ListaEtichete="" Initializare="" Prompt="Selectati codul sau denumirea" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="GT" Ordine="6" Nume="Inceput" TipObiect="D" DataField="@termene" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Alegeti primul termen" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="GT" Ordine="7" Nume="Cantitate" TipObiect="N" DataField="@Tcantitate" LabelField="" Latime="80" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="GT" Ordine="8" Nume="Pret" TipObiect="N" DataField="@Tpret" LabelField="" Latime="100" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="GT" Ordine="9" Nume="Poz km" TipObiect="C" DataField="@info2" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info2" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="GT" Ordine="10" Nume="Nr. de luni" TipObiect="C" DataField="@Gluni" LabelField="" Latime="80" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Numar de luni" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="GT" Ordine="11" Nume="Periodicitate" TipObiect="CB" DataField="@periodicitate" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="1,2,3,6,12" ListaEtichete="Lunar,Bilunar,Trimestrial,Semestrial,Anual" Initializare="1" Prompt="Termen/Luna" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="GT" Ordine="19" Nume="Explicatii" TipObiect="C" DataField="@explicatii" LabelField="" Latime="300" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Explicatii" Procesare="" Tooltip=""/>
+</formuri>
+</tipuri>
+<tipuri Meniu="KO" Tip="BF" Subtip="BF" Ordine="2" Nume="Pozitie/termen" Descriere="" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="0" Fel="" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="1" Nume="Cod" TipObiect="AC" DataField="@cod" LabelField="@denumire" Latime="300" Vizibil="0" Modificabil="1" ProcSQL="wACNomenclatorCon" ListaValori="" ListaEtichete="" Initializare="" Prompt="Selectati codul" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="1" Nume="Sursa" TipObiect="AC" DataField="@modplata" LabelField="@modplata" Latime="300" Vizibil="0" Modificabil="1" ProcSQL="wACSurse" ListaValori="" ListaEtichete="" Initializare="" Prompt="Selectati sursa" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="2" Nume="Gestiune" TipObiect="AC" DataField="@gestiune" LabelField="@dengestiune" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="wACGestiuni" ListaValori="" ListaEtichete="" Initializare=" " Prompt="Gestiune" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="3" Nume="Cantitate" TipObiect="N" DataField="@cantitate" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cantitate" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="4" Nume="Termen1" TipObiect="N" DataField="@Tcantitate" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Termen1" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="5" Nume="Termen2" TipObiect="N" DataField="@Tpret" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tpret" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="6" Nume="Termen poz." TipObiect="D" DataField="@termen" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Termen" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="6" Nume="Cantitate" TipObiect="N" DataField="@cantitateum1" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cantitate UM1" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="7" Nume="Cantitate um2" TipObiect="N" DataField="@cantitateum2" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cantitate UM2" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="8" Nume="Cantitate UM3" TipObiect="N" DataField="@cantitateum3" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cantitate UM3" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="9" Nume="Pret" TipObiect="N" DataField="@pret" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Pret" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="10" Nume="Categ. pret" TipObiect="AC" DataField="@categpret" LabelField="@categpret" Latime="50" Vizibil="0" Modificabil="1" ProcSQL="wACCategPret" ListaValori="" ListaEtichete="" Initializare="" Prompt="Categorie pret" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="11" Nume="Curs" TipObiect="C" DataField="@curs" LabelField="" Latime="50" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Curs" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="12" Nume="Discount" TipObiect="N" DataField="@discount" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Discount" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="13" Nume="Cota tva" TipObiect="N" DataField="@cotatva" Latime="100" Vizibil="0" Modificabil="1" Prompt="Cota tva"/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="14" Nume="Explicatii" TipObiect="N" DataField="@explicatii" LabelField="" Latime="250" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Explicatii" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="15" Nume="Lot" TipObiect="C" DataField="@lot" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Lot" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="16" Nume="Data exp." TipObiect="D" DataField="@dataexpirarii" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Data expirarii" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="17" Nume="Obiect" TipObiect="C" DataField="@obiect" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Obiect" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="18" Nume="Info1" TipObiect="N" DataField="@info1" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info1" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="19" Nume="Info2" TipObiect="C" DataField="@info2" Latime="250" Vizibil="0" Modificabil="1" Prompt="Info2"/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="20" Nume="Info3" TipObiect="N" DataField="@info3" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info3" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="21" Nume="Info4" TipObiect="C" DataField="@info4" LabelField="" Latime="250" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info4" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="22" Nume="Info5" TipObiect="C" DataField="@info5" LabelField="" Latime="250" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info5" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="23" Nume="Info6" TipObiect="D" DataField="@info6" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info6" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="24" Nume="Info7" TipObiect="D" DataField="@info7" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info7" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="25" Nume="Info8" TipObiect="N" DataField="@info8" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info8" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="26" Nume="Info9" TipObiect="N" DataField="@info9" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info9" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="27" Nume="Info10" TipObiect="N" DataField="@info10" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info10" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="28" Nume="Info11" TipObiect="N" DataField="@info11" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info11" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="29" Nume="Info12" TipObiect="C" DataField="@info12" LabelField="" Latime="200" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info12" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="30" Nume="Info13" TipObiect="C" DataField="@info13" LabelField="" Latime="200" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info13" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="31" Nume="Info14" TipObiect="C" DataField="@info14" LabelField="" Latime="200" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info14" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="32" Nume="Info15" TipObiect="C" DataField="@info15" LabelField="" Latime="200" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info15" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="33" Nume="Info16" TipObiect="C" DataField="@info16" LabelField="" Latime="200" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info16" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="34" Nume="Info17" TipObiect="C" DataField="@info17" LabelField="" Latime="200" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info17" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="BF" Ordine="35" Nume="Nr. pozitie" TipObiect="N" DataField="@numarpozitie" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Nr. pozitie" Procesare="" Tooltip=""/>
+</formuri>
+</tipuri>
+<tipuri Meniu="KO" Tip="BF" Subtip="ST" Ordine="2" Nume="Schimbare stare" Descriere="" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="wOPSchimbStare" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="O" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="KO" Tip="BF" Subtip="ST" Ordine="1" Nume="Schimbare stare" TipObiect="CB" DataField="@stare" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="0,1,6,7" ListaEtichete="0-Operat,1-Definitiv,6-Realizat,7-Reziliat" Initializare="" Prompt="Stare" Procesare="" Tooltip=""/>
+</formuri>
+</tipuri>
+<tipuri Meniu="KO" Tip="BF" Subtip="KO" Ordine="3" Nume="Copiere contract" Descriere="          Operatia permite copierea unui contract dupa cum urmeaza: Daca data noului contract este intr-un an diferit fata de data contractului de baza, atunci se genereaza un contract identic " TextAdaugare="" TextModificare="" ProcDate=" " ProcScriere="" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel=" " procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="KO" Tip="BF" Subtip="KO" Ordine="1" Nume="Contract nou" TipObiect="C" DataField="@n_numar" LabelField="" Latime="400" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="KO" Ordine="2" Nume="Data noului contract" TipObiect="D" DataField="@n_data" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="KO" Ordine="3" Nume="Valabilitate contract nou" TipObiect="D" DataField="@n_termen" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+</formuri>
+</tipuri>
+<tipuri Meniu="KO" Tip="BF" Subtip="SP" Ordine="4" Nume="Stergere poz cu term" Descriere="Operatie care sterge o pozitie din contract cu toate termenele aferente lui." TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="wOPSergerePozconCuTermene" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="O" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="KO" Tip="BF" Subtip="SP" Ordine="1" Nume="Sursa" TipObiect="AC" DataField="@sursa" LabelField="" Latime="400" Vizibil="0" Modificabil="1" ProcSQL="wACSurse" ListaValori="" ListaEtichete="" Initializare="" Prompt="Sursa" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="SP" Ordine="2" Nume="Cod" TipObiect="AC" DataField="@cod" LabelField="" Latime="400" Vizibil="0" Modificabil="1" ProcSQL="wACNomenclatorCon" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cod" Procesare="" Tooltip=""/>
+</formuri>
+</tipuri>
+<tipuri Meniu="KO" Tip="BF" Subtip="PR" Ordine="5" Nume="Schimbare pret" Descriere="          Operatie de schimbare pret pe termene de la data. Se selecteaza sursa si codul pe care se doreste modificarea de pret si se alege data de la care intra in vigoare noul pret." TextAdaugare="" TextModificare="" ProcDate=" " ProcScriere="" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel=" " procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="KO" Tip="BF" Subtip="PR" Ordine="1" Nume="Sursa" TipObiect="AC" DataField="@sursa" LabelField="" Latime="400" Vizibil="0" Modificabil="1" ProcSQL="wACSurse" ListaValori="" ListaEtichete="" Initializare="" Prompt="Sursa" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="PR" Ordine="2" Nume="Cod" TipObiect="AC" DataField="@cod" LabelField="" Latime="400" Vizibil="0" Modificabil="1" ProcSQL="wACNomenclatorCon" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cod" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="PR" Ordine="3" Nume="Data modificarii" TipObiect="D" DataField="@data_pret" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="PR" Ordine="4" Nume="Pret nou" TipObiect="N" DataField="@pret_nou" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Pret nou" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="PR" Ordine="5" Nume="Schimbare pret nomenclator" TipObiect="CHB" DataField="@schimbare_pret_nomencl" LabelField="" Latime="300" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+</formuri>
+</tipuri>
+<tipuri Meniu="KO" Tip="BF" Subtip="MA" Ordine="6" Nume="Modificare antet" Descriere="          Operatie care permite schimbarea datelor din antet." TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="wOPModificareAntetCon" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="O" procPopulare="wOPModificareAntetCon_p" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="1" Nume="Tip" TipObiect="C" DataField="@n_tip" LabelField="" Latime="50" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tip" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="2" Nume="Stare" TipObiect="C" DataField="@denstare" LabelField=" " Latime="200" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="3" Nume="Contract" TipObiect="C" DataField="@n_contract" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Contract" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="4" Nume="Data" TipObiect="D" DataField="@n_data" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Data" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="5" Nume="Gestiune" TipObiect="AC" DataField="@gestiune" LabelField=" " Latime="100" Vizibil="0" Modificabil="1" ProcSQL="wACGestiuni" ListaValori=" " ListaEtichete=" " Initializare=" " Prompt="Gestiune" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="6" Nume="Beneficiar" TipObiect="AC" DataField="@n_tert" LabelField="@dentert" Latime="300" Vizibil="0" Modificabil="1" ProcSQL="wACTerti" ListaValori="" ListaEtichete="" Initializare="" Prompt="Selectati un tert" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="7" Nume="Gest. primitoare" TipObiect="AC" DataField="@gestprim" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="wACGestiuni" ListaValori="" ListaEtichete="" Initializare="" Prompt="Gestiune primitoare" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="8" Nume="Punct livrare" TipObiect="AC" DataField="@punctlivrare" LabelField="@punctlivrare" Latime="200" Vizibil="0" Modificabil="1" ProcSQL="wACPuncteLivrare" ListaValori="" ListaEtichete="" Initializare="" Prompt="Punct livrare" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="9" Nume="Cont client" TipObiect="AC" DataField="@contclient" LabelField="@contclient" Latime="300" Vizibil="0" Modificabil="1" ProcSQL="wACConturi" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cont client" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="10" Nume="Factura" TipObiect="C" DataField="@factura" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL=" " ListaValori="" ListaEtichete="" Initializare="" Prompt="Factura" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="11" Nume="Loc munca" TipObiect="AC" DataField="@lm" LabelField="@denlm" Latime="300" Vizibil="0" Modificabil="1" ProcSQL="wACLocm" ListaValori="" ListaEtichete="" Initializare="" Prompt="Loc munca" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="12" Nume="Proc. penalizare" TipObiect="N" DataField="@procpen" LabelField="" Latime="60" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Procent penalizare" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="13" Nume="Valabilitate" TipObiect="D" DataField="@termen" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Valabilitate" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="14" Nume="Zile scadenta" TipObiect="N" DataField="@scadenta" LabelField="" Latime="50" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Scadenta" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="15" Nume="Explicatii" TipObiect="C" DataField="@explicatii" LabelField="" Latime="250" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Explicatii" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="16" Nume="Info1" TipObiect="C" DataField="@info1" LabelField="" Latime="150" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info1" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="17" Nume="Info2" TipObiect="N" DataField="@info2" LabelField="" Latime="150" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info2" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="18" Nume="Info3" TipObiect="N" DataField="@info3" LabelField="" Latime="150" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info3" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="19" Nume="Info4" TipObiect="N" DataField="@info4" LabelField="" Latime="150" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info4" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="20" Nume="Info5" TipObiect="N" DataField="@info5" LabelField="" Latime="150" Vizibil="0" Modificabil="0" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info5" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="21" Nume="Responsabil" TipObiect="C" DataField="@info6" LabelField="" Latime="200" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Info6" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="22" Nume="Contract cadru" TipObiect="C" DataField="@contr_cadru" LabelField="" Latime="300" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Contract cadru" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="MA" Ordine="23" Nume="Valoare" TipObiect="N" DataField="@valoare" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Valoare" Procesare="" Tooltip=""/>
+</formuri>
+</tipuri>
+<tipuri Meniu="KO" Tip="BF" Subtip="AA" Ordine="7" Nume="Adaugare antet con" Descriere="Operatie de adaugare antet contract. Aceasta operatie va fi folosita doar in cazul in care beneficiarul nu doreste derularea contractului la data semnarii contractului." TextAdaugare="" TextModificare="" ProcDate=" " ProcScriere="wOPScriuAntetCon" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="0" Fel="O" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="KO" Tip="BF" Subtip="AA" Ordine="1" Nume="Contract" TipObiect="C" DataField="@contract" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Contract" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="AA" Ordine="2" Nume="Data intocm" TipObiect="D" DataField="@data" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt=" " Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="AA" Ordine="3" Nume="Data incetarii" TipObiect="D" DataField="@dataIncetarii" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="AA" Ordine="4" Nume="Beneficiar" TipObiect="AC" DataField="@tert" LabelField="" Latime="270" Vizibil="0" Modificabil="1" ProcSQL="wACTerti" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="KO" Tip="BF" Subtip="AA" Ordine="5" Nume="Loc munca" TipObiect="AC" DataField="@lm" LabelField="" Latime="270" Vizibil="0" Modificabil="1" ProcSQL="wACLocm" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+</formuri>
+</tipuri>
+</machete>
+

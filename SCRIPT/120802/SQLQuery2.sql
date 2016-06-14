@@ -1,0 +1,1 @@
+select pozcon.cota

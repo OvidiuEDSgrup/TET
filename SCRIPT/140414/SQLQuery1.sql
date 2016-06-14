@@ -1,0 +1,1 @@
+select * from nomencl n where n.Cod=' 200-PXC1620'

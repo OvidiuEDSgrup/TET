@@ -1,0 +1,441 @@
+<machete>
+<meniuri Meniu="SERVICE AUTO" Nume="Service " MeniuParinte="" Icoana="" TipMacheta="" NrOrdine="650.00" Componenta="" Semnatura="" vizibil="1"/>
+<meniuri Meniu="OP" Nume="Operatii" MeniuParinte="SERVICE AUTO" Icoana="Utilaje" TipMacheta="C" NrOrdine="504.00" Componenta="" Semnatura="" vizibil="1">
+<Detalii>
+<row>
+<vechi>
+<row id="504" nume="Operatii" idparinte="500" icoana="Utilaje" tipmacheta="C" meniu="OP" modul="MP" publicabil="1"/>
+</vechi>
+</row>
+</Detalii>
+</meniuri>
+<meniuri Meniu="QE" Nume="Devize in lucru" MeniuParinte="SERVICE AUTO" Icoana="Devize in lucru" TipMacheta="D" NrOrdine="651.00" Componenta="" Semnatura="" vizibil="1">
+<Detalii/>
+</meniuri>
+<meniuri Meniu="QT" Nume="Centralizator Devize" MeniuParinte="SERVICE AUTO" Icoana="Devize in lucru" TipMacheta="D" NrOrdine="651.00" Componenta="" Semnatura="" vizibil="1">
+<Detalii/>
+</meniuri>
+<meniuri Meniu="QF" Nume="Devize de facturat" MeniuParinte="SERVICE AUTO" Icoana="Devize de facturat" TipMacheta="D" NrOrdine="652.00" Componenta="" Semnatura="" vizibil="1">
+<Detalii/>
+</meniuri>
+<meniuri Meniu="QG" Nume="Devize inchise" MeniuParinte="SERVICE AUTO" Icoana="Devize inchise" TipMacheta="D" NrOrdine="653.00" Componenta="" Semnatura="" vizibil="1">
+<Detalii/>
+</meniuri>
+<meniuri Meniu="QA" Nume="Utilaje" MeniuParinte="SERVICE AUTO" Icoana="Autovehicule" TipMacheta="C" NrOrdine="661.00" Componenta="" Semnatura="" vizibil="1"/>
+<meniuri Meniu="QC" Nume="Tipuri de utilaje" MeniuParinte="SERVICE AUTO" Icoana="Tipuri de autovehicu" TipMacheta="C" NrOrdine="662.00" Componenta="" Semnatura="" vizibil="0"/>
+<meniuri Meniu="QB" Nume="Mecanici" MeniuParinte="SERVICE AUTO" Icoana="Posturi de lucru" TipMacheta="C" NrOrdine="663.00" Componenta="" Semnatura="" vizibil="1"/>
+<meniuri Meniu="QD" Nume="Tarife manopera" MeniuParinte="SERVICE AUTO" Icoana="Tarife manopera" TipMacheta="C" NrOrdine="664.00" Componenta="" Semnatura="" vizibil="1">
+<Detalii/>
+</meniuri>
+<tipuri Meniu="OP" Tip="" Subtip="" Ordine="1" Nume="Operatii" Descriere=" " TextAdaugare="Adaugare operatie" TextModificare="Modificare operatie" ProcDate="wIaOperatii" ProcScriere="wScriuOperatii" ProcStergere="wStergOperatii" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel=" " procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="OP" Tip="" Subtip="" Ordine="1" Nume="Cod" TipObiect="C" DataField="@cod" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cod" Procesare="" Tooltip=""/>
+<form Meniu="OP" Tip="" Subtip="" Ordine="2" Nume="Denumire" TipObiect="C" DataField="@denumire" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Denumire" Procesare="" Tooltip=""/>
+<form Meniu="OP" Tip="" Subtip="" Ordine="3" Nume="Tip operatie" TipObiect="C" DataField="@tipoperatie" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tip operatie" Procesare="" Tooltip=""/>
+<form Meniu="OP" Tip="" Subtip="" Ordine="4" Nume="Tarif" TipObiect="N" DataField="@tarif" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tarif" Procesare="" Tooltip=""/>
+<form Meniu="OP" Tip="" Subtip="" Ordine="5" Nume="UM" TipObiect="AC" DataField="@UM" LabelField="@UM" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACUM" ListaValori="" ListaEtichete="" Initializare="" Prompt="Unitate masura" Procesare="" Tooltip=""/>
+<form Meniu="OP" Tip="" Subtip="" Ordine="6" Nume="Categorie" TipObiect="C" DataField="@categorie" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Categorie" Procesare="" Tooltip=""/>
+<form Meniu="OP" Tip="" Subtip="" Ordine="7" Nume="Norma de timp" TipObiect="N" DataField="@normatimp" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Norma de timp" Procesare="" Tooltip=""/>
+</formuri>
+<filtre>
+<filtre Meniu="OP" Tip="OP" Ordine="1" Vizibil="1" TipObiect="" Descriere="Cod" Prompt1="Cod" DataField1="@f_cod" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="OP" Tip="OP" Ordine="2" Vizibil="1" TipObiect="" Descriere="Denumire" Prompt1="Denumire" DataField1="@f_denumire" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="OP" Tip="OP" Ordine="3" Vizibil="1" TipObiect="" Descriere="Tip" Prompt1="Tip" DataField1="@f_tipoperatie" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="OP" Tip="OP" Ordine="4" Vizibil="1" TipObiect="" Descriere="Tarif" Prompt1="De la" DataField1="@f_tarifj" Interval="1" Prompt2="La" DataField2="@f_tarifs"/>
+<filtre Meniu="OP" Tip="OP" Ordine="5" Vizibil="1" TipObiect="" Descriere="UM" Prompt1="UM" DataField1="@f_UM" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="OP" Tip="OP" Ordine="6" Vizibil="1" TipObiect="" Descriere="Categorie" Prompt1="Categorie" DataField1="@f_categorie" Interval="0" Prompt2="" DataField2=""/>
+</filtre>
+<griduri>
+<grid Meniu="OP" Tip="" Subtip="" InPozitii="0" NumeCol="Cod" DataField="@cod" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="OP" Tip="" Subtip="" InPozitii="0" NumeCol="Denumire" DataField="@denumire" TipObiect="C" Latime="150" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="OP" Tip="" Subtip="" InPozitii="0" NumeCol="Tip" DataField="@tipoperatie" TipObiect="C" Latime="50" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="OP" Tip="" Subtip="" InPozitii="0" NumeCol="Tarif" DataField="@tarif" TipObiect="N" Latime="70" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="OP" Tip="" Subtip="" InPozitii="0" NumeCol="UM" DataField="@UM" TipObiect="C" Latime="50" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="OP" Tip="" Subtip="" InPozitii="0" NumeCol="Categorie" DataField="@categorie" TipObiect="C" Latime="70" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="OP" Tip="" Subtip="" InPozitii="0" NumeCol="Norma de timp" DataField="@normatimp" TipObiect="N" Latime="70" Ordine="7" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="QE" Tip="QE" Subtip="" Ordine="1" Nume="Devize in lucru" Descriere="" TextAdaugare="" TextModificare="" ProcDate="YSO_wIaDevizeLucru" ProcScriere="" ProcStergere="wStergDevizLucru" ProcDatePoz="yso_wIaPozDevizLucru" ProcScrierePoz="yso_wScriuPozDevizLucru" ProcStergerePoz="wStergPozDevizLucru" Vizibil="1" Fel="" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QE" Tip="QE" Subtip="" Ordine="1" Nume="Nr. deviz" TipObiect="C" DataField="@nrdeviz" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cod" Procesare="" Tooltip=""/>
+<form Meniu="QE" Tip="QE" Subtip="" Ordine="2" Nume="Cod Utilaj" TipObiect="C" DataField="@nrinmatriculare" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Nr. inmatriculare" Procesare="" Tooltip="" formula=""/>
+<form Meniu="QE" Tip="QE" Subtip="" Ordine="2" Nume="Utilaj" TipObiect="AC" DataField="@autovehicul" LabelField="@autovehicul" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="wACAutovehicule" ListaValori="" ListaEtichete="" Initializare="" Prompt="Utilaj" formula=""/>
+<form Meniu="QE" Tip="QE" Subtip="" Ordine="3" Nume="Sesizare client" TipObiect="C" DataField="@sesizareclient" LabelField="" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Sesizare client" Procesare="" Tooltip=""/>
+<form Meniu="QE" Tip="QE" Subtip="" Ordine="4" Nume="Constatare" TipObiect="C" DataField="@constatareservice" LabelField="" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Constatare" Procesare="" Tooltip=""/>
+<form Meniu="QE" Tip="QE" Subtip="" Ordine="5" Nume="Observatii" TipObiect="C" DataField="@obs" Latime="300" Vizibil="1" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="" Ordine="15" Nume="Km la bord" TipObiect="N" DataField="@kmbord" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Km bord" Procesare="" Tooltip="" formula=""/>
+<form Meniu="QE" Tip="QE" Subtip="" Ordine="16" Nume="Nr. dosar" TipObiect="C" DataField="@nrdosar" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="" Ordine="17" Nume="Beneficiar" TipObiect="AC" DataField="@beneficiar" LabelField="@denbeneficiar" Latime="300" Vizibil="1" Modificabil="0" ProcSQL="wACTerti" ListaValori="" ListaEtichete="" Initializare="" Prompt="Beneficiar" Procesare="" Tooltip=""/>
+<form Meniu="QE" Tip="QE" Subtip="" Ordine="20" Nume="Data incepere" TipObiect="D" DataField="@dataincepere" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="QE" Tip="QE" Subtip="" Ordine="21" Nume="Ora incepere" TipObiect="C" DataField="@oraincepere" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="" Ordine="22" Nume="Termen executie" TipObiect="D" DataField="@termenexecutie" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="" Ordine="23" Nume="Ora executie" TipObiect="C" DataField="@oraexecutie" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="" Ordine="24" Nume="Mecanic" TipObiect="AC" DataField="@postlucru" LabelField="@denpostlucru" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="wACPosturiLucru" ListaValori="" ListaEtichete="" Initializare="" Prompt="Post de lucru" Procesare="" Tooltip=""/>
+<form Meniu="QE" Tip="QE" Subtip="" Ordine="25" Nume="Stare" TipObiect="CB" DataField="@stare" Latime="100" Vizibil="1" Modificabil="0" ListaValori="0,1,2,3" ListaEtichete="Neacceptat,Acceptat,Finalizat,Facturat" Initializare="0"/>
+<form Meniu="QE" Tip="QE" Subtip="" Ordine="26" Nume="Valoare deviz" TipObiect="N" DataField="@valoaredeviz" Latime="100" Vizibil="1" Modificabil="0"/>
+</formuri>
+<filtre>
+<filtre Meniu="QE" Tip="QE" Ordine="1" Vizibil="1" TipObiect="" Descriere="Nr. deviz" Prompt1="Nr. deviz" DataField1="@filtrunrdeviz" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="QE" Tip="QE" Ordine="2" Vizibil="0" TipObiect="" Descriere="Nr. inmatriculare" Prompt1="Nr. inmatriculare" DataField1="@filtrunrinmatriculare" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="QE" Tip="QE" Ordine="3" Vizibil="1" TipObiect="" Descriere="Beneficiar" Prompt1="Beneficiar" DataField1="@filtrubeneficiar" Interval="0" Prompt2="" DataField2=""/>
+</filtre>
+<griduri>
+<grid Meniu="QE" Tip="QE" Subtip="" InPozitii="0" NumeCol="Nr. deviz" DataField="@nrdeviz" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="QE" Tip="QE" Subtip="" InPozitii="0" NumeCol="Nr.inmatr." DataField="@nrinmatriculare" TipObiect="C" Latime="100" Ordine="2" Vizibil="0" modificabil="0" formula=""/>
+<grid Meniu="QE" Tip="QE" Subtip="" InPozitii="0" NumeCol="Data" DataField="@dataincepere" TipObiect="D" Latime="100" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="QE" Tip="QE" Subtip="" InPozitii="0" NumeCol="Beneficiar" DataField="@denbeneficiar" TipObiect="C" Latime="200" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="QE" Tip="QE" Subtip="" InPozitii="0" NumeCol="Nume Service" DataField="@denpostlucru" TipObiect="C" Latime="100" Ordine="5" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="QE" Tip="QE" Subtip="" InPozitii="0" NumeCol="Km bord" DataField="@kmbord" TipObiect="N" Latime="100" Ordine="6" Vizibil="0" modificabil="0" formula=""/>
+<grid Meniu="QE" Tip="QE" Subtip="" InPozitii="0" NumeCol="Valoare deviz" DataField="@valoaredeviz" TipObiect="N" Latime="150" Ordine="7" Vizibil="1" formula=""/>
+<grid Meniu="QE" Tip="QE" Subtip="" InPozitii="0" NumeCol="Sesizare client" DataField="@sesizareclient" TipObiect="C" Latime="150" Ordine="8" Vizibil="1" formula=""/>
+<grid Meniu="QE" Tip="QE" Subtip="" InPozitii="0" NumeCol="Constatare service" DataField="@constatareservice" TipObiect="C" Latime="170" Ordine="9" Vizibil="1" formula=""/>
+<grid Meniu="QE" Tip="QE" Subtip="" InPozitii="1" NumeCol="Denumire" DataField="@denumire" TipObiect="G" Latime="200" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="QE" Tip="QE" Subtip="" InPozitii="1" NumeCol="Cantitate" DataField="@cantitate" TipObiect="N" Latime="80" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="QE" Tip="QE" Subtip=" " InPozitii="1" NumeCol="Stoc" DataField="@stoc" TipObiect="N" Latime="80" Ordine="4" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="QE" Tip="QE" Subtip="" InPozitii="1" NumeCol="Pret de stoc sau tarif orar" DataField="@tarif" TipObiect="N" Latime="120" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="QE" Tip="QE" Subtip="" InPozitii="1" NumeCol="Pret vanzare" DataField="@pretvanzare" TipObiect="N" Latime="100" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="QE" Tip="QE" Subtip="" InPozitii="1" NumeCol="Discount" DataField="@discount" TipObiect="N" Latime="55" Ordine="7" Vizibil="1" formula=""/>
+<grid Meniu="QE" Tip="QE" Subtip="" InPozitii="1" NumeCol="Valoare cu TVA" DataField="@valoarecutva" TipObiect="N" Latime="100" Ordine="9" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="QT" Tip="QT" Subtip="" Ordine="1" Nume="Devize in lucru" Descriere="" TextAdaugare="" TextModificare="" ProcDate="YSO_wIaCentralizatorDevize" ProcScriere="" ProcStergere="" ProcDatePoz="yso_wIaPozDevizLucru" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QT" Tip="QT" Subtip="" Ordine="1" Nume="Nr. deviz" TipObiect="C" DataField="@nrdeviz" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cod" Procesare="" Tooltip=""/>
+<form Meniu="QT" Tip="QT" Subtip="" Ordine="2" Nume="Cod Utilaj" TipObiect="C" DataField="@nrinmatriculare" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Nr. inmatriculare" Procesare="" Tooltip="" formula=""/>
+<form Meniu="QT" Tip="QT" Subtip="" Ordine="2" Nume="Utilaj" TipObiect="AC" DataField="@autovehicul" LabelField="@autovehicul" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="wACAutovehicule" ListaValori="" ListaEtichete="" Initializare="" Prompt="Utilaj" formula=""/>
+<form Meniu="QT" Tip="QT" Subtip="" Ordine="3" Nume="Sesizare client" TipObiect="C" DataField="@sesizareclient" LabelField="" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Sesizare client" Procesare="" Tooltip=""/>
+<form Meniu="QT" Tip="QT" Subtip="" Ordine="4" Nume="Constatare" TipObiect="C" DataField="@constatareservice" LabelField="" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Constatare" Procesare="" Tooltip=""/>
+<form Meniu="QT" Tip="QT" Subtip="" Ordine="5" Nume="Observatii" TipObiect="C" DataField="@obs" Latime="300" Vizibil="1" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="" Ordine="15" Nume="Km la bord" TipObiect="N" DataField="@kmbord" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Km bord" Procesare="" Tooltip="" formula=""/>
+<form Meniu="QT" Tip="QT" Subtip="" Ordine="16" Nume="Nr. dosar" TipObiect="C" DataField="@nrdosar" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="" Ordine="17" Nume="Beneficiar" TipObiect="AC" DataField="@beneficiar" LabelField="@denbeneficiar" Latime="300" Vizibil="1" Modificabil="0" ProcSQL="wACTerti" ListaValori="" ListaEtichete="" Initializare="" Prompt="Beneficiar" Procesare="" Tooltip=""/>
+<form Meniu="QT" Tip="QT" Subtip="" Ordine="20" Nume="Data incepere" TipObiect="D" DataField="@dataincepere" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="QT" Tip="QT" Subtip="" Ordine="21" Nume="Ora incepere" TipObiect="C" DataField="@oraincepere" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="" Ordine="22" Nume="Termen executie" TipObiect="D" DataField="@termenexecutie" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="" Ordine="23" Nume="Ora executie" TipObiect="C" DataField="@oraexecutie" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="" Ordine="24" Nume="Mecanic" TipObiect="AC" DataField="@postlucru" LabelField="@denpostlucru" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="wACPosturiLucru" ListaValori="" ListaEtichete="" Initializare="" Prompt="Post de lucru" Procesare="" Tooltip=""/>
+<form Meniu="QT" Tip="QT" Subtip="" Ordine="25" Nume="Stare" TipObiect="CB" DataField="@stare" Latime="100" Vizibil="1" Modificabil="0" ListaValori="0,1,2,3" ListaEtichete="Neacceptat,Acceptat,Finalizat,Facturat" Initializare="0"/>
+<form Meniu="QT" Tip="QT" Subtip="" Ordine="26" Nume="Valoare deviz" TipObiect="N" DataField="@valoaredeviz" Latime="100" Vizibil="1" Modificabil="0"/>
+</formuri>
+<filtre>
+<filtre Meniu="QT" Tip="QT" Ordine="1" Vizibil="1" TipObiect="" Descriere="Nr. deviz" Prompt1="Nr. deviz" DataField1="@filtrunrdeviz" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="QT" Tip="QT" Ordine="2" Vizibil="0" TipObiect="" Descriere="Nr. inmatriculare" Prompt1="Nr. inmatriculare" DataField1="@filtrunrinmatriculare" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="QT" Tip="QT" Ordine="3" Vizibil="1" TipObiect="" Descriere="Beneficiar" Prompt1="Beneficiar" DataField1="@filtrubeneficiar" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="QT" Tip="QT" Ordine="4" Vizibil="1" Descriere="Stare" Prompt1="Stare" DataField1="@filtrutipdeviz" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="QT" Tip="QT" Ordine="5" Vizibil="1" Descriere="Magazin" Prompt1="" DataField1="@filtrulocmunca" Interval="0" Prompt2="" DataField2=""/>
+</filtre>
+<griduri>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="0" NumeCol="Nr. deviz" DataField="@nrdeviz" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="0" NumeCol="Nr.inmatr." DataField="@nrinmatriculare" TipObiect="C" Latime="100" Ordine="2" Vizibil="0" modificabil="0" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="0" NumeCol="Data" DataField="@dataincepere" TipObiect="D" Latime="100" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="0" NumeCol="Beneficiar" DataField="@denbeneficiar" TipObiect="C" Latime="200" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="0" NumeCol="Nume Service" DataField="@denpostlucru" TipObiect="C" Latime="100" Ordine="5" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="0" NumeCol="Km bord" DataField="@kmbord" TipObiect="N" Latime="100" Ordine="6" Vizibil="0" modificabil="0" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="0" NumeCol="Valoare deviz" DataField="@valoaredeviz" TipObiect="N" Latime="150" Ordine="7" Vizibil="1" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="0" NumeCol="Sesizare client" DataField="@sesizareclient" TipObiect="C" Latime="150" Ordine="8" Vizibil="1" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="0" NumeCol="Constatare service" DataField="@constatareservice" TipObiect="C" Latime="170" Ordine="9" Vizibil="1" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="0" NumeCol="Magazin" DataField="@denlm" TipObiect="C" Latime="100" Ordine="10" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="0" NumeCol="Stare" DataField="@denstare" TipObiect="C" Latime="100" Ordine="20" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="1" NumeCol="Denumire" DataField="@denumire" TipObiect="G" Latime="200" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="1" NumeCol="Cantitate" DataField="@cantitate" TipObiect="N" Latime="80" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="1" NumeCol="Stoc" DataField="@stoc" TipObiect="N" Latime="80" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="1" NumeCol="Pret de stoc sau tarif orar" DataField="@tarif" TipObiect="N" Latime="120" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="1" NumeCol="Pret vanzare" DataField="@pretvanzare" TipObiect="N" Latime="100" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="1" NumeCol="Discount" DataField="@discount" TipObiect="N" Latime="55" Ordine="7" Vizibil="1" formula=""/>
+<grid Meniu="QT" Tip="QT" Subtip="" InPozitii="1" NumeCol="Valoare cu TVA" DataField="@valoarecutva" TipObiect="N" Latime="100" Ordine="9" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="QF" Tip="QF" Subtip="" Ordine="2" Nume="Devize de facturat" Descriere="" TextAdaugare="" TextModificare="" ProcDate="wIaDevizeDeFacturat" ProcScriere="" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QF" Tip="QF" Subtip="" Ordine="1" Nume="Cod" TipObiect="C" DataField="@coddeviz" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cod" Procesare="" Tooltip=""/>
+<form Meniu="QF" Tip="QF" Subtip="" Ordine="2" Nume="Denumire" TipObiect="C" DataField="@denumiredeviz" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Denumire" Procesare="" Tooltip=""/>
+<form Meniu="QF" Tip="QF" Subtip="" Ordine="3" Nume="Data lansarii" TipObiect="D" DataField="@data" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Data" Procesare="" Tooltip=""/>
+<form Meniu="QF" Tip="QF" Subtip="" Ordine="4" Nume="Beneficiar" TipObiect="AC" DataField="@tert" LabelField="@denumire" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACTerti" ListaValori="" ListaEtichete="" Initializare="" Prompt="Beneficiar" Procesare="" Tooltip=""/>
+<form Meniu="QF" Tip="QF" Subtip="" Ordine="5" Nume="Executant" TipObiect="C" DataField="@executant" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Executant" Procesare="" Tooltip=""/>
+<form Meniu="QF" Tip="QF" Subtip="" Ordine="6" Nume="Km bord" TipObiect="N" DataField="@kmbord" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Km bord" Procesare="" Tooltip=""/>
+<form Meniu="QF" Tip="QF" Subtip="" Ordine="7" Nume="Valoare deviz" TipObiect="N" DataField="@valoaredeviz" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Valoare deviz" Procesare="" Tooltip=""/>
+<form Meniu="QF" Tip="QF" Subtip="" Ordine="8" Nume="Sesizare client" TipObiect="C" DataField="@sesizareclient" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Sezisare client" Procesare="" Tooltip=""/>
+<form Meniu="QF" Tip="QF" Subtip="" Ordine="9" Nume="Constatare service" TipObiect="C" DataField="@constatareservice" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Constatare service" Procesare="" Tooltip=""/>
+</formuri>
+<filtre>
+<filtre Meniu="QF" Tip="QF" Ordine="1" Vizibil="1" TipObiect="" Descriere="Nr. deviz" Prompt1="Nr. deviz" DataField1="@filtrunrdeviz" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="QF" Tip="QF" Ordine="2" Vizibil="1" TipObiect="" Descriere="Nr. inmatriculare" Prompt1="Nr. inmatriculare" DataField1="@filtrunrinmatriculare" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="QF" Tip="QF" Ordine="3" Vizibil="1" TipObiect="" Descriere="Beneficiar" Prompt1="Beneficiar" DataField1="@filtrubeneficiar" Interval="0" Prompt2="" DataField2=""/>
+</filtre>
+<griduri>
+<grid Meniu="QF" Tip="QF" Subtip="" InPozitii="0" NumeCol="Nr. deviz" DataField="@nrdeviz" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="QF" Tip="QF" Subtip="" InPozitii="0" NumeCol="Nr.inmatr." DataField="@nrinmatriculare" TipObiect="C" Latime="100" Ordine="2" Vizibil="0" modificabil="0" formula=""/>
+<grid Meniu="QF" Tip="QF" Subtip="" InPozitii="0" NumeCol="Data" DataField="@dataincepere" TipObiect="D" Latime="100" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="QF" Tip="QF" Subtip="" InPozitii="0" NumeCol="Beneficiar" DataField="@denbeneficiar" TipObiect="C" Latime="200" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="QF" Tip="QF" Subtip="" InPozitii="0" NumeCol="Post lucru" DataField="@denpostlucru" TipObiect="C" Latime="100" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="QF" Tip="QF" Subtip="" InPozitii="0" NumeCol="Km bord" DataField="@kmbord" TipObiect="N" Latime="100" Ordine="6" Vizibil="0" modificabil="0" formula=""/>
+<grid Meniu="QF" Tip="QF" Subtip="" InPozitii="0" NumeCol="Valoare deviz" DataField="@valoaredeviz" TipObiect="N" Latime="150" Ordine="7" Vizibil="1" formula=""/>
+<grid Meniu="QF" Tip="QF" Subtip="" InPozitii="0" NumeCol="Sesizare client" DataField="@sesizareclient" TipObiect="C" Latime="150" Ordine="8" Vizibil="1" formula=""/>
+<grid Meniu="QF" Tip="QF" Subtip="" InPozitii="0" NumeCol="Constatare service" DataField="@constatareservice" TipObiect="C" Latime="170" Ordine="9" Vizibil="1" formula=""/>
+<grid Meniu="QF" Tip="QF" Subtip="" InPozitii="1" NumeCol="Denumire" DataField="@denumire" TipObiect="G" Latime="200" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="QF" Tip="QF" Subtip="" InPozitii="1" NumeCol="Cantitate" DataField="@cantitate" TipObiect="N" Latime="80" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="QF" Tip="QF" Subtip="" InPozitii="1" NumeCol="Pret de stoc sau tarif orar" DataField="@tarif" TipObiect="N" Latime="120" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="QF" Tip="QF" Subtip="" InPozitii="1" NumeCol="Pret vanzare" DataField="@pretvanzare" TipObiect="N" Latime="100" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="QF" Tip="QF" Subtip="" InPozitii="1" NumeCol="Discount" DataField="@discount" TipObiect="N" Latime="55" Ordine="7" Vizibil="1" formula=""/>
+<grid Meniu="QF" Tip="QF" Subtip="" InPozitii="1" NumeCol="Valoare cu TVA" DataField="@valoarecutva" TipObiect="N" Latime="100" Ordine="9" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="QG" Tip="QG" Subtip="" Ordine="1" Nume="Devize inchise" Descriere="" TextAdaugare="" TextModificare="" ProcDate="wIaDevizeInchise" ProcScriere="" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QG" Tip="QG" Subtip="" Ordine="1" Nume="Cod" TipObiect="C" DataField="@coddeviz" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Cod deviz" Procesare="" Tooltip=""/>
+<form Meniu="QG" Tip="QG" Subtip="" Ordine="2" Nume="Denumire" TipObiect="C" DataField="@denumiredeviz" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Denumire deviz" Procesare="" Tooltip=""/>
+<form Meniu="QG" Tip="QG" Subtip="" Ordine="3" Nume="Data lansarii" TipObiect="D" DataField="@data" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Data lansarii" Procesare="" Tooltip=""/>
+<form Meniu="QG" Tip="QG" Subtip="" Ordine="4" Nume="Beneficiar" TipObiect="AC" DataField="@tert" LabelField="@denumire" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="wACTerti" ListaValori="" ListaEtichete="" Initializare="" Prompt="Beneficiar" Procesare="" Tooltip=""/>
+<form Meniu="QG" Tip="QG" Subtip="" Ordine="5" Nume="Executant" TipObiect="C" DataField="@executant" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Executant" Procesare="" Tooltip=""/>
+<form Meniu="QG" Tip="QG" Subtip="" Ordine="6" Nume="Km bord" TipObiect="N" DataField="@kmbord" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Km Bord" Procesare="" Tooltip=""/>
+<form Meniu="QG" Tip="QG" Subtip="" Ordine="7" Nume="Valoare deviz" TipObiect="N" DataField="@valoaredeviz" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Valoare deviz" Procesare="" Tooltip=""/>
+<form Meniu="QG" Tip="QG" Subtip="" Ordine="8" Nume="Sesizare client" TipObiect="C" DataField="@sesizareclient" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Sesizare Client" Procesare="" Tooltip=""/>
+<form Meniu="QG" Tip="QG" Subtip="" Ordine="9" Nume="Constatare service" TipObiect="C" DataField="@constatareservice" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Constatare Service" Procesare="" Tooltip=""/>
+</formuri>
+<filtre>
+<filtre Meniu="QG" Tip="QG" Ordine="1" Vizibil="1" TipObiect="" Descriere="Nr. deviz" Prompt1="Nr. deviz" DataField1="@filtrunrdeviz" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="QG" Tip="QG" Ordine="2" Vizibil="1" TipObiect="" Descriere="Nr. inmatriculare" Prompt1="Nr. inmatriculare" DataField1="@filtrunrinmatriculare" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="QG" Tip="QG" Ordine="3" Vizibil="1" TipObiect="" Descriere="Beneficiar" Prompt1="Beneficiar" DataField1="@filtrubeneficiar" Interval="0" Prompt2="" DataField2=""/>
+</filtre>
+<griduri>
+<grid Meniu="QG" Tip="QG" Subtip="" InPozitii="0" NumeCol="Nr. deviz" DataField="@nrdeviz" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="QG" Tip="QG" Subtip="" InPozitii="0" NumeCol="Nr.inmatr." DataField="@nrinmatriculare" TipObiect="C" Latime="100" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="QG" Tip="QG" Subtip="" InPozitii="0" NumeCol="Data" DataField="@dataincepere" TipObiect="D" Latime="100" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="QG" Tip="QG" Subtip="" InPozitii="0" NumeCol="Beneficiar" DataField="@denbeneficiar" TipObiect="C" Latime="200" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="QG" Tip="QG" Subtip="" InPozitii="0" NumeCol="Post lucru" DataField="@denpostlucru" TipObiect="C" Latime="100" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="QG" Tip="QG" Subtip="" InPozitii="0" NumeCol="Km bord" DataField="@kmbord" TipObiect="N" Latime="100" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="QG" Tip="QG" Subtip="" InPozitii="0" NumeCol="Valoare deviz" DataField="@valoaredeviz" TipObiect="N" Latime="150" Ordine="7" Vizibil="1" formula=""/>
+<grid Meniu="QG" Tip="QG" Subtip="" InPozitii="0" NumeCol="Sesizare client" DataField="@sesizareclient" TipObiect="C" Latime="150" Ordine="8" Vizibil="1" formula=""/>
+<grid Meniu="QG" Tip="QG" Subtip="" InPozitii="0" NumeCol="Constatare service" DataField="@constatareservice" TipObiect="C" Latime="170" Ordine="9" Vizibil="1" formula=""/>
+<grid Meniu="QG" Tip="QG" Subtip="" InPozitii="1" NumeCol="Denumire" DataField="@denumire" TipObiect="G" Latime="200" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="QG" Tip="QG" Subtip="" InPozitii="1" NumeCol="Cantitate" DataField="@cantitate" TipObiect="N" Latime="80" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="QG" Tip="QG" Subtip="" InPozitii="1" NumeCol="Pret de stoc sau tarif orar" DataField="@tarif" TipObiect="N" Latime="120" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="QG" Tip="QG" Subtip="" InPozitii="1" NumeCol="Pret vanzare" DataField="@pretvanzare" TipObiect="N" Latime="100" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="QG" Tip="QG" Subtip="" InPozitii="1" NumeCol="Discount" DataField="@discount" TipObiect="N" Latime="55" Ordine="7" Vizibil="1" formula=""/>
+<grid Meniu="QG" Tip="QG" Subtip="" InPozitii="1" NumeCol="Valoare cu TVA" DataField="@valoarecutva" TipObiect="N" Latime="100" Ordine="9" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="QA" Tip="" Subtip="" Ordine="1" Nume="Utilaje" Descriere="" TextAdaugare="Adaugare utilaj" TextModificare="Modificare utilaj" ProcDate="wIaAutovehicule" ProcScriere="wScriuAutovehicul" ProcStergere="wStergAutovehicul" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QA" Tip="" Subtip="" Ordine="1" Nume="Serie" TipObiect="C" DataField="@codautovehicul" LabelField="" Latime="150" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="Serie" Procesare="" Tooltip=""/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="2" Nume="Tip utilaj" TipObiect="AC" DataField="@tipautovehicul" LabelField="@tipautovehicul" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="wACTipuriAutovehicule" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tip autovehicul" Procesare="" Tooltip="" formula=""/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="3" Nume="Marca" TipObiect="AC" DataField="@marca" LabelField="@denmarca" Latime="250" Vizibil="1" Modificabil="1" ProcSQL="wACGrupe" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="4" Nume="Model" TipObiect="C" DataField="@model" LabelField="" Latime="150" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="5" Nume="Versiune" TipObiect="C" DataField="@versiune" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="6" Nume="Tip motor" TipObiect="C" DataField="@tipmotor" Latime="150" Vizibil="0" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="7" Nume="Putere" TipObiect="C" DataField="@puteremotor" Latime="150" Vizibil="0" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="8" Nume="An fabricatie" TipObiect="N" DataField="@anfabricatie" LabelField="" Latime="50" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="9" Nume="Nr. inmatriculare / identificare" TipObiect="C" DataField="@nrinmatriculare" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="10" Nume="Serie" TipObiect="C" DataField="@seriesasiu" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="11" Nume="Serie de motor" TipObiect="C" DataField="@seriemotor" Latime="150" Vizibil="1" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="12" Nume="Cilindree" TipObiect="C" DataField="@cilindree" Latime="150" Vizibil="0" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="13" Nume="Carburant" TipObiect="CB" DataField="@carburant" Latime="150" Vizibil="0" Modificabil="1" ListaValori="B,M,G" ListaEtichete="Benzina,Motorina,Gaz" Initializare="B"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="14" Nume="Culoare" TipObiect="AC" DataField="@culoare" LabelField="@denculoare" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="wACCulori" Prompt="Culoare"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="15" Nume="Chirias" TipObiect="AC" DataField="@codchirias" LabelField="@denchirias" Latime="200" Vizibil="0" Modificabil="1" ProcSQL="wACTerti" Prompt="Chirias"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="16" Nume="Proprietar" TipObiect="AC" DataField="@codproprietar" LabelField="@denproprietar" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="wACTerti" Prompt="Proprietar"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="18" Nume="Nr. card" TipObiect="C" DataField="@nrcard" Latime="150" Vizibil="0" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="19" Nume="Data card" TipObiect="D" DataField="@datacard" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="20" Nume="Data adeziunii" TipObiect="D" DataField="@dataadeziunii" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="21" Nume="Data ITP" TipObiect="D" DataField="@dataITP" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="22" Nume="Asigurare" TipObiect="C" DataField="@asigurare" Latime="150" Vizibil="0" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="23" Nume="Asigurare obligatorie" TipObiect="C" DataField="@asigurareobligatorie" Latime="150" Vizibil="0" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="24" Nume="Data cumpararii" TipObiect="D" DataField="@datacumpararii" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="25" Nume="Comanda" TipObiect="C" DataField="@com" Latime="150" Vizibil="0" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="26" Nume="Garantie" TipObiect="N" DataField="@garantie" Latime="50" Vizibil="0" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="27" Nume="Dealer" TipObiect="C" DataField="@dealer" Latime="150" Vizibil="0" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="28" Nume="Cod antidemaraj" TipObiect="C" DataField="@codantidemaraj" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="29" Nume="Cod radio" TipObiect="C" DataField="@codradio" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="30" Nume="Cod chei" TipObiect="C" DataField="@codchei" LabelField="" Latime="150" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="31" Nume="DDG (Data debut garantie)" TipObiect="D" DataField="@DDG" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="32" Nume="DAM (Data aplicare modificari)" TipObiect="C" DataField="@DAM" Latime="50" Vizibil="0" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="33" Nume="Ore functionare" TipObiect="N" DataField="@kmbord" LabelField="" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" formula=""/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="34" Nume="Observatii" TipObiect="C" DataField="@obs" Latime="300" Vizibil="0" Modificabil="1"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="35" Nume="Furnizor" TipObiect="AC" DataField="@furnizor" LabelField="@denfurnizor" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="wACTerti" Prompt="Furnizor"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="36" Nume="Mod plata" TipObiect="CB" DataField="@modplata" Latime="100" Vizibil="0" Modificabil="1" ListaValori=",C,L" ListaEtichete=",Cash,Leasing"/>
+<form Meniu="QA" Tip="" Subtip="" Ordine="37" Nume="Firma leasing" TipObiect="C" DataField="@firmaleasing" Latime="200" Vizibil="0" Modificabil="1"/>
+</formuri>
+<filtre>
+<filtre Meniu="QA" Tip="QA" Ordine="1" Vizibil="1" TipObiect="" Descriere="Nr. inmatriculare" Prompt1="Nr. inmatriculare" DataField1="@filtrunrinmatriculare" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="QA" Tip="QA" Ordine="2" Vizibil="1" TipObiect="" Descriere="Tip autovehicul" Prompt1="Tip autovehicul" DataField1="@filtrutipautovehicul" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="QA" Tip="QA" Ordine="3" Vizibil="1" TipObiect="" Descriere="Marca" Prompt1="Marca" DataField1="@filtrumarca" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="QA" Tip="QA" Ordine="4" Vizibil="1" TipObiect="" Descriere="Model" Prompt1="Model" DataField1="@filtrumodel" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="QA" Tip="QA" Ordine="5" Vizibil="1" TipObiect="" Descriere="An fabricatie" Prompt1="De la" DataField1="@filtruanfabricatiej" Interval="1" Prompt2="Pana la" DataField2="@filtruanfabricaties"/>
+<filtre Meniu="QA" Tip="QA" Ordine="10" Vizibil="1" Descriere="Serie" Prompt1="Serie" DataField1="@filtruserie" Interval="0" Prompt2="" DataField2=""/>
+</filtre>
+<griduri>
+<grid Meniu="QA" Tip="" Subtip="" InPozitii="0" NumeCol="Marca" DataField="@marca" TipObiect="C" Latime="150" Ordine="1" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="QA" Tip="" Subtip="" InPozitii="0" NumeCol="Model" DataField="@model" TipObiect="C" Latime="150" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="QA" Tip="" Subtip="" InPozitii="0" NumeCol="Tip utilaj" DataField="@tipautovehicul" TipObiect="C" Latime="150" Ordine="2" Vizibil="0" modificabil="0" formula=""/>
+<grid Meniu="QA" Tip="" Subtip="" InPozitii="0" NumeCol="Serie" DataField="@codautovehicul" TipObiect="C" Latime="150" Ordine="3" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="QA" Tip="" Subtip="" InPozitii="0" NumeCol="Proprietar" DataField="@denproprietar" TipObiect="C" Latime="200" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="QA" Tip="" Subtip="" InPozitii="0" NumeCol="Versiune" DataField="@versiune" TipObiect="C" Latime="150" Ordine="5" Vizibil="0" modificabil="0" formula=""/>
+<grid Meniu="QA" Tip="" Subtip="" InPozitii="0" NumeCol="Furnizor" DataField="@denfurnizor" TipObiect="C" Latime="150" Ordine="6" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="QA" Tip="" Subtip="" InPozitii="0" NumeCol="Nr. inmatriculare" DataField="@nrinmatriculare" TipObiect="C" Latime="150" Ordine="7" Vizibil="0" modificabil="0" formula=""/>
+<grid Meniu="QA" Tip="" Subtip="" InPozitii="0" NumeCol="An fabricatie" DataField="@anfabricatie" TipObiect="C" Latime="100" Ordine="8" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="QC" Tip="" Subtip="" Ordine="2" Nume="Tipuri utilaje" Descriere="" TextAdaugare="Adaugare tip utilaje" TextModificare="Modificare tip autovehicule" ProcDate="wIaTipuriAutovehicule" ProcScriere="wScriuTipAutovehicule" ProcStergere="wStergTipAutovehicule" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QC" Tip="" Subtip="" Ordine="1" Nume="Cod" TipObiect="C" DataField="@cod" LabelField="" Latime="150" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="QC" Tip="" Subtip="" Ordine="3" Nume="Marca" TipObiect="C" DataField="@marca" LabelField="" Latime="150" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="QC" Tip="" Subtip="" Ordine="4" Nume="Model" TipObiect="C" DataField="@model" LabelField="" Latime="150" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="QC" Tip="" Subtip="" Ordine="5" Nume="Versiune" TipObiect="C" DataField="@versiune" LabelField="" Latime="150" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="QC" Tip="" Subtip="" Ordine="6" Nume="Tip motor" TipObiect="C" DataField="@tipmotor" Latime="150" Vizibil="1" Modificabil="1"/>
+<form Meniu="QC" Tip="" Subtip="" Ordine="7" Nume="Capacitate" TipObiect="C" DataField="@capacitate" Latime="150" Vizibil="1" Modificabil="1"/>
+<form Meniu="QC" Tip="" Subtip="" Ordine="8" Nume="Putere" TipObiect="C" DataField="@putere" Latime="150" Vizibil="1" Modificabil="1"/>
+<form Meniu="QC" Tip="" Subtip="" Ordine="9" Nume="Grupa" TipObiect="C" DataField="@grupa" LabelField="" Latime="150" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+</formuri>
+<griduri>
+<grid Meniu="QC" Tip="" Subtip="" InPozitii="0" NumeCol="Cod" DataField="@cod" TipObiect="C" Latime="150" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="QC" Tip="" Subtip="" InPozitii="0" NumeCol="Marca" DataField="@marca" TipObiect="C" Latime="150" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="QC" Tip="" Subtip="" InPozitii="0" NumeCol="Model" DataField="@model" TipObiect="C" Latime="150" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="QC" Tip="" Subtip="" InPozitii="0" NumeCol="Versiune" DataField="@versiune" TipObiect="C" Latime="150" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="QC" Tip="" Subtip="" InPozitii="0" NumeCol="Tip motor" DataField="@tipmotor" TipObiect="C" Latime="150" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="QC" Tip="" Subtip="" InPozitii="0" NumeCol="Capacitate" DataField="@capacitate" TipObiect="C" Latime="150" Ordine="7" Vizibil="1" formula=""/>
+<grid Meniu="QC" Tip="" Subtip="" InPozitii="0" NumeCol="Putere" DataField="@putere" TipObiect="C" Latime="150" Ordine="8" Vizibil="1" formula=""/>
+<grid Meniu="QC" Tip="" Subtip="" InPozitii="0" NumeCol="Grupa" DataField="@grupa" TipObiect="C" Latime="100" Ordine="9" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="QB" Tip="" Subtip="" Ordine="3" Nume="Posturi de lucru" Descriere="" TextAdaugare="Adaugare post de lucru" TextModificare="Modificare post de lucru" ProcDate="wIaPosturiLucru" ProcScriere="wScriuPostLucru" ProcStergere="wStergPostLucru" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QB" Tip="" Subtip="" Ordine="1" Nume="Post de lucru" TipObiect="N" DataField="@postlucru" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="QB" Tip="" Subtip="" Ordine="2" Nume="Denumire" TipObiect="C" DataField="@denumire" LabelField="" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="QB" Tip="" Subtip="" Ordine="3" Nume="Loc de munca" TipObiect="AC" DataField="@locmunca" LabelField="@denlm" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="wACLocm" ListaValori="" ListaEtichete="" Initializare="" Prompt="Loc de munca" Procesare="" Tooltip=""/>
+<form Meniu="QB" Tip="" Subtip="" Ordine="4" Nume="Consilier responsabil" TipObiect="C" DataField="@consilier" LabelField="" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+</formuri>
+<filtre>
+<filtre Meniu="QB" Tip="QB" Ordine="1" Vizibil="1" TipObiect="" Descriere="Post de lucru" Prompt1="Post de lucru" DataField1="@filtrupostlucru" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="QB" Tip="QB" Ordine="2" Vizibil="1" TipObiect="" Descriere="Denumire" Prompt1="Denumire" DataField1="@filtrudenumire" Interval="0" Prompt2="" DataField2=""/>
+</filtre>
+<griduri>
+<grid Meniu="QB" Tip="" Subtip="" InPozitii="0" NumeCol="Post de lucru" DataField="@postlucru" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="QB" Tip="" Subtip="" InPozitii="0" NumeCol="Denumire" DataField="@denumire" TipObiect="C" Latime="250" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="QB" Tip="" Subtip="" InPozitii="0" NumeCol="Loc de munca" DataField="@locmunca" TipObiect="C" Latime="150" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="QB" Tip="" Subtip="" InPozitii="0" NumeCol="Consilier" DataField="@consilier" TipObiect="C" Latime="200" Ordine="4" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="QD" Tip="" Subtip="" Ordine="4" Nume="Tarife manopera" Descriere="" TextAdaugare="Adaugare tarif manopera" TextModificare="Modificare tarif manopera" ProcDate="wIaTarifeSA" ProcScriere="wScriuTarifSA" ProcStergere="wStergTarifSA" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QD" Tip="" Subtip="" Ordine="1" Nume="Cod" TipObiect="C" DataField="@cod" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="QD" Tip="" Subtip="" Ordine="2" Nume="Denumire" TipObiect="C" DataField="@denumire" LabelField="" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="QD" Tip="" Subtip="" Ordine="3" Nume="Tarif" TipObiect="N" DataField="@tarif" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" ListaValori="" ListaEtichete="" Initializare="" Prompt="" Procesare="" Tooltip=""/>
+<form Meniu="QD" Tip="" Subtip="" Ordine="4" Nume="Valuta" TipObiect="AC" DataField="@valuta" LabelField="@denvaluta" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACValuta"/>
+</formuri>
+<filtre>
+<filtre Meniu="QD" Tip="QD" Ordine="1" Vizibil="1" TipObiect="" Descriere="Cod" Prompt1="Cod" DataField1="@filtrucod" Interval="0" Prompt2="" DataField2=""/>
+<filtre Meniu="QD" Tip="QD" Ordine="2" Vizibil="1" TipObiect="" Descriere="Tarif" Prompt1="De la" DataField1="@filtrutarifj" Interval="1" Prompt2="Pana La" DataField2="@filtrutarifs"/>
+<filtre Meniu="QD" Tip="QD" Ordine="3" Vizibil="1" TipObiect="" Descriere="Denumire" Prompt1="Denumire" DataField1="@filtrudenumire" Interval="0" Prompt2="" DataField2=""/>
+</filtre>
+<griduri>
+<grid Meniu="QD" Tip="" Subtip="" InPozitii="0" NumeCol="Cod" DataField="@cod" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="QD" Tip="" Subtip="" InPozitii="0" NumeCol="Denumire" DataField="@denumire" TipObiect="C" Latime="200" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="QD" Tip="" Subtip="" InPozitii="0" NumeCol="Tarif" DataField="@tarif" TipObiect="N" Latime="100" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="QD" Tip="" Subtip="" InPozitii="0" NumeCol="Valuta" DataField="@valuta" TipObiect="C" Latime="100" Ordine="4" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="QE" Tip="QE" Subtip="GT" Ordine="1" Nume="Generare transfer" Descriere="Generare transfer piese deviz in gestiunea de service." ProcScriere="wOPGenerareTransferPiese" Vizibil="0" Fel="O" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QE" Tip="QE" Subtip="GT" Ordine="1" Nume="Nr. transfer" TipObiect="C" DataField="@numar" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="GT" Ordine="2" Nume="Data transfer" TipObiect="D" DataField="@data" Latime="100" Vizibil="1" Modificabil="1"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="QE" Tip="QE" Subtip="M" Ordine="1" Nume="Manopera" Descriere="" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QE" Tip="QE" Subtip="M" Ordine="2" Nume="Operatie" TipObiect="AC" DataField="@cod" LabelField="@denumire" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="wACOperatii" Prompt="Operatie"/>
+<form Meniu="QE" Tip="QE" Subtip="M" Ordine="3" Nume="Minute" TipObiect="N" DataField="@cantitate" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="M" Ordine="4" Nume="Timp" TipObiect="N" DataField="@timpnormat" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="M" Ordine="5" Nume="Tarif orar" TipObiect="AC" DataField="@tarif" LabelField="@tarif" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="wACTarifeSA" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tarif orar"/>
+<form Meniu="QE" Tip="QE" Subtip="M" Ordine="6" Nume="Pret vanzare" TipObiect="N" DataField="@pretvanzare" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="M" Ordine="7" Nume="Discount (%)" TipObiect="N" DataField="@discount" Latime="30" Vizibil="0" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="M" Ordine="8" Nume="Mecanic" TipObiect="AC" DataField="@marca" LabelField="@numesalariat" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACPersonal" Prompt="Mecanic"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="QE" Tip="QE" Subtip="P" Ordine="2" Nume="Piesa" Descriere="" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QE" Tip="QE" Subtip="P" Ordine="1" Nume="Barcod" TipObiect="C" DataField="@barcod" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="P" Ordine="2" Nume="Piesa" TipObiect="AC" DataField="@cod" LabelField="@denumire" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="yso_wACNomenclatorDevizLucru" Prompt="Piesa"/>
+<form Meniu="QE" Tip="QE" Subtip="P" Ordine="3" Nume="Cantitate" TipObiect="N" DataField="@cantitate" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="P" Ordine="6" Nume="Pret vanzare" TipObiect="N" DataField="@pretvanzare" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="P" Ordine="7" Nume="Discount (%)" TipObiect="N" DataField="@discount" Latime="30" Vizibil="0" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="P" Ordine="9" Nume="Gestiune" TipObiect="AC" DataField="@gestiune" LabelField="@dengestiune" Latime="300" Vizibil="0" Modificabil="1" ProcSQL="wACGestiuni" Prompt="Gestiune"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="QE" Tip="QE" Subtip="FM" Ordine="2" Nume="Finalizare manopera" Descriere="Stabilire data finalizare manopera deviz." ProcScriere="wOPFinalizareManopera" Vizibil="0" Fel="O" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QE" Tip="QE" Subtip="FM" Ordine="2" Nume="Data finalizarii" TipObiect="D" DataField="@data" Latime="100" Vizibil="1" Modificabil="1"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="QE" Tip="QE" Subtip="BD" Ordine="3" Nume="Finalizare deviz" Descriere="Trecere deviz in starea &quot;Bun de facturat&quot;." ProcScriere="yso_wOPFinalizareDeviz" Vizibil="1" Fel="O" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QE" Tip="QE" Subtip="BD" Ordine="1" Nume="Nr. transfer" TipObiect="C" DataField="@numar" LabelField=" " Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="BD" Ordine="2" Nume="Data transfer/finalizare" TipObiect="D" DataField="@data" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="BD" Ordine="4" Nume="Numar deviz" TipObiect="N" DataField="@nrdeviz" Latime="200" Vizibil="1" Modificabil="1"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="QE" Tip="QE" Subtip="R" Ordine="3" Nume="Refacturare" Vizibil="0" Fel="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QE" Tip="QE" Subtip="R" Ordine="2" Nume="Serviciu prestat" TipObiect="AC" DataField="@cod" LabelField="@denumire" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="wACNomenclator" Prompt="Serviciu prestat"/>
+<form Meniu="QE" Tip="QE" Subtip="R" Ordine="3" Nume="Tert" TipObiect="AC" DataField="@tertfactrefact" LabelField="@dentertfactrefact" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="wACTerti" Prompt="Tert"/>
+<form Meniu="QE" Tip="QE" Subtip="R" Ordine="4" Nume="Factura" TipObiect="C" DataField="@gestiune" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" Prompt="Factura"/>
+<form Meniu="QE" Tip="QE" Subtip="R" Ordine="5" Nume="Data facturii" TipObiect="D" DataField="@datafactrefact" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="QE" Tip="QE" Subtip="R" Ordine="6" Nume="Pret vanzare" TipObiect="N" DataField="@pretvanzare" Latime="100" Vizibil="1" Modificabil="1"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="QT" Tip="QT" Subtip="GT" Ordine="1" Nume="Generare transfer" Descriere="Generare transfer piese deviz in gestiunea de service." ProcScriere="wOPGenerareTransferPiese" Vizibil="0" Fel="O" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QT" Tip="QT" Subtip="GT" Ordine="1" Nume="Nr. transfer" TipObiect="C" DataField="@numar" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="GT" Ordine="2" Nume="Data transfer" TipObiect="D" DataField="@data" Latime="100" Vizibil="1" Modificabil="1"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="QT" Tip="QT" Subtip="M" Ordine="1" Nume="Manopera" Descriere="" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QT" Tip="QT" Subtip="M" Ordine="2" Nume="Operatie" TipObiect="AC" DataField="@cod" LabelField="@denumire" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="wACOperatii" Prompt="Operatie"/>
+<form Meniu="QT" Tip="QT" Subtip="M" Ordine="3" Nume="Minute" TipObiect="N" DataField="@cantitate" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="M" Ordine="4" Nume="Timp" TipObiect="N" DataField="@timpnormat" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="M" Ordine="5" Nume="Tarif orar" TipObiect="AC" DataField="@tarif" LabelField="@tarif" Latime="100" Vizibil="0" Modificabil="1" ProcSQL="wACTarifeSA" ListaValori="" ListaEtichete="" Initializare="" Prompt="Tarif orar"/>
+<form Meniu="QT" Tip="QT" Subtip="M" Ordine="6" Nume="Pret vanzare" TipObiect="N" DataField="@pretvanzare" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="M" Ordine="7" Nume="Discount (%)" TipObiect="N" DataField="@discount" Latime="30" Vizibil="0" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="M" Ordine="8" Nume="Mecanic" TipObiect="AC" DataField="@marca" LabelField="@numesalariat" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACPersonal" Prompt="Mecanic"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="QT" Tip="QT" Subtip="P" Ordine="2" Nume="Piesa" Descriere="" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="" procPopulare="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QT" Tip="QT" Subtip="P" Ordine="1" Nume="Barcod" TipObiect="C" DataField="@barcod" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="P" Ordine="2" Nume="Piesa" TipObiect="AC" DataField="@cod" LabelField="@denumire" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="yso_wACNomenclatorDevizLucru" Prompt="Piesa"/>
+<form Meniu="QT" Tip="QT" Subtip="P" Ordine="3" Nume="Cantitate" TipObiect="N" DataField="@cantitate" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="P" Ordine="6" Nume="Pret vanzare" TipObiect="N" DataField="@pretvanzare" Latime="100" Vizibil="0" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="P" Ordine="7" Nume="Discount (%)" TipObiect="N" DataField="@discount" Latime="30" Vizibil="0" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="P" Ordine="9" Nume="Gestiune" TipObiect="AC" DataField="@gestiune" LabelField="@dengestiune" Latime="300" Vizibil="0" Modificabil="1" ProcSQL="wACGestiuni" Prompt="Gestiune"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="QT" Tip="QT" Subtip="FM" Ordine="2" Nume="Finalizare manopera" Descriere="Stabilire data finalizare manopera deviz." ProcScriere="wOPFinalizareManopera" Vizibil="0" Fel="O" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QT" Tip="QT" Subtip="FM" Ordine="2" Nume="Data finalizarii" TipObiect="D" DataField="@data" Latime="100" Vizibil="1" Modificabil="1"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="QT" Tip="QT" Subtip="BD" Ordine="3" Nume="Finalizare deviz" Descriere="Trecere deviz in starea &quot;Bun de facturat&quot;." ProcScriere="yso_wOPFinalizareDeviz" Vizibil="1" Fel="O" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QT" Tip="QT" Subtip="BD" Ordine="1" Nume="Nr. transfer" TipObiect="C" DataField="@numar" LabelField="" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="BD" Ordine="2" Nume="Data transfer/finalizare" TipObiect="D" DataField="@data" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="BD" Ordine="4" Nume="Numar deviz" TipObiect="N" DataField="@nrdeviz" Latime="200" Vizibil="1" Modificabil="1"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="QT" Tip="QT" Subtip="R" Ordine="3" Nume="Refacturare" Vizibil="0" Fel="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QT" Tip="QT" Subtip="R" Ordine="2" Nume="Serviciu prestat" TipObiect="AC" DataField="@cod" LabelField="@denumire" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="wACNomenclator" Prompt="Serviciu prestat"/>
+<form Meniu="QT" Tip="QT" Subtip="R" Ordine="3" Nume="Tert" TipObiect="AC" DataField="@tertfactrefact" LabelField="@dentertfactrefact" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="wACTerti" Prompt="Tert"/>
+<form Meniu="QT" Tip="QT" Subtip="R" Ordine="4" Nume="Factura" TipObiect="C" DataField="@gestiune" LabelField="" Latime="100" Vizibil="1" Modificabil="1" ProcSQL="" Prompt="Factura"/>
+<form Meniu="QT" Tip="QT" Subtip="R" Ordine="5" Nume="Data facturii" TipObiect="D" DataField="@datafactrefact" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="QT" Tip="QT" Subtip="R" Ordine="6" Nume="Pret vanzare" TipObiect="N" DataField="@pretvanzare" Latime="100" Vizibil="1" Modificabil="1"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="QF" Tip="QF" Subtip="FD" Ordine="1" Nume="Facturare deviz" Descriere="Generare factura fiscala (aviz) din deviz." ProcScriere="wOPFacturareDeviz" Vizibil="1" Fel="O" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="QF" Tip="QF" Subtip="FD" Ordine="1" Nume="Nr. doc." TipObiect="C" DataField="@numar" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="QF" Tip="QF" Subtip="FD" Ordine="2" Nume="Data doc." TipObiect="D" DataField="@data" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="QF" Tip="QF" Subtip="FD" Ordine="3" Nume="Data scad." TipObiect="D" DataField="@datascad" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="QF" Tip="QF" Subtip="FD" Ordine="4" Nume="Cont factura (411...)" TipObiect="AC" DataField="@contfact" LabelField="@dencontfact" Latime="300" Vizibil="1" Modificabil="1" ProcSQL="wACConturi" Prompt="Cont factura (411...)"/>
+</formuri>
+</tipuri>
+</machete>
+

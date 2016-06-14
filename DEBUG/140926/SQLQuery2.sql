@@ -1,0 +1,1 @@
+exec yso_predariPachete '2392'

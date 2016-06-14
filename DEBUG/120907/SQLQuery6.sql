@@ -1,0 +1,3 @@
+declare @p2 xml
+set @p2=convert(xml,N'<row aplicatie="PV" tip="PV" casamarcat="3" data="09/07/2012" inXML="0" UID="006192F5-137C-12D4-289F-9F18B4CC0DD5" categoriePret="4" tert="1770509163190" cod="100-ISO4-16-BL" cantitate="1"><tert cod="1770509163190" denumire="PARVU CATALIN" cod_fiscal="1770509163190" NrORC="" localitate="5789" judet="DJ" adresa="" telefon_fax="" banca="" cont_in_banca="" zileScad="0" categorie_pret="4" cautaCoduriNomencl="0" nrcomenzi="0"/></row>')
+exec wUnCodNomenclator @sesiune='C3BC988345D11',@parXML=@p2

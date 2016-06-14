@@ -1,0 +1,13 @@
+begin tran
+--exec RefacereStocuri null,null,null,null,null,null
+declare @p2 xml
+set @p2=convert(xml,N'<parametri subunitate="1" tip="BK" numar="CJ982057" data="09/23/2015" explicatii="" termen="09/23/2015" dengestiune="CJ SHOWROOM  CLUJ" gestiune="211.CJ" dentert="I T B INSTALATII SRL" factura="" tert="18933100" contractcor="" punctlivrare="" denpunctlivrare="" denlm="CLUJ3" lm="1VZ_CJ_03" dengestprim="" gestprim="" valuta="" curs="0.0000" valoare="-329.00" valtva="-78.96" valtotala="-407.96" scadenta="0" contclient="" procpen="0" contr_cadru="" ext_camp4="" ext_camp5="01/01/1901" ext_modificari="" ext_clauze="" valabilitate="01/01/1901" pozitii="1" discount="0.0000000e+000" comspec="0" operat="09/23/2015" stare="1" categpret="1" dencategpret="Lista unica-Pret catalog  RON (1)" denstare="1-Facturabil" info1="" info2="0.00" info3="0.000000000000000e+000" info4="0.0000000e+000" info5="0.00" info6="" culoare="#0000FF" _nemodificabil="1" beneficiar="18933100" denbenef="18933100 - I T B INSTALATII SRL" numardoc="" iddelegat="1" numedelegat="BUDUSAN                                                               IONATAN                       KX 540642   POL CLUJ                      " prenumedelegat="IONATAN" nrmijltransp="" seriebuletin="KX" numarbuletin="540642" eliberatbuletin="POL CLUJ" data_expedierii="09/23/2015" ora_expedierii="10:14:32" nrformular="RIA_FACT" denformular=" RIA Factura" o_beneficiar="18933100" o_numardoc="" o_iddelegat="1" o_prenumedelegat="IONATAN" o_seriebuletin="KX" o_numarbuletin="540642" o_eliberatbuletin="POL CLUJ" o_nrmijltransp="" o_nrformular="RIA_FACT" update="1" datadoc="09/23/2015" aviznefacturat="0" noudelegat="0" observatii="" tipMacheta="D" codMeniu="CO" TipDetaliere="BK" 
+subtip="GF"><o_DateGrid><row cod="100-ISO4-16-RO" cantitate_factura="-47.000" cantitate_disponibila="-47.000" gestiune="211.CJ" denumire="HE-Tub 16x2 Standard cu izolatie rosie 6 mm (colaci 100m)" cant_aprobata="-47.000" cant_realizata="0.000" subunitate="1" tip="BK" data="09/23/2015" contract="CJ982057" tert="18933100" numar_pozitie="1"/></o_DateGrid><DateGrid><row cod="100-ISO4-16-RO" cantitate_factura="-47.000" cantitate_disponibila="-47.000" gestiune="211.CJ" denumire="HE-Tub 16x2 Standard cu izolatie rosie 6 mm (colaci 100m)" cant_aprobata="-47.000" cant_realizata="0.000" subunitate="1" tip="BK" data="09/23/2015" contract="CJ982057" tert="18933100" numar_pozitie="1"/></DateGrid></parametri>')
+select @p2
+
+exec wOPGenerareUnAPdinBK @sesiune='AE526C1ABF785',@parXML=@p2
+
+rollback tran
+
+--exec validSoldTert
+--exec validareStocNegativ null,null,null,null,null,null,null,null,null,null,null

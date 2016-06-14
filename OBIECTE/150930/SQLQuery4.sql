@@ -1,0 +1,3 @@
+declare @p2 xml
+set @p2=convert(xml,N'<row tip="AS" numar="tesc_dc" data="09/24/2015" tert="2620723224506" dentert="CAPSUC DANIELA PersoanA FizicA (CF/CNP: 21110901)" contvenituri="472" lm="" factura="" zilescadenta="0" aviznefacturat="0" contract="" tiptva="0"><row cod="AVANS" denumire=" CV AVANS CONFORM OFERTEI" cantitate="1" pvaluta="13000" cotatva="24" sumatva="0" subtip="AS"/><detalii><row explicatii=""/></detalii></row>')
+exec wScriuPozdoc @sesiune='EE550205BBDA1',@parXML=@p2

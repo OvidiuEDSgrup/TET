@@ -1,0 +1,3 @@
+declare @p2 xml
+set @p2=convert(xml,N'<row tip="AS" numar="test" data="09/29/2015" tert="1730521384184" dentert="ENACHE MARIA IRINA (CF/CNP: 1730521384184)" contvenituri="472" lm="1VZ_AG_00" factura="" zilescadenta="0" aviznefacturat="0" contract="" tiptva="0"><row cod="AVANS" denumire=" CV AVANS CONFORM OFERTEI" cantitate="1" pvaluta="10" cotatva="24" sumatva="0" subtip="AS"/><detalii><row explicatii=""/></detalii></row>')
+exec wScriuPozdoc @sesiune='',@parXML=@p2

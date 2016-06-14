@@ -1,0 +1,1 @@
+select convert(date,'2012-19-1')

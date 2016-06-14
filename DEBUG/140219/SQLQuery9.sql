@@ -1,0 +1,1 @@
+EXEC rapFormReceptieAm @sesiune=@sesiune, @tip=@tip, @numar=@numar, @data=@data, @datajos=@datajos, @datasus=@datasus, @f_gestprim=@f_gestprim, @parXML=@parXML

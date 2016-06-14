@@ -1,0 +1,1 @@
+select p.pretdisc,p.valfrtva,* from yso.pozconexp p where p.[Contract]='9850306'

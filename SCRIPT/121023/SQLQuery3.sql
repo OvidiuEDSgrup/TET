@@ -1,0 +1,1 @@
+select * from pozdoc p where p.Numar='9410450' and abs(p.Cantitate*p.Pret_vanzare*0.24-p.TVA_deductibil)>0.1

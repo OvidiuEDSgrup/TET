@@ -1,0 +1,1 @@
+select * from con where con.Contract like 'test%'

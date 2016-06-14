@@ -1,0 +1,1 @@
+select * from sysscon s where s.Contract='9810302' order by s.Data_stergerii desc

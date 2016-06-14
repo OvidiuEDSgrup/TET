@@ -1,0 +1,143 @@
+<machete>
+<meniuri Meniu="VC" Nume="Verificare contabilitate" MeniuParinte="CONTAGEST" Icoana="verificari1" TipMacheta="D" NrOrdine="451.00" Componenta="" Semnatura="" vizibil="1" publicabil="1">
+<Detalii>
+<row>
+<vechi>
+<row id="451" nume="Verificare contabilitate" idparinte="6" icoana="verificari1" tipmacheta="D" meniu="VC" publicabil="1"/>
+</vechi>
+</row>
+</Detalii>
+</meniuri>
+<tipuri Meniu="VC" Tip="SC" Subtip="" Ordine="1" Nume="Stocuri" ProcDate="wIaVerificareContabilitate" Vizibil="1" Fel=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="VC" Tip="SC" Ordine="1" Vizibil="1" Descriere="Numar doc." Prompt1="Filtru nr. document" DataField1="@filtruNrDoc" Interval="0"/>
+<filtre Meniu="VC" Tip="SC" Ordine="2" Vizibil="1" Descriere="Cont" Prompt1="Filtru cont" DataField1="@filtruCont" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="VC" Tip="SC" InPozitii="0" NumeCol="Tip doc." DataField="@tip_document" TipObiect="C" Latime="40" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="VC" Tip="SC" InPozitii="0" NumeCol="Numar" DataField="@numar" TipObiect="C" Latime="80" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="VC" Tip="SC" InPozitii="0" NumeCol="Data" DataField="@data" TipObiect="D" Latime="80" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="VC" Tip="SC" InPozitii="0" NumeCol="Cont" DataField="@cont" TipObiect="C" Latime="80" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="VC" Tip="SC" InPozitii="0" NumeCol="Valoare doc." DataField="@valoare_doc" TipObiect="N" Latime="100" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="VC" Tip="SC" InPozitii="0" NumeCol="Valoare inregistrari" DataField="@valoare_inregistrari" TipObiect="N" Latime="100" Ordine="6" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="VC" Tip="FU" Subtip="" Ordine="2" Nume="Furnizori" ProcDate="wIaVerificareContabilitate" Vizibil="1" Fel=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="VC" Tip="FU" Ordine="1" Vizibil="1" Descriere="Numar doc." Prompt1="Filtru nr. document" DataField1="@filtruNrDoc" Interval="0"/>
+<filtre Meniu="VC" Tip="FU" Ordine="2" Vizibil="1" Descriere="Cont" Prompt1="Filtru cont" DataField1="@filtruCont" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="VC" Tip="FU" InPozitii="0" NumeCol="Tip doc." DataField="@tip_document" TipObiect="C" Latime="40" Ordine="1" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VC" Tip="FU" InPozitii="0" NumeCol="Numar" DataField="@numar" TipObiect="C" Latime="80" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VC" Tip="FU" InPozitii="0" NumeCol="Data" DataField="@data" TipObiect="D" Latime="80" Ordine="3" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VC" Tip="FU" InPozitii="0" NumeCol="Cont" DataField="@cont" TipObiect="C" Latime="80" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VC" Tip="FU" InPozitii="0" NumeCol="Valoare doc." DataField="@valoare_doc" TipObiect="N" Latime="100" Ordine="5" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VC" Tip="FU" InPozitii="0" NumeCol="Valoare inregistrari" DataField="@valoare_inregistrari" TipObiect="N" Latime="100" Ordine="6" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="VC" Tip="BE" Subtip="" Ordine="3" Nume="Beneficiari" ProcDate="wIaVerificareContabilitate" Vizibil="1" Fel=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="VC" Tip="BE" Ordine="1" Vizibil="1" Descriere="Numar doc." Prompt1="Filtru nr. document" DataField1="@filtruNrDoc" Interval="0"/>
+<filtre Meniu="VC" Tip="BE" Ordine="2" Vizibil="1" Descriere="Cont" Prompt1="Filtru cont" DataField1="@filtruCont" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="VC" Tip="BE" InPozitii="0" NumeCol="Tip doc." DataField="@tip_document" TipObiect="C" Latime="40" Ordine="1" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VC" Tip="BE" InPozitii="0" NumeCol="Numar" DataField="@numar" TipObiect="C" Latime="80" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VC" Tip="BE" InPozitii="0" NumeCol="Data" DataField="@data" TipObiect="D" Latime="80" Ordine="3" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VC" Tip="BE" InPozitii="0" NumeCol="Cont" DataField="@cont" TipObiect="C" Latime="80" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VC" Tip="BE" InPozitii="0" NumeCol="Valoare doc." DataField="@valoare_doc" TipObiect="N" Latime="100" Ordine="5" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VC" Tip="BE" InPozitii="0" NumeCol="Valoare inregistrari" DataField="@valoare_inregistrari" TipObiect="N" Latime="100" Ordine="6" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="VC" Tip="TD" Subtip="" Ordine="4" Nume="TVA deductibil" ProcDate="wIaVerificareContabilitate" Vizibil="1" Fel=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="VC" Tip="TD" Ordine="1" Vizibil="1" Descriere="Numar doc." Prompt1="Filtru nr. document" DataField1="@filtruNrDoc" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="VC" Tip="TD" InPozitii="0" NumeCol="Tip doc." DataField="@tip_document" TipObiect="C" Latime="40" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="VC" Tip="TD" InPozitii="0" NumeCol="Numar" DataField="@numar" TipObiect="C" Latime="80" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="VC" Tip="TD" InPozitii="0" NumeCol="Data" DataField="@data" TipObiect="D" Latime="80" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="VC" Tip="TD" InPozitii="0" NumeCol="Valoare in doc." DataField="@valoare_doc" TipObiect="N" Latime="100" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="VC" Tip="TD" InPozitii="0" NumeCol="Valoare inregistrari" DataField="@valoare_inregistrari" TipObiect="N" Latime="100" Ordine="6" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="VC" Tip="TC" Subtip="" Ordine="5" Nume="TVA colectat" ProcDate="wIaVerificareContabilitate" Vizibil="1" Fel=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="VC" Tip="TC" Ordine="1" Vizibil="1" Descriere="Numar doc." Prompt1="Filtru nr. document" DataField1="@filtruNrDoc" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="VC" Tip="TC" InPozitii="0" NumeCol="Tip doc." DataField="@tip_document" TipObiect="C" Latime="40" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="VC" Tip="TC" InPozitii="0" NumeCol="Numar" DataField="@numar" TipObiect="C" Latime="80" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="VC" Tip="TC" InPozitii="0" NumeCol="Data" DataField="@data" TipObiect="D" Latime="80" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="VC" Tip="TC" InPozitii="0" NumeCol="Valoare in doc." DataField="@valoare_doc" TipObiect="N" Latime="100" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="VC" Tip="TC" InPozitii="0" NumeCol="Valoare inregistrari" DataField="@valoare_inregistrari" TipObiect="N" Latime="100" Ordine="6" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="VC" Tip="SC" Subtip="PN" Ordine="1" Nume="Populare necorelatii" Descriere="Operatie care realizeaza popularea tabelei de necorelatii cu documentele care au diferente intre valoarea de stoc (cantitate X pret) si valoarea inregistrata in contabilitate, la nivel de cont." TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="wOPPopulareNecorelatii" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="O" procPopulare="" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VC" Tip="SC" Subtip="PN" Ordine="2" Nume="Data jos" TipObiect="D" DataField="@datajos" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="VC" Tip="SC" Subtip="PN" Ordine="3" Nume="Data sus" TipObiect="D" DataField="@datasus" Latime="100" Vizibil="1" Modificabil="1"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VC" Tip="SC" Subtip="RI" Ordine="2" Nume="Refac. inreg.pe doc." Descriere="Operatie de refacere inregistrari contabile pe document." ProcScriere="wOPRefacereIntegritate" Vizibil="1" Fel="O" procPopulare=" " tasta="T" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VC" Tip="SC" Subtip="RI" Ordine="1" Nume="Tip doc." TipObiect="C" DataField="@tip_document" Latime="50" Vizibil="1" Modificabil="0"/>
+<form Meniu="VC" Tip="SC" Subtip="RI" Ordine="2" Nume="Nr. doc." TipObiect="C" DataField="@numar" Latime="100" Vizibil="1" Modificabil="0"/>
+<form Meniu="VC" Tip="SC" Subtip="RI" Ordine="3" Nume="Data doc." TipObiect="D" DataField="@data" Latime="100" Vizibil="1" Modificabil="0"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VC" Tip="FU" Subtip="PN" Ordine="1" Nume="Populare necorelatii" Descriere="Operatie care realizeaza popularea tabelei de necorelatii furnizori - contabilitate." ProcScriere="wOPPopulareNecorelatii" Vizibil="1" Fel="O" tasta=" " sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VC" Tip="FU" Subtip="PN" Ordine="2" Nume="Data jos" TipObiect="D" DataField="@datajos" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="VC" Tip="FU" Subtip="PN" Ordine="3" Nume="Data sus" TipObiect="D" DataField="@datasus" Latime="100" Vizibil="1" Modificabil="1"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VC" Tip="FU" Subtip="RI" Ordine="2" Nume="Refac. inreg.pe doc." Descriere="Operatie de refacere inregistrari contabile pe document." ProcScriere="wOPRefacereIntegritate" Vizibil="1" Fel="O" tasta="T" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VC" Tip="FU" Subtip="RI" Ordine="1" Nume="Tip doc." TipObiect="C" DataField="@tip_document" Latime="50" Vizibil="1" Modificabil="0"/>
+<form Meniu="VC" Tip="FU" Subtip="RI" Ordine="2" Nume="Nr. doc." TipObiect="C" DataField="@numar" Latime="100" Vizibil="1" Modificabil="0"/>
+<form Meniu="VC" Tip="FU" Subtip="RI" Ordine="3" Nume="Data doc." TipObiect="D" DataField="@data" Latime="100" Vizibil="1" Modificabil="0"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VC" Tip="BE" Subtip="PN" Ordine="1" Nume="Populare necorelatii" Descriere="Operatie care realizeaza popularea tabelei de necorelatii beneficiari - contabilitate." ProcScriere="wOPPopulareNecorelatii" Vizibil="1" Fel="O" procPopulare=" " tasta=" " sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VC" Tip="BE" Subtip="PN" Ordine="2" Nume="Data jos" TipObiect="D" DataField="@datajos" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="VC" Tip="BE" Subtip="PN" Ordine="3" Nume="Data sus" TipObiect="D" DataField="@datasus" Latime="100" Vizibil="1" Modificabil="1"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VC" Tip="BE" Subtip="RI" Ordine="2" Nume="Refac. inreg.pe doc." Descriere="Operatie de refacere inregistrari contabile pe document." ProcScriere="wOPRefacereIntegritate" Vizibil="1" Fel="O" tasta="T" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VC" Tip="BE" Subtip="RI" Ordine="1" Nume="Tip doc." TipObiect="C" DataField="@tip_document" Latime="50" Vizibil="1" Modificabil="0"/>
+<form Meniu="VC" Tip="BE" Subtip="RI" Ordine="2" Nume="Nr. doc." TipObiect="C" DataField="@numar" Latime="100" Vizibil="1" Modificabil="0"/>
+<form Meniu="VC" Tip="BE" Subtip="RI" Ordine="3" Nume="Data doc." TipObiect="D" DataField="@data" Latime="100" Vizibil="1" Modificabil="0"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VC" Tip="TD" Subtip="PN" Ordine="1" Nume="Populare necorelatii" Descriere="Operatie care realizeaza popularea tabelei de necorelatii TVA deductibil - contabilitate." ProcScriere="wOPPopulareNecorelatii" Vizibil="1" Fel="O" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VC" Tip="TD" Subtip="PN" Ordine="1" Nume="Data jos" TipObiect="D" DataField="@datajos" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="VC" Tip="TD" Subtip="PN" Ordine="2" Nume="Data sus" TipObiect="D" DataField="@datasus" Latime="100" Vizibil="1" Modificabil="1"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VC" Tip="TD" Subtip="RI" Ordine="2" Nume="Refac. inreg.pe doc." Descriere="Operatie de refacere inregistrari contabile pe document." ProcScriere="wOPRefacereIntegritate" Vizibil="1" Fel="O" procPopulare=" " tasta="T" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VC" Tip="TD" Subtip="RI" Ordine="1" Nume="Tip doc." TipObiect="C" DataField="@tip_document" Latime="50" Vizibil="1" Modificabil="0"/>
+<form Meniu="VC" Tip="TD" Subtip="RI" Ordine="2" Nume="Nr. doc." TipObiect="C" DataField="@numar" Latime="100" Vizibil="1" Modificabil="0"/>
+<form Meniu="VC" Tip="TD" Subtip="RI" Ordine="3" Nume="Data doc." TipObiect="D" DataField="@data" Latime="100" Vizibil="1" Modificabil="0"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VC" Tip="TC" Subtip="PN" Ordine="1" Nume="Populare necorelatii" Descriere="Operatie care realizeaza popularea tabelei de necorelatii TVA colectat - contabilitate." ProcScriere="wOPPopulareNecorelatii" Vizibil="1" Fel="O" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VC" Tip="TC" Subtip="PN" Ordine="1" Nume="Data jos" TipObiect="D" DataField="@datajos" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="VC" Tip="TC" Subtip="PN" Ordine="3" Nume="Data sus" TipObiect="D" DataField="@datasus" Latime="100" Vizibil="1" Modificabil="1"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VC" Tip="TC" Subtip="RI" Ordine="2" Nume="Refac. inreg.pe doc." Descriere="Operatie de refacere inregistrari contabile pe document." ProcScriere="wOPRefacereIntegritate" Vizibil="1" Fel="O" procPopulare=" " tasta="T" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VC" Tip="TC" Subtip="RI" Ordine="1" Nume="Tip doc." TipObiect="C" DataField="@tip_document" Latime="50" Vizibil="1" Modificabil="0"/>
+<form Meniu="VC" Tip="TC" Subtip="RI" Ordine="2" Nume="Nr. doc." TipObiect="C" DataField="@numar" Latime="100" Vizibil="1" Modificabil="0"/>
+<form Meniu="VC" Tip="TC" Subtip="RI" Ordine="3" Nume="Data doc." TipObiect="D" DataField="@data" Latime="100" Vizibil="1" Modificabil="0"/>
+</formuri>
+</tipuri>
+</machete>
+

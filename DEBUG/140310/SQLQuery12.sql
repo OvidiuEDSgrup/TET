@@ -1,0 +1,5 @@
+execute as login='tet\magazin.nt'
+declare @p2 xml
+set @p2=convert(xml,N'<row subunitate="1" tip="BK" numar="NT980370" data="03/10/2014" explicatii="SIMULARE" termen="03/10/2014" dengestiune="NT SHOWROOM  NEAMT" gestiune="211.NT" dentert="CAPSUC DANIELA" factura="" tert="2620723224506" contractcor="" punctlivrare="" denpunctlivrare="" denlm="NEAMT SHOW-ROOM" lm="1VZ_NT_00" dengestprim="" gestprim="" valuta="" curs="0.0000" valoare="12429.30" valtva="2983.03" valtotala="15412.33" scadenta="0" contclient="" procpen="0" contr_cadru="" ext_camp4="" ext_camp5="01/01/1901" ext_modificari="" ext_clauze="" valabilitate="01/01/1901" pozitii="24" discount="0.0000000e+000" comspec="0" stare="0" categpret="1" dencategpret="Lista unica-Pret catalog  RON (1)" denstare="0-Operat" info1="" info2="0.00" info3="0.000000000000000e+000" info4="0.0000000e+000" info5="0.00" info6="" culoare="#000000" _nemodificabil="0" _refresh="1"/>')
+exec wIaPozCon @sesiune='628BB9F0792E3',@parXML=@p2
+revert

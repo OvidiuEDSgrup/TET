@@ -1,0 +1,1 @@
+select * from pozcon c where c.Contract='9811182'

@@ -1,0 +1,1 @@
+select Gestiune_primitoare,* from pozdoc where tip='ac' and data='2014-05-27'and Gestiune='211.gl' and utilizator='asis'

@@ -1,0 +1,3 @@
+declare @p2 xml
+set @p2=convert(xml,N'<row tipdocument="AP" serie="TET NT" numarinferior="9410001" numarsuperior="9419999" ultimulnumar="9410943" denumire="Avize" denserieinnumar="Nu" serieinnumar="0" idPlaja="6" datajos="02/01/2013" datasus="02/28/2013" scotformulare="0" tip="PJ" tipMacheta="C" codMeniu="PJ" TipDetaliere="PJ" subtip="LL"/>')
+exec yso_wOPListareLipsaPlajeDocumente @sesiune='6B78410443085',@parXML=@p2

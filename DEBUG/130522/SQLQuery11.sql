@@ -1,0 +1,1 @@
+select * from pozplin p where p.Tert='RO15807344' and p.Factura in ('38','40')

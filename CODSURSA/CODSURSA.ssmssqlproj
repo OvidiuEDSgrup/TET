@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="CODSURSA">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="10.0.0.10:TET\asis">
+          <Created>2012-03-02T16:24:22.2583576+02:00</Created>
+          <Type>SQL</Type>
+          <Server>10.0.0.10</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>TET</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="ASIS:TET\asis">
+          <Created>2012-02-03T14:38:20.7840799+02:00</Created>
+          <Type>SQL</Type>
+          <Server>ASIS</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>TEST</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="INSERT_POZDOC.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>INSERT_POZDOC.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery14.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery14.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery18.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery18.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="inlocuirepret.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>inlocuirepret.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery5.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery5.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TEREZ.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>TEREZ.sql</FullPath>
+        </FileNode>
+        <FileNode Name="USERSQL.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>USERSQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="alocarestocbtrlb.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>alocarestocbtrlb.sql</FullPath>
+        </FileNode>
+        <FileNode Name="aprov.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:10.0.0.10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>10.0.0.10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>aprov.sql</FullPath>
+        </FileNode>
+        <FileNode Name="centrcomlivrimplicit.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>centrcomlivrimplicit.sql</FullPath>
+        </FileNode>
+        <FileNode Name="debug.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>debug.sql</FullPath>
+        </FileNode>
+        <FileNode Name="descarcarestocfacturare.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>descarcarestocfacturare.sql</FullPath>
+        </FileNode>
+        <FileNode Name="doccontr.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>doccontr.sql</FullPath>
+        </FileNode>
+        <FileNode Name="furn cod.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>furn cod.sql</FullPath>
+        </FileNode>
+        <FileNode Name="gencomaprov.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:10.0.0.10:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>10.0.0.10</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>gencomaprov.sql</FullPath>
+        </FileNode>
+        <FileNode Name="log.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>log.sql</FullPath>
+        </FileNode>
+        <FileNode Name="pozcomlivrtmp.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>pozcomlivrtmp.sql</FullPath>
+        </FileNode>
+        <FileNode Name="pozcon.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>pozcon.sql</FullPath>
+        </FileNode>
+        <FileNode Name="pozconcreare.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>pozconcreare.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rapspecifcomlivr.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rapspecifcomlivr.sql</FullPath>
+        </FileNode>
+        <FileNode Name="refac_stare.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>refac_stare.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rezervaribk.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rezervaribk.sql</FullPath>
+        </FileNode>
+        <FileNode Name="tblstocuri.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>tblstocuri.sql</FullPath>
+        </FileNode>
+        <FileNode Name="test.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>test.sql</FullPath>
+        </FileNode>
+        <FileNode Name="trace.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ASIS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ASIS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>trace.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

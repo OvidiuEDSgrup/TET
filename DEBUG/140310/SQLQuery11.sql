@@ -1,0 +1,1 @@
+select n.Denumire,p.Numar_pozitie,* from pozcon p join nomencl n  on n.cod=p.cod where p.Contract like 'nt980370'

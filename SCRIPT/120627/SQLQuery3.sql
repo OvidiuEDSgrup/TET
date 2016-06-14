@@ -1,0 +1,1 @@
+exec  "select * from nomencl"

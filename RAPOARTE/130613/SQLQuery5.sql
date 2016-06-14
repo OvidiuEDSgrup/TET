@@ -1,0 +1,1 @@
+select DATEADD(year,-1,getdate())

@@ -1,0 +1,1 @@
+select max(data) from bp

@@ -1,0 +1,1 @@
+select * from terti t where t.Denumire like '%CLIENT%'

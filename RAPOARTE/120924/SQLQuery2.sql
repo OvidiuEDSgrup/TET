@@ -1,0 +1,1 @@
+select * from pozadoc p where '9430109' in (p.factura_stinga,p.Factura_dreapta)

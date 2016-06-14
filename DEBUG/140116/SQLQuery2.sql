@@ -1,0 +1,1 @@
+select * from sesiuniRIA s where s.utilizator like '%ag'

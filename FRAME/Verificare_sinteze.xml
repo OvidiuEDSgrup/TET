@@ -1,0 +1,149 @@
+<machete>
+<meniuri Meniu="VS" Nume="Verificare sinteze" MeniuParinte="CONTAGEST" Icoana="verificari2" TipMacheta="D" NrOrdine="452.00" Componenta="" Semnatura="" vizibil="1" publicabil="1">
+<Detalii>
+<row>
+<vechi>
+<row id="452" nume="Verificare sinteze" idparinte="6" icoana="verificari2" tipmacheta="D" meniu="VS" publicabil="1"/>
+</vechi>
+</row>
+</Detalii>
+</meniuri>
+<tipuri Meniu="VS" Tip="RI" Subtip="" Ordine="1" Nume="Rulaje conturi" ProcDate="wIaVerificareSinteze" Vizibil="1" Fel=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="VS" Tip="RI" Ordine="1" Vizibil="1" Descriere="Cont" Prompt1="Filtru cont" DataField1="@filtruCont" Interval="0"/>
+<filtre Meniu="VS" Tip="RI" Ordine="2" Vizibil="1" Descriere="Tip cont" Prompt1="Filtru tip cont" DataField1="@filtruTipCont" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="VS" Tip="RI" InPozitii="0" NumeCol="Cont" DataField="@cont" TipObiect="C" Latime="80" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="VS" Tip="RI" InPozitii="0" NumeCol="Tip cont" DataField="@denTip_cont" TipObiect="C" Latime="100" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="VS" Tip="RI" InPozitii="0" NumeCol="Valoare inregistrari" DataField="@valoare_inregistrari" TipObiect="N" Latime="100" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="VS" Tip="RI" InPozitii="0" NumeCol="Valoare rulaje" DataField="@valoare_rulaje" TipObiect="N" Latime="100" Ordine="4" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="VS" Tip="SA" Subtip="" Ordine="2" Nume="Sintetic - analitic" ProcDate="wIaVerificareSinteze" Vizibil="1" Fel=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="VS" Tip="SA" Ordine="1" Vizibil="1" Descriere="Cont" Prompt1="Filtru cont" DataField1="@filtruCont" Interval="0"/>
+<filtre Meniu="VS" Tip="SA" Ordine="2" Vizibil="1" Descriere="Loc munca" Prompt1="Filtru loc munca" DataField1="@filtruLM" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="VS" Tip="SA" InPozitii="0" NumeCol="Cont" DataField="@cont" TipObiect="C" Latime="80" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="VS" Tip="SA" InPozitii="0" NumeCol="Debit sintetic" DataField="@rulaj_debit" TipObiect="N" Latime="100" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="VS" Tip="SA" InPozitii="0" NumeCol="Debit analitic" DataField="@deban" TipObiect="N" Latime="100" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="VS" Tip="SA" InPozitii="0" NumeCol="Credit sintetic" DataField="@rulaj_credit" TipObiect="N" Latime="100" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="VS" Tip="SA" InPozitii="0" NumeCol="Credit analitic" DataField="@credan" TipObiect="N" Latime="100" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="VS" Tip="SA" InPozitii="0" NumeCol="Valuta" DataField="@valuta" TipObiect="C" Latime="50" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="VS" Tip="SA" InPozitii="0" NumeCol="Loc munca" DataField="@lm" TipObiect="C" Latime="100" Ordine="7" Vizibil="0" formula=""/>
+<grid Meniu="VS" Tip="SA" InPozitii="0" NumeCol="Loc munca" DataField="@denLM" TipObiect="C" Latime="100" Ordine="8" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="VS" Tip="SS" Subtip="" Ordine="3" Nume="Stocuri" ProcDate="wIaVerificareSinteze" Vizibil="1" Fel=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="VS" Tip="SS" Ordine="1" Vizibil="1" Descriere="Cod" Prompt1="Filtru cod" DataField1="@filtruCod" Interval="0"/>
+<filtre Meniu="VS" Tip="SS" Ordine="2" Vizibil="1" Descriere="Denumire" Prompt1="Filtru denumire" DataField1="@filtruDenumire" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="VS" Tip="SS" InPozitii="0" NumeCol="Gestiune" DataField="@gest" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VS" Tip="SS" InPozitii="0" NumeCol="Cod" DataField="@cod" TipObiect="C" Latime="100" Ordine="3" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VS" Tip="SS" InPozitii="0" NumeCol="Denumire" DataField="@den" TipObiect="C" Latime="200" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VS" Tip="SS" InPozitii="0" NumeCol="Cod intrare" DataField="@codintrare" TipObiect="C" Latime="100" Ordine="5" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VS" Tip="SS" InPozitii="0" NumeCol="Stoc doc." DataField="@stocdoc" TipObiect="N" Latime="100" Ordine="6" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VS" Tip="SS" InPozitii="0" NumeCol="Stoc" DataField="@stoc" TipObiect="N" Latime="100" Ordine="7" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="VS" Tip="FF" Subtip="" Ordine="4" Nume="Facturi furnizori" ProcDate="wIaVerificareSinteze" Vizibil="1" Fel=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="VS" Tip="FF" Ordine="1" Vizibil="1" Descriere="Tert" Prompt1="Filtru tert" DataField1="@filtruTert" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="VS" Tip="FF" InPozitii="0" NumeCol="Tert" DataField="@tert" TipObiect="C" Latime="80" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VS" Tip="FF" InPozitii="0" NumeCol="Denumire" DataField="@dentert" TipObiect="C" Latime="200" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="VS" Tip="FF" InPozitii="0" NumeCol="Factura" DataField="@factura" TipObiect="C" Latime="80" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="VS" Tip="FF" InPozitii="0" NumeCol="Data" DataField="@data" TipObiect="D" Latime="80" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="VS" Tip="FF" InPozitii="0" NumeCol="Sold doc." DataField="@solddoc" TipObiect="N" Latime="80" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="VS" Tip="FF" InPozitii="0" NumeCol="Sold fact." DataField="@soldfact" TipObiect="N" Latime="80" Ordine="7" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VS" Tip="FF" InPozitii="0" NumeCol="Sold doc. in valuta" DataField="@solddocvaluta" TipObiect="N" Latime="80" Ordine="8" Vizibil="1" formula=""/>
+<grid Meniu="VS" Tip="FF" InPozitii="0" NumeCol="Sold fact. in valuta" DataField="@soldfactvaluta" TipObiect="N" Latime="80" Ordine="9" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="VS" Tip="FB" Subtip="" Ordine="5" Nume="Facturi beneficiari" ProcDate="wIaVerificareSinteze" Vizibil="1" Fel=" " tasta=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="VS" Tip="FB" Ordine="1" Vizibil="1" Descriere="Tert" Prompt1="Filtru tert" DataField1="@filtruTert" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="VS" Tip="FB" InPozitii="0" NumeCol="Tert" DataField="@tert" TipObiect="C" Latime="80" Ordine="2" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VS" Tip="FB" InPozitii="0" NumeCol="Denumire" DataField="@dentert" TipObiect="C" Latime="200" Ordine="3" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VS" Tip="FB" InPozitii="0" NumeCol="Factura" DataField="@factura" TipObiect="C" Latime="80" Ordine="4" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VS" Tip="FB" InPozitii="0" NumeCol="Data" DataField="@data" TipObiect="D" Latime="80" Ordine="5" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VS" Tip="FB" InPozitii="0" NumeCol="Sold doc." DataField="@solddoc" TipObiect="N" Latime="80" Ordine="6" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VS" Tip="FB" InPozitii="0" NumeCol="Sold fact." DataField="@soldfact" TipObiect="N" Latime="80" Ordine="7" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VS" Tip="FB" InPozitii="0" NumeCol="Sold doc. in valuta" DataField="@solddocvaluta" TipObiect="N" Latime="80" Ordine="8" Vizibil="1" modificabil="0" formula=""/>
+<grid Meniu="VS" Tip="FB" InPozitii="0" NumeCol="Sold fact. in valuta" DataField="@soldfactvaluta" TipObiect="N" Latime="80" Ordine="9" Vizibil="1" modificabil="0" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="VS" Tip="SD" Subtip="" Ordine="6" Nume="Deconturi" ProcDate="wIaVerificareSinteze" Vizibil="0" Fel=" " sursa="webConfigTipuri"/>
+<tipuri Meniu="VS" Tip="SE" Subtip="" Ordine="8" Nume="Efecte" ProcDate="wIaVerificareSinteze" Vizibil="0" Fel=" " sursa="webConfigTipuri"/>
+<tipuri Meniu="VS" Tip="AN" Subtip="" Ordine="10" Nume="Antet" ProcDate="wIaVerificareSinteze" Vizibil="0" Fel=" " sursa="webConfigTipuri"/>
+<tipuri Meniu="VS" Tip="RI" Subtip="PN" Ordine="1" Nume="Populare necorelatii" ProcScriere="wOPPopulareNecorelatii" Vizibil="1" Fel="O" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VS" Tip="RI" Subtip="PN" Ordine="1" Nume="Data jos" TipObiect="D" DataField="@datajos" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="VS" Tip="RI" Subtip="PN" Ordine="2" Nume="Data sus" TipObiect="D" DataField="@datasus" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="VS" Tip="RI" Subtip="PN" Ordine="3" Nume="Rulaje pe loc de munca" TipObiect="CHB" DataField="@rulajePeLocMunca" Latime="200" Vizibil="1" Modificabil="1"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VS" Tip="RI" Subtip="RI" Ordine="2" Nume="Refacere rulaje cont" ProcScriere="wOPRefacereIntegritate" Vizibil="1" Fel="O" procPopulare=" " tasta=" " sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VS" Tip="RI" Subtip="RI" Ordine="5" Nume="Cont" TipObiect="C" DataField="@cont" LabelField=" " Latime="100" Vizibil="1" Modificabil="0" ProcSQL=" " Prompt="Cont"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VS" Tip="SA" Subtip="PN" Ordine="1" Nume="Populare necorelatii" ProcScriere="wOPPopulareNecorelatii" Vizibil="1" Fel="O" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VS" Tip="SA" Subtip="PN" Ordine="1" Nume="Data sus" TipObiect="D" DataField="@datasus" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="VS" Tip="SA" Subtip="PN" Ordine="2" Nume="Cont" TipObiect="AC" DataField="@filtruCont" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACConturi" Prompt="Filtru cont"/>
+<form Meniu="VS" Tip="SA" Subtip="PN" Ordine="3" Nume="Valuta" TipObiect="AC" DataField="@valuta" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACValuta" Prompt="Valuta"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VS" Tip="SA" Subtip="RI" Ordine="2" Nume="Refacere rulaje cont" ProcScriere="wOPRefacereIntegritate" Vizibil="1" Fel="O" tasta=" " sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VS" Tip="SA" Subtip="RI" Ordine="5" Nume="Cont" TipObiect="C" DataField="@cont" Latime="100" Vizibil="1" Modificabil="0" Prompt="Cont"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VS" Tip="SS" Subtip="PN" Ordine="1" Nume="Populare necorelatii" ProcScriere="wOPPopulareNecorelatii" Vizibil="1" Fel="O" tasta=" " sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VS" Tip="SS" Subtip="PN" Ordine="5" Nume="Un cod" TipObiect="AC" DataField="@cod" LabelField="@den" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACNomenclator" Prompt="Cod"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VS" Tip="SS" Subtip="RI" Ordine="2" Nume="Refacere stoc pe cod" ProcScriere="wOPRefacereIntegritate" Vizibil="1" Fel="O" procPopulare=" " tasta=" " sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VS" Tip="SS" Subtip="RI" Ordine="10" Nume="Gestiune" TipObiect="C" DataField="@gest" LabelField=" " Latime="300" Vizibil="1" Modificabil="0" ProcSQL=" " Prompt="Gestiune"/>
+<form Meniu="VS" Tip="SS" Subtip="RI" Ordine="11" Nume="Marca" TipObiect="C" DataField="@marca" LabelField=" " Latime="300" Vizibil="0" Modificabil="0" ProcSQL=" " Prompt="Marca"/>
+<form Meniu="VS" Tip="SS" Subtip="RI" Ordine="12" Nume="Cod" TipObiect="C" DataField="@cod" LabelField=" " Latime="300" Vizibil="1" Modificabil="0" ProcSQL=" " Prompt="Cod"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VS" Tip="FF" Subtip="PN" Ordine="1" Nume="Populare necorelatii" ProcScriere="wOPPopulareNecorelatii" Vizibil="1" Fel="O" tasta=" " sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VS" Tip="FF" Subtip="PN" Ordine="5" Nume="Un cont" TipObiect="AC" DataField="@cont" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACConturi" Prompt="Cont"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VS" Tip="FF" Subtip="RI" Ordine="2" Nume="Refacere factura" Descriere=" " ProcScriere="wOPRefacereIntegritate" Vizibil="1" Fel="O" procPopulare=" " sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VS" Tip="FF" Subtip="RI" Ordine="1" Nume="Tip factura" TipObiect="C" DataField="@tipfact" Latime="55" Vizibil="1" Modificabil="0"/>
+<form Meniu="VS" Tip="FF" Subtip="RI" Ordine="4" Nume="Factura" TipObiect="C" DataField="@factura" Latime="100" Vizibil="1" Modificabil="0" ProcSQL=" "/>
+<form Meniu="VS" Tip="FF" Subtip="RI" Ordine="5" Nume="Tert" TipObiect="C" DataField="@tert" Latime="100" Vizibil="1" Modificabil="0" ProcSQL=" "/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VS" Tip="FB" Subtip="PN" Ordine="1" Nume="Populare necorelatii" ProcScriere="wOPPopulareNecorelatii" Vizibil="1" Fel="O" tasta=" " sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VS" Tip="FB" Subtip="PN" Ordine="5" Nume="Un cont" TipObiect="AC" DataField="@cont" Latime="200" Vizibil="1" Modificabil="1" ProcSQL="wACConturi" Prompt="Cont"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VS" Tip="FB" Subtip="RI" Ordine="2" Nume="Refacere factura" ProcScriere="wOPRefacereIntegritate" Vizibil="1" Fel="O" tasta=" " sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VS" Tip="FB" Subtip="RI" Ordine="1" Nume="Tip factura" TipObiect="C" DataField="@tipfact" Latime="55" Vizibil="1" Modificabil="0"/>
+<form Meniu="VS" Tip="FB" Subtip="RI" Ordine="4" Nume="Factura" TipObiect="C" DataField="@factura" Latime="100" Vizibil="1" Modificabil="0"/>
+<form Meniu="VS" Tip="FB" Subtip="RI" Ordine="5" Nume="Tert" TipObiect="C" DataField="@tert" Latime="100" Vizibil="1" Modificabil="0"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VS" Tip="SD" Subtip="RI" Ordine="2" Nume="Refacere decont" ProcScriere="wOPRefacereIntegritate" Vizibil="0" Fel="O" procPopulare=" " tasta=" " sursa="webConfigTipuri"/>
+<tipuri Meniu="VS" Tip="SE" Subtip="RI" Ordine="2" Nume="Refacere efect" ProcScriere="wOPRefacereIntegritate" Vizibil="0" Fel="O" procPopulare=" " tasta=" " sursa="webConfigTipuri"/>
+</machete>
+

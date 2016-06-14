@@ -1,0 +1,1 @@
+select * from docfiscale where TipDoc='AP'

@@ -1,0 +1,22 @@
+<machete>
+<meniuri Meniu="IG" Nume="Configurare contare" MeniuParinte="CONTAGEST" Icoana="tbconfig" TipMacheta="C" NrOrdine="777.00" Componenta=" " Semnatura=" " vizibil="1"/>
+<tipuri Meniu="IG" Subtip="" Ordine="1" Nume="Configurare contare" Descriere="Macheta de configurare contare iesiri din gestiune." TextAdaugare="Adaugare" TextModificare="Modificare" ProcDate="wIaConfigurareContareIG" ProcScriere="wScriuConfigurareContareIG" ProcStergere="wStergConfigurareContareIG" Vizibil="1" Fel=" " tasta=" " ProcInchidereMacheta=" " sursa="webConfigTipuri">
+<formuri>
+<form Meniu="IG" Subtip="" Ordine="1" Nume="Cont de stoc" TipObiect="C" DataField="@cont_de_stoc" Latime="100" Vizibil="1" Modificabil="1" Prompt="Cont de stoc"/>
+<form Meniu="IG" Subtip="" Ordine="2" Nume="Cont cheltuieli" TipObiect="C" DataField="@cont_cheltuieli" Latime="100" Vizibil="1" Modificabil="1" Prompt="Cont cheltuieli"/>
+<form Meniu="IG" Subtip="" Ordine="3" Nume="Cont venituri" TipObiect="C" DataField="@cont_venituri" Latime="100" Vizibil="1" Modificabil="1" Prompt="Cont venituri"/>
+<form Meniu="IG" Subtip="" Ordine="4" Nume="Analitic gestiune" TipObiect="CHB" DataField="@analiticg" Latime="150" Vizibil="1" Modificabil="1" Prompt="Analitic gestiune"/>
+<form Meniu="IG" Subtip="" Ordine="5" Nume="Analitic cont stoc" TipObiect="CHB" DataField="@analiticcs" Latime="150" Vizibil="1" Modificabil="1" Prompt="Analitic cont stoc"/>
+<form Meniu="IG" Subtip="" Ordine="6" Nume="Nr. ordine" TipObiect="N" DataField="@nrord" Latime="100" Vizibil="1" Modificabil="1" Prompt="Nr. ordine"/>
+</formuri>
+<griduri>
+<grid Meniu="IG" InPozitii="0" NumeCol="Cont de stoc" DataField="@cont_de_stoc" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="IG" InPozitii="0" NumeCol="Cont cheltuieli" DataField="@cont_cheltuieli" TipObiect="C" Latime="100" Ordine="2" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="IG" InPozitii="0" NumeCol="Cont venituri" DataField="@cont_venituri" TipObiect="C" Latime="100" Ordine="3" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="IG" InPozitii="0" NumeCol="Analitic gestiune" DataField="@analiticg" TipObiect="C" Latime="100" Ordine="4" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="IG" InPozitii="0" NumeCol="Analitic cont stoc" DataField="@analiticcs" TipObiect="C" Latime="100" Ordine="5" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="IG" InPozitii="0" NumeCol="Nr. ordine" DataField="@nrord" TipObiect="N" Latime="100" Ordine="6" Vizibil="1" modificabil="0" formula=" "/>
+</griduri>
+</tipuri>
+</machete>
+

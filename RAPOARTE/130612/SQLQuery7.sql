@@ -1,0 +1,1 @@
+select * from pozdoc p where p.Tip='TE' and p.Cantitate<0

@@ -1,0 +1,1 @@
+select * from syssWebConfigMeniu m where m.Nume like '%trust%'

@@ -1,0 +1,1 @@
+select * from pozdoc p where p.Tip='te' and p.Gestiune_primitoare like '210.%'

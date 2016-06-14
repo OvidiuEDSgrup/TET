@@ -1,0 +1,1 @@
+select * from LMFiltrare l where l.utilizator='ionela'

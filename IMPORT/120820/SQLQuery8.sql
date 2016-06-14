@@ -1,0 +1,1 @@
+alter table sysscomenzi alter column descriere char(150) not null

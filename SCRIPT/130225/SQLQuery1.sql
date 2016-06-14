@@ -1,0 +1,1 @@
+select * from pozdoc p where p.Numar='10000410'

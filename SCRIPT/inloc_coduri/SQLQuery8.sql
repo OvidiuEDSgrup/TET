@@ -1,0 +1,2 @@
+select * from dbo.fFacturi('F','2014-06-01', '2014-06-30','BE471868673',null,'401.1',0,0,0,null,null) f
+select * from pozadoc p where p.Tert='BE471868673' and p.Tip='FF' --and p.Data between '2014-06-01' and '2014-06-30'

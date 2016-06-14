@@ -1,0 +1,1 @@
+SELECT * FROM pozdoc p where p.Cod='MPRS32S_10' and p.Cod_intrare='7002'

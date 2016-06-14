@@ -1,0 +1,1 @@
+select * from istoricstocuri i where i.Data_lunii='2015-09-30' and i.idIntrareFirma is null

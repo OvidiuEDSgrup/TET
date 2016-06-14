@@ -1,0 +1,1 @@
+delete extcon where Contract='10200'

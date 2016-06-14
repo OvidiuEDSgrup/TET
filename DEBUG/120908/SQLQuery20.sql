@@ -1,0 +1,1 @@
+select sum(c) from (select convert(int,null) as c union all select null ) t

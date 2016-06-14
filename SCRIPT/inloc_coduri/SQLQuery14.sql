@@ -1,0 +1,1 @@
+select * from webConfigTipuri m where m.Tip like 'PV'

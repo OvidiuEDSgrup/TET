@@ -1,0 +1,1 @@
+select * from pozadoc p where p.Factura_dreapta like 'DJ900004'

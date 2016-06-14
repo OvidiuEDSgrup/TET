@@ -1,0 +1,1 @@
+select dbo.soldcont ('5311.2', '2013-01-09', 'D')-dbo.soldcont ('5311.2', '2013-01-09', 'C')

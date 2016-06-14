@@ -1,0 +1,4 @@
+declare @p2 xml
+set @p2=convert(xml,N'<row tipDocFund="RN" denTipDocFund="RN - Necesar Aprovizionare" dataDocFund="12/21/2015" nrDocFund="SV910073" gestiune_primitoare="290.SV" gestiune="101" cod="44841" denumire="UNIS-Invertor Airex  150/200 1KW" explicatii="211.SV                                  0000/00/00" cantitate="1.00" idContractCorespondent="1154" idPozContractCorespondent="541349" idContract="-60100" idPozContract="-415461" valoare="359.20" tipMacheta="D" codMeniu="YSO_FA" tip="FA" TipDetaliere="FA" subtip="GT"/>')
+exec wOPGenerareTransferFundamenteComanda_p @sesiune='20B3329472541',@parXML=@p2
+select 'o pozitie',@p2

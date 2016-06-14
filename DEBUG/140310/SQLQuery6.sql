@@ -1,0 +1,1 @@
+select * from nomencl n where n.Tip='U'

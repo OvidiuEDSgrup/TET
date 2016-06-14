@@ -1,0 +1,1 @@
+CREATE TABLE dbo.ProcedureLogging(	Callid INT IDENTITY(1,1),	DatabaseName SYSNAME,	ProcedureSchema SYSNAME,	ProcedureName SYSNAME,	CallTime DATETIME DEFAULT GETDATE(),	CallingUser VARCHAR(255) DEFAULT SYSTEM_USER,	LoggingParameters VARCHAR(MAX),	LoggingValues VARCHAR(MAX))GOALTER TABLE dbo.ProcedureLoggingADD CONSTRAINT PK_ProcedureLogging PRIMARY KEY (Callid)

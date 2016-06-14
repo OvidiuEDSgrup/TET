@@ -1,0 +1,6 @@
+begin tran
+declare @p2 xml
+set @p2=convert(xml,N'<row subunitate="1" tip="BK" numar="AG980257" data="05/21/2014" explicatii="" termen="05/21/2014" dengestiune="AG SHOWROOM  PITESTI" gestiune="211.AG" dentert="VALIBOG TERMINSTAL SRL" factura="AG940112" tert="31291970" contractcor="" punctlivrare="" denpunctlivrare="" denlm="ARGES2" lm="1VZ_AG_02" dengestprim="" gestprim="" valuta="" curs="0.0000" valoare="6750.00" valtva="1620.00" valtotala="8370.00" scadenta="0" contclient="" procpen="0" contr_cadru="" ext_camp4="" ext_camp5="01/01/1901" ext_modificari="" ext_clauze="" valabilitate="01/01/1901" pozitii="8" discount="0.0000000e+000" comspec="0" operat="05/21/2014" stare="0" categpret="1" dencategpret="Lista unica-Pret catalog  RON (1)" denstare="0-Operat" info1="" info2="0.00" info3="0.000000000000000e+000" info4="0.0000000e+000" info5="10.00" info6="" culoare="#000000" _nemodificabil="0"><row cod="ANT_TRUST" denumire="Asistenta la Montaj (pret pe ora)" cantitate="3" pret="40.32" discount="100" explicatii="" subtip="SV"><detalii><row deviz="nr doc intern"/></detalii></row></row>')
+exec wScriuPozCon @sesiune='',@parXML=@p2
+select p.detalii,* from pozcon p where p.Contract like 'AG980257            '
+rollback tran

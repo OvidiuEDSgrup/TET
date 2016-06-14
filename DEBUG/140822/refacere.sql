@@ -1,0 +1,1 @@
+exec RefacereStocuri '700.cj',null,null,null,null,null

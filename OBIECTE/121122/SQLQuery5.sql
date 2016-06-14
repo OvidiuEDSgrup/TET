@@ -1,0 +1,1 @@
+select * from webConfigGrid g where g.TipMacheta='O'

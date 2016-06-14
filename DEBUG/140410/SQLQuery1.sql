@@ -1,0 +1,1 @@
+select * from con p where p.Contract like 'SV980580'

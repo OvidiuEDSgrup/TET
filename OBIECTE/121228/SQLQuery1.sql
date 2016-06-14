@@ -1,0 +1,1 @@
+select * from con c where c.Contract='TESTOV5'

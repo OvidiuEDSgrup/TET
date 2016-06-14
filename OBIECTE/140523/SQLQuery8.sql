@@ -1,0 +1,1 @@
+select p.detalii,* from pozcon p where p.Contract like 'AG980257            '

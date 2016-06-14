@@ -1,0 +1,3 @@
+declare @p2 xml
+set @p2=convert(xml,N'<document aplicatie="PV" tip="PV" casamarcat="1" data="07/13/2012" inXML="0" UID="F7B5FF4F-1E81-67E0-057B-817F568AD900" categoriePret="4"><pozitii><row codInitial="-1*5092 018000000" cod="5092 018000000" denumire="TRUST-Cot 90° interior-exterior D18" um="BUC" cotatva="24.00" pretcatalog="2.24" discount="0" tip="21" cantitate="-1" trebuieCantarit="0" stocMaxim="21.00" tipLinie="Produs" o_pretcatalog="2.24" pret="2.24" observatii="-1 BUC x 2.24" valoare="-2.24" valoarefaradiscount="-2.24" tva="-0.43" pretftva="1.81" valftva="-1.81" nrlinie="1"/></pozitii></document>')
+exec wValidareDocumentPV @sesiune='716B4DDE44F13',@parXML=@p2

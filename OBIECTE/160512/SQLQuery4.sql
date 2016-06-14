@@ -1,0 +1,12 @@
+begin tran
+exec wOPGenerareUnAPdinBKSP '', '
+<row subunitate="1" tip="BK" numar="NT985629" data="05/11/2016" explicatii="DE PLATIT=EU" termen="05/11/2016" dengestiune="NT SHOWROOM  NEAMT" gestiune="211.NT" dentert="STEFANESCU ANISOARA-ELEONORA" factura="" tert="2701202173177" contractcor="" punctlivrare="" denpunctlivrare="" denlm="NEAMT3" lm="1VZ_NT_03" dengestprim="" gestprim="" valuta="" curs="0.0000" valoare="2.25" valtva="0.45" valtotala="2.70" scadenta="0" contclient="" procpen="0" contr_cadru="" ext_camp4="" ext_camp5="01/01/1901" ext_modificari="" ext_clauze="" valabilitate="01/01/1901" pozitii="1" discount="0.0000000e+000" comspec="0" operat="05/11/2016" stare="1" categpret="1" dencategpret="Lista unica-Pret catalog  RON (1)" denstare="1-Facturabil" info1="" info2="0.00" info3="0.000000000000000e+000" info4="0.0000000e+000" info5="0.00" info6="" culoare="#0000FF" _nemodificabil="1" beneficiar="2701202173177" denbenef="2701202173177 - STEFANESCU ANISOARA-ELEONORA" numardoc="" iddelegat="1" numedelegat="STEFANESCU NORI                                                                                     NT 559385   POL. NEAMT                    " prenumedelegat="" nrmijltransp="TAXI" denmijloctp="TAXI                                                                                      " mijloctp="" seriebuletin="NT" numarbuletin="559385" eliberatbuletin="POL. NEAMT" data_expedierii="05/11/2016" ora_expedierii="09:27:25" nrformular="RIA_FACT" denformular=" RIA Factura" o_beneficiar="2701202173177" o_numardoc="" o_iddelegat="1" o_prenumedelegat="" o_seriebuletin="NT" o_numarbuletin="559385" o_eliberatbuletin="POL. NEAMT" o_nrmijltransp="TAXI" o_nrformular="RIA_FACT" update="1" datadoc="05/11/2016" aviznefacturat="0" noudelegat="0" observatii="" tipMacheta="D" codMeniu="CO_FILIALE" TipDetaliere="BK" subtip="GF">
+  <o_DateGrid>
+    <row cod="200-160212" cantitate_factura="0.500" cantitate_disponibila="0.500" gestiune="211.NT" denumire="Tub HENCO 16x2 Standard (colaci 200m)" cant_aprobata="0.500" cant_realizata="0.000" subunitate="1" tip="BK" data="05/11/2016" contract="NT985629" tert="2701202173177" numar_pozitie="1" />
+  </o_DateGrid>
+  <DateGrid>
+    <row cod="200-160212" cantitate_factura="0.500" cantitate_disponibila="0.500" gestiune="211.NT" denumire="Tub HENCO 16x2 Standard (colaci 200m)" cant_aprobata="0.500" cant_realizata="0.000" subunitate="1" tip="BK" data="05/11/2016" contract="NT985629" tert="2701202173177" numar_pozitie="1" />
+  </DateGrid>
+</row>
+'
+rollback tran

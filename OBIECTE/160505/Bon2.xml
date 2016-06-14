@@ -1,0 +1,12 @@
+﻿<date>
+  <document aplicatie="PV" tip="PV" casamarcat="11" data="05/06/2016" inXML="0" UID="100488F2-B911-C3F1-9C8C-864104E8C573" categoriePret="1" tipdoc="AP" facturaDinBon="1" tert="1790225170323" codFormular="FBONPVRIA" observatii="" zileScad="0" pentruValidare="1" ora="1628" totaldocument="0" totalincasari="0" descarcarePrioritara="0" LM="1VZ_IF_90" 
+            numar_in_pozdoc="IF940843" factura="IF940843" dataScad="05/06/2016" numarDoc="940843" seriefactura="IF">
+    <tert cod="1790225170323" denumire="ANTONIU MARIAN" cod_fiscal="1790225170323" NrORC="RP 753697" localitate="" judet="DB" adresa="COM COBIA,SAT BLIDARI" telefon_fax="" banca="" cont_in_banca="" zileScad="0" categorie_pret="1" cautaCoduriNomencl="0" nrcomenzi="0" />
+    <delegat idDelegat="1" />
+    <locatie idLocatie="" />
+    <masina idMasina="" />
+    <bonuriPeFactura>
+      <row casamarcat="11" nrbon="1" data="05/06/2016" />
+    </bonuriPeFactura>
+  </document>
+</date>

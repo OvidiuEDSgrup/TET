@@ -1,0 +1,1 @@
+select * from stocuri s where s.Cod_intrare='' and ABS(s.stoc)>=0.001

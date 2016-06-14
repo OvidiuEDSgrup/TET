@@ -1,0 +1,1 @@
+select * from par p where p.Val_numerica=12 or p.Val_numerica=2011

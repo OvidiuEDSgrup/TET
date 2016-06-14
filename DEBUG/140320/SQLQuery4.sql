@@ -1,0 +1,1 @@
+select * from docfiscale d where d.UltimulNr=10000001

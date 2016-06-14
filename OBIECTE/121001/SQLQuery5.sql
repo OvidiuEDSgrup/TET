@@ -1,0 +1,1 @@
+exec yso_wOPReincadrareIesiri @sesiune='', @parXML='<row dataj="2012-09-01" datas="2012-09-30" cugolire="0"/>'

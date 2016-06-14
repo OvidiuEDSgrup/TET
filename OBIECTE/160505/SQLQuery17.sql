@@ -1,0 +1,10 @@
+exec sp_executesql N'exec rapDocumente
+	@sesiune=@sesiune, @datajos=@datajos, @datasus=@datasus, @tert=@tert, @cod=@cod,
+	@gestiune=@gestiune, @lm=@locm, @factura=@factura, @comanda=@comanda,
+	@Nivel1=@Nivel1, @Nivel2=@Nivel2, @Nivel3=@Nivel3, @Nivel4=@Nivel4, @Nivel5=@Nivel5, @ordonare=@ordonare,
+	@grupaTerti=@grupaTerti, @grupa=@grupaNomenclator, @locatia=@locatie,
+	@detalii=@detalii, @top=@top, @tipRaport=''Intrari iesiri'',
+	@nrmaximdetalii=@nrmaximdetalii,
+	@codintrare=@codintrare, @ctstoc=@ctstoc, @tip_doc_str=@tip_doc_str,
+	@contCor=@contCor, @indicator=@indicator, @pret_cu_amanuntul=@pret_cu_amanuntul,
+	@gestiuneprim=@gestiuneprim, @umalt=@umalt, @furnizor=@furnizor, @lot=@lot, @nrdoc=@nrdoc, @comanda_beneficiar=@comanda_beneficiar',N'@sesiune nvarchar(13),@datajos datetime,@datasus datetime,@tert nvarchar(4000),@cod nvarchar(4000),@gestiune nvarchar(4000),@locm nvarchar(4000),@factura nvarchar(4000),@comanda nvarchar(4000),@comanda_beneficiar nvarchar(4000),@Nivel1 nvarchar(2),@Nivel2 nvarchar(2),@Nivel3 nvarchar(4000),@Nivel4 nvarchar(4000),@Nivel5 nvarchar(4000),@ordonare int,@grupaTerti nvarchar(4000),@grupaNomenclator nvarchar(4000),@locatie nvarchar(4000),@detalii int,@top nvarchar(4000),@nrmaximdetalii nvarchar(6),@codintrare nvarchar(4000),@ctstoc nvarchar(4000),@tip_doc_str nvarchar(4000),@contCor nvarchar(4000),@indicator nvarchar(4000),@pret_cu_amanuntul bit,@gestiuneprim nvarchar(4000),@umalt nvarchar(4000),@furnizor nvarchar(4000),@lot nvarchar(4000),@nrdoc nvarchar(4000)',@sesiune=N'81D499F5FAFB4',@datajos='2016-04-01 00:00:00',@datasus='2016-04-30 00:00:00',@tert=NULL,@cod=NULL,@gestiune=NULL,@locm=NULL,@factura=NULL,@comanda=NULL,@comanda_beneficiar=NULL,@Nivel1=N'TE',@Nivel2=N'FA',@Nivel3=NULL,@Nivel4=NULL,@Nivel5=NULL,@ordonare=1,@grupaTerti=NULL,@grupaNomenclator=NULL,@locatie=NULL,@detalii=1,@top=NULL,@nrmaximdetalii=N'100000',@codintrare=NULL,@ctstoc=NULL,@tip_doc_str=N'',@contCor=NULL,@indicator=NULL,@pret_cu_amanuntul=0,@gestiuneprim=NULL,@umalt=NULL,@furnizor=NULL,@lot=NULL,@nrdoc=NULL

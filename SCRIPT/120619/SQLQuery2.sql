@@ -1,0 +1,1 @@
+select * from istoricstocuri s where s.Cod_gestiune='300'

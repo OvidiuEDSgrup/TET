@@ -1,0 +1,143 @@
+<machete>
+<meniuri Meniu="VD" Nume="Verificare documente" MeniuParinte="CONTAGEST" Icoana="verificari0" TipMacheta="D" NrOrdine="450.00" Componenta="" Semnatura="" vizibil="1" publicabil="1">
+<Detalii>
+<row>
+<vechi>
+<row id="450" nume="Verificare documente" idparinte="6" icoana="Verificare" tipmacheta="D" meniu="VD" publicabil="1"/>
+</vechi>
+</row>
+</Detalii>
+</meniuri>
+<tipuri Meniu="VD" Tip="CE" Subtip="" Ordine="1" Nume="Conturi eronate" ProcDate="wIaVerificareDocumente" Vizibil="1" Fel=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="VD" Tip="CE" Ordine="1" Vizibil="1" Descriere="Numar doc." Prompt1="Filtru nr. document" DataField1="@filtruNrDoc" Interval="0"/>
+<filtre Meniu="VD" Tip="CE" Ordine="2" Vizibil="1" Descriere="Cont debit" Prompt1="Filtru cont debit" DataField1="@filtruContDebit" Interval="0"/>
+<filtre Meniu="VD" Tip="CE" Ordine="3" Vizibil="1" Descriere="Cont credit" Prompt1="Filtru cont credit" DataField1="@filtruContCredit" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="VD" Tip="CE" InPozitii="0" NumeCol="Tip" DataField="@tip_document" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="CE" InPozitii="0" NumeCol="Numar" DataField="@numar_document" TipObiect="C" Latime="100" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="CE" InPozitii="0" NumeCol="Data" DataField="@data" TipObiect="D" Latime="100" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="CE" InPozitii="0" NumeCol="Cont debitor" DataField="@cont_debitor" TipObiect="C" Latime="150" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="CE" InPozitii="0" NumeCol="Cont creditor" DataField="@cont_creditor" TipObiect="C" Latime="150" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="CE" InPozitii="0" NumeCol="Eroare" DataField="@explicatii" TipObiect="C" Latime="200" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="CE" InPozitii="0" NumeCol="Suma" DataField="@suma" TipObiect="N" Latime="100" Ordine="7" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="VD" Tip="PD" Subtip="" Ordine="2" Nume="Pret intrare" ProcDate="wIaVerificareDocumente" Vizibil="1" Fel=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="VD" Tip="PD" Ordine="1" Vizibil="1" Descriere="Numar doc." Prompt1="Filtru nr. document" DataField1="@filtruNrDoc" Interval="0"/>
+<filtre Meniu="VD" Tip="PD" Ordine="2" Vizibil="1" Descriere="Gestiune" Prompt1="Filtru gestiune" DataField1="@filtruGest" Interval="0"/>
+<filtre Meniu="VD" Tip="PD" Ordine="3" Vizibil="1" Descriere="Cod" Prompt1="Filtru cod" DataField1="@filtruCod" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="VD" Tip="PD" InPozitii="0" NumeCol="Tip doc." DataField="@tip_doc" TipObiect="C" Latime="40" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="PD" InPozitii="0" NumeCol="Numar" DataField="@numar" TipObiect="C" Latime="80" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="PD" InPozitii="0" NumeCol="Data" DataField="@data" TipObiect="D" Latime="80" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="PD" InPozitii="0" NumeCol="Tip gest." DataField="@tip_gestiune" TipObiect="C" Latime="40" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="PD" InPozitii="0" NumeCol="Gestiune" DataField="@gestiune" TipObiect="C" Latime="100" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="PD" InPozitii="0" NumeCol="Cod" DataField="@cod" TipObiect="C" Latime="80" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="PD" InPozitii="0" NumeCol="Cod intrare" DataField="@cod_intrare" TipObiect="C" Latime="80" Ordine="7" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="PD" InPozitii="0" NumeCol="Pret in doc." DataField="@pret_stoc_doc" TipObiect="N" Latime="80" Ordine="8" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="PD" InPozitii="0" NumeCol="Pret stoc" DataField="@pret_stoc_stoc" TipObiect="N" Latime="80" Ordine="9" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="VD" Tip="PA" Subtip="" Ordine="3" Nume="Pret amanunt" ProcDate="wIaVerificareDocumente" Vizibil="1" Fel=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="VD" Tip="PA" Ordine="1" Vizibil="1" Descriere="Numar doc." Prompt1="Filtru nr. document" DataField1="@filtruNrDoc" Interval="0"/>
+<filtre Meniu="VD" Tip="PA" Ordine="2" Vizibil="1" Descriere="Gestiune" Prompt1="Filtru gestiune" DataField1="@filtruGest" Interval="0"/>
+<filtre Meniu="VD" Tip="PA" Ordine="3" Vizibil="1" Descriere="Cod" Prompt1="Filtru cod" DataField1="@filtruCod" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="VD" Tip="PA" InPozitii="0" NumeCol="Tip doc." DataField="@tip" TipObiect="C" Latime="40" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="PA" InPozitii="0" NumeCol="Numar" DataField="@numar" TipObiect="C" Latime="80" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="PA" InPozitii="0" NumeCol="Data" DataField="@data" TipObiect="D" Latime="80" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="PA" InPozitii="0" NumeCol="Tip gest." DataField="@tip_gestiune" TipObiect="C" Latime="40" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="PA" InPozitii="0" NumeCol="Gestiune" DataField="@gestiune" TipObiect="C" Latime="100" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="PA" InPozitii="0" NumeCol="Cod" DataField="@cod" TipObiect="C" Latime="80" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="PA" InPozitii="0" NumeCol="Cod intrare" DataField="@cod_intrare" TipObiect="C" Latime="80" Ordine="7" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="PA" InPozitii="0" NumeCol="Pret am. doc." DataField="@pret_stoc_doc" TipObiect="N" Latime="80" Ordine="8" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="PA" InPozitii="0" NumeCol="Pret am. stoc" DataField="@pret_stoc_stoc" TipObiect="N" Latime="80" Ordine="9" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="VD" Tip="CD" Subtip="" Ordine="4" Nume="Cont de stoc" ProcDate="wIaVerificareDocumente" Vizibil="1" Fel=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="VD" Tip="CD" Ordine="1" Vizibil="1" Descriere="Numar doc." Prompt1="Filtru nr. document" DataField1="@filtruNrDoc" Interval="0"/>
+<filtre Meniu="VD" Tip="CD" Ordine="2" Vizibil="1" Descriere="Gestiune" Prompt1="Filtru gestiune" DataField1="@filtruGest" Interval="0"/>
+<filtre Meniu="VD" Tip="CD" Ordine="3" Vizibil="1" Descriere="Cod" Prompt1="Filtru cod" DataField1="@filtruCod" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="VD" Tip="CD" InPozitii="0" NumeCol="Tip doc." DataField="@tip_doc" TipObiect="C" Latime="40" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="CD" InPozitii="0" NumeCol="Numar" DataField="@numar" TipObiect="C" Latime="40" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="CD" InPozitii="0" NumeCol="Data" DataField="@data" TipObiect="D" Latime="80" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="CD" InPozitii="0" NumeCol="Gestiune" DataField="@gestiune" TipObiect="C" Latime="80" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="CD" InPozitii="0" NumeCol="Cod" DataField="@cod" TipObiect="C" Latime="80" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="CD" InPozitii="0" NumeCol="Cod intrare" DataField="@cod_intrare" TipObiect="C" Latime="80" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="CD" InPozitii="0" NumeCol="Cont stoc" DataField="@cont_stoc_stoc" TipObiect="C" Latime="80" Ordine="7" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="CD" InPozitii="0" NumeCol="Cont in doc." DataField="@cont_stoc_doc" TipObiect="C" Latime="80" Ordine="8" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="VD" Tip="DF" Subtip="" Ordine="5" Nume="Cont factura" ProcDate="wIaVerificareDocumente" Vizibil="1" Fel=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="VD" Tip="DF" Ordine="1" Vizibil="1" Descriere="Tert" Prompt1="Filtru tert" DataField1="@filtruTert" Interval="0"/>
+<filtre Meniu="VD" Tip="DF" Ordine="2" Vizibil="1" Descriere="Numar" Prompt1="Filtru nr. document" DataField1="@filtruNrDoc" Interval="0"/>
+<filtre Meniu="VD" Tip="DF" Ordine="3" Vizibil="1" Descriere="Factura" Prompt1="Filtru factura" DataField1="@filtruFactura" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="VD" Tip="DF" InPozitii="0" NumeCol="Tip doc." DataField="@tip_doc" TipObiect="C" Latime="40" Ordine="1" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="DF" InPozitii="0" NumeCol="Numar" DataField="@numar" TipObiect="C" Latime="80" Ordine="2" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="DF" InPozitii="0" NumeCol="Data doc." DataField="@data" TipObiect="D" Latime="100" Ordine="3" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="DF" InPozitii="0" NumeCol="Tert" DataField="@denTert" TipObiect="C" Latime="200" Ordine="4" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="DF" InPozitii="0" NumeCol="Factura" DataField="@factura" TipObiect="C" Latime="80" Ordine="5" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="DF" InPozitii="0" NumeCol="Cont doc." DataField="@cont_tert_doc" TipObiect="C" Latime="80" Ordine="6" Vizibil="1" formula=""/>
+<grid Meniu="VD" Tip="DF" InPozitii="0" NumeCol="Cont fact." DataField="@cont_tert_fact" TipObiect="C" Latime="80" Ordine="7" Vizibil="1" formula=""/>
+</griduri>
+</tipuri>
+<tipuri Meniu="VD" Tip="CT" Subtip="" Ordine="6" Nume="Cr.4426,Deb.4427,Cl.6/7" ProcDate="wIaVerificareDocumente" Vizibil="1" Fel=" " tasta=" " ProcInchidereMacheta=" " sursa="webConfigTipuri">
+<filtre>
+<filtre Meniu="VD" Tip="CT" Ordine="1" Vizibil="1" Descriere="Numar doc." Prompt1="Filtru nr. document" DataField1="@filtruNrDoc" Interval="0"/>
+<filtre Meniu="VD" Tip="CT" Ordine="2" Vizibil="1" Descriere="Cont debit" Prompt1="Filtru cont debit" DataField1="@filtruContDebit" Interval="0"/>
+<filtre Meniu="VD" Tip="CT" Ordine="3" Vizibil="1" Descriere="Cont credit" Prompt1="Filtru cont credit" DataField1="@filtruContCredit" Interval="0"/>
+</filtre>
+<griduri>
+<grid Meniu="VD" Tip="CT" InPozitii="0" NumeCol="Tip" DataField="@tip_document" TipObiect="C" Latime="100" Ordine="1" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="VD" Tip="CT" InPozitii="0" NumeCol="Numar" DataField="@numar_document" TipObiect="C" Latime="100" Ordine="2" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="VD" Tip="CT" InPozitii="0" NumeCol="Data" DataField="@data" TipObiect="D" Latime="100" Ordine="3" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="VD" Tip="CT" InPozitii="0" NumeCol="Cont debitor" DataField="@cont_debitor" TipObiect="C" Latime="150" Ordine="4" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="VD" Tip="CT" InPozitii="0" NumeCol="Cont creditor" DataField="@cont_creditor" TipObiect="C" Latime="150" Ordine="5" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="VD" Tip="CT" InPozitii="0" NumeCol="Suma" DataField="@suma" TipObiect="N" Latime="100" Ordine="6" Vizibil="1" modificabil="0" formula=" "/>
+<grid Meniu="VD" Tip="CT" InPozitii="0" NumeCol="Eroare" DataField="@explicatii" TipObiect="C" Latime="200" Ordine="7" Vizibil="1" modificabil="0" formula=" "/>
+</griduri>
+</tipuri>
+<tipuri Meniu="VD" Tip="PD" Subtip="CP" Ordine="1" Nume="Corectare necorelatii" Descriere="Operatie de corectare integritate stocuri. Este optionala completarea campului cod si gestiune insa pentru functionarea mai rapida este nevoie de completarea lor. Exista optiunea de refacere stocuri care va reface stocul pana la data sus si in functie de filtrele Cod si Gestiune" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="wOPCorectareIntegritateStocuri" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="O" procPopulare="" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VD" Tip="PD" Subtip="CP" Ordine="1" Nume="Data jos" TipObiect="D" DataField="@datajos" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="VD" Tip="PD" Subtip="CP" Ordine="2" Nume="Data sus" TipObiect="D" DataField="@datasus" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="VD" Tip="PD" Subtip="CP" Ordine="3" Nume="Cod" TipObiect="AC" DataField="@filtrucod" Latime="250" Vizibil="1" Modificabil="1" ProcSQL="wACNomenclator"/>
+<form Meniu="VD" Tip="PD" Subtip="CP" Ordine="4" Nume="Gestiune" TipObiect="AC" DataField="@filtrugestiune" Latime="250" Vizibil="1" Modificabil="1" ProcSQL="wACGestiuni"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VD" Tip="PA" Subtip="CA" Ordine="1" Nume="Corectare erori" Descriere="Operatie de corectare integritate stocuri. Este optionala completarea campului cod si gestiune insa pentru functionarea mai rapida este nevoie de completarea lor. Exista optiunea de refacere stocuri care va reface stocul pana la data sus si in functie de filtrele Cod si Gestiune" ProcScriere="wOPCorectareIntegritateStocuri" Vizibil="1" Fel="O" procPopulare=" " sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VD" Tip="PA" Subtip="CA" Ordine="1" Nume="Data jos" TipObiect="D" DataField="@datajos" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="VD" Tip="PA" Subtip="CA" Ordine="2" Nume="Data sus" TipObiect="D" DataField="@datasus" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="VD" Tip="PA" Subtip="CA" Ordine="3" Nume="Cod" TipObiect="AC" DataField="@filtrucod" Latime="250" Vizibil="1" Modificabil="1" ProcSQL="wACNomenclator"/>
+<form Meniu="VD" Tip="PA" Subtip="CA" Ordine="4" Nume="Gestiune" TipObiect="AC" DataField="@filtrugestiune" Latime="250" Vizibil="1" Modificabil="1" ProcSQL="wACGestiuni"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VD" Tip="CD" Subtip="CS" Ordine="1" Nume="Corectare necorelatii" Descriere="Operatie de corectare integritate stocuri. Este optionala completarea campului cod si gestiune insa pentru functionarea mai rapida este nevoie de completarea lor. Exista optiunea de refacere stocuri care va reface stocul pana la data sus si in functie de filtrele Cod si Gestiune" TextAdaugare="" TextModificare="" ProcDate="" ProcScriere="wOPCorectareIntegritateStocuri" ProcStergere="" ProcDatePoz="" ProcScrierePoz="" ProcStergerePoz="" Vizibil="1" Fel="O" procPopulare="" tasta="" ProcInchidereMacheta="" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VD" Tip="CD" Subtip="CS" Ordine="1" Nume="Data jos" TipObiect="D" DataField="@datajos" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="VD" Tip="CD" Subtip="CS" Ordine="2" Nume="Data sus" TipObiect="D" DataField="@datasus" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="VD" Tip="CD" Subtip="CS" Ordine="3" Nume="Cod" TipObiect="AC" DataField="@filtrucod" Latime="250" Vizibil="1" Modificabil="1" ProcSQL="wACNomenclator"/>
+<form Meniu="VD" Tip="CD" Subtip="CS" Ordine="4" Nume="Gestiune" TipObiect="AC" DataField="@filtrugestiune" Latime="250" Vizibil="1" Modificabil="1" ProcSQL="wACGestiuni"/>
+</formuri>
+</tipuri>
+<tipuri Meniu="VD" Tip="DF" Subtip="CF" Ordine="1" Nume="Corectare erori" Descriere="Operatia realizeaza corectarea necorelatiilor prin  modificarea facturilor in documentele gresite.Optiune de refacere facturi" ProcScriere="wOPCorectareIntegritateFacturi" Vizibil="1" Fel="O" sursa="webConfigTipuri">
+<formuri>
+<form Meniu="VD" Tip="DF" Subtip="CF" Ordine="3" Nume="Data jos" TipObiect="D" DataField="@datajos" Latime="100" Vizibil="1" Modificabil="1"/>
+<form Meniu="VD" Tip="DF" Subtip="CF" Ordine="4" Nume="Data sus" TipObiect="D" DataField="@datasus" Latime="100" Vizibil="1" Modificabil="1"/>
+</formuri>
+</tipuri>
+</machete>
+

@@ -1,0 +1,1 @@
+select * from stocuri s where s.Cod='100-iso4-16-bl' and s.Cod_gestiune='211'

@@ -1,0 +1,1 @@
+SELECT * from stocuri s where s.Cod like '1-1604a' and s.Cod_gestiune='211.1'

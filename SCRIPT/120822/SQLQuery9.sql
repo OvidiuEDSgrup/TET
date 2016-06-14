@@ -1,0 +1,1 @@
+select top 1 idpozdoc,Cod_intrare from pozdoc p order by p.idpozdoc desc

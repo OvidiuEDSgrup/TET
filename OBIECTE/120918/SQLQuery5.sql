@@ -1,0 +1,1 @@
+select o.name,* from sys.columns c inner join sys.objects o on o.object_id=c.object_id where c.name like '%transact%'

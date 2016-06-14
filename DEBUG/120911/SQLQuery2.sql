@@ -1,0 +1,1 @@
+exec wIntegritateACPV '', '<row dataj="2012-08-01" datas="2012-08-31" gestiune="211.1"/>'

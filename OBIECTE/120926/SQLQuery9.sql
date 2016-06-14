@@ -1,0 +1,1 @@
+select * from pozdoc p where '7564' in (p.Factura,p.Contract)

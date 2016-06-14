@@ -1,0 +1,1 @@
+SELECT P.Gestiune_primitoare,* FROM pozdoc P WHERE P.Numar='AG200001'

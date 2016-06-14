@@ -1,0 +1,1 @@
+select * from webJurnalOperatii j where j.data>='2013-12-11'

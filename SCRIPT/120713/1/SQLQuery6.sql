@@ -1,0 +1,1 @@
+exec master..sp_select '#stocurisp1'

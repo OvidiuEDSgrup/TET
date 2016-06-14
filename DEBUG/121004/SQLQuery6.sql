@@ -1,0 +1,1 @@
+select * from stocuri s where s.Cod like 'PKKP500/1400'	

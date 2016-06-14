@@ -1,0 +1,1 @@
+select * from bp b where b.Casa_de_marcat not in (1,2,3)

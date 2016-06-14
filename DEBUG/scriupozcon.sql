@@ -1,0 +1,5 @@
+declare @p2 xml
+set @p2=convert(xml,N'<row subunitate="1" tip="BK" numar="9820271" data="07/16/2012" explicatii="COMANDA" termen="07/16/2012" dengestiune="DEPOZIT CJ" gestiune="212" dentert="TRUST EURO THERM  SRL - CLUJ" factura="" tert="RO6610440CJ" contractcor="" punctlivrare="" denlm="MKT-PCT LUCRU CJ" lm="1MKT20" dengestprim="" gestprim="" valuta="" curs="0.0000" valoare="0.00" valtva="0.00" valtotala="0.00" scadenta="0" contclient="" procpen="" contr_cadru="" ext_camp4="" ext_modificari="" ext_clauze="" valabilitate="01/01/1901" pozitii="5" discount="0.0000000e+000" comspec="0" stare="0" denstare="0-Operat" info1="" info2="0.00" info3="0.000000000000000e+000" info4="0.0000000e+000" info5="0.0000000e+000" info6="" culoare="#000000" _nemodificabil="0">
+<row cod="07235601" codfarastoc="0" cantitate="1" pret="0" categpret="" discount="0" explicatii="0" info1="0" info2="" subtip="BK"/>
+</row>')
+exec wScriuPozCon @sesiune='17965C7E229B0',@parXML=@p2

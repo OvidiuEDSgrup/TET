@@ -1,0 +1,1 @@
+select p.Cont_factura,* from pozdoc p where p.Tip='ac'

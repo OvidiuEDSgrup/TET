@@ -1,0 +1,1 @@
+select * from par where Parametru='CNAZBKBP'

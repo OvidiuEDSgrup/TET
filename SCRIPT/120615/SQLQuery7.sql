@@ -1,0 +1,1 @@
+select * from avnefac a where a.Terminal='6648'

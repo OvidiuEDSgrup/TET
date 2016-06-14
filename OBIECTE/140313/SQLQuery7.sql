@@ -1,0 +1,2 @@
+if (Number(row.@noudelegat)==1) {return row.@prenumedelegat;} else {return String(row.@numedelegat).substr(20,30).replace(/^\s+|\s+$/g, ');}
+if (Number(row.@noudelegat)==1) {return row.@prenumedelegat;} else {return String(row.@numedelegat).substr(20,30).replace(/^\s+|\s+$/g, '');}

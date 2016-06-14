@@ -1,0 +1,1 @@
+select * from webConfigstdTipuri ts where ts.TipMacheta='D' and ts.Meniu='KO' and ts.Tip='bk'

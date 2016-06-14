@@ -1,0 +1,1 @@
+exec sp_executesql N'SELECT Tip_parametru,Parametru,Val_logica,Val_numerica,Val_alfanumerica FROM TET..par WHERE Tip_parametru = @P1 AND Parametru = @P2    ORDER BY Tip_parametru ASC ,Parametru ASC ',N'@P1 char(2),@P2 char(9)','UC','DEFBKPART'

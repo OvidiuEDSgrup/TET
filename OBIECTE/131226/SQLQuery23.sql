@@ -1,0 +1,5 @@
+delete from webconfigfiltre where meniu='CN' and ('CL'='' or isnull(tip,'')='CL')
+delete from webconfiggrid where meniu='CN' and ('CL'='' or isnull(tip,'')='CL') and (''='' or isnull(subtip,'')='')
+delete from webconfigtipuri where meniu='CN' and ('CL'='' or isnull(tip,'')='CL') and (''='' or isnull(subtip,'')='')
+delete from webconfigform where meniu='CN' and ('CL'='' or isnull(tip,'')='CL') and (''='' or isnull(subtip,'')='')
+delete from webConfigTaburi where MeniuSursa='CN' and ('CL'='' or isnull(TipSursa,'')='CL')

@@ -1,0 +1,1 @@
+select * from webConfigMeniuUtiliz m where m.IdUtilizator like '%ag'
