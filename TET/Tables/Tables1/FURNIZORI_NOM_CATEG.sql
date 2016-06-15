@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[FURNIZORI_NOM_CATEG] (
+    [FURNIZOR] VARCHAR (50) NULL,
+    [VAT]      VARCHAR (50) NULL
+);
+

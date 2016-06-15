@@ -1,0 +1,2 @@
+﻿CREATE USER [TET\asis] FOR LOGIN [TET\asis];
+

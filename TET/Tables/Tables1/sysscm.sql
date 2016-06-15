@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[sysscm] (
+    [Host_id]                  CHAR (10)  NOT NULL,
+    [Host_name]                CHAR (30)  NOT NULL,
+    [Aplicatia]                CHAR (30)  NOT NULL,
+    [Data_operarii]            DATETIME   NOT NULL,
+    [Utilizator]               CHAR (10)  NOT NULL,
+    [Tip_act]                  CHAR (1)   NOT NULL,
+    [Data]                     DATETIME   NOT NULL,
+    [Marca]                    CHAR (6)   NOT NULL,
+    [Tip_diagnostic]           CHAR (2)   NOT NULL,
+    [Data_inceput]             DATETIME   NOT NULL,
+    [Data_sfarsit]             DATETIME   NOT NULL,
+    [Zile_lucratoare]          SMALLINT   NOT NULL,
+    [Zile_cu_reducere]         SMALLINT   NOT NULL,
+    [Zile_luna_anterioara]     SMALLINT   NOT NULL,
+    [Indemnizatia_zi]          FLOAT (53) NOT NULL,
+    [Procent_aplicat]          REAL       NOT NULL,
+    [Indemnizatie_unitate]     FLOAT (53) NOT NULL,
+    [Indemnizatie_CAS]         FLOAT (53) NOT NULL,
+    [Baza_calcul]              FLOAT (53) NOT NULL,
+    [Zile_lucratoare_in_luna]  SMALLINT   NOT NULL,
+    [Indemnizatii_calc_manual] BIT        NOT NULL,
+    [Suma]                     FLOAT (53) NOT NULL
+) ON [SYSS];
+

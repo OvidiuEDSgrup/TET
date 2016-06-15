@@ -1,0 +1,67 @@
+﻿--***
+/**	proc. scriu brut salarii	*/
+Create procedure scriuBrut_salarii 
+	@Data datetime, @marca char(6), @loc_de_munca char(9), @Loc_munca_pt_stat_de_plata int, @Total_ore_lucrate int, @Ore_lucrate__regie int, @Realizat__regie float, 
+	@Ore_lucrate_acord int, @Realizat_acord float, @Ore_suplimentare_1 int, @Indemnizatie_ore_supl_1 float, @Ore_suplimentare_2 int, @Indemnizatie_ore_supl_2 float, 
+	@Ore_suplimentare_3 int, @Indemnizatie_ore_supl_3 float, @Ore_suplimentare_4 int, @Indemnizatie_ore_supl_4 float, @Ore_spor_100 int, @Indemnizatie_ore_spor_100 float, 
+	@Ore_de_noapte int, @Ind_ore_de_noapte float, @Ore_lucrate_regim_normal int, @Ind_regim_normal float, @Ore_intrerupere_tehnologica int, @Ind_intrerupere_tehnologica float, 
+	@Ore_obligatii_cetatenesti int, @Ind_obligatii_cetatenesti float, @Ore_concediu_fara_salar int, @Ind_concediu_fara_salar float, @Ore_concediu_de_odihna int, @Ind_concediu_de_odihna float, 
+	@Ore_concediu_medical int, @Ind_c_medical_unitate float, @Ind_c_medical_CAS float, @Ore_invoiri int, @Ind_invoiri float, @Ore_nemotivate int, @Ind_nemotivate float, 
+	@Salar_categoria_lucrarii float, @CMCAS float, @CMUnitate float, @CO float, @Restituiri float, @Diminuari float, @Suma_impoz float, @Premiu float, @Diurna float, @Cons_admin float, 
+	@Procent_lucrat_acord float,@Suma_imp_sep float,@Spor_vechime float,@Spor_de_noapte float, @Spor_sistematic_peste_program float, @Spor_de_functie_suplimentara float, 
+	@Spor_specific float, @Spor_cond_1 float, @Spor_cond_2 float, @Spor_cond_3 float, @Spor_cond_4 float, @Spor_cond_5 float, @Spor_cond_6 float, @Aj_deces float, 
+	@VENIT_TOTAL float, @Salar_orar float, @Venit_cond_normale float, @Venit_cond_deosebite float, @Venit_cond_speciale float, @Spor_cond_7 float, @Spor_cond_8 float, 
+	@Spor_cond_9 float, @Regim_de_lucru float
+As
+if exists (select * from brut where data=@Data and marca=@marca and loc_de_munca=@loc_de_munca)
+	update brut set Total_ore_lucrate=Total_ore_lucrate+@Total_ore_lucrate,Ore_lucrate__regie=Ore_lucrate__regie+@Ore_lucrate__regie, Realizat__regie=Realizat__regie+@Realizat__regie, 
+	Ore_lucrate_acord=Ore_lucrate_acord+@Ore_lucrate_acord, Realizat_acord=Realizat_acord+@Realizat_acord, Ore_suplimentare_1=Ore_suplimentare_1+@Ore_suplimentare_1, 
+	Indemnizatie_ore_supl_1=Indemnizatie_ore_supl_1+@Indemnizatie_ore_supl_1, Ore_suplimentare_2=Ore_suplimentare_2+@Ore_suplimentare_2,
+	Indemnizatie_ore_supl_2=Indemnizatie_ore_supl_2+@Indemnizatie_ore_supl_2, 
+	Ore_suplimentare_3=Ore_suplimentare_3+@Ore_suplimentare_3, Indemnizatie_ore_supl_3=Indemnizatie_ore_supl_3+@Indemnizatie_ore_supl_3, 
+	Ore_suplimentare_4=Ore_suplimentare_4+@Ore_suplimentare_4, Indemnizatie_ore_supl_4=Indemnizatie_ore_supl_4+@Indemnizatie_ore_supl_4, 
+	Ore_spor_100=Ore_spor_100+@Ore_spor_100, Indemnizatie_ore_spor_100=Indemnizatie_ore_spor_100+@Indemnizatie_ore_spor_100, 
+	Ore_de_noapte=Ore_de_noapte+@Ore_de_noapte, Ind_ore_de_noapte=Ind_ore_de_noapte+@Ind_ore_de_noapte,
+	Ore_lucrate_regim_normal=Ore_lucrate_regim_normal+@Ore_lucrate_regim_normal, Ind_regim_normal=Ind_regim_normal+@Ind_regim_normal,
+	Ore_intrerupere_tehnologica=Ore_intrerupere_tehnologica+@Ore_intrerupere_tehnologica, Ind_intrerupere_tehnologica=Ind_intrerupere_tehnologica+@Ind_intrerupere_tehnologica,
+	Ore_obligatii_cetatenesti=Ore_obligatii_cetatenesti+@Ore_obligatii_cetatenesti, Ind_obligatii_cetatenesti=Ind_obligatii_cetatenesti+@Ind_obligatii_cetatenesti, 
+	Ore_concediu_fara_salar=Ore_concediu_fara_salar+@Ore_concediu_fara_salar, Ind_concediu_fara_salar=Ind_concediu_fara_salar+@Ind_concediu_fara_salar,
+	Ore_concediu_de_odihna=Ore_concediu_de_odihna+@Ore_concediu_de_odihna, Ind_concediu_de_odihna=Ind_concediu_de_odihna+@Ind_concediu_de_odihna, 
+	Ore_concediu_medical=Ore_concediu_medical+@Ore_concediu_medical, Ind_c_medical_unitate=Ind_c_medical_unitate+@Ind_c_medical_unitate,
+	Ind_c_medical_CAS=Ind_c_medical_CAS+@Ind_c_medical_CAS, Ore_invoiri=Ore_invoiri+@Ore_invoiri, Ind_invoiri=Ind_invoiri+@Ind_invoiri, 
+	Ore_nemotivate=Ore_nemotivate+@Ore_nemotivate, Ind_nemotivate=Ind_nemotivate+@Ind_nemotivate, Salar_categoria_lucrarii=Salar_categoria_lucrarii+@Salar_categoria_lucrarii, 
+	CMCAS=CMCAS+@CMCAS, CMunitate=CMunitate+@CMUnitate, CO=CO+@CO, Restituiri=Restituiri+@Restituiri, 
+	Diminuari=Diminuari+@Diminuari, Suma_impozabila=Suma_impozabila+@Suma_impoz, Premiu=Premiu+@Premiu, 
+	Diurna=Diurna+@Diurna, Cons_admin=Cons_admin+@Cons_admin, Sp_salar_realizat=Sp_salar_realizat+@Procent_lucrat_acord, 
+	Suma_imp_separat=Suma_imp_separat+@Suma_imp_sep, Spor_vechime=Spor_vechime+@Spor_vechime, Spor_de_noapte=Spor_de_noapte+@Spor_de_noapte, 
+	Spor_sistematic_peste_program=Spor_sistematic_peste_program+@Spor_sistematic_peste_program, Spor_de_functie_suplimentara=Spor_de_functie_suplimentara+@Spor_de_functie_suplimentara,
+	Spor_specific=Spor_specific+@Spor_specific, Spor_cond_1=Spor_cond_1+@Spor_cond_1, Spor_cond_2=Spor_cond_2+@Spor_cond_2, Spor_cond_3=Spor_cond_3+@Spor_cond_3, 
+	Spor_cond_4=Spor_cond_4+@Spor_cond_4, Spor_cond_5=Spor_cond_5+@Spor_cond_5, Spor_cond_6=Spor_cond_6+@Spor_cond_6,Compensatie =Compensatie+@Aj_deces, 
+	VENIT_TOTAL=VENIT_TOTAL+@VENIT_TOTAL, Salar_orar=(case when @Salar_orar=0 then Salar_orar else @Salar_orar end), 
+	Venit_cond_normale=Venit_cond_normale+@Venit_cond_normale, Venit_cond_deosebite=Venit_cond_deosebite+@Venit_cond_deosebite, Venit_cond_speciale=Venit_cond_speciale+@Venit_cond_speciale, 
+	Spor_cond_7=Spor_cond_7+@Spor_cond_7, Spor_cond_8=Spor_cond_8+@Spor_cond_8, Spor_cond_9=Spor_cond_9+@Spor_cond_9
+	--, Spor_cond_10 = @Regim_de_lucru
+	where data=@Data and marca=@marca and loc_de_munca=@loc_de_munca
+else
+	insert into brut (Data, Marca, Loc_de_munca, Loc_munca_pt_stat_de_plata, Total_ore_lucrate, Ore_lucrate__regie, 
+	Realizat__regie, Ore_lucrate_acord, Realizat_acord, Ore_suplimentare_1, Indemnizatie_ore_supl_1, 
+	Ore_suplimentare_2, Indemnizatie_ore_supl_2, Ore_suplimentare_3, Indemnizatie_ore_supl_3, Ore_suplimentare_4, 
+	Indemnizatie_ore_supl_4, Ore_spor_100, Indemnizatie_ore_spor_100, Ore_de_noapte, Ind_ore_de_noapte, 
+	Ore_lucrate_regim_normal, Ind_regim_normal, Ore_intrerupere_tehnologica, Ind_intrerupere_tehnologica, 
+	Ore_obligatii_cetatenesti, Ind_obligatii_cetatenesti, Ore_concediu_fara_salar, Ind_concediu_fara_salar, 
+	Ore_concediu_de_odihna, Ind_concediu_de_odihna, Ore_concediu_medical, Ind_c_medical_unitate, Ind_c_medical_CAS, 		
+	Ore_invoiri, Ind_invoiri, Ore_nemotivate, Ind_nemotivate, Salar_categoria_lucrarii, CMCAS, CMunitate, CO, 
+	Restituiri, Diminuari, Suma_impozabila, Premiu, Diurna, Cons_admin, Sp_salar_realizat, Suma_imp_separat, 
+	Spor_vechime, Spor_de_noapte, Spor_sistematic_peste_program, Spor_de_functie_suplimentara, Spor_specific, 
+	Spor_cond_1, Spor_cond_2, Spor_cond_3, Spor_cond_4, Spor_cond_5, Spor_cond_6, Compensatie, 
+	VENIT_TOTAL, Salar_orar, Venit_cond_normale, Venit_cond_deosebite, Venit_cond_speciale, Spor_cond_7, Spor_cond_8, Spor_cond_9, Spor_cond_10)
+	select @Data, @marca, @loc_de_munca, @Loc_munca_pt_stat_de_plata int,  
+	@Total_ore_lucrate, @Ore_lucrate__regie, @Realizat__regie, @Ore_lucrate_acord, @Realizat_acord, 
+	@Ore_suplimentare_1, @Indemnizatie_ore_supl_1, @Ore_suplimentare_2, @Indemnizatie_ore_supl_2, @Ore_suplimentare_3, @Indemnizatie_ore_supl_3, @Ore_suplimentare_4, @Indemnizatie_ore_supl_4, 
+	@Ore_spor_100, @Indemnizatie_ore_spor_100, @Ore_de_noapte, @Ind_ore_de_noapte, @Ore_lucrate_regim_normal, @Ind_regim_normal, 
+	@Ore_intrerupere_tehnologica, @Ind_intrerupere_tehnologica, @Ore_obligatii_cetatenesti, @Ind_obligatii_cetatenesti, @Ore_concediu_fara_salar, @Ind_concediu_fara_salar, 
+	@Ore_concediu_de_odihna, @Ind_concediu_de_odihna, @Ore_concediu_medical, @Ind_c_medical_unitate, @Ind_c_medical_CAS, @Ore_invoiri, @Ind_invoiri, @Ore_nemotivate, @Ind_nemotivate, 
+	@Salar_categoria_lucrarii, @CMCAS, @CMUnitate, @CO, @Restituiri, @Diminuari, @Suma_impoz, @Premiu, @Diurna, @Cons_admin, @Procent_lucrat_acord, @Suma_imp_sep, 
+	@Spor_vechime, @Spor_de_noapte, @Spor_sistematic_peste_program, @Spor_de_functie_suplimentara, @Spor_specific, 
+	@Spor_cond_1, @Spor_cond_2, @Spor_cond_3, @Spor_cond_4, @Spor_cond_5, @Spor_cond_6, @Aj_deces, @VENIT_TOTAL, @Salar_orar, 
+	@Venit_cond_normale, @Venit_cond_deosebite, @Venit_cond_speciale, @Spor_cond_7, @Spor_cond_8, @Spor_cond_9, @Regim_de_lucru

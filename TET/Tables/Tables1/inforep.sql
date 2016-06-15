@@ -1,0 +1,51 @@
+﻿CREATE TABLE [dbo].[inforep] (
+    [Cod_reper]                  CHAR (20)  NOT NULL,
+    [Tip_reper]                  CHAR (2)   NOT NULL,
+    [Cod_articol]                CHAR (20)  NOT NULL,
+    [Numar_bataturi]             SMALLINT   NOT NULL,
+    [Numar_fire]                 REAL       NOT NULL,
+    [Numar_fire_cauciuc]         CHAR (10)  NOT NULL,
+    [Numar_fire_cauciuc_invalit] SMALLINT   NOT NULL,
+    [Lungime_mostra_finita]      FLOAT (53) NOT NULL,
+    [Lungime_fir_mostra_finita]  FLOAT (53) NOT NULL,
+    [Lungime_mostra_cruda]       FLOAT (53) NOT NULL,
+    [Lungime_fir_mostra_cruda]   FLOAT (53) NOT NULL,
+    [Numar_de_cartele]           INT        NOT NULL,
+    [Numar_spata_fata]           FLOAT (53) NOT NULL,
+    [Numar_spata_spate]          FLOAT (53) NOT NULL,
+    [Fire_in_casuta]             CHAR (40)  NOT NULL,
+    [Numar_ite]                  SMALLINT   NOT NULL,
+    [Grosimea_cocletilor_mm]     SMALLINT   NOT NULL,
+    [Grosimea_sirmei_de_liziera] SMALLINT   NOT NULL,
+    [Numar_roti_dintate]         SMALLINT   NOT NULL,
+    [Lungime_raport_finit]       REAL       NOT NULL,
+    [Lungime_raport_crud]        REAL       NOT NULL,
+    [Desime_razboi]              REAL       NOT NULL,
+    [Desime_cruda]               REAL       NOT NULL,
+    [Desime_finita]              REAL       NOT NULL,
+    [Latime_spata]               REAL       NOT NULL,
+    [Latime_cruda]               REAL       NOT NULL,
+    [Latime_finita]              SMALLINT   NOT NULL,
+    [Alungire_cruda]             REAL       NOT NULL,
+    [Alungire_finita]            REAL       NOT NULL,
+    [Rezistenta_rupere_cruda]    REAL       NOT NULL,
+    [Rezistenta_rupere_finita]   REAL       NOT NULL,
+    [Elasticitate_cruda]         REAL       NOT NULL,
+    [Elasticitate_finita]        REAL       NOT NULL,
+    [Marca]                      CHAR (6)   NOT NULL,
+    [Utilizator]                 CHAR (10)  NOT NULL,
+    [Greutate_cruda]             FLOAT (53) NOT NULL,
+    [Greutate_finita]            FLOAT (53) NOT NULL,
+    [Greutate_mostra_cauciuc]    FLOAT (53) NOT NULL,
+    [Numar_ace]                  REAL       NOT NULL,
+    [Tip_finisaj]                CHAR (1)   NOT NULL,
+    [Utilaj]                     CHAR (1)   NOT NULL,
+    [Observatii]                 CHAR (200) NOT NULL,
+    [Data_validarii]             DATETIME   NOT NULL
+);
+
+
+GO
+CREATE UNIQUE CLUSTERED INDEX [Cod_reper]
+    ON [dbo].[inforep]([Cod_reper] ASC);
+

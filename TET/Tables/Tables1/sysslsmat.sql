@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[sysslsmat] (
+    [Host_id]            CHAR (10)  NOT NULL,
+    [Host_name]          CHAR (30)  NOT NULL,
+    [Aplicatia]          CHAR (30)  NOT NULL,
+    [Data_operarii]      DATETIME   NOT NULL,
+    [Utilizator]         CHAR (10)  NOT NULL,
+    [Tip_act]            CHAR (1)   NOT NULL,
+    [Subunitate]         CHAR (9)   NOT NULL,
+    [Comanda]            CHAR (13)  NOT NULL,
+    [Cod_produs]         CHAR (20)  NOT NULL,
+    [Tip_reper_mat]      BINARY (1) NOT NULL,
+    [Cod_tata]           CHAR (20)  NOT NULL,
+    [Cod_material]       CHAR (20)  NOT NULL,
+    [Cod_inlocuit]       CHAR (20)  NOT NULL,
+    [Cantitate_necesara] FLOAT (53) NOT NULL,
+    [Pret]               FLOAT (53) NOT NULL,
+    [Loc_de_munca]       CHAR (9)   NOT NULL,
+    [Numar_fisa]         CHAR (8)   NOT NULL,
+    [Gestiune]           CHAR (9)   NOT NULL,
+    [Alfa1]              CHAR (20)  NOT NULL,
+    [Alfa2]              CHAR (20)  NOT NULL,
+    [Val1]               FLOAT (53) NOT NULL,
+    [Val2]               FLOAT (53) NOT NULL,
+    [Data]               DATETIME   NOT NULL
+) ON [SYSS];
+

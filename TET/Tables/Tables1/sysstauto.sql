@@ -1,0 +1,51 @@
+﻿CREATE TABLE [dbo].[sysstauto] (
+    [Cod]                    VARCHAR (20)  NOT NULL,
+    [Tip_auto]               VARCHAR (10)  NOT NULL,
+    [Marca]                  VARCHAR (30)  NOT NULL,
+    [Model]                  VARCHAR (30)  NOT NULL,
+    [Versiune]               VARCHAR (30)  NOT NULL,
+    [An_fabricatie]          VARCHAR (4)   NOT NULL,
+    [Dealer]                 VARCHAR (50)  NOT NULL,
+    [Serie_de_sasiu]         VARCHAR (30)  NOT NULL,
+    [Nr_circulatie]          VARCHAR (15)  NOT NULL,
+    [Serie_de_motor]         VARCHAR (30)  NOT NULL,
+    [Km_la_bord]             FLOAT (53)    NOT NULL,
+    [DAM]                    VARCHAR (4)   NOT NULL,
+    [DDG]                    DATETIME      NOT NULL,
+    [Cilindree]              VARCHAR (30)  NOT NULL,
+    [Carburant]              VARCHAR (1)   NOT NULL,
+    [Culoare]                VARCHAR (20)  NOT NULL,
+    [Denumire_culoare]       VARCHAR (30)  NOT NULL,
+    [Cod_antidemaraj]        VARCHAR (10)  NOT NULL,
+    [Cod_radio]              VARCHAR (10)  NOT NULL,
+    [Cod_chei]               VARCHAR (10)  NOT NULL,
+    [Tip_club]               VARCHAR (20)  NOT NULL,
+    [Numar_card]             VARCHAR (20)  NOT NULL,
+    [Data_card]              DATETIME      NOT NULL,
+    [Data_adeziunii]         DATETIME      NOT NULL,
+    [Cod_chirias]            VARCHAR (20)  NOT NULL,
+    [Cod_proprietar]         VARCHAR (20)  NOT NULL,
+    [Data_ITP]               DATETIME      NOT NULL,
+    [Asigurare]              VARCHAR (20)  NOT NULL,
+    [Asigurare_obligatorie]  VARCHAR (20)  NOT NULL,
+    [Data_cumpararii]        DATETIME      NOT NULL,
+    [Observatii]             VARCHAR (100) NOT NULL,
+    [Nr_comanda]             VARCHAR (40)  NOT NULL,
+    [Tip_motor]              VARCHAR (20)  NOT NULL,
+    [Putere_motor]           VARCHAR (10)  NOT NULL,
+    [Garantie]               REAL          NOT NULL,
+    [Furnizor]               VARCHAR (30)  NOT NULL,
+    [Localitate_furnizor]    VARCHAR (50)  NOT NULL,
+    [Mod_de_plata]           VARCHAR (20)  NOT NULL,
+    [Denumire_firma_leasing] VARCHAR (50)  NOT NULL,
+    [host]                   INT           NOT NULL,
+    [utilsterg]              VARCHAR (30)  NULL,
+    [apl]                    VARCHAR (30)  NULL,
+    [datast]                 DATETIME      NOT NULL
+);
+
+
+GO
+CREATE NONCLUSTERED INDEX [autosters_idx]
+    ON [dbo].[sysstauto]([Cod] ASC, [utilsterg] ASC, [datast] ASC);
+

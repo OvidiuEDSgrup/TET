@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[CLIENTI_FINAL] (
+    [CLIENT]        VARCHAR (200) NULL,
+    [subunitate]    VARCHAR (50)  NULL,
+    [tip]           VARCHAR (50)  NULL,
+    [contract]      VARCHAR (50)  NULL,
+    [cont contabil] VARCHAR (50)  NULL,
+    [cod_fiscal]    VARCHAR (50)  NULL,
+    [Data]          VARCHAR (50)  NULL,
+    [Stare]         VARCHAR (50)  NULL,
+    [Zona]          VARCHAR (50)  NULL,
+    [Tip client]    VARCHAR (50)  NULL,
+    [Echipa]        VARCHAR (100) NULL,
+    [Cod AgV]       VARCHAR (50)  NULL,
+    [AgV]           VARCHAR (50)  NULL,
+    [Loc_de_munca]  VARCHAR (100) NULL,
+    [gestiunea]     VARCHAR (50)  NULL,
+    [termem plata]  VARCHAR (50)  NULL,
+    [moneda]        VARCHAR (50)  NULL,
+    [TARGET]        VARCHAR (50)  NULL,
+    [limita credit] VARCHAR (50)  NULL,
+    [TAX_REFERENCE] VARCHAR (50)  NULL,
+    [sold dec 2011] VARCHAR (50)  NULL,
+    [judet]         VARCHAR (50)  NULL,
+    [localitate]    VARCHAR (50)  NULL,
+    [adresa]        VARCHAR (100) NULL,
+    [email]         VARCHAR (50)  NULL
+);
+

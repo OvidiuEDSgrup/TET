@@ -1,0 +1,17 @@
+﻿CREATE TABLE [dbo].[Tally] (
+    [N] INT IDENTITY (1, 1) NOT NULL,
+    CONSTRAINT [PK_Tally_N] PRIMARY KEY CLUSTERED ([N] ASC) WITH (FILLFACTOR = 100)
+);
+
+
+GO
+GRANT REFERENCES
+    ON OBJECT::[dbo].[Tally] TO PUBLIC
+    AS [dbo];
+
+
+GO
+GRANT SELECT
+    ON OBJECT::[dbo].[Tally] TO PUBLIC
+    AS [dbo];
+

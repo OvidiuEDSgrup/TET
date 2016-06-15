@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[LOCATORI] (
+    [nrcrt]     VARCHAR (50)  NULL,
+    [GESTIUNE]  VARCHAR (50)  NULL,
+    [ARTICOL]   VARCHAR (100) NULL,
+    [DESCRIERE] VARCHAR (300) NULL,
+    [LOCATOR]   VARCHAR (50)  NULL
+);
+

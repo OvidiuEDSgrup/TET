@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[sysspn] (
+    [Host_id]        CHAR (10)    NOT NULL,
+    [Host_name]      CHAR (30)    NOT NULL,
+    [Aplicatia]      CHAR (30)    NOT NULL,
+    [Data_stergerii] DATETIME     NOT NULL,
+    [Stergator]      CHAR (10)    NOT NULL,
+    [Data_operarii]  DATETIME     NOT NULL,
+    [Ora_operarii]   CHAR (6)     NOT NULL,
+    [Subunitate]     CHAR (9)     NOT NULL,
+    [Tip]            CHAR (2)     NOT NULL,
+    [Numar]          CHAR (13)    NOT NULL,
+    [Data]           DATETIME     NOT NULL,
+    [Cont_debitor]   VARCHAR (20) NULL,
+    [Cont_creditor]  VARCHAR (20) NULL,
+    [Suma]           FLOAT (53)   NOT NULL,
+    [Valuta]         CHAR (3)     NOT NULL,
+    [Curs]           FLOAT (53)   NOT NULL,
+    [Suma_valuta]    FLOAT (53)   NOT NULL,
+    [Explicatii]     CHAR (200)   NOT NULL,
+    [Utilizator]     CHAR (10)    NOT NULL,
+    [Nr_pozitie]     INT          NOT NULL,
+    [Loc_munca]      CHAR (9)     NOT NULL,
+    [Comanda]        CHAR (40)    NOT NULL,
+    [Tert]           CHAR (13)    NOT NULL,
+    [Jurnal]         CHAR (3)     NOT NULL
+) ON [SYSS];
+

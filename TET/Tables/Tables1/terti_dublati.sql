@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[terti_dublati] (
+    [SESTERGE]                 VARCHAR (50)  NULL,
+    [RAMANE]                   VARCHAR (50)  NULL,
+    [Tert]                     VARCHAR (50)  NULL,
+    [Denumire]                 VARCHAR (100) NULL,
+    [Grupa]                    VARCHAR (50)  NULL,
+    [Tert_extern]              VARCHAR (50)  NULL,
+    [Cod_fiscal]               VARCHAR (50)  NULL,
+    [JSAUVAT]                  VARCHAR (50)  NULL,
+    [Localitate]               VARCHAR (50)  NULL,
+    [Judet]                    VARCHAR (50)  NULL,
+    [Adresa]                   VARCHAR (100) NULL,
+    [Cont_ca_furnizor]         VARCHAR (50)  NULL,
+    [Cont_ca_beneficiar]       VARCHAR (50)  NULL,
+    [Sold_ca_beneficiar]       VARCHAR (50)  NULL,
+    [Sold_maxim_ca_beneficiar] VARCHAR (50)  NULL,
+    [responsabil]              VARCHAR (50)  NULL,
+    [agent]                    VARCHAR (50)  NULL,
+    [siteweb]                  VARCHAR (50)  NULL,
+    [EMAIL]                    VARCHAR (50)  NULL,
+    [Identificator]            VARCHAR (50)  NULL,
+    [Descriere]                VARCHAR (50)  NULL,
+    [Pers_contact]             VARCHAR (50)  NULL,
+    [JUDSAUTARAPCT]            VARCHAR (50)  NULL,
+    [ADRESAPUNCT]              VARCHAR (50)  NULL
+);
+
