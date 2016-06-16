@@ -34,6 +34,8 @@
 );
 
 
+
+
 GO
 CREATE UNIQUE CLUSTERED INDEX [Principal]
     ON [dbo].[doc]([Subunitate] ASC, [Tip] ASC, [Data] ASC, [Numar] ASC);
@@ -60,38 +62,31 @@ CREATE NONCLUSTERED INDEX [Punct_livrare]
 
 
 GO
-CREATE STATISTICS [_dta_stat_386854678_6_5]
-    ON [dbo].[doc]([Cod_tert], [Data]);
 
-
-GO
-CREATE STATISTICS [_dta_stat_386854678_1_7_5_6]
-    ON [dbo].[doc]([Subunitate], [Factura], [Data], [Cod_tert]);
 
 
 GO
-CREATE STATISTICS [_dta_stat_386854678_3_5_1_6]
-    ON [dbo].[doc]([Numar], [Data], [Subunitate], [Cod_tert]);
 
-
-GO
-CREATE STATISTICS [_dta_stat_386854678_9_5_1_6_2]
-    ON [dbo].[doc]([Loc_munca], [Data], [Subunitate], [Cod_tert], [Tip]);
 
 
 GO
-CREATE STATISTICS [_dta_stat_386854678_2_5_3_6_9]
-    ON [dbo].[doc]([Tip], [Data], [Numar], [Cod_tert], [Loc_munca]);
 
-
-GO
-CREATE STATISTICS [_dta_stat_386854678_5_2_3_1_6_9]
-    ON [dbo].[doc]([Data], [Tip], [Numar], [Subunitate], [Cod_tert], [Loc_munca]);
 
 
 GO
-CREATE STATISTICS [_dta_stat_386854678_5_1_6_2_7_3_9]
-    ON [dbo].[doc]([Data], [Subunitate], [Cod_tert], [Tip], [Factura], [Numar], [Loc_munca]);
+
+
+
+GO
+
+
+
+GO
+
+
+
+GO
+
 
 
 GO
