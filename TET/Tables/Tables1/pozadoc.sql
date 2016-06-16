@@ -36,6 +36,8 @@
 );
 
 
+
+
 GO
 CREATE UNIQUE CLUSTERED INDEX [Actualizare]
     ON [dbo].[pozadoc]([Subunitate] ASC, [Tip] ASC, [Numar_document] ASC, [Data] ASC, [Numar_pozitie] ASC);
@@ -52,8 +54,7 @@ CREATE NONCLUSTERED INDEX [Stanga]
 
 
 GO
-CREATE STATISTICS [_dta_stat_329820287_1_7_6]
-    ON [dbo].[pozadoc]([Subunitate], [Factura_dreapta], [Factura_stinga]);
+
 
 
 GO

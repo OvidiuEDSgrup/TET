@@ -20,9 +20,15 @@
     [UID]                 VARCHAR (36)   NULL,
     [Bon]                 XML            NULL,
     [IdAntetBon]          INT            IDENTITY (1, 1) NOT NULL,
-    [UID_Card_Fidelizare] AS             ([dbo].[f_antetBonuri_UidCardFidelizareDinXml]([bon])) PERSISTED,
-    [yso_numar_in_pozdoc] AS             ([dbo].[yso_wfIaValAtribXml]([Bon],'numar_in_pozdoc')) PERSISTED
+    [yso_numar_in_pozdoc] AS             ([dbo].[yso_wfIaValAtribXml]([Bon],'numar_in_pozdoc')) PERSISTED,
+    [UID_Card_Fidelizare] AS             ([dbo].[f_antetBonuri_UidCardFidelizareDinXml]([bon])) PERSISTED
 );
+
+
+
+
+
+
 
 
 GO
@@ -63,26 +69,21 @@ CREATE NONCLUSTERED INDEX [IX_yso_numar_in_pozdoc]
 
 
 GO
-CREATE STATISTICS [_dta_stat_1386032269_6_4]
-    ON [dbo].[antetBonuri]([Factura], [Data_bon]);
 
-
-GO
-CREATE STATISTICS [_dta_stat_1386032269_1_6_4]
-    ON [dbo].[antetBonuri]([Casa_de_marcat], [Factura], [Data_bon]);
 
 
 GO
-CREATE STATISTICS [_dta_stat_1386032269_5_6_4_2]
-    ON [dbo].[antetBonuri]([Vinzator], [Factura], [Data_bon], [Chitanta]);
 
-
-GO
-CREATE STATISTICS [_dta_stat_1386032269_3_6_4_2_1]
-    ON [dbo].[antetBonuri]([Numar_bon], [Factura], [Data_bon], [Chitanta], [Casa_de_marcat]);
 
 
 GO
-CREATE STATISTICS [_dta_stat_1386032269_4_1_5_3_6]
-    ON [dbo].[antetBonuri]([Data_bon], [Casa_de_marcat], [Vinzator], [Numar_bon], [Factura]);
+
+
+
+GO
+
+
+
+GO
+
 

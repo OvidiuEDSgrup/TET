@@ -15,6 +15,8 @@
 );
 
 
+
+
 GO
 CREATE UNIQUE CLUSTERED INDEX [Principal]
     ON [dbo].[conturi]([Subunitate] ASC, [Cont] ASC);
@@ -31,8 +33,7 @@ CREATE NONCLUSTERED INDEX [Denumire]
 
 
 GO
-CREATE STATISTICS [_dta_stat_181575685_1_2_6]
-    ON [dbo].[conturi]([Subunitate], [Cont], [Are_analitice]);
+
 
 
 GO

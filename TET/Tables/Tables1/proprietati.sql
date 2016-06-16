@@ -7,6 +7,8 @@
 );
 
 
+
+
 GO
 CREATE UNIQUE CLUSTERED INDEX [Principal]
     ON [dbo].[proprietati]([Tip] ASC, [Cod] ASC, [Cod_proprietate] ASC, [Valoare] ASC, [Valoare_tupla] ASC);
@@ -28,6 +30,5 @@ CREATE NONCLUSTERED INDEX [Tip_si_tupla]
 
 
 GO
-CREATE STATISTICS [_dta_stat_1620252877_2_3]
-    ON [dbo].[proprietati]([Cod], [Cod_proprietate]);
+
 

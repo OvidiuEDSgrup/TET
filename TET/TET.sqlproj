@@ -25,6 +25,8 @@
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
     <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <ValidateCasingOnIdentifiers>False</ValidateCasingOnIdentifiers>
+    <Recovery>SIMPLE</Recovery>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -108,7 +110,10 @@
     <Build Include="Tables\Tables1\anteclc.sql" />
     <Build Include="Tables\Tables1\antecman.sql" />
     <Build Include="Tables\Tables1\antecmat.sql" />
-    <Build Include="Tables\Tables1\antetBonuri.sql" />
+    <Build Include="Tables\Tables1\antetBonuri.sql">
+      <QuotedIdentifier>On</QuotedIdentifier>
+      <AnsiNulls>On</AnsiNulls>
+    </Build>
     <Build Include="Tables\Tables1\antetinv.sql" />
     <Build Include="Tables\Tables1\AntetInventar.sql" />
     <Build Include="Tables\Tables1\AntetPlanificare.sql" />

@@ -27,6 +27,8 @@
 );
 
 
+
+
 GO
 CREATE UNIQUE CLUSTERED INDEX [Cod]
     ON [dbo].[nomencl]([Cod] ASC);
@@ -43,8 +45,7 @@ CREATE NONCLUSTERED INDEX [Denumire]
 
 
 GO
-CREATE STATISTICS [_dta_stat_188787980_10_1]
-    ON [dbo].[nomencl]([Grupa], [Cod]);
+
 
 
 GO
