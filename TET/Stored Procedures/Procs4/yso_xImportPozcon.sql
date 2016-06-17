@@ -42,7 +42,7 @@ begin try -- scriu pozcon
 	from ##importXlsTmp 
 	except
 	select			tip, subtip, numar, data, tert, cod, gestiune, cantitate, valuta--, termene
-	, pret, discount, discount2, discount3, cotatva, punctlivrare, modplata
+	, pret, discount, /*discount2, discount3,*/ cotatva, punctlivrare, modplata
 	--, cant_aprobata
 	, explicatii--, numarpozitie
 	, atp--, dataexpirarii, obiect, denobiect

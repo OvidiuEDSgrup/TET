@@ -50,7 +50,7 @@
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <SuppressTSqlWarnings>71501</SuppressTSqlWarnings>
+    <SuppressTSqlWarnings>71501;71502;71562;SQL71501</SuppressTSqlWarnings>
     <TreatTSqlWarningsAsErrors>True</TreatTSqlWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
@@ -1634,7 +1634,7 @@
     <Build Include="Stored Procedures\Procs1\corectiiInchidere.sql" />
     <Build Include="Stored Procedures\Procs1\costArtCalc.sql" />
     <Build Include="Stored Procedures\Procs1\creare_tabela_pontaj_automat.sql" />
-    <Build Include="Stored Procedures\Procs1\CreareTabeleD112.sql" />
+    <None Include="Stored Procedures\Procs1\CreareTabeleD112.sql" />
     <Build Include="Stored Procedures\Procs1\creazaBonTemp.sql" />
     <Build Include="Stored Procedures\Procs1\CreazaDiezDeconturi.sql" />
     <Build Include="Stored Procedures\Procs1\CreazaDiezFacturi.sql" />
@@ -1775,7 +1775,6 @@
     <Build Include="Stored Procedures\Procs1\genRevisalSalariati.sql" />
     <Build Include="Stored Procedures\Procs1\GestiuniEXCEL.sql" />
     <Build Include="Stored Procedures\Procs1\GolireTabeleD112.sql" />
-    <Build Include="Stored Procedures\Procs1\HandlerPuncteBon.sql" />
     <Build Include="Stored Procedures\Procs1\iaArborePlan.sql" />
     <Build Include="Stored Procedures\Procs1\iaMOAntecalculatie.sql" />
     <Build Include="Stored Procedures\Procs1\iauNrDataDoc.sql" />
@@ -1936,7 +1935,6 @@
     <Build Include="Stored Procedures\Procs1\pStocVech.sql" />
     <Build Include="Stored Procedures\Procs1\pstoczi.sql" />
     <Build Include="Stored Procedures\Procs1\pSume_cm_marca.sql" />
-    <Build Include="Stored Procedures\Procs1\ptBanca.sql" />
     <Build Include="Stored Procedures\Procs1\ptFluturasi.sql" />
     <Build Include="Stored Procedures\Procs1\ptGenerare_codbara_declaratii.sql" />
     <Build Include="Stored Procedures\Procs1\ptGenerare_codbara_OP.sql" />
@@ -2441,7 +2439,6 @@
     <Build Include="Stored Procedures\Procs1\wACNrinmatriculare.sql" />
     <Build Include="Stored Procedures\Procs1\wACNumereDeInventar.sql" />
     <Build Include="Stored Procedures\Procs1\wACOperatii.sql" />
-    <Build Include="Stored Procedures\Procs1\wACOperatiiPlanificare.sql" />
     <Build Include="Stored Procedures\Procs1\wACOperatiiRaportare.sql" />
     <Build Include="Stored Procedures\Procs1\wACOrePontajZilnic.sql" />
     <Build Include="Stored Procedures\Procs1\wACPersoaneContact.sql" />
@@ -3010,19 +3007,13 @@
     <Build Include="Stored Procedures\Procs2\wMaxCod.sql" />
     <Build Include="Stored Procedures\Procs2\wmComandaAgent.sql" />
     <Build Include="Stored Procedures\Procs2\wmComandaAsistent.sql" />
-    <Build Include="Stored Procedures\Procs2\wmComandaDeFacturat.sql" />
-    <Build Include="Stored Procedures\Procs2\wmComandaDeFacturatHandler.sql" />
     <Build Include="Stored Procedures\Procs2\wmComandaLivrare.sql" />
-    <Build Include="Stored Procedures\Procs2\wmComandaTertDeschisa.sql" />
-    <Build Include="Stored Procedures\Procs2\wmComandaTertDeschisaHandler.sql" />
     <Build Include="Stored Procedures\Procs2\wmConfirmareAnulareComanda.sql" />
     <Build Include="Stored Procedures\Procs2\wmConfirmareInchidereDocument.sql" />
     <Build Include="Stored Procedures\Procs2\wmDateTerti.sql" />
     <Build Include="Stored Procedures\Procs2\wmDetaliiDocument.sql" />
     <Build Include="Stored Procedures\Procs2\wmDetaliiIncasare.sql" />
     <Build Include="Stored Procedures\Procs2\wmDetBonuri.sql" />
-    <Build Include="Stored Procedures\Procs2\wmDetComenzi.sql" />
-    <Build Include="Stored Procedures\Procs2\wmDetComenziTert.sql" />
     <Build Include="Stored Procedures\Procs2\wmDetPuncteLivrare.sql" />
     <Build Include="Stored Procedures\Procs2\wmDetStocuri.sql" />
     <Build Include="Stored Procedures\Procs2\wmDetTerti.sql" />
@@ -3239,7 +3230,6 @@
     <Build Include="Stored Procedures\Procs2\wOPFormularMF.sql" />
     <Build Include="Stored Procedures\Procs2\wOPGasesteRelatiiConfigurari.sql" />
     <Build Include="Stored Procedures\Procs2\wOPGasesteRelatiiConfigurari_tabela.sql" />
-    <Build Include="Stored Procedures\Procs2\wOPGenBKdinBF.sql" />
     <Build Include="Stored Procedures\Procs2\wOPGenCoefAm.sql" />
     <Build Include="Stored Procedures\Procs2\wOPGenComandaProductie.sql" />
     <Build Include="Stored Procedures\Procs2\wOPGenComandaProductie_p.sql" />
@@ -3259,8 +3249,6 @@
     <Build Include="Stored Procedures\Procs2\wOPGenerareComandaAprovizionareCentralizator.sql" />
     <Build Include="Stored Procedures\Procs2\wOPGenerareComandaAprovizionareCentralizator_p.sql" />
     <Build Include="Stored Procedures\Procs2\wOPGenerareComandaProductieContract.sql" />
-    <Build Include="Stored Procedures\Procs2\wOPGenerareComenziProductie.sql" />
-    <Build Include="Stored Procedures\Procs2\wOPGenerareComenziProductie2.sql" />
     <Build Include="Stored Procedures\Procs2\wOPGenerareComLivrare.sql" />
     <Build Include="Stored Procedures\Procs2\wOPGenerareCompensariDeconturi.sql" />
     <Build Include="Stored Procedures\Procs2\wOPGenerareCompensariEfecte.sql" />
@@ -3478,7 +3466,6 @@
     <Build Include="Stored Procedures\Procs2\wOPPopulareLocatii.sql" />
     <Build Include="Stored Procedures\Procs2\wOPPopulareMF.sql" />
     <Build Include="Stored Procedures\Procs2\wOPPopulareNecorelatii.sql" />
-    <Build Include="Stored Procedures\Procs2\wOPPopularePlanificare.sql" />
     <Build Include="Stored Procedures\Procs2\wOPPopularePlanificareNoua.sql" />
     <Build Include="Stored Procedures\Procs2\wOPPopularePlanificareNoua_p.sql" />
     <Build Include="Stored Procedures\Procs2\wOPPopularePontajZilnic.sql" />
@@ -3969,7 +3956,6 @@
     <Build Include="Stored Procedures\Procs3\wScriuPozContracteSP.sql" />
     <Build Include="Stored Procedures\Procs3\wScriuPozD112.sql" />
     <Build Include="Stored Procedures\Procs3\wScriuPozD205.sql" />
-    <Build Include="Stored Procedures\Procs3\wScriuPozDevizeLucru.sql" />
     <Build Include="Stored Procedures\Procs3\wScriuPozDevizLucru.sql" />
     <Build Include="Stored Procedures\Procs3\wScriuPozDispAW.sql" />
     <Build Include="Stored Procedures\Procs3\wScriuPozdoc.sql" />
@@ -3988,7 +3974,6 @@
     <Build Include="Stored Procedures\Procs3\wScriuPozIPC.sql" />
     <Build Include="Stored Procedures\Procs3\wScriuPozListaCoduriBare.sql" />
     <Build Include="Stored Procedures\Procs3\wScriuPozNcon.sql" />
-    <Build Include="Stored Procedures\Procs3\wScriuPozOrdineDePlata.sql" />
     <Build Include="Stored Procedures\Procs3\wScriuPozPlanificareLansari.sql" />
     <Build Include="Stored Procedures\Procs3\wScriuPozplin.sql" />
     <Build Include="Stored Procedures\Procs3\wScriuPozplinSP.sql" />
@@ -4497,7 +4482,6 @@
     <Build Include="Stored Procedures\Procs3\yso_wACMasinExp.sql" />
     <Build Include="Stored Procedures\Procs3\yso_wACNomenclatorDevizLucru.sql" />
     <Build Include="Stored Procedures\Procs3\yso_wACValProprietatiNomencl.sql" />
-    <Build Include="Stored Procedures\Procs3\yso_wFrameScriuWebConfigMeniu.sql" />
     <Build Include="Stored Procedures\Procs3\yso_wIaAvizBon_p.sql" />
     <Build Include="Stored Procedures\Procs3\yso_wIaAvizeCon_p.sql" />
     <Build Include="Stored Procedures\Procs3\yso_wIaAvizeContracte_p.sql" />
@@ -4612,6 +4596,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assemblies\HTTPGet_1.dll" />
+    <None Include="SqlSchemaCompare1.scmp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="HTTPGet_1">
@@ -4622,5 +4607,37 @@
       <SqlOwnerName>dbo</SqlOwnerName>
       <SqlPermissionSet>UNSAFE</SqlPermissionSet>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ASISria\ASISria.sqlproj">
+      <Name>ASISria</Name>
+      <Project>{366a0424-65ba-4ea4-b639-179f651262ce}</Project>
+      <Private>True</Private>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>ASiSria</DatabaseSqlCmdVariable>
+    </ProjectReference>
+    <ProjectReference Include="..\ASISria\ASISria.sqlproj">
+      <Name>ASISria</Name>
+      <Project>{366a0424-65ba-4ea4-b639-179f651262ce}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="ASiSria">
+      <DefaultValue>ASiSria</DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\100\SqlSchemas\master.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\100\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\100\SqlSchemas\msdb.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\100\SqlSchemas\msdb.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>msdb</DatabaseVariableLiteralValue>
+    </ArtifactReference>
   </ItemGroup>
 </Project>

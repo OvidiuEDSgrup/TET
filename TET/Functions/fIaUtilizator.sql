@@ -11,7 +11,7 @@ begin
 	if isnull(@sesiune,'')!=''
 	begin
 		select top 1 @Utilizator=utilizator
-		from ASiSria.dbo.sesiuniRIA 
+		from [$(ASiSria)].dbo.sesiuniRIA 
 		where token=@sesiune and BD=DB_NAME() /* validare bd  */
 		-- nu returnez cu isnull - toate aplicatiile care au sesiune, trebuie sa foloseasca un user valid.
 		return @utilizator

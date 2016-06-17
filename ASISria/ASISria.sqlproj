@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{366a0424-65ba-4ea4-b639-179f651262ce}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -25,6 +25,7 @@
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
     <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <ValidateCasingOnIdentifiers>False</ValidateCasingOnIdentifiers>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -65,14 +66,26 @@
   <ItemGroup>
     <Build Include="Tables\utilizatoriRIA.sql" />
     <Build Include="Tables\bazedeDateRIA.sql" />
-    <Build Include="Tables\sesiuniRIA.sql" />
+    <None Include="Tables\sesiuniRIA.sql" />
     <Build Include="Tables\cheiActivare.sql" />
     <Build Include="Tables\parametriRIA.sql" />
-    <Build Include="Tables\varSesiune.sql" />
+    <None Include="Tables\varSesiune.sql" />
     <Build Include="Tables\logUtilizatori.sql" />
     <Build Include="Tables\ProceduriDeRulat.sql" />
-    <Build Include="Stored Procedures\ReportToExcelProvider.sql" />
-    <Build Include="Stored Procedures\RuleazaProceduri.sql" />
+    <None Include="Stored Procedures\ReportToExcelProvider.sql" />
+    <None Include="Stored Procedures\RuleazaProceduri.sql" />
     <Build Include="Stored Procedures\startJob.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\100\SqlSchemas\master.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\100\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\100\SqlSchemas\msdb.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\100\SqlSchemas\msdb.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>msdb</DatabaseVariableLiteralValue>
+    </ArtifactReference>
   </ItemGroup>
 </Project>
