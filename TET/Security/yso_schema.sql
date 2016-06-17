@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [yso]
+    AUTHORIZATION [dbo];
+
