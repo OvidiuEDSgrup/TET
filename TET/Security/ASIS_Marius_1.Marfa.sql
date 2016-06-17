@@ -1,3 +1,0 @@
-﻿CREATE LOGIN [ASIS\Marius.Marfa]
-    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
-
