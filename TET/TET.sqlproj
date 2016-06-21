@@ -4567,6 +4567,7 @@
     <Build Include="Database Triggers\setareDeclansareTriggere.sql" />
     <Build Include="XMLSchemaCollections\ASchemaRevisal.sql" />
     <Build Include="Security\yso_schema.sql" />
+    <Build Include="Tables\Table1.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assemblies\HTTPGet_1.dll" />
@@ -4608,5 +4609,8 @@
       <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
       <DatabaseVariableLiteralValue>msdb</DatabaseVariableLiteralValue>
     </ArtifactReference>
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="TET.refactorlog" />
   </ItemGroup>
 </Project>
