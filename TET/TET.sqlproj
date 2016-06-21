@@ -4616,11 +4616,6 @@
       <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
       <DatabaseSqlCmdVariable>ASiSria</DatabaseSqlCmdVariable>
     </ProjectReference>
-    <ProjectReference Include="..\ASISria\ASISria.sqlproj">
-      <Name>ASISria</Name>
-      <Project>{366a0424-65ba-4ea4-b639-179f651262ce}</Project>
-      <Private>True</Private>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <SqlCmdVariable Include="ASiSria">
