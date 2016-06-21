@@ -1182,30 +1182,6 @@
     <Build Include="Views\tpretun.sql" />
     <Build Include="Storage\SYSS.sql" />
     <Build Include="Storage\WEB.sql" />
-    <Build Include="Security\TET_dana.capsuc.sql" />
-    <Build Include="Security\TET_dana_1.capsuc.sql" />
-    <Build Include="Security\ASIS_Oradea.sql" />
-    <Build Include="Security\ASIS_Admin.sql" />
-    <Build Include="Security\TET_ASISplus.sql" />
-    <Build Include="Security\TET_maria.ciangu.sql" />
-    <Build Include="Security\mobria.sql" />
-    <Build Include="Security\mobria_1.sql" />
-    <Build Include="Security\TET_cristina.ciocan.sql" />
-    <Build Include="Security\TET_cristina.taramtus.sql" />
-    <Build Include="Security\TET_elis.sauciuc.sql" />
-    <Build Include="Security\TET_carmen.hanganu.sql" />
-    <Build Include="Security\TET_lilioara.alucai.sql" />
-    <Build Include="Security\ASIS_ASISria.sql" />
-    <Build Include="Security\ASIS_ASISria_1.sql" />
-    <Build Include="Security\TET_nela.roban.sql" />
-    <Build Include="Security\TET_rodica.cojocaru.sql" />
-    <Build Include="Security\TET_roxana.vatajelu.sql" />
-    <Build Include="Security\TET_asis.sql" />
-    <Build Include="Security\TET_asis_1.sql" />
-    <Build Include="Security\ASIS_root.sql" />
-    <Build Include="Security\ASIS_Marius.Marfa.sql" />
-    <Build Include="Security\ASIS_Marius_1.Marfa.sql" />
-    <Build Include="Security\RoleMemberships.sql" />
     <Build Include="Functions\fSuma_cifrelor.sql" />
     <Build Include="Functions\calcul_coeficient_acord_ARL.sql" />
     <Build Include="Functions\rot_val.sql" />
@@ -4589,9 +4565,7 @@
     <Build Include="Database Triggers\trgLogDDLEvent.sql" />
     <Build Include="Database Triggers\jurnalizare_obiecte_sql.sql" />
     <Build Include="Database Triggers\setareDeclansareTriggere.sql" />
-    <Build Include="Security\yso.sql" />
     <Build Include="XMLSchemaCollections\ASchemaRevisal.sql" />
-    <Build Include="Security\Permissions.sql" />
     <Build Include="Security\yso_schema.sql" />
   </ItemGroup>
   <ItemGroup>
@@ -4615,11 +4589,6 @@
       <Private>True</Private>
       <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
       <DatabaseSqlCmdVariable>ASiSria</DatabaseSqlCmdVariable>
-    </ProjectReference>
-    <ProjectReference Include="..\ASISria\ASISria.sqlproj">
-      <Name>ASISria</Name>
-      <Project>{366a0424-65ba-4ea4-b639-179f651262ce}</Project>
-      <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
