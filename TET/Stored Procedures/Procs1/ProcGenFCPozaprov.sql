@@ -1,4 +1,4 @@
-﻿CREATE procedure [yso].[ProcGenFCPozaprov] @utilizator char(10),@contract VARCHAR(20), @data DATETIME, @furnizor CHAR(13), 
+﻿CREATE procedure [dbo].[ProcGenFCPozaprov] @utilizator char(10),@contract VARCHAR(20), @data DATETIME, @furnizor CHAR(13), 
 	@termenJos datetime, @termenSus datetime,@filtruTermen int, @gestiune char(9) as
 --DECLARE @utilizator char(10) SET @utilizator='OVIDIU' 
 declare @Subunitate char(9), @cHostId char(8),@randuri int
@@ -22,7 +22,7 @@ select p.Subunitate, p.cod, p.Tip, p.contract, p.data, p.tert, MAX(p.termen) as 
 ---SUM(p.Cantitate),0,null) 
 ,0 as Cantitate_alte
 INTO #pozconBKfaraStoc
-from yso.pozconexp p 
+from [dbo].pozconexp p 
 inner join con c on c.subunitate=p.subunitate and c.tip=p.tip and c.contract=p.contract and c.data=p.data and c.tert=p.tert
 inner join nomencl n on p.cod=n.cod
 left join par ON par.Tip_parametru='GE' AND par.Parametru='REZSTOCBK'

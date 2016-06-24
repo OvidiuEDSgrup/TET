@@ -1,5 +1,5 @@
 ﻿CREATE PROC yso_predariPachete @cHostId char(25) AS 
-EXEC yso.predariPachete @cHostId=@cHostId
+EXEC [dbo].predariPachete @cHostId=@cHostId
 
 --EXEC yso.predariPachete '11140'
 --select * from #codIntrarePachete

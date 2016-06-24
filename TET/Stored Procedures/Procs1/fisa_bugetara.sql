@@ -10,7 +10,7 @@ select @subunitate=val_alfanumerica from par where tip_parametru='GE' and parame
 declare @eLmUtiliz int
 declare @LmUtiliz table(valoare varchar(200), cod_proprietate varchar(20))
 insert into @LmUtiliz(valoare, cod_proprietate)
-select valoare, cod_proprietate from fPropUtiliz() where valoare<>'' and cod_proprietate='LOCMUNCA'
+select valoare, cod_proprietate from fPropUtiliz(null) where valoare<>'' and cod_proprietate='LOCMUNCA'
 set @eLmUtiliz=isnull((select max(1) from @LmUtiliz),0)
 
 select subunitate,tip_document,numar_document,data,cont_debitor,cont_creditor,suma,valuta,curs,suma_valuta,explicatii,utilizator,data_operarii,ora_operarii,numar_pozitie,loc_de_munca,right(Comanda,20) as Comanda,Jurnal

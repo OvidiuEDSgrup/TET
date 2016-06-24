@@ -1,5 +1,5 @@
 ﻿--exec yso.predariPachete '5048'
-CREATE PROC yso.predariPachete @cHostId char(25) AS 
+CREATE PROC [dbo].predariPachete @cHostId char(25) AS 
 --DECLARE @cHostId char(10) SET @cHostId='4468'
 
 set @cHostId=isnull((select top 1 s.utilizator from asisria..sesiuniria s where s.token=@cHostId),@cHostId)
@@ -32,7 +32,7 @@ CREATE NONCLUSTERED INDEX NumarAviz ON #codIntrarePachete (Subunitate, Numar, Da
 IF OBJECT_ID('yso.predariPacheteTmp') IS NULL
 BEGIN
 	--SET @cTextSelect=''		
-	CREATE TABLE yso.predariPacheteTmp 
+	CREATE TABLE [dbo].predariPacheteTmp 
 		(Terminal char(10),
 		Subunitate char(9),
 		Contract char(20),
@@ -50,15 +50,15 @@ BEGIN
 		Cod_intrare char(20),
 		Cantitate float,
 		ordine varchar(1))
-	CREATE UNIQUE NONCLUSTERED INDEX Unic ON yso.predariPacheteTmp (Terminal, Subunitate, Tip, Numar, Data, Numar_pozitie)
-	CREATE NONCLUSTERED INDEX Aviz ON yso.predariPacheteTmp (Terminal, Subunitate, TipAviz, NumarAviz, DataAviz, CodPachet, Cod_intrarePachet)
-	CREATE NONCLUSTERED INDEX Contract ON yso.predariPacheteTmp (Terminal, Subunitate, Contract, Tert, CodPachet)
+	CREATE UNIQUE NONCLUSTERED INDEX Unic ON [dbo].predariPacheteTmp (Terminal, Subunitate, Tip, Numar, Data, Numar_pozitie)
+	CREATE NONCLUSTERED INDEX Aviz ON [dbo].predariPacheteTmp (Terminal, Subunitate, TipAviz, NumarAviz, DataAviz, CodPachet, Cod_intrarePachet)
+	CREATE NONCLUSTERED INDEX Contract ON [dbo].predariPacheteTmp (Terminal, Subunitate, Contract, Tert, CodPachet)
 END
 -- select * from yso.predariPacheteTmp
-DELETE yso.predariPacheteTmp
+DELETE [dbo].predariPacheteTmp
 WHERE Terminal=@cHostId
 
-INSERT yso.predariPacheteTmp
+INSERT [dbo].predariPacheteTmp
 SELECT DISTINCT @cHostId,pa.Subunitate,pa.Contract,pa.Tert,pa.Tip,pa.Numar,pa.Data,pa.Numar_pozitie,pa.Cod
 	, pa.cod_intrare,cm.Tip,cm.numar,cm.data,cm.Numar_pozitie
 	, CASE pr.Valoare WHEN 'DA' THEN cm.Cod_intrare ELSE cm.Cod END 
@@ -69,7 +69,7 @@ FROM pozdoc cm
 	LEFT JOIN proprietati pr on pr.Tip='NOMENCL' and pr.Cod_proprietate='ARESERII' and pr.Cod=cm.Cod and pr.Valoare='DA' and pr.Valoare_tupla=''
 WHERE cm.Tip='CM'
 
-INSERT yso.predariPacheteTmp
+INSERT [dbo].predariPacheteTmp
 SELECT DISTINCT @cHostId,ap.Subunitate
 	, CASE ap.Tip WHEN 'AP' THEN ap.Contract WHEN 'TE' THEN ap.Factura WHEN 'AE' THEN ISNULL(NULLIF(ap.Grupa,''),ap.[contract]) ELSE '' END 
 	, CASE ap.Tip WHEN 'AP' THEN ap.Tert WHEN 'TE' THEN pc.Tert WHEN 'AE' THEN pc1.Tert ELSE ap.Tert END 
@@ -85,11 +85,11 @@ FROM pozdoc ap
 	outer apply (select top (1) * from con pc1 where pc1.Subunitate=ap.Subunitate and pc1.Tip='BK' and ap.Tip='AE' and pc1.Contract=NULLIF(ISNULL(NULLIF(ap.Grupa,''),ap.[contract]),'')
 		order by pc1.data desc) pc1
 	LEFT JOIN proprietati pr on pr.Tip='NOMENCL' and pr.Cod_proprietate='ARESERII' and pr.Cod=ap.Cod and pr.Valoare='DA' and pr.Valoare_tupla=''
-WHERE exists (SELECT 1 FROM yso.predariPacheteTmp pp WHERE Terminal=@cHostId and pp.Subunitate=ap.Subunitate 
+WHERE exists (SELECT 1 FROM [dbo].predariPacheteTmp pp WHERE Terminal=@cHostId and pp.Subunitate=ap.Subunitate 
 	and pp.NumarAviz=ap.Numar and pp.DataAviz=ap.Data and pp.Numar_pozitieAviz=ap.Numar_pozitie)--and pp.CodPachet=ap.Cod and pp.Cod_intrarePachet=ap.Cod_intrare)
 
 --/*
-INSERT yso.predariPacheteTmp
+INSERT [dbo].predariPacheteTmp
 SELECT DISTINCT @cHostId,ap.Subunitate
 	, CASE ap.Tip WHEN 'AP' THEN ap.Contract WHEN 'TE' THEN ap.Factura WHEN 'AE' THEN ISNULL(NULLIF(ap.Grupa,''),ap.[contract]) ELSE '' END 
 	, CASE ap.Tip WHEN 'AP' THEN ap.Tert WHEN 'TE' THEN pc.Tert WHEN 'AE' THEN pc1.Tert ELSE ap.Tert END 
@@ -105,10 +105,10 @@ FROM pozdoc ap
 	outer apply (select top (1) * from con pc1 where pc1.Subunitate=ap.Subunitate and pc1.Tip='BK' and ap.Tip='AE' and pc1.Contract=NULLIF(ISNULL(NULLIF(ap.Grupa,''),ap.[contract]),'')
 		order by pc1.data desc) pc1
 	LEFT JOIN proprietati pr on pr.Tip='NOMENCL' and pr.Cod_proprietate='ARESERII' and pr.Cod=ap.Cod and pr.Valoare='DA' and pr.Valoare_tupla=''
-WHERE NOT exists (SELECT 1 FROM yso.predariPacheteTmp pp WHERE Terminal=@cHostId and pp.Subunitate=ap.Subunitate 
+WHERE NOT exists (SELECT 1 FROM [dbo].predariPacheteTmp pp WHERE Terminal=@cHostId and pp.Subunitate=ap.Subunitate 
 	and pp.NumarAviz=ap.Numar and pp.DataAviz=ap.Data and pp.Numar_pozitieAviz=ap.Numar_pozitie)
 	--and pp.CodPachet=ap.Cod and pp.Cod_intrarePachet=ap.Cod_intrare)
 
-select * from yso.predariPacheteTmp where Terminal=@cHostId
+select * from [dbo].predariPacheteTmp where Terminal=@cHostId
 
 

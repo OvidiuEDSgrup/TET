@@ -49,7 +49,7 @@ end
 declare @eLmUtiliz int
 declare @LmUtiliz table(valoare varchar(200), cod_proprietate varchar(20))
 insert into @LmUtiliz(valoare, cod_proprietate)
-select valoare, cod_proprietate from fPropUtiliz() where valoare<>'' and cod_proprietate='LOCMUNCA'
+select valoare, cod_proprietate from fPropUtiliz(null) where valoare<>'' and cod_proprietate='LOCMUNCA'
 set @eLmUtiliz=isnull((select max(1) from @LmUtiliz),0)
 	/**	organizare indicatori pentru a fi mai usor in continuare - in principal, pentru a lua grupa indicatorilor */
 select c.indbug, c.denumire as descriere,

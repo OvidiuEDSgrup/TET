@@ -3,7 +3,7 @@
 --<row cod="11400355" codprop="SUBCONTRACTANT" descriere="SUBCONTRACTANT" valoare="33665" denvaloare="1" update="1" o_cod="11400355" o_codprop="SUBCONTRACTANT" o_descriere="SUBCONTRACTANT" o_valoare="1" o_denvaloare="1" o_update="1" tip="PT"/></row>')
 --set @sesiune='8B6B8AD4685D5'
 --***
-CREATE procedure [yso].[wScriuProprietatiTerti]   @sesiune varchar(30), @parXML XML as
+CREATE procedure [dbo].[yso_wScriuProprietatiTerti]   @sesiune varchar(30), @parXML XML as
 declare @tert varchar(13), @update bit, @valoare varchar(20), @descriere varchar(200), @codprop varchar(50), @denvaloare varchar(80)
 	,@o_codprop varchar(20),@o_valoare varchar(20), @o_denvaloare varchar(80)
 Select  @tert = @parXML.value('(/row/@tert)[1]','varchar(13)'),

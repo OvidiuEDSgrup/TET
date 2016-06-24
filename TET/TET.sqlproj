@@ -1541,7 +1541,6 @@
     <Build Include="Stored Procedures\Procs1\AsociezLocatieRM.sql" />
     <Build Include="Stored Procedures\Procs1\balanta_centralizatoare.sql" />
     <Build Include="Stored Procedures\Procs1\balanta_contabila.sql" />
-    <Build Include="Stored Procedures\Procs1\bkp_validareNecorelatiiStocuri.sql" />
     <Build Include="Stored Procedures\Procs1\BrutCuRectificari.sql" />
     <Build Include="Stored Procedures\Procs1\CalcCategBilant.sql" />
     <Build Include="Stored Procedures\Procs1\CalcCategInd.sql" />
@@ -1940,7 +1939,6 @@
     <Build Include="Stored Procedures\Procs1\rapAntecalculatii.sql" />
     <Build Include="Stored Procedures\Procs1\rapAvansSalarii.sql" />
     <Build Include="Stored Procedures\Procs1\rapAvize.sql" />
-    <Build Include="Stored Procedures\Procs1\rapAvize_grafic.sql" />
     <Build Include="Stored Procedures\Procs1\rapAvizStoc.sql" />
     <Build Include="Stored Procedures\Procs1\rapBalantaContabilaLocm.sql" />
     <Build Include="Stored Procedures\Procs1\rapBalantaContabilaLocm_tabela.sql" />
@@ -2045,7 +2043,6 @@
     <Build Include="Stored Procedures\Procs1\rapIncasariPV.sql" />
     <Build Include="Stored Procedures\Procs1\rapInterventii.sql" />
     <Build Include="Stored Procedures\Procs1\rapIntrariIesiri.sql" />
-    <Build Include="Stored Procedures\Procs1\rapIntrariIesiriGrafic.sql" />
     <Build Include="Stored Procedures\Procs1\rapIntrariIesiripeTerti.sql" />
     <Build Include="Stored Procedures\Procs1\rapInventarComparativa.sql" />
     <Build Include="Stored Procedures\Procs1\rapInventarFolosinta.sql" />

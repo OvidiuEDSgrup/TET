@@ -1,4 +1,4 @@
-﻿CREATE TABLE [yso].[pozFactBenefTmp] (
+﻿CREATE TABLE [dbo].[pozFactBenefTmp] (
     [Terminal]        CHAR (10)  NOT NULL,
     [Subunitate]      CHAR (9)   NOT NULL,
     [Numar_document]  CHAR (8)   NOT NULL,
@@ -14,5 +14,5 @@
 
 GO
 CREATE UNIQUE NONCLUSTERED INDEX [unic]
-    ON [yso].[pozFactBenefTmp]([Terminal] ASC, [Subunitate] ASC, [Tip] ASC, [Numar_document] ASC, [Data] ASC, [Tert] ASC, [Factura_stinga] ASC, [Factura_dreapta] ASC);
+    ON [dbo].[pozFactBenefTmp]([Terminal] ASC, [Subunitate] ASC, [Tip] ASC, [Numar_document] ASC, [Data] ASC, [Tert] ASC, [Factura_stinga] ASC, [Factura_dreapta] ASC);
 

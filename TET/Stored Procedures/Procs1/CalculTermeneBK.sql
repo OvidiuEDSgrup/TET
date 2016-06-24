@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [yso].[CalculTermeneBK] 
+﻿CREATE PROCEDURE [dbo].[CalculTermeneBK] 
 --DECLARE
 @Subunitate CHAR(9), @Tip CHAR(2), @Contract CHAR(20), @Tert CHAR(13), @Data DATETIME 
 AS

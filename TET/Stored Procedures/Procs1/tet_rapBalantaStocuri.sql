@@ -38,7 +38,7 @@ select r.cont,r.cod,r.cod_intrare,r.gestiune,r.pret,
 	,r.pret_cu_amanuntul, max(r.predator) predator, MAX(tert) as tert, MAX(tip_miscare) as tip_miscare, MAX(in_out) as in_out
 	,MAX(r.furnizor) as furnizor
 into #stocuri
-from dbo.fStocuri(@q_dDataJos,@q_dDataSus,@q_cCod,@q_cGestiune,@q_cCodi,@q_gr_cod,@q_tiprap,@q_cCont, 0, '', '', @comanda, '', '','') r
+from dbo.fStocuri(@q_dDataJos,@q_dDataSus,@q_cCod,@q_cGestiune,@q_cCodi,@q_gr_cod,@q_tiprap,@q_cCont, 0, '', '', @comanda, '', '','',null) r
 	left outer join gestiuni g on  r.subunitate=g.subunitate and r.gestiune=g.cod_gestiune
 --left outer join nomencl n on n.cod=r.cod
 where (@q_TipStocuri='' or @q_TipStocuri='M' and left(r.cont,3) not in ('345','354','371','357') 

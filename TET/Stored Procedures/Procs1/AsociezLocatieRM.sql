@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE yso.AsociezLocatieRM @subunitate	char(9),@Tip char(2),@Numar	char(8),@Data datetime as
+﻿CREATE PROCEDURE [dbo].AsociezLocatieRM @subunitate	char(9),@Tip char(2),@Numar	char(8),@Data datetime as
 --DECLARE @subunitate	char(9),@Tip char(2),@Numar	char(8),@Data datetime
 --select @Tip=p.Tip, @Numar=p.numar,@data=p.data from pozdoc p where p.Subunitate=@subunitate and p.Tip='RM' and p.Numar='5364'
 

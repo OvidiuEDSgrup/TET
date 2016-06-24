@@ -3,7 +3,7 @@
 -- Create date: 
 -- Description:	
 -- =============================================
-CREATE FUNCTION [yso].[verificNumar] 
+CREATE FUNCTION [dbo].[verificNumar] 
 (
 	-- Add the parameters for the function here
 	@nrAlfa varchar(200)

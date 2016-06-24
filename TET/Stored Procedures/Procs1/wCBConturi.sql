@@ -1,4 +1,4 @@
-﻿CREATE procedure [yso].[wCBConturi] @sesiune varchar(50), @parXML XML  
+﻿CREATE procedure [dbo].[wCBConturi] @sesiune varchar(50), @parXML XML  
 as  
 if exists(select * from sysobjects where name='wACConturiSP' and type='P' and SCHEMA_NAME([uid])='yso')      
 	exec yso.wACConturiSP @sesiune,@parXML      

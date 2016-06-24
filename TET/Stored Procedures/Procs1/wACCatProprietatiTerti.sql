@@ -1,5 +1,5 @@
 ﻿--***
-CREATE procedure [yso].[wACCatProprietatiTerti]   @sesiune varchar(30), @parXML XML
+CREATE procedure [dbo].[wACCatProprietatiTerti]   @sesiune varchar(30), @parXML XML
 as
 declare @codprop varchar(20),@cautare varchar(100), @tert varchar(13), @fltDescriere varchar(80)
 select @tert = isnull(@parXML.value('(/row/@tert)[1]','varchar(13)'),'')

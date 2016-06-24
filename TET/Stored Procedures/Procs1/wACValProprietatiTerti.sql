@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE  [yso].[wACValProprietatiTerti] 
+﻿CREATE PROCEDURE  [dbo].[wACValProprietatiTerti] 
 	@sesiune [varchar](50),
 	@parXML [xml]
 WITH EXECUTE AS CALLER

@@ -1,11 +1,11 @@
-﻿CREATE PROCEDURE [yso].[IntocmireFactBenef] @hostID char(10) as 
+﻿CREATE PROCEDURE [dbo].[IntocmireFactBenef] @hostID char(10) as 
 --DECLARE @hostID char(10) 
 --SET @hostID='4460'
 --drop table [yso].[pozFactBenefTmp]
 
 if OBJECT_ID('yso.pozFactBenefTmp') IS NULL
 BEGIN
-	CREATE TABLE [yso].[pozFactBenefTmp](
+	CREATE TABLE [dbo].[pozFactBenefTmp](
 		Terminal [char](10) NOT NULL,
 		[Subunitate] [char](9) NOT NULL,
 		[Numar_document] [char](8) NOT NULL,
@@ -19,13 +19,13 @@ BEGIN
 		sumaFactSt [float] NOT NULL,
 		tvaFactSt [float] NOT NULL
 	) ON [PRIMARY]
-	CREATE UNIQUE NONCLUSTERED INDEX unic on [yso].[pozFactBenefTmp] (Terminal, Subunitate, Tip, Numar_document, Data, Tert, Factura_stinga, Factura_dreapta)
+	CREATE UNIQUE NONCLUSTERED INDEX unic on [dbo].[pozFactBenefTmp] (Terminal, Subunitate, Tip, Numar_document, Data, Tert, Factura_stinga, Factura_dreapta)
 END
 
-DELETE [yso].[pozFactBenefTmp]
+DELETE [dbo].[pozFactBenefTmp]
 WHERE Terminal=@hostID
 
-INSERT INTO [yso].[pozFactBenefTmp]
+INSERT INTO [dbo].[pozFactBenefTmp]
            ([Terminal]
            ,[Subunitate]
            ,[Numar_document]

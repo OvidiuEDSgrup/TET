@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [yso].[DefinTermeneBK] @cHostID char(10) AS
+﻿CREATE PROCEDURE [dbo].[DefinTermeneBK] @cHostID char(10) AS
 
 --DECLARE @Subunitate CHAR(9), @Tip CHAR(2), @Contract CHAR(20), @Tert CHAR(13), @Data DATETIME 
 

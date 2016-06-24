@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [yso].[RefacTermeneBK] @hostID char(10) AS 
+﻿CREATE PROCEDURE [dbo].[RefacTermeneBK] @hostID char(10) AS 
 --DECLARE @hostID char(10)
 DECLARE @Subunitate CHAR(9), @Tip CHAR(2), @Contract CHAR(20), @Tert CHAR(13), @Data DATETIME 
 
@@ -13,7 +13,7 @@ OPEN comLivrNefac
 FETCH NEXT FROM comlivrnefac INTO @subunitate, @tip, @contract, @data, @tert
 WHILE @@FETCH_STATUS<>-1
 BEGIN
-	EXEC yso.DefalcTermeneBK @subunitate, @tip, @contract, @data, @tert
+	EXEC [dbo].DefalcTermeneBK @subunitate, @tip, @contract, @data, @tert
 	FETCH NEXT FROM comlivrnefac INTO @subunitate, @tip, @contract, @data, @tert
 END
 

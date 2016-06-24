@@ -1,4 +1,4 @@
-﻿CREATE TABLE [yso].[syssgr] (
+﻿CREATE TABLE [dbo].[syssgr] (
     [Host_id]            CHAR (10)      NOT NULL,
     [Host_name]          NVARCHAR (128) NULL,
     [Aplicatia]          VARCHAR (30)   NULL,

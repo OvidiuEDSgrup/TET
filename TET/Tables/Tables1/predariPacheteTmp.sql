@@ -1,4 +1,4 @@
-﻿CREATE TABLE [yso].[predariPacheteTmp] (
+﻿CREATE TABLE [dbo].[predariPacheteTmp] (
     [Terminal]          CHAR (10)   NULL,
     [Subunitate]        CHAR (9)    NULL,
     [Contract]          CHAR (20)   NULL,
@@ -21,15 +21,15 @@
 
 GO
 CREATE UNIQUE NONCLUSTERED INDEX [Unic]
-    ON [yso].[predariPacheteTmp]([Terminal] ASC, [Subunitate] ASC, [Tip] ASC, [Numar] ASC, [Data] ASC, [Numar_pozitie] ASC);
+    ON [dbo].[predariPacheteTmp]([Terminal] ASC, [Subunitate] ASC, [Tip] ASC, [Numar] ASC, [Data] ASC, [Numar_pozitie] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [Aviz]
-    ON [yso].[predariPacheteTmp]([Terminal] ASC, [Subunitate] ASC, [TipAviz] ASC, [NumarAviz] ASC, [DataAviz] ASC, [CodPachet] ASC, [Cod_intrarePachet] ASC);
+    ON [dbo].[predariPacheteTmp]([Terminal] ASC, [Subunitate] ASC, [TipAviz] ASC, [NumarAviz] ASC, [DataAviz] ASC, [CodPachet] ASC, [Cod_intrarePachet] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [Contract]
-    ON [yso].[predariPacheteTmp]([Terminal] ASC, [Subunitate] ASC, [Contract] ASC, [Tert] ASC, [CodPachet] ASC);
+    ON [dbo].[predariPacheteTmp]([Terminal] ASC, [Subunitate] ASC, [Contract] ASC, [Tert] ASC, [CodPachet] ASC);
 

@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE yso.DefalcTermeneBK @Subunitate CHAR(9), @Tip CHAR(2), @Contract CHAR(20), @Data DATETIME, @Tert CHAR(13) AS
+﻿CREATE PROCEDURE [dbo].DefalcTermeneBK @Subunitate CHAR(9), @Tip CHAR(2), @Contract CHAR(20), @Data DATETIME, @Tert CHAR(13) AS
 
 --DECLARE @Subunitate CHAR(9), @Tip CHAR(2), @Contract CHAR(20), @Data DATETIME, @Tert CHAR(13)
 --SELECT TOP 1 
@@ -104,7 +104,7 @@ SELECT pozcon.Cod, pozcon.Cantitate, pozcon.Termen, pozcon.Cant_aprobata, pozcon
 	and pozcon.Contract=t.Contract and pozcon.Cod=t.Cod),0) AS amTermen
 ,dbo.valoare_maxima(ISNULL(s.StocGest,0)-c.Cant_aprobata_altele,0,null) AS Stoc_disponibil
 ,ISNULL(r.StocRezervat,0) AS StocRezervat
-,DATEADD(day,ISNULL(NULLIF(yso.verificNumar(
+,DATEADD(day,ISNULL(NULLIF([dbo].verificNumar(
 	COALESCE((SELECT TOP 1 pfax.explicatii 
 	FROM pozcon pfa INNER JOIN con fa ON fa.subunitate=pfa.subunitate AND fa.tip=pfa.tip AND fa.Data=pfa.Data AND fa.Tert=pfa.Tert 
 			AND fa.Contract=pfa.Contract

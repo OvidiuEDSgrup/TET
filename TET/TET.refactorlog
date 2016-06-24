@@ -84,4 +84,151 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="[UQ_yso_Art_cor_furn_IDPozADoc_Cod_articol]" />
   </Operation>
+  <Operation Name="Move Schema" Key="0d9bc82b-c81e-499a-9818-a21e2e10c893" ChangeDateTime="06/24/2016 15:24:44">
+    <Property Name="ElementName" Value="[yso].[pozFactBenefTmp]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="628233e0-0996-45cd-a82c-5c434e9433d8" ChangeDateTime="06/24/2016 15:25:27">
+    <Property Name="ElementName" Value="[yso].[predariPacheteTmp]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="7b9b22c4-f6e8-483a-856d-6f5bb7f99686" ChangeDateTime="06/24/2016 15:26:41">
+    <Property Name="ElementName" Value="[yso].[syssgr]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="29a2aa74-4756-4d45-b3d9-4410b65d6c94" ChangeDateTime="06/24/2016 15:28:40">
+    <Property Name="ElementName" Value="[yso].[pozconexp]" />
+    <Property Name="ElementType" Value="SqlView" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="518998b6-0cd0-427b-aafe-3400c6cd6da6" ChangeDateTime="06/24/2016 15:29:03">
+    <Property Name="ElementName" Value="[yso].[verificNumar]" />
+    <Property Name="ElementType" Value="SqlScalarFunction" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="a35dd0e7-3888-419c-b1da-d9cb7a2a82e1" ChangeDateTime="06/24/2016 15:29:19">
+    <Property Name="ElementName" Value="[yso].[AsociezLocatieRM]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="7deed7d8-44e2-44dc-bec4-2aa09d9e4524" ChangeDateTime="06/24/2016 15:29:31">
+    <Property Name="ElementName" Value="[yso].[CalculTermeneFC]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="9b7cd064-8393-4f28-aabf-980b9011f6ef" ChangeDateTime="06/24/2016 15:29:48">
+    <Property Name="ElementName" Value="[yso].[CalculTermeneBK]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="e6f38e8c-8df5-4b82-9e52-04457cb45010" ChangeDateTime="06/24/2016 15:30:14">
+    <Property Name="ElementName" Value="[yso].[DefalcTermeneBK]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="18833ead-d95b-487b-af38-2d8918581ff4" ChangeDateTime="06/24/2016 15:30:28">
+    <Property Name="ElementName" Value="[yso].[DefinTermeneBK]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="1fe8dece-f645-4fe2-826d-1cb2a90d975b" ChangeDateTime="06/24/2016 15:30:41">
+    <Property Name="ElementName" Value="[yso].[ProcGenFCPozaprov]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="da197e49-93af-4338-9166-999969f0664a" ChangeDateTime="06/24/2016 15:31:04">
+    <Property Name="ElementName" Value="[yso].[rapContrBeneficiari]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="eb7c47d3-0134-458d-8d53-20e68f473bba" ChangeDateTime="06/24/2016 15:31:18">
+    <Property Name="ElementName" Value="[yso].[RefacTermeneBK]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="64970523-9f20-4118-83a8-b70acac18246" ChangeDateTime="06/24/2016 15:31:35">
+    <Property Name="ElementName" Value="[yso].[wACCatProprietatiTerti]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="5adfe7da-a31d-4c62-85ed-09b68c1d8385" ChangeDateTime="06/24/2016 15:31:47">
+    <Property Name="ElementName" Value="[yso].[wACValProprietatiTerti]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="76a87f0c-5906-4557-90f5-a5dc5fde76b4" ChangeDateTime="06/24/2016 15:31:59">
+    <Property Name="ElementName" Value="[yso].[wCBConturi]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e7273dd6-698c-4c69-8c53-70257effe1e8" ChangeDateTime="06/24/2016 15:32:50">
+    <Property Name="ElementName" Value="[yso].[wIaProprietatiTerti]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="ParentElementName" Value="[yso]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[yso_wIaProprietatiTerti]" />
+  </Operation>
+  <Operation Name="Move Schema" Key="b20570cb-74d4-46f8-95a4-ce8a2b92b778" ChangeDateTime="06/24/2016 15:32:57">
+    <Property Name="ElementName" Value="[yso].[yso_wIaProprietatiTerti]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b73e6122-748b-44d4-a406-051b616a1030" ChangeDateTime="06/24/2016 15:33:14">
+    <Property Name="ElementName" Value="[yso].[wScriuProprietatiTerti]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="ParentElementName" Value="[yso]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[yso_wScriuProprietatiTerti]" />
+  </Operation>
+  <Operation Name="Move Schema" Key="7c6929b0-e099-49ff-a2f1-7f9d1a43c1e0" ChangeDateTime="06/24/2016 15:33:24">
+    <Property Name="ElementName" Value="[yso].[yso_wScriuProprietatiTerti]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="40b480f3-d188-4704-a88f-9b3a16cc9084" ChangeDateTime="06/24/2016 15:33:36">
+    <Property Name="ElementName" Value="[yso].[wStergProprietatiTerti]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="ParentElementName" Value="[yso]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[yso_wStergProprietatiTerti]" />
+  </Operation>
+  <Operation Name="Move Schema" Key="a0eee543-ef61-4b2d-aeff-3b1fb6af79df" ChangeDateTime="06/24/2016 15:33:45">
+    <Property Name="ElementName" Value="[yso].[yso_wStergProprietatiTerti]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="c033e89c-7c5d-4db0-aa4e-5d7e55f36b46" ChangeDateTime="06/24/2016 15:34:11">
+    <Property Name="ElementName" Value="[yso].[IntocmireFactBenef]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
+  <Operation Name="Move Schema" Key="6b7e064a-e25e-44aa-a471-d2b8c1940c2f" ChangeDateTime="06/24/2016 15:34:24">
+    <Property Name="ElementName" Value="[yso].[predariPachete]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
 </Operations>

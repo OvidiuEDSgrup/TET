@@ -1,5 +1,5 @@
 ﻿--drop proc rapContrBeneficiari 
-CREATE procedure yso.rapContrBeneficiari @tipContract char(2)=null as 
+CREATE procedure [dbo].rapContrBeneficiari @tipContract char(2)=null as 
 select p.*,t.Denumire as den_tert,isnull(n.Denumire,g.Denumire) as den_cod,x.Pret as disc_doi,x.Cantitate as disc_trei 
 from pozcon p 
 inner join con c on c.Subunitate=p.Subunitate and c.Tip=p.Tip and c.Contract=p.Contract and c.Data=p.Data and c.Tert=p.Tert

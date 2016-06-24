@@ -1,5 +1,5 @@
 ﻿--***
-CREATE procedure [yso].[wIaProprietatiTerti]   @sesiune varchar(30), @parXML XML as
+CREATE procedure [dbo].[yso_wIaProprietatiTerti]   @sesiune varchar(30), @parXML XML as
 
 --declare @sesiune varchar(30), @parXML XML 
 --set @parXML=convert(xml,N'<row tert="RO18576910" dentert="ELRAD SRL" codfiscal="10867728" localitate="8288" denlocalitate="BAIA MARE" judet="MM" denjudet="MARAMURES" tara="" dentara="" adresa="CIPRIAN PORUMBESCU55" strada="CIPRIAN PORUMBESCU55" numar="" bloc="" scara="" apartament="" codpostal="" telefonfax="" banca="" denbanca="" continbanca="" decontarivaluta="0" grupa="109" dengrupa="" contfurn="401.2" dencontfurn="Furnizori marfa intern" contben="411.1" dencontben="Clienti interni" datatert="01/01/1901" categpret="0" dencategpret="" soldmaxben="0.00" discount="0.00" termenlivrare="0" termenscadenta="0" reprezentant="" functiereprezentant="" lm="" denlm="" responsabil="03001" denresponsabil="" info1="" info2="raduvasile96@yahoo.com" info3="" nrordreg="J24/442/1998" tiptert="0" neplatitortva="0" nomspec="0" soldfurn="0.00" soldben="0.00" culoare="#000000" subcontractant="" tip="PT"/>')

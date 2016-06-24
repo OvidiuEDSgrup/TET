@@ -21,7 +21,7 @@ if 0<
 		and c.Contract=RTRIM(pp.Contract)+'.'+RTRIM(pp.numar_pozitie) 
 		/*and c.Contract_coresp=pp.Cod and c.Mod_plata='1'*/))
 begin
-	insert pozcon
+	insert pozcon (Subunitate,Tip,Contract,Tert,Punct_livrare,Data,Cod,Cantitate,Pret,Pret_promotional,Discount,Termen,Factura,Cant_disponibila,Cant_aprobata,Cant_realizata,Valuta,Cota_TVA,Suma_TVA,Mod_de_plata,UM,Zi_scadenta_din_luna,Explicatii,Numar_pozitie,Utilizator,Data_operarii,Ora_operarii,detalii)
 	select --*,
 	pp.Subunitate	--Subunitate	char	9
 	,pp.tip	--Tip	char	2
@@ -50,6 +50,7 @@ begin
 	,pp.Utilizator	--Utilizator	char	10
 	,GETDATE()	--Data_operarii	datetime	8
 	,''	--Ora_operarii	char	6 
+	,NULL
 	from tehnpoz tp join pozcon pp on tp.Cod_tehn=pp.Cod and tp.Tip='M' and tp.Loc_munca=''
 	where pp.Subunitate=@sub and pp.Tip=@tip and pp.Contract=@contract and pp.Data=@data and pp.Tert=@tert
 	and not exists 	
@@ -59,7 +60,8 @@ begin
 		and c.Contract=RTRIM(pp.Contract)+'.'+RTRIM(pp.numar_pozitie) 
 		and pc.Cod=tp.Cod and pc.Numar_pozitie=tp.Nr /*and c.Contract_coresp=pp.Cod and c.Mod_plata='1'*/)
 
-	insert con
+	insert con (
+	Subunitate	,Tip	,Contract	,Tert	,Punct_livrare	,Data	,Stare	,Loc_de_munca	,Gestiune	,Termen	,Scadenta	,Discount	,Valuta	,Curs	,Mod_plata	,Mod_ambalare	,Factura	,Total_contractat	,Total_TVA	,Contract_coresp	,Mod_penalizare	,Procent_penalizare	,Procent_avans	,Avans	,Nr_rate	,Val_reziduala	,Sold_initial	,Cod_dobanda	,Dobanda	,Incasat	,Responsabil	,Responsabil_tert	,Explicatii	,Data_rezilierii	,detalii) 
 	select --*,
 	c.Subunitate	--Subunitate	char	9
 	,c.tip	--Tip	char	2
@@ -95,6 +97,7 @@ begin
 	,''	--Responsabil_tert	char	20
 	,''	--Explicatii	char	50
 	,''	--Data_rezilierii	datetime	8
+	,NULL
 	from pozcon pp
 		join con c on c.Subunitate=pp.Subunitate and c.Tip=pp.Tip and c.Contract=pp.Contract and c.Data=pp.Data and c.Tert=pp.Tert
 		join tehn t on t.Cod_tehn=pp.Cod
@@ -118,7 +121,7 @@ open componente
 fetch next from componente into @sub,@tip,@contract,@data,@tert
 while @@FETCH_STATUS=0
 begin
-	exec yso.DefalcTermeneBK @subunitate=@sub, @tip=@tip, @contract=@contract,@data=@data,@tert=@tert
+	exec [dbo].DefalcTermeneBK @subunitate=@sub, @tip=@tip, @contract=@contract,@data=@data,@tert=@tert
 end
 
 close componente

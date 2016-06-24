@@ -1,5 +1,5 @@
 ﻿
-CREATE PROCEDURE [yso].[CalculTermeneFC] @Subunitate CHAR(9), @Tip CHAR(2), @Contract CHAR(20), @Tert CHAR(13), @Data DATETIME AS
+CREATE PROCEDURE [dbo].[CalculTermeneFC] @Subunitate CHAR(9), @Tip CHAR(2), @Contract CHAR(20), @Tert CHAR(13), @Data DATETIME AS
 --pun termen pe comanda livrare
 
 DECLARE	@lRezStocBK bit, @cListaGestRezStocBK CHAR(200), @codLivr CHAR(30), @cantLivr FLOAT, @cantLibera FLOAT, @dTermenAprov DATETIME
@@ -26,7 +26,7 @@ from pozcon p
 
 UPDATE pozcon SET 
 --SELECT 
-Termen=DATEADD(day,ISNULL(NULLIF(yso.verificNumar(
+Termen=DATEADD(day,ISNULL(NULLIF([dbo].verificNumar(
 	COALESCE((SELECT TOP 1 pfax.explicatii 
 	FROM pozcon pfa INNER JOIN con fa ON fa.subunitate=pfa.subunitate AND fa.tip=pfa.tip AND fa.Data=pfa.Data AND fa.Tert=pfa.Tert 
 			AND fa.Contract=pfa.Contract

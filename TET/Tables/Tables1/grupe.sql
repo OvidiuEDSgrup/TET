@@ -41,7 +41,7 @@ set @Utilizator=dbo.fIauUtilizatorCurent()
 select top 1 @Aplicatia=Aplicatia from sysunic where hostid=host_id() and data_iesirii is null order by data_intrarii desc
 set @Aplicatia=left(isnull(@Aplicatia, APP_NAME()), 30)
 
-insert into yso.syssgr
+insert into [dbo].syssgr
 	select host_id(),host_name (),@Aplicatia,getdate(),@Utilizator
 ,[Tip_de_nomenclator]
 ,[Grupa]
