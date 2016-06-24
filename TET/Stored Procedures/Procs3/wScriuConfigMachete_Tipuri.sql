@@ -49,7 +49,7 @@ begin try
 	end
 	
 	if (@p_fel in ('M','A') and isnull(@p_subtip,'')<>'')
-		raiserror('Nu e permisa completarea campului fel cu "Doar odificare" sau "Doar adaugare" pentru subtipuri!',16,1)
+		raiserror('Nu e permisa completarea campului fel cu "Doar modificare" sau "Doar adaugare" pentru subtipuri!',16,1)
 
 	-- Se verifica sa nu existe deja acest tip
 	if exists(select 1 from webConfigTipuri wp
@@ -62,6 +62,10 @@ begin try
 		set @mesaj = 'Acest tip deja exista in webConfigTipuri.'
 		raiserror(@mesaj,16,1)
 	end
+	
+	if '<' in (left(@p_procdate,1), left(@p_procscriere,1), left(@p_procstergere,1), left(@p_procdatepoz,1), left(@p_procscrierepoz,1), left(@p_procstergerepoz,1), left(@p_procpopulare,1), left(@p_procinchideremacheta,1))
+	select @mesaj='Procedura nu poate sa inceapa cu "<"!'
+	if len(@mesaj)>0 raiserror(@mesaj,16,1)
 
 	if @update=0
 	begin

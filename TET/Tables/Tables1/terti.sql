@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[terti] (
-    [Subunitate]               CHAR (9)     NOT NULL,
-    [Tert]                     CHAR (13)    NOT NULL,
-    [Denumire]                 CHAR (40)    NOT NULL,
+    [Subunitate]               VARCHAR(9)     NOT NULL,
+    [Tert]                     VARCHAR(13)    NOT NULL,
+    [Denumire]                 VARCHAR(80)    NOT NULL,
     [Cod_fiscal]               CHAR (16)    NOT NULL,
     [Localitate]               CHAR (35)    NOT NULL,
     [Judet]                    CHAR (20)    NOT NULL,

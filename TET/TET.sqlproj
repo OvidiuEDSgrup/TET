@@ -4567,7 +4567,8 @@
     <Build Include="Database Triggers\setareDeclansareTriggere.sql" />
     <Build Include="XMLSchemaCollections\ASchemaRevisal.sql" />
     <Build Include="Security\yso_schema.sql" />
-    <Build Include="Tables\Table1.sql" />
+    <Build Include="Tables\yso_Articole_corectii_furnizori.sql" />
+    <Build Include="Tables\yso_Garantii_corectii_furnizori.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assemblies\HTTPGet_1.dll" />

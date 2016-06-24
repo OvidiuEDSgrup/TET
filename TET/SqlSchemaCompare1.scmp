@@ -246,7 +246,7 @@
       </PropertyElementName>
       <PropertyElementName>
         <Name>IncludeTransactionalScripts</Name>
-        <Value>False</Value>
+        <Value>True</Value>
       </PropertyElementName>
       <PropertyElementName>
         <Name>NoAlterStatementsToChangeCLRTypes</Name>

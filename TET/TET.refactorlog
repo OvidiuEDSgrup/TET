@@ -7,4 +7,81 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="IdPozDoc" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="ad1f4b46-3b2f-4e13-8f87-a6977036c9bc" ChangeDateTime="06/24/2016 13:19:38">
+    <Property Name="ElementName" Value="[dbo].[Table2].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Table2]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Detalii_corectii_furnizori" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f8091721-210c-4528-8277-46ac58b508b4" ChangeDateTime="06/24/2016 13:20:06">
+    <Property Name="ElementName" Value="[dbo].[Table2].[Detalii_corectii_furnizori]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Table2]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_detaliu" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2f8d45bc-7c5a-4059-b6ef-609f6747772b" ChangeDateTime="06/24/2016 13:22:10">
+    <Property Name="ElementName" Value="[dbo].[Table1].[IdPozDoc]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Table1]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_detaliu_corectie" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8701bd4d-e1c6-421c-9643-2dcd9eb0659c" ChangeDateTime="06/24/2016 13:22:19">
+    <Property Name="ElementName" Value="[dbo].[yso_Detalii_corectii_furnizori].[id_detaliu]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[yso_Detalii_corectii_furnizori]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_detaliu_corectie" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="db51d121-f463-4683-a3be-ef1def9bcf51" ChangeDateTime="06/24/2016 13:24:03">
+    <Property Name="ElementName" Value="[dbo].[Table2].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Table2]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_detaliu_corectie" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="88b73702-9f59-4ff5-8d14-6b5fc1861ff7" ChangeDateTime="06/24/2016 13:27:03">
+    <Property Name="ElementName" Value="[dbo].[yso_Garantii_corectii_furnizori].[id_detaliu_corectie]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[yso_Garantii_corectii_furnizori]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_cor_furn" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a9cd14c3-8129-4aed-9ab1-4fc8962e5703" ChangeDateTime="06/24/2016 13:27:14">
+    <Property Name="ElementName" Value="[dbo].[yso_Detalii_corectii_furnizori].[id_detaliu_corectie]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[yso_Detalii_corectii_furnizori]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_cor_furn" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="348a4bd0-269a-4da4-bd05-9679c84c1c18" ChangeDateTime="06/24/2016 13:27:48">
+    <Property Name="ElementName" Value="[dbo].[yso_Articole_corectii_furnizori].[id_detaliu_corectie]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[yso_Articole_corectii_furnizori]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_cor_furn" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0ce177ff-6d39-451d-b003-b69764c63148" ChangeDateTime="06/24/2016 13:28:39">
+    <Property Name="ElementName" Value="[dbo].[yso_Articole_corectii_furnizori].[id_cor_furn]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[yso_Articole_corectii_furnizori]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="idPozADoc" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3cac421f-99cd-479c-8b0b-ee8c978b15dd" ChangeDateTime="06/24/2016 13:29:01">
+    <Property Name="ElementName" Value="[dbo].[yso_Garantii_corectii_furnizori].[id_cor_furn]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[yso_Garantii_corectii_furnizori]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="idPozADoc" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8a2ae23a-3bb6-4d16-939d-02334e64be5d" ChangeDateTime="06/24/2016 13:59:44">
+    <Property Name="ElementName" Value="[dbo].[yso_Articole_corectii_furnizori].[UQ_yso_Art_cor_furn_IdPozADoc_Cod_articol]" />
+    <Property Name="ElementType" Value="SqlIndex" />
+    <Property Name="ParentElementName" Value="[dbo].[yso_Articole_corectii_furnizori]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[UQ_yso_Art_cor_furn_IDPozADoc_Cod_articol]" />
+  </Operation>
 </Operations>

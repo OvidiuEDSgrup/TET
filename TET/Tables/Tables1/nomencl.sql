@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[nomencl] (
-    [Cod]                    CHAR (20)    NOT NULL,
+    [Cod]                    VARCHAR(20)    NOT NULL,
     [Tip]                    CHAR (1)     NOT NULL,
-    [Denumire]               CHAR (150)   NOT NULL,
+    [Denumire]               VARCHAR(150)   NOT NULL,
     [UM]                     CHAR (3)     NOT NULL,
     [UM_1]                   CHAR (3)     NOT NULL,
     [Coeficient_conversie_1] FLOAT (53)   NOT NULL,
