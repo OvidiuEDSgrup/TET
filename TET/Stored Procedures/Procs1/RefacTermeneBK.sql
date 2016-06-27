@@ -55,5 +55,5 @@ and p.Tert=t.Tert and p.Data=t.Data and p.Cod=t.Cod
 join con c on c.Subunitate=p.Subunitate and c.Tip=p.Tip and c.Contract=p.Contract and p.Tert=c.Tert and p.Data=c.Data
 where t.Subunitate='1' and t.Cantitate<0 and p.Cantitate>0
 
---exec yso.RefacTermeneBK @hostid
+--exec dbo.RefacTermeneBK @hostid
 */

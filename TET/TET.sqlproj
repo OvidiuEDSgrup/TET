@@ -4563,7 +4563,6 @@
     <Build Include="Database Triggers\jurnalizare_obiecte_sql.sql" />
     <Build Include="Database Triggers\setareDeclansareTriggere.sql" />
     <Build Include="XMLSchemaCollections\ASchemaRevisal.sql" />
-    <Build Include="Security\yso_schema.sql" />
     <Build Include="Tables\yso_Articole_corectii_furnizori.sql" />
     <Build Include="Tables\yso_Garantii_corectii_furnizori.sql" />
   </ItemGroup>

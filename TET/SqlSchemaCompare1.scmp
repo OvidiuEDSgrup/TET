@@ -58,7 +58,7 @@
       </PropertyElementName>
       <PropertyElementName>
         <Name>DeployDatabaseInSingleUserMode</Name>
-        <Value>True</Value>
+        <Value>False</Value>
       </PropertyElementName>
       <PropertyElementName>
         <Name>DisableAndReenableDdlTriggers</Name>

@@ -3,7 +3,7 @@
 --SET @hostID='4460'
 --drop table [yso].[pozFactBenefTmp]
 
-if OBJECT_ID('yso.pozFactBenefTmp') IS NULL
+if OBJECT_ID('dbo.pozFactBenefTmp') IS NULL
 BEGIN
 	CREATE TABLE [dbo].[pozFactBenefTmp](
 		Terminal [char](10) NOT NULL,

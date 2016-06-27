@@ -1,7 +1,7 @@
 ﻿CREATE procedure [dbo].[wCBConturi] @sesiune varchar(50), @parXML XML  
 as  
 if exists(select * from sysobjects where name='wACConturiSP' and type='P' and SCHEMA_NAME([uid])='yso')      
-	exec yso.wACConturiSP @sesiune,@parXML      
+	exec dbo.wACConturiSP @sesiune,@parXML      
 else      
 begin
 declare @subunitate varchar(9), @searchText varchar(80), @tip varchar(2), @codMeniu varchar(2), @cdeb varchar(13), @subtip varchar(2),@facturanesosita bit,

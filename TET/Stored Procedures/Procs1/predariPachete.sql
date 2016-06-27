@@ -1,4 +1,4 @@
-﻿--exec yso.predariPachete '5048'
+﻿--exec dbo.predariPachete '5048'
 CREATE PROC [dbo].predariPachete @cHostId char(25) AS 
 --DECLARE @cHostId char(10) SET @cHostId='4468'
 
@@ -28,8 +28,8 @@ GROUP BY av.Subunitate, av.cod, COALESCE(pp.Cod_intrare,te.Cod_intrare, av.Cod_i
 CREATE UNIQUE NONCLUSTERED INDEX Unic ON #codIntrarePachete (Subunitate, cod, cod_intrare)
 CREATE NONCLUSTERED INDEX NumarAviz ON #codIntrarePachete (Subunitate, Numar, Data)
 
---drop table yso.predariPacheteTmp 
-IF OBJECT_ID('yso.predariPacheteTmp') IS NULL
+--drop table dbo.predariPacheteTmp 
+IF OBJECT_ID('dbo.predariPacheteTmp') IS NULL
 BEGIN
 	--SET @cTextSelect=''		
 	CREATE TABLE [dbo].predariPacheteTmp 
@@ -54,7 +54,7 @@ BEGIN
 	CREATE NONCLUSTERED INDEX Aviz ON [dbo].predariPacheteTmp (Terminal, Subunitate, TipAviz, NumarAviz, DataAviz, CodPachet, Cod_intrarePachet)
 	CREATE NONCLUSTERED INDEX Contract ON [dbo].predariPacheteTmp (Terminal, Subunitate, Contract, Tert, CodPachet)
 END
--- select * from yso.predariPacheteTmp
+-- select * from dbo.predariPacheteTmp
 DELETE [dbo].predariPacheteTmp
 WHERE Terminal=@cHostId
 

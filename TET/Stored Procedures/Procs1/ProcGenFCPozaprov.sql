@@ -17,7 +17,7 @@ select p.Subunitate, p.cod, p.Tip, p.contract, p.data, p.tert, MAX(p.termen) as 
 --,dbo.valoare_maxima(
 --(SELECT SUM(dbo.valoare_maxima(pa.Cantitate
 --	-dbo.valoare_maxima(rez.Cant_rezervata+pa.Cant_realizata,dbo.valoare_maxima(te.Transferuri,ap.Avize+ae.AlteIesiri,null),null),0,null))
---FROM yso.pozconexp pa WHERE pa.Subunitate=p.Subunitate and pa.Tip=p.tip and pa.Cod=p.Cod and pa.Cantitate>0
+--FROM dbo.pozconexp pa WHERE pa.Subunitate=p.Subunitate and pa.Tip=p.tip and pa.Cod=p.Cod and pa.Cantitate>0
 --	and pa.Factura=MAX(p.Factura))
 ---SUM(p.Cantitate),0,null) 
 ,0 as Cantitate_alte

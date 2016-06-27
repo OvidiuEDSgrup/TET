@@ -38,7 +38,7 @@ on n.numar=p.numar and n.data=p.data and n.cod=p.cod
 
 --UPDATE pozcon SET 
 ----SELECT 
---Termen=DATEADD(day,ISNULL(NULLIF(yso.verificNumar(
+--Termen=DATEADD(day,ISNULL(NULLIF(dbo.verificNumar(
 --	COALESCE(
 --		(SELECT TOP 1 pr.valoare FROM proprietati pr WHERE pr.tip='NOMENCL' AND pr.cod=pozcon.cod AND pr.cod_proprietate='ATP' ORDER BY pr.valoare DESC)
 --		,'')

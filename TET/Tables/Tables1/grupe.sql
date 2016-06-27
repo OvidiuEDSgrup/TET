@@ -60,5 +60,5 @@ insert into [dbo].syssgr
    
    --select top 0 HOST_ID() as Host_id,HOST_NAME() as Host_name,SPACE(30) as Aplicatia,GETDATE() as Data_stergerii,SPACE(10) as Stergator,
    --grupe.* 
-   --into yso.syssgr
+   --into dbo.syssgr
    --from grupe
