@@ -9,7 +9,8 @@ BEGIN TRY
 		@idPozContract INT, @idContract INT, @idPozContractCorespondent INT, @idContractCorespondent INT, 
 		@mesaj VARCHAR(500), @utilizator VARCHAR(100), @gestiune VARCHAR(50), @numar VARCHAR(20), 
 		@tipGestiune VARCHAR(1), @tipGestiuneRez VARCHAR(1),@subunitate VARCHAR(9), @gestiune_primitoare varchar(20)
-		, @gestiuneRezervari VARCHAR(20), @cuRezervari INT, @codArticol varchar(20), @cantitate float
+		, @gestiuneRezervari VARCHAR(20), @cuRezervari INT, @codArticol varchar(20), @cantitate float,
+		@nrFormular varchar(10), @denFormular varchar(100)
 
 	SET @idPozContract = @parXML.value('(/*/@idPozContract)[1]', 'int')
 	SET @idContract = @parXML.value('(/*/@idContract)[1]', 'int')
@@ -26,7 +27,16 @@ BEGIN TRY
 	/** Validari **/
 	--IF @idContract IS NULL
 	--	RAISERROR ('Alegeti cel putin si cel mult o singura linie din tabel!', 11, 1)
-
+	
+	select	@nrformular=(case when p.Cod_proprietate='UltFormGenTE' then rtrim(p.Valoare) else isnull(@nrformular,'') end)
+	from proprietati p
+	where p.Tip='PROPUTILIZ' and p.Cod=@utilizator and p.Valoare_tupla=''
+		and P.Cod_proprietate in ('UltFormGenTE')
+		
+	select @denformular=RTRIM(f.Denumire_formular)
+	FROM antform f
+	WHERE f.Numar_formular=@nrformular
+		
 	/** Tip gestiune **/
 	SELECT 
 		@tipGestiune = tip_gestiune
@@ -37,7 +47,6 @@ BEGIN TRY
 
 	IF object_id('tempdb..#pozitiitransfer_p') IS NOT NULL
 		DROP TABLE #pozitiitransfer_p;
-
 			
 	WITH Antet AS (
 		SELECT @idContract AS idContract, 
@@ -111,7 +120,8 @@ BEGIN TRY
 	UPDATE #pozitiitransfer_p
 		SET detransferat = cantitate - transferat
 	
-	SELECT gestiune, gestiune_primitoare
+	SELECT gestiune, gestiune_primitoare,
+		nrformular=@nrformular, denformular=@denformular
 	FROM #pozitiitransfer_p P
 	GROUP BY gestiune, gestiune_primitoare
 	ORDER BY SUM(P.cantitate) DESC

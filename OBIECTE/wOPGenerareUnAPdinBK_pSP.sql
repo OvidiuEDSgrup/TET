@@ -98,13 +98,13 @@ begin try
 		, modPlata=@modPlata
 		, nrformular=@nrformular, denformular=@denformular
 	FOR XML raw, root('Date')
-	
+
 	SELECT (    
 		select rtrim(p.cod) as cod, 
 			--> in transfer se va duce cantitatea aprobata ramasa netransferata(Pret_promotional->camp refolosit pentru cant. transferata)
 			convert(decimal(15,3),(p.cantitate-p.cant_realizata)) as cantitate_factura,
 			convert(decimal(15,3),(p.cant_aprobata-p.cant_realizata)) as cantitate_disponibila, 
-			gestiune= 
+			gestiune= COALESCE(NULLIF(@gestprim,''), @gestiune), /*
 			(case 			
 				(case 
 					when not (abs(p.cant_aprobata)>=0.001)
@@ -119,7 +119,7 @@ begin try
 					then (case @stare when @stareRealizatBK then @stareFacturabilBK when @stareTransferatBK then @stareAprobatBK else @stare end)
 					else @stare -- nerealizat, neexpediat => Operat sau Definitiv
 				end)
-			when '1' then @gestiune when '4' then @gestprim else @gestiune end),
+			when '1' then @gestiune when '4' then @gestprim else @gestiune end),*/
 			-->pretul cu amnuntul se ia din dreptul categoriei de pret
 			--isnull(convert(varchar(20),(select top 1 pret_cu_amanuntul from preturi where cod_produs=p.cod and um=@CategPret 
 			--	order by data_inferioara desc)),0) as pamanunt,

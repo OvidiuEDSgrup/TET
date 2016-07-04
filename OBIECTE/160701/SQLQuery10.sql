@@ -1,0 +1,1 @@
+select * from webConfigSTDFiltre f where f.Meniu='s0'

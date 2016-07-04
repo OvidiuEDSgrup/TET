@@ -126,7 +126,7 @@ begin try
 		left join nomencl n on n.Cod=p.Cod
 		left JOIN stocuri s 
 			ON p.Subunitate=s.Subunitate and p.Cod=s.Cod and s.Stoc>=0.001 
-				and s.Cod_gestiune=isnull(x.gest_antet,x.gestiune)
+				and s.Cod_gestiune=x.gestiune
 	WHERE p.Subunitate=@Sub and p.Tip='BK' and p.Contract=@contract and p.Data=@data and p.Tert=@beneficiar
 		AND n.Tip<>'S'
 		AND (s.Stoc is null 
@@ -240,7 +240,7 @@ begin try
 			detalii=(select modPlata=@modPlata, explicatii=@explicatii for xml raw, type),
 			--date pentru pozitiile de AP
 			(select convert(varchar(20),p.pret) as '@pvaluta', rtrim(@valuta) as '@valuta',convert(varchar(20),@curs) as '@curs',
-					CONVERT(decimal(5,2),p.Discount) as '@discount', @lm as '@lm', ISNULL(x.gest_antet, x.gestiune) as '@gestiune',
+					CONVERT(decimal(5,2),p.Discount) as '@discount', @lm as '@lm', x.gestiune as '@gestiune',
 					rtrim(p.cod) as '@cod', 
 					rtrim(isnull(x.cantitate_factura,(p.cantitate-p.cant_realizata))) as '@cantitate', @contract as '@contract'
 					,detalii=(select explicatii=RTRIM(p.Explicatii) for xml raw, type)
