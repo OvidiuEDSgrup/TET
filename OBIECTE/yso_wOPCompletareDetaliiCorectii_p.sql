@@ -49,39 +49,23 @@ BEGIN TRY
 	--calcul sold tert in 408
 	set @soldTert=0
 	
-	select f.Subunitate as sub,rtrim(f.tip) as tip,f.Data as data, rtrim(f.Numar) as numar
-		,convert(float,0) as cumulat,CONVERT(float,0) as suma,ROW_NUMBER() OVER (ORDER BY l.idLegDoc desc /*F.DATA_SCADENTEI,f.factura*/) as nrp,
-		coalesce((case f.Tip when 'AP' then pa.Factura_stinga when 'AC' then b.Factura end),nullif(f.Factura,''),f.Numar) as factura, 
-		isnull(nullif(nullif(isnull((case f.Tip when 'AP' then pa.Data_fact when 'AC' then b.Data_facturii end),f.Data_facturii),'1900-01-01'),'1900-01-01'),f.data) as data_factura,
-		isnull(nullif(nullif(isnull((case f.Tip when 'AP' then pa.Data_scad when 'AC' then b.Data_scadentei end),f.Data_scadentei),'1900-01-01'),'1900-01-01'),f.Data_scadentei) as data_scadentei,
-		rtrim(f.Cod_tert) as beneficiar, rtrim(t.Denumire) as denbeneficiar,
-		f.loc_munca,f.comanda,f.valuta,f.curs,
-		case when isnull(f.Valuta,'')<>'' then f.Valoare_valuta else f.Valoare end as valoare,
-		f.TVA_22, 0 as selectat, 0 as factnoua,space(20) as cod,space(80) as denumire,convert(float,0.00) as cantitate,
-		a.Valoare+a.Tva_22-a.Achitat AS sold
-	into #doc
-	from doc f 
-		inner join yso_LegComisionVanzari l on l.subDoc=f.Subunitate and l.tipDoc=f.Tip and l.dataDoc=f.Data and l.nrDoc=f.Numar
-		inner join terti t on t.Subunitate=f.Subunitate and t.Tert=f.Cod_tert 
-		left join 
-			(select b.Data_bon, b.yso_numar_in_pozdoc, b.Factura, b.Data_facturii, b.Data_scadentei,
-				ROW_NUMBER() OVER(PARTITION BY b.data_bon, b.yso_numar_in_pozdoc ORDER BY b.factura DESC, b.data_facturii DESC) AS nrBonFact
-			from antetbonuri b join antetBonuri ab on ab.Chitanta=0 and ab.Factura=b.Factura and ab.Data_facturii=b.Data_facturii
-			where b.Chitanta=1 --and b.Data_bon<=@data 
-			--group by b.Data_bon, b.yso_numar_in_pozdoc, b.Factura, b.Data_facturii
-			) AS B
-		ON b.Data_bon=f.Data and b.yso_numar_in_pozdoc=f.Numar  and b.nrBonFact=1
-		left join 
-			(select pa.Subunitate, pa.Factura_stinga, pa.Factura_dreapta, pa.Data_fact, pa.Data_scad, pa.Tert,
-				ROW_NUMBER() OVER(PARTITION BY pa.factura_dreapta, pa.tert ORDER BY pa.factura_stinga DESC, pa.data_fact DESC) AS nrIntocFact
-			from pozadoc pa where pa.Tip='IF' and pa.Factura_stinga<>'' --and pa.Data>=@data
-			--group by pa.Subunitate, pa.Factura_stinga, pa.Factura_dreapta, pa.Data_fact, pa.Tert
-			) Pa 
-		ON pa.Subunitate=f.Subunitate and pa.Factura_dreapta=f.Factura and pa.tert=f.cod_tert and pa.nrIntocFact=1
-		left join facturi a ON a.Subunitate=f.Subunitate and a.Tip=0x46 and a.Tert=f.Cod_tert 
-			and a.Factura=coalesce((case f.Tip when 'AP' then pa.Factura_stinga when 'AC' then f.Factura end),nullif(f.Factura,''),f.Numar)
-	where l.idPozDoc=@idpozadoc 
-	order by l.idLegDoc desc--f.data,f.factura
+	select l.subunit as sub, 
+		convert(float,0) as cumulat,CONVERT(float,0) as suma,ROW_NUMBER() OVER (ORDER BY l.cod_articol desc /*F.DATA_SCADENTEI,f.factura*/) as nrp,
+		RTRIM(p.Factura_dreapta) as factura, 
+		p.Data_fact as data_factura,
+		p.Data_scad as data_scadentei,
+		rtrim(l.furnizor) as furnizor, rtrim(t.Denumire) as denfurnizor,
+		p.loc_munca,p.comanda,p.valuta,p.curs,
+		p.suma as valoare,
+		p.TVA22, 0 as selectat, 0 as factnoua,space(20) as cod,space(80) as denumire,convert(float,0.00) as cantitate
+		--a.Valoare+a.Tva_22-a.Achitat AS sold
+	into #coduri
+	from yso_Articole_corectii_furnizori l 
+		inner join pozadoc p on p.idPozadoc = l.idPozADoc
+		inner join nomencl f on l.cod_articol = f.Cod
+		inner join terti t on t.Subunitate=l.subunit and t.Tert=l.furnizor 
+	where l.idPozADoc=@idpozadoc 
+	order by l.cod_articol
 
 	set @dentert=(select RTRIM(denumire)from terti where tert=@tert and Subunitate=@sub)
 	
@@ -115,18 +99,18 @@ BEGIN TRY
 			RTRIM(@tert) as furnizor,
 			RTRIM(@factura) as factFurniz,
 			RTRIM(p.sub) as sub,
-			RTRIM(p.tip) as tip,
-			CONVERT(varchar(10),p.data,101) as data,
-			rtrim(p.numar) as numar,
+			--RTRIM(p.tip) as tip,
+			--CONVERT(varchar(10),p.data,101) as data,
+			--rtrim(p.numar) as numar,
 			--@tip as subtip,
 			rtrim(p.Factura) as factBenef,
-			p.beneficiar , p.denbeneficiar,
+			--p.furnizor , p.denfurnizor,
 			CONVERT(varchar(10),p.data_factura,101) as data_factura,
 			CONVERT(varchar(10),p.Data_scadentei,101) as data_scadentei,
-			convert(decimal(17,2),p.Valoare+p.TVA_22) as valoare,
+			convert(decimal(17,2),p.Valoare+p.TVA22) as valoare,
 			convert(decimal(17,2),p.Valoare) as valftva,
 			convert(decimal(17,2),p.suma) as suma,
-			convert(decimal(17,2),(CASE WHEN p.sold >=0.01 THEN p.sold END)) as sold,
+			--convert(decimal(17,2),(CASE WHEN p.sold >=0.r01 THEN p.sold END)) as sold,
 			CONVERT(decimal(12,5),@curs) as curs,
 			@valuta as valuta,
 			case when ISNULL(@valuta,'')='' then 'RON' else @valuta end as denvaluta,
@@ -136,7 +120,7 @@ BEGIN TRY
 			ltrim(p.denumire) as denumire,
 			convert(decimal(12,2),cantitate) as cantitate,
 			@lm as lm
-		FROM  #doc p 
+		FROM  #coduri p 
 		order by p.nrp
 		FOR XML RAW, TYPE
 		)
