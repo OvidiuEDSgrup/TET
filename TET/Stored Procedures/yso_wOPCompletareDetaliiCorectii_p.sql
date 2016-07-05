@@ -1,7 +1,4 @@
-IF EXISTS (SELECT * FROM sysobjects WHERE NAME = 'yso_wOPCompletareDetaliiCorectii_p')
-	DROP PROCEDURE yso_wOPCompletareDetaliiCorectii_p
-GO
-CREATE PROCEDURE yso_wOPCompletareDetaliiCorectii_p @sesiune VARCHAR(50), @parXML XML
+﻿CREATE PROCEDURE yso_wOPCompletareDetaliiCorectii_p @sesiune VARCHAR(50), @parXML XML
 AS
 BEGIN TRY
 	DECLARE @tert VARCHAR(20), @mesaj VARCHAR(400), @dataJos DATETIME, @dataSus DATETIME,
@@ -57,8 +54,7 @@ BEGIN TRY
 		rtrim(l.furnizor) as furnizor, rtrim(t.Denumire) as denfurnizor,
 		p.loc_munca,p.comanda,p.valuta,p.curs,
 		p.suma as valoare,
-		p.TVA22, 0 as selectat, 0 as factnoua,space(20) as cod,space(80) as denumire,convert(float,0.00) as cantitate,
-		l.nr_pozitie
+		p.TVA22, 0 as selectat, 0 as factnoua,space(20) as cod,space(80) as denumire,convert(float,0.00) as cantitate
 		--a.Valoare+a.Tva_22-a.Achitat AS sold
 	into #coduri
 	from yso_Articole_corectii_furnizori l 

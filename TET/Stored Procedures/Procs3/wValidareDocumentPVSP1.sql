@@ -157,11 +157,11 @@ begin try
 	
 	if exists (select 1 from #bonTemp b inner join nomencl n on n.Cod=b.Cod_produs and n.Tip not in ('R','S') where b.Cantitate<0.00001)
 	begin
-		if OBJECT_ID('tempdb..#gesttransfer') is null
-		begin
-			create table #gesttransfer(gestiune varchar(20),gestiune_transfer varchar(20),nrordine int)
-			exec creeazaGestiuniTransfer
-		end
+		--if OBJECT_ID('tempdb..#gesttransfer') is null
+		--begin
+		--	create table #gesttransfer(gestiune varchar(20),gestiune_transfer varchar(20),nrordine int)
+		--	exec creeazaGestiuniTransfer
+		--end
 		
 		set @ErrorMessage=null
 		select @ErrorMessage='Nu pot fi returnate articole fara a specifica documentul initial! Va rog sa folositi operatia de stornare de pe bonul/factura initiala.'
@@ -178,6 +178,15 @@ begin try
 				and t.gestiune=isnull(pd.gestiune_transfer,pd.cod_Gestiune) and t.Tip in ('AP','AC') and t.Cantitate>0 and t.Data<=pd.Data order by t.Data desc) s 
 		where pd.cantitate<0 and s.Cod is null
 --*/		
+		if @ErrorMessage is not null
+			raiserror(@errormessage,11,1)
+	end
+	
+	if @eBon=1 and exists (select 1 from #bonTemp b inner join nomencl n on n.Cod=b.Cod_produs and n.Tip not in ('R','S') where b.discount<0.00001)
+	begin		
+		set @ErrorMessage=null
+		select @ErrorMessage='Nu pot fi emise bonuri cu discount negativ! Va rugam sa folositi metoda de lucru corecta pentru majorarea unui pret.'
+	
 		if @ErrorMessage is not null
 			raiserror(@errormessage,11,1)
 	end

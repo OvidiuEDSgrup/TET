@@ -4565,6 +4565,8 @@
     <Build Include="XMLSchemaCollections\ASchemaRevisal.sql" />
     <Build Include="Tables\yso_Articole_corectii_furnizori.sql" />
     <Build Include="Tables\yso_Garantii_corectii_furnizori.sql" />
+    <Build Include="Stored Procedures\yso_wOPCompletareDetaliiCorectii_p.sql" />
+    <Build Include="Stored Procedures\yso_wOPCompletareDetaliiCorectii.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assemblies\HTTPGet_1.dll" />

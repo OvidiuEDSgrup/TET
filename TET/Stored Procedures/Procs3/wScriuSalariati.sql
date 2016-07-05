@@ -47,7 +47,7 @@ begin try
 	casasan, buletin, plecat, localitate, judet, strada, numar, codpostal, bloc, scara, etaj, apart, isnull(modangaj,'N') as modangaj, 
 	isnull(dataplec,'01/01/1901') as dataplec, dedpers, tipcolab, isnull(gradinv,'0') as gradinv, dedsomaj, altesurse, activitate, permis, limba, 
 	nationalitatea, cetatenia, isnull(stareacivila,'N') as stareacivila, religia, isnull(stagiumilitar,'N') as stagiumilitar,
-	telefon, email, observatii, actionar, nrcontract, tichete, anplimp, comanda, pasaport, fictiv, detalii
+	telefon, email, observatii, actionar, nrcontract, tichete, anplimp, comanda, tipstat, pasaport, fictiv, detalii
 	into #xmlpersonal
 	from OPENXML(@iDoc, '/row')
 	WITH
@@ -136,6 +136,7 @@ begin try
 		tichete int '@tichete',
 		anplimp char(9) '@anplimp',
 		comanda varchar(20) '@comanda',
+		tipstat varchar(25) '@tipstat',
 		pasaport varchar(50) '@pasaport',
 		fictiv int '@fictiv'	
 	)
@@ -265,7 +266,7 @@ begin try
 	Sindicalist,zile_concediu_de_odihna_an,zile_concediu_efectuat_an,zile_absente_an,vechime_totala,
 	data_angajarii_in_unitate,banca,Cont_in_banca,poza,Sex,Data_nasterii,Cod_numeric_personal,
 	Studii,Profesia,Adresa,copii,Loc_ramas_vacant,Localitate,Judet,Strada,Numar,Cod_postal,Bloc,Scara,Etaj,Apartament,Sector,Mod_angajare,Data_plec,Tip_colab,
-	grad_invalid,coef_invalid,alte_surse,fictiv,detalii,Activitate)
+	grad_invalid,coef_invalid,alte_surse,fictiv,detalii,Activitate,nr_contract,comanda,tip_stat,vechime_la_intrare,Spor_cond_7,Spor_cond_8,Spor_cond_9,Spor_cond_10)
 	select marca, nume, functie, lm, isnull(tichete,0), categoria_salarizare, isnull(grupamunca,'N'), isnull(salinc,0), isnull(salbaza,0), 
 	isnull(reglucr,8), isnull(salorar,0), isnull(tipsal,'1'), isnull(tipimp,'1'), isnull(pensie_suplimentara,0), isnull(somaj,1), 
 	isnull(cassind,@pCassInd)*10, isnull(spindc,0), isnull(spvech,0), isnull(spnoapte,25), isnull(spprogr,0), isnull(spsupl,0), 
@@ -275,9 +276,11 @@ begin try
 	isnull(datanasterii,'1901-01-01'), isnull(cnp,''), '', '', isnull(casasan,''), isnull(buletin,''), isnull(plecat,0), 
 	isnull(localitate,''), rtrim(isnull(judet,''))+(case when isnull(anplimp,'')<>'' then ','+rtrim(isnull(anplimp,'')) else '' end), 
 	isnull(strada,''), isnull(numar,''), isnull(Codpostal,0), isnull(Bloc,''), isnull(Scara,''), isnull(etaj,''), isnull(apart,''), 0, 
-	isnull(modangaj,'N'), isnull(dataplec,'1901-01-01'), isnull(tipcolab,''), isnull(gradinv,''), isnull(dedsomaj,0), isnull(altesurse,0), fictiv, detalii, activitate
+	isnull(modangaj,'N'), isnull(dataplec,'1901-01-01'), isnull(tipcolab,''), isnull(gradinv,''), isnull(dedsomaj,0), isnull(altesurse,0), fictiv, detalii, activitate,
+	nrcontract, comanda, tipstat, vechimeintrare, isnull(sp7,0), isnull(sp8,0), isnull(sp9,0), isnull(sp10,0)
 	from #xmlpersonal x
 	where x.ptupdate=0
+/*
 --	insert in infopers
 	insert into infopers (marca,permis_auto_categoria,limbi_straine,nationalitatea,cetatenia,starea_civila,
 	marca_sot_sotie,nume_sot_sotie,religia,evidenta_militara,telefon,email,observatii,actionar,
@@ -289,7 +292,7 @@ begin try
 	isnull(vechimeintrare,''), isnull(vechimemeserie,''), isnull(nrcontract,''), isnull(sp7,0), isnull(sp8,0), isnull(sp9,0), isnull(sp10,0)
 	from #xmlpersonal x
 	where x.ptupdate=0 or not exists (select 1 from infopers ip where ip.marca=x.marca)
-
+*/
 --	update personal
 	update p
 	set Marca=isnull(x.marca, p.marca), 
@@ -317,10 +320,12 @@ begin try
 	Bloc=isnull(x.bloc,p.Bloc), Scara=isnull(x.scara,p.Scara), Etaj=isnull(x.etaj,p.Etaj), Apartament=isnull(x.apart,p.Apartament), 
 	Mod_angajare=isnull(x.Modangaj,p.Mod_angajare), Data_plec=isnull(x.Dataplec,p.Data_plec),
 	Tip_colab=isnull(x.tipcolab,p.Tip_colab), Grad_invalid=isnull(x.gradinv,p.Grad_invalid), 
-	Coef_invalid=isnull(x.dedsomaj,p.Coef_invalid), Alte_surse=isnull(x.altesurse,p.Alte_surse), fictiv=isnull(x.fictiv,p.fictiv), p.detalii=x.detalii, Activitate=isnull(x.Activitate,p.Activitate)
+	Coef_invalid=isnull(x.dedsomaj,p.Coef_invalid), Alte_surse=isnull(x.altesurse,p.Alte_surse), fictiv=isnull(x.fictiv,p.fictiv), p.detalii=x.detalii, Activitate=isnull(x.Activitate,p.Activitate), 
+	nr_contract=isnull(x.nrcontract,p.nr_contract), comanda=isnull(x.comanda,p.comanda), tip_stat=isnull(x.tipstat,p.tip_stat), Vechime_la_intrare=isnull(x.vechimeintrare,p.vechime_la_intrare), 
+	Spor_cond_7=isnull(x.sp7,p.spor_cond_7), Spor_cond_8=isnull(x.sp8,p.spor_cond_8), Spor_cond_9=isnull(x.sp9,p.spor_cond_9), Spor_cond_10=isnull(x.sp10,p.spor_cond_10)
 	from personal p, #xmlpersonal x
 	where x.ptupdate=1 and p.marca=x.marca_veche
-
+/*
 --	update infopers
 	update i
 	set Marca=isnull(x.marca, i.marca), 
@@ -335,7 +340,7 @@ begin try
 	Nr_contract=isnull(x.nrcontract,i.Nr_contract)
 	from infopers i, #xmlPersonal x
 	where x.ptupdate=1 and i.Marca=x.Marca_veche
-
+*/
 	if @pasaport is not null
 		exec scriuExtinfop @Marca=@marca, @Cod_inf='PASAPORT', @Val_inf=@pasaport, @Data_inf='01/01/1901', @Procent=0, @Stergere=2
 

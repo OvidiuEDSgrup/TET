@@ -7,7 +7,10 @@ BEGIN TRY
 		@idContract INT, @mesaj VARCHAR(500), @gestiune VARCHAR(20),@numarPozDoc VARCHAR(20), @docPlaje XML,
 		@data DATETIME, @utilizator VARCHAR(100), @subunitate VARCHAR(9), @cod VARCHAR(20), @idPozContract INT, 
 		@cantitate FLOAT, @fetch INT, @docJurnal XML, @idJurnal INT, @stare INT, @gestiune_primitoare varchar(20),@lm varchar(20), @docTransfer xml,
-		@fara_mesaje bit=0, @detalii xml, @custodie int,@tert varchar(20), @cuRezervari bit, @gestiuneRezervari varchar(20)
+		@fara_mesaje bit=0, @detalii xml, @custodie int,@tert varchar(20), @cuRezervari bit, @gestiuneRezervari varchar(20),
+		@nrformular varchar(10), @CLFrom varchar(100), @caleRaport varchar(1000), @numefisier varchar(200), @calefisier varchar(200),
+		@profile_name varchar(50), @file_attachments varchar(1000), @subject varchar(200), @textemail varchar(1000),
+		@emailGest varchar(100)
 
 	SELECT
 		@gestiune = @parXML.value('(/*/@gestiune)[1]', 'varchar(20)'),
@@ -17,6 +20,7 @@ BEGIN TRY
 		@stare = @parXML.value('(/*/@stare)[1]', 'int'),
 		@fara_mesaje = isnull(@parXML.value('(/*/@fara_mesaje)[1]', 'bit'),0),
 		@lm = @parXML.value('(/*/@lm)[1]', 'varchar(20)'),
+		@nrformular=upper(ISNULL(@parXML.value('(/*/@nrformular)[1]', 'varchar(10)'), '')),
 		@custodie=0
 
 	if @parXML.exist('(/*/detalii)[1]')=1
@@ -25,7 +29,12 @@ BEGIN TRY
 	EXEC luare_date_par 'GE', 'SUBPRO', 0, 0, @subunitate OUTPUT
 	EXEC luare_date_par 'GE', 'REZSTOCBK', @cuRezervari OUTPUT, 0, @gestiuneRezervari OUTPUT
 	EXEC wIaUtilizator @sesiune = @sesiune, @utilizator = @utilizator OUTPUT
-
+	set @calefisier=(select rtrim(rtrim(p.URL)+'/'+REPLACE(REPLACE(P.CALEFORM,rtrim(P.CALERIA),''),'\',''))+'/'
+		from (select p.Parametru, p.Val_alfanumerica
+		from par p where Tip_parametru='AR' 
+		and Parametru IN ('CALEFORM','CALERIA','URL')) AS S
+		PIVOT (MAX(val_alfanumerica) FOR parametru in ([CALEFORM],[CALERIA],[URL])) AS P)
+	
 	IF @stare = 0
 	begin
 		declare @docdef xml
@@ -34,7 +43,9 @@ BEGIN TRY
 	end
 
 	/** Daca gestiunea primitoare este una de tip custodii vom trimite clientul in locatie**/
-	select top 1 @custodie=isnull(detalii.value('(/*/@custodie)[1]', 'int'),0) from gestiuni where cod_gestiune=@gestiune_primitoare
+	select top 1 @custodie=isnull(detalii.value('(/*/@custodie)[1]', 'int'),0),
+		@emailGest=ISNULL(detalii.value('(/row/@email)[1]','varchar(100)'),'')
+	from gestiuni where cod_gestiune=@gestiune_primitoare
 
 	IF OBJECT_ID('tempdb..#pozitiiTransfer') IS NOT NULL
 		DROP TABLE #pozitiiTransfer
@@ -100,12 +111,53 @@ BEGIN TRY
 	set @xml = (select @idContract idContract for xml raw)
 	exec updateStareContract @sesiune=@sesiune, @parXML=@xml
 	
-	if exists (select 1 from sysobjects where [type]='P' and [name]='wOPGenerareTransferSP1')
-		exec wOPGenerareTransferSP1 @sesiune=@sesiune, @parXML=@parXML
-
+	if object_id('temdb..#expeditie') is not null
+		drop table #expeditie
+	
+	select tip='PROPUTILIZ', Cod=@Utilizator, Cod_proprietate='UltFormGenTE', Valoare=isnull(@nrformular,''), Valoare_tupla=@nrformular 
+	into #expeditie where isnull(@nrformular,'')<>''
+	
+	delete pp
+	from proprietati pp join #expeditie e  on e.tip=pp.Tip and e.Cod=pp.Cod and e.Cod_proprietate=pp.Cod_proprietate --and pp.Valoare_tupla=''
+	
+	insert proprietati (Tip,Cod,Cod_proprietate,Valoare,Valoare_tupla)
+	select e.tip,e.Cod,e.Cod_proprietate,e.Valoare,e.Valoare_tupla 
+	from #expeditie e 
+		left join proprietati pp on e.tip=pp.Tip and e.Cod=pp.Cod and e.Cod_proprietate=pp.Cod_proprietate --and pp.Valoare_tupla=''
+	where pp.Valoare is null
+	
 	if @fara_mesaje=0
 		SELECT 'S-a generat transferul cu numarul de document ' + @numarPozDoc + ' pentru codurile si cantitatile selectate!' AS textMesaj, 'Notificare' AS titluMesaj
 		FOR XML raw, root('Mesaje')
+	
+	if @nrformular<>'' and @@TRANCOUNT<=0
+	begin
+		declare @paramXmlString xml
+			
+		select @CLFrom=CLFrom, @caleRaport=rtrim(CLWhere) from antform where numar_formular=@nrformular
+		set @numefisier='Transfer_'+ISNULL(rtrim(@numarPozDoc),'')+(case when @clfrom<>'Raport' then '.doc' else '' end)
+		set @paramXmlString= (select 'TE' as tip, @nrformular as nrform, rtrim(@numarPozDoc) as numar, @data as data,
+			@numefisier as numefisier, @numefisier as numeFisier, (case when @CLFrom='Raport' then @caleRaport end) as caleRaport,
+			0 as scriuavnefac, 0 as inXML, 1 as faraMesaj, 1 as faraMesaje 
+			for xml raw)
+			
+		if @CLFrom='Raport'
+			exec wExportaRaport @sesiune=@sesiune, @parXML=@paramXmlString
+		else 
+			exec wTipFormular @sesiune=@sesiune, @parXML=@paramXmlString 
+		
+		set @file_attachments=RTRIM(@calefisier)+RTRIM(@numefisier)+(case when @CLFrom='raport' then '.PDF' else '' end)
+	end
+	
+	if isnull(@emailGest, '')<>''
+	begin
+		set @subject='Transfer de la gestiunea '+rtrim(@gestiune)
+		set @textemail='Aveti transferul '+ @numarPozDoc + ' catre gestiunea dvs.'+CHAR(10)+CHAR(13)
+			+@file_attachments 
+		
+		exec msdb..sp_send_dbmail @Profile_name=@profile_name, @recipients=@emailGest, @subject=@subject, 
+			@body=@textemail--, @file_attachments = @file_attachments
+	end
 END TRY
 
 BEGIN CATCH

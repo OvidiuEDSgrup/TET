@@ -14,7 +14,8 @@
 		FOREIGN KEY (cod_articol) REFERENCES Nomencl(cod), 
     cantitate DECIMAL(12, 3) NOT NULL, 
     pret DECIMAL(15, 5) NULL, 
-    pret_valuta DECIMAL(15, 5) NULL
+    pret_valuta DECIMAL(15, 5) NULL, 
+    [nr_pozitie] INT NOT NULL IDENTITY
 )
 
 GO

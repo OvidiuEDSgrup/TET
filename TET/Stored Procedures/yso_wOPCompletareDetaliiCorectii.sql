@@ -1,15 +1,11 @@
-IF EXISTS (SELECT * FROM sysobjects WHERE NAME = 'yso_wOPCompletareDetaliiCorectii')
-	DROP PROCEDURE yso_wOPCompletareDetaliiCorectii
-GO
-CREATE PROCEDURE yso_wOPCompletareDetaliiCorectii @sesiune VARCHAR(50), @parXML XML
+﻿CREATE PROCEDURE yso_wOPCompletareDetaliiCorectii @sesiune VARCHAR(50), @parXML XML
 AS
 BEGIN TRY
 	DECLARE @iDoc int, @tert VARCHAR(20), @mesaj VARCHAR(400), @dataJos DATETIME, @dataSus DATETIME,
 		@tip VARCHAR(2), @utilizator varchar(50), @suma float, @data datetime, @valuta varchar(3),
 		@dentert varchar(200), @numar varchar(20), @cont varchar(13), @curs float, @sub varchar(9),
 		@soldTert float, @lm varchar(13), @factura varchar(20), @gestiune varchar(13), @cod varchar(20), @flm int
-		,@docVanzareComisionat varchar(40), @tipDoc varchar(2), @nrDoc varchar(8), @dataDoc datetime, 
-		@cantitate float, @pret float, @pret_valuta float
+		,@docVanzareComisionat varchar(40), @tipDoc varchar(2), @nrDoc varchar(8), @dataDoc datetime
 
 	EXEC wIaUtilizator @sesiune = @sesiune, @utilizator = @utilizator OUTPUT
 
@@ -25,10 +21,6 @@ BEGIN TRY
 	
 	SELECT
 		@tip = isnull(@parXML.value('(/*/@tip)[1]', 'varchar(2)'),''),
-		@cod = isnull(@parXML.value('(/*/@cod)[1]', 'varchar(20)'),''),
-		@cantitate = isnull(@parXML.value('(/*/@cantitate)[1]', 'float'),0),
-		@pret = ISNULL(@parXML.value('(/*/@pret)[1]','float'),0),
-		@pret_valuta = ISNULL(@parXML.value('(/*/@pret_valuta)[1]','float'),0),
 		@tert = isnull(@parXML.value('(//@tert)[1]', 'varchar(20)'),''),
 		@numar = isnull(@parXML.value('(//@numar)[1]', 'varchar(20)'),''),
 		@factura = isnull(@parXML.value('(//@factura)[1]', 'varchar(20)'),isnull(@parXML.value('(/*/*/@factura)[1]', 'varchar(20)'),'')),
@@ -36,7 +28,7 @@ BEGIN TRY
 			,isnull(@parXML.value('(/*/*/*/@docVanzareComisionat)[1]', 'varchar(40)'),'')),
 		@valuta = isnull(isnull(@parXML.value('(//@valuta)[1]', 'varchar(3)'),@parXML.value('(/*/*/@valuta)[1]', 'varchar(3)')),''),
 		@lm = isnull(@parXML.value('(/*/*/@lm)[1]', 'varchar(13)'),isnull(@parXML.value('(/*/@lm)[1]', 'varchar(13)'),'')),
-		--@cod = isnull(@parXML.value('(/*/*/@cod)[1]', 'varchar(20)'),''),
+		@cod = isnull(@parXML.value('(/*/*/@cod)[1]', 'varchar(20)'),''),
 		@gestiune = isnull(@parXML.value('(//@gestiune)[1]', 'varchar(13)'),''),
 		@suma = isnull(@parXML.value('(//@suma)[1]', 'float'),'0'),
 		@curs = isnull(isnull(@parXML.value('(//@curs)[1]', 'float'),@parXML.value('(/*/*/@curs)[1]', 'float')),0) ,

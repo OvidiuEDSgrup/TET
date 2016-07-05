@@ -60,6 +60,8 @@
 );
 
 
+
+
 GO
 CREATE UNIQUE CLUSTERED INDEX [Pentru_culegere]
     ON [dbo].[pozdoc]([Subunitate] ASC, [Tip] ASC, [Numar] ASC, [Data] ASC, [Numar_pozitie] ASC);
@@ -568,15 +570,15 @@ set @GestPM=','+RTrim(@GestPM)+','
 	max(a.cont_de_stoc),max(a.data_expirarii),0,max(case when a.tip='AI' and a.discount=1 then 1 else 0 end),
 	max(a.tva_neexigibil),max(case when c.tip_gestiune='A' and tip_miscare='I' then a.pret_cu_amanuntul 
 	when c.tip_gestiune='A' and tip_miscare='E' then a.pret_amanunt_predator else a.accize_cumparare end),
-	'',isnull(max(a.pret_amanunt_predator),0),'','','','','',0,0,0,0,0,0,'','01/01/1901',max(a.idPozDoc),max(a.idPozDoc)
+	'',isnull(max(a.pret_amanunt_predator),0),'','','','',max(coalesce(nullif(a.lot, ''), nullif(s.lot, ''), '')),0,0,0,0,0,0,'','01/01/1901',max(a.idPozDoc),max(a.idPozDoc)
 	from inserted a
 	inner join gestiuni c on a.Subunitate=c.Subunitate and a.Gestiune=c.Cod_gestiune
 	left outer join stocuri s on s.subunitate=a.subunitate and s.tip_gestiune=c.tip_gestiune and s.cod_gestiune=left(a.gestiune,@l_stocuri_codgestiune) and s.cod_intrare=a.cod_intrare and s.cod=a.cod
 	where (@gestexceptiemediup_l=0 or 
 			(@gestexceptiemediup=1 and charindex(','+rtrim(a.gestiune)+',',@GestPM)=0 or @gestexceptiemediup<>1 and charindex(','+rtrim(a.gestiune)+',',@GestPM)>0)
 			or c.tip_gestiune='A') and a.tip not in ('PF','CI','AF')
-	and c.tip_gestiune not in ('V','I')
-	and a.tip_miscare in ('I','E') and s.Cod_intrare is null 
+		and c.tip_gestiune not in ('V','I')
+		and a.tip_miscare in ('I','E') and s.Cod_intrare is null 
 	group by a.subunitate,c.tip_gestiune,left(a.gestiune,@l_stocuri_codgestiune),a.cod,a.cod_intrare
  -- intrari TI
  insert into stocuri 
@@ -594,29 +596,32 @@ set @GestPM=','+RTrim(@GestPM)+','
 	where (@gestexceptiemediup_l=0 or 
 		(@gestexceptiemediup=1 and charindex(','+rtrim(a.gestiune_primitoare)+',',@GestPM)=0 or @gestexceptiemediup<>1 and charindex(','+rtrim(a.gestiune_primitoare)+',',@GestPM)>0)
 				or c.tip_gestiune='A') and a.tip='TE' 
-	and not exists (select cod_intrare from stocuri where subunitate=a.subunitate and tip_gestiune=c.tip_gestiune
-	and cod_gestiune=left(a.gestiune_primitoare,@l_stocuri_codgestiune)
-	and cod_intrare=(case when a.grupa='' then a.cod_intrare else a.grupa end) and cod=a.cod)
+		and not exists (select cod_intrare from stocuri where subunitate=a.subunitate and tip_gestiune=c.tip_gestiune
+		and cod_gestiune=left(a.gestiune_primitoare,@l_stocuri_codgestiune)
+		and cod_intrare=(case when a.grupa='' then a.cod_intrare else a.grupa end) and cod=a.cod)
 	group by a.subunitate,c.tip_gestiune,left(a.gestiune_primitoare,@l_stocuri_codgestiune),a.cod,
 	(case when a.grupa='' then a.cod_intrare else a.grupa end)
 -- folosinta
 insert into stocuri (Subunitate,Tip_gestiune,Cod_gestiune,Cod,Data,Cod_intrare,Pret,Stoc_initial,Intrari,Iesiri,Data_ultimei_iesiri,
 	Stoc,Cont,Data_expirarii,Stoc_ce_se_calculeaza,Are_documente_in_perioada,TVA_neexigibil,Pret_cu_amanuntul,Locatie,Pret_vanzare,
-	Loc_de_munca,Comanda,Contract,Furnizor,Lot,Stoc_initial_UM2,Intrari_UM2,Iesiri_UM2,Stoc_UM2,Stoc2_ce_se_calculeaza,Val1,Alfa1,Data1)
+	Loc_de_munca,Comanda,Contract,Furnizor,Lot,Stoc_initial_UM2,Intrari_UM2,Iesiri_UM2,Stoc_UM2,Stoc2_ce_se_calculeaza,Val1,Alfa1,Data1,idIntrareFirma,idIntrare)
 	select a.subunitate,'F',left(a.gestiune,@l_stocuri_codgestiune),a.cod,max(a.data),a.cod_intrare,max(a.pret_de_stoc),0,0,0,max(a.data),0,
-	max(a.cont_de_stoc),max(a.data_expirarii),0,0,0,0,max(locatie),0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, '', '01/01/1901'
-	from inserted a where a.tip in ('PF','CI','AF') and not exists (select cod_intrare from stocuri where subunitate=a.subunitate
-	and tip_gestiune='F' and cod_gestiune=left(a.gestiune,@l_stocuri_codgestiune) and cod=a.cod and cod_intrare=a.cod_intrare)
+	max(a.cont_de_stoc),max(a.data_expirarii),0,0,0,0,max(locatie),0, '', '', '', '', max(isnull(a.lot, '')), 0, 0, 0, 0, 0, 0, '', '01/01/1901',max(a.idPozDoc),max(a.idPozDoc)
+	from inserted a 
+	where a.tip in ('PF','CI','AF') and not exists (select cod_intrare from stocuri where subunitate=a.subunitate
+		and tip_gestiune='F' and cod_gestiune=left(a.gestiune,@l_stocuri_codgestiune) and cod=a.cod and cod_intrare=a.cod_intrare)
 	group by a.subunitate,left(a.gestiune,@l_stocuri_codgestiune),a.cod,a.cod_intrare
 -- intrari folosinta pe marca_primitoare
 insert into stocuri (Subunitate,Tip_gestiune,Cod_gestiune,Cod,Data,Cod_intrare,Pret,Stoc_initial,Intrari,Iesiri,Data_ultimei_iesiri,
 	Stoc,Cont,Data_expirarii,Stoc_ce_se_calculeaza,Are_documente_in_perioada,TVA_neexigibil,Pret_cu_amanuntul,Locatie,Pret_vanzare,
-	Loc_de_munca,Comanda,Contract,Furnizor,Lot,Stoc_initial_UM2,Intrari_UM2,Iesiri_UM2,Stoc_UM2,Stoc2_ce_se_calculeaza,Val1,Alfa1,Data1)
+	Loc_de_munca,Comanda,Contract,Furnizor,Lot,Stoc_initial_UM2,Intrari_UM2,Iesiri_UM2,Stoc_UM2,Stoc2_ce_se_calculeaza,Val1,Alfa1,Data1,idIntrareFirma,idIntrare)
 	select a.subunitate,'F',left(a.gestiune_primitoare,@l_stocuri_codgestiune),a.cod,max(a.data),(case when a.grupa<>'' then a.grupa else a.cod_intrare end),max(a.pret_de_stoc),0,0,0,
-	max(a.data),0,max(a.cont_corespondent),max(a.data_expirarii),0,0,0,0,max(locatie),0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, '', '01/01/1901'
-	from inserted a where a.tip in ('DF','PF')
-	and not exists (select cod_intrare from stocuri where subunitate=a.subunitate and tip_gestiune='F'
-	and cod_gestiune=left(a.gestiune_primitoare,@l_stocuri_codgestiune) and cod_intrare=(case when a.grupa<>'' then a.grupa else a.cod_intrare end) and cod=a.cod)
+	max(a.data),0,max(a.cont_corespondent),max(a.data_expirarii),0,0,0,0,max(a.locatie),0, '', '', '', '', max(coalesce(nullif(a.lot, ''), nullif(s.lot, ''), '')), 0, 0, 0, 0, 0, 0, '', '01/01/1901',max(a.idIntrareFirma),max(a.idPozDoc)
+	from inserted a 
+	left outer join stocuri s on a.subunitate=s.subunitate and s.Tip_gestiune='F' and a.gestiune=s.cod_gestiune and a.cod=s.cod and a.cod_intrare=s.cod_intrare
+	where a.tip in ('DF','PF')
+		and not exists (select cod_intrare from stocuri where subunitate=a.subunitate and tip_gestiune='F'
+			and cod_gestiune=left(a.gestiune_primitoare,@l_stocuri_codgestiune) and cod_intrare=(case when a.grupa<>'' then a.grupa else a.cod_intrare end) and cod=a.cod)
 	group by a.subunitate,left(a.gestiune_primitoare,@l_stocuri_codgestiune),a.cod,(case when a.grupa<>'' then a.grupa else a.cod_intrare end)
 -- custodie pe terti
 insert into stocuri (Subunitate,Tip_gestiune,Cod_gestiune,Cod,Data,Cod_intrare,Pret,Stoc_initial,Intrari,Iesiri,Data_ultimei_iesiri,
@@ -635,9 +640,9 @@ insert into stocuri (Subunitate,Tip_gestiune,Cod_gestiune,Cod,Data,Cod_intrare,P
 declare @intrari float,@iesiri float,@int2 float,@ies2 float,@pret float,@pretam float,@TVAn float,@pretv float
 declare @csub char(9),@ddat datetime,@cgest char(20),@ccod char(20),@ccodi char(13),@npret float,@npretam float,@nTVAn float,@ddataexp datetime,
 	@ncant float,@ncant2 float,@tipm char(1),@tipg char(1),@loc char(30),@npretv float,@semn int,@intrare int,@ccontstoc varchar(40),@locm char(9),@com char(40),
-	@cntr char(20),@furn char(13),@lot char(13)
+	@cntr char(20),@furn char(13),@lot char(20)
 declare @gsub char(9),@gtipg char(1),@ggest char(20),@gcod char(20),@gcodi char(13),@gloc char(30),@gfetch int,@gctstoc varchar(40),@gdata datetime,@ggdat datetime,
-	@ddataulties datetime,@gdataexp datetime,@glocm char(9),@gcom char(40),@gcntr char(20),@gfurn char(13),@glot char(13),@tip varchar(2),@numar varchar(20),@numar_pozitie int
+	@ddataulties datetime,@gdataexp datetime,@glocm char(9),@gcom char(40),@gcntr char(20),@gfurn char(13),@glot char(20),@tip varchar(2),@numar varchar(20),@numar_pozitie int
 
 declare @pretE float,@contE varchar(40)-->variabile necesare verificare necorelatii iesiri
 declare @crsDocStoc cursor
@@ -668,7 +673,7 @@ select subunitate, tip as tip,numar as numar,numar_pozitie as numar_pozitie, 'F'
 from inserted where @mediup_l=0 and tip in ('PF','CI','AF') and tip_miscare in ('I','E')
 union all
 select subunitate,tip as tip,numar as numar,numar_pozitie as numar_pozitie, 'F',data,gestiune_primitoare,cod,(case when grupa<>'' then grupa else cod_intrare end),
-	pret_de_stoc*(case when tip='DF' and procent_vama<>0 then (1-convert(decimal(12,3),procent_vama/100)) else 1 end), pret_cu_amanuntul,cantitate,0,
+	(case when tip='DF' and procent_vama<>0 then round(pret_de_stoc*(1-procent_vama/100),4) else pret_de_stoc end), pret_cu_amanuntul,cantitate,0,
 	'I',locatie,pret_amanunt_predator,TVA_neexigibil,1,data_expirarii, cont_corespondent,isnull(detalii.value('(/*/@lmprim)[1]','varchar(20)'),loc_de_munca),comanda,'','',''
 from inserted where @mediup_l=0 and tip in ('DF','PF')
 union all
@@ -698,7 +703,7 @@ select subunitate, tip as tip,numar as numar,numar_pozitie as numar_pozitie, 'F'
 from deleted where @mediup_l=0 and tip in ('PF','CI','AF') and tip_miscare in ('I','E')
 union all
 select subunitate,tip as tip,numar as numar,numar_pozitie as numar_pozitie, 'F',data,gestiune_primitoare,cod,(case when grupa<>'' then grupa else cod_intrare end),
-	pret_de_stoc*(case when tip='DF' and procent_vama<>0 then (1-convert(decimal(12,3),procent_vama/100)) else 1 end), pret_cu_amanuntul,cantitate,0,
+	(case when tip='DF' and procent_vama<>0 then round(pret_de_stoc*(1-procent_vama/100),4) else pret_de_stoc end), pret_cu_amanuntul,cantitate,0,
 	'I',locatie,pret_amanunt_predator,TVA_neexigibil,-1,data_expirarii, cont_corespondent,loc_de_munca,comanda,'','',''
 from deleted where @mediup_l=0 and tip in ('DF','PF')
 union all
@@ -802,7 +807,7 @@ begin
 		end
 
 	--validare/propagare corelatii pret si cont
-	if 1=1 or ((SELECT trigger_nestlevel() ) < 2 )-->se apeleaza numai pentru pozitiile din insert
+	if (select count(1) from inserted)>0 and (1=1 or ((SELECT trigger_nestlevel() ) < 2 ))-->se apeleaza numai pentru pozitiile din insert
 		--and (UPDATE(pret_de_stoc) or UPDATE(cont_de_stoc) or UPDATE(cont_corespondent) and @tip='TE')
 	begin
 		if exists (select * from sysobjects where name ='validareNecorelatiiStocuri')
@@ -836,12 +841,13 @@ begin
 		pret_vanzare=isnull((case when stoc_initial=0 and @intrare=1 then @pretv else pret_vanzare end),0),
 		data_expirarii=(case when @gdataexp>'01/01/1901' and @gdataexp>data_expirarii then @gdataexp else data_expirarii end),
 		cont=(case when @gctstoc<>'' and @gdata<=data then @gctstoc else cont end),
-		data=(case when @intrare=1 /*and @intrari>0 and @ggdat<data*/ then @ggdat else data end)
+		data=(case when @intrare=1 and @intrari>0 /*and @ggdat<data*/ then @ggdat else data end)
 	where subunitate=@gsub and tip_gestiune=@gtipg and cod_gestiune=left(@ggest,@l_stocuri_codgestiune) and cod=@gcod and cod_intrare=@gcodi
 		
 	delete stocuri
 		where abs(Stoc)<0.001 and abs(intrari)<0.001 and abs(Iesiri)<0.001 AND subunitate=@gsub and tip_gestiune=@gtipg and cod_gestiune=left(@ggest,@l_stocuri_codgestiune) and cod=@gcod and cod_intrare=@gcodi 
-			and not exists (select 1 from pozdoc where pozdoc.idPozdoc=stocuri.idIntrare)
+			/*Nu trebuie pusa aceasta conditie. Daca modific la o pozitie codul de intrare, stocul ei va ramane perpetuu chiar daca este cu zero*/
+			--and not exists (select 1 from pozdoc where pozdoc.idPozdoc=stocuri.idIntrare)
 	set @gsub=@csub
 	set @gtipg=@tipg
 	set @ggest=@cgest
