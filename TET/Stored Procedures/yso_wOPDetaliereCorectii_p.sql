@@ -1,7 +1,4 @@
-IF EXISTS (SELECT * FROM sysobjects WHERE NAME = 'yso_wOPDetaliereCorectii_p')
-	DROP PROCEDURE yso_wOPDetaliereCorectii_p
-GO
-CREATE PROCEDURE yso_wOPDetaliereCorectii_p @sesiune VARCHAR(50), @parXML XML
+﻿CREATE PROCEDURE yso_wOPDetaliereCorectii_p @sesiune VARCHAR(50), @parXML XML
 AS
 BEGIN TRY
 	DECLARE @tert VARCHAR(20), @mesaj VARCHAR(400), @dataJos DATETIME, @dataSus DATETIME,

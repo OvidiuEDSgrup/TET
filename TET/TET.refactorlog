@@ -231,4 +231,11 @@
     <Property Name="NewSchema" Value="dbo" />
     <Property Name="IsNewSchemaExternal" Value="True" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="3340f841-02e6-4444-931a-0e606e13efbf" ChangeDateTime="07/06/2016 09:13:46">
+    <Property Name="ElementName" Value="[dbo].[yso_Articole_corectii_furnizori]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[dbo]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="yso_Articole_corectii" />
+  </Operation>
 </Operations>

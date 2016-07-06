@@ -115,6 +115,7 @@
     <Build Include="Tables\Tables1\antetBonuri.sql">
       <QuotedIdentifier>On</QuotedIdentifier>
       <AnsiNulls>On</AnsiNulls>
+      <SuppressTSqlWarnings>71501</SuppressTSqlWarnings>
     </Build>
     <Build Include="Tables\Tables1\antetinv.sql" />
     <Build Include="Tables\Tables1\AntetInventar.sql" />
@@ -4567,6 +4568,7 @@
     <Build Include="Tables\yso_Garantii_corectii_furnizori.sql" />
     <Build Include="Stored Procedures\yso_wOPCompletareDetaliiCorectii_p.sql" />
     <Build Include="Stored Procedures\yso_wOPCompletareDetaliiCorectii.sql" />
+    <Build Include="Stored Procedures\yso_wOPDetaliereCorectii_p.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assemblies\HTTPGet_1.dll" />

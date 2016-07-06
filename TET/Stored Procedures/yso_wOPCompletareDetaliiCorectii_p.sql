@@ -47,22 +47,23 @@ BEGIN TRY
 	set @soldTert=0
 	
 	select l.subunit as sub, 
-		convert(float,0) as cumulat,CONVERT(float,0) as suma,ROW_NUMBER() OVER (ORDER BY l.cod_articol desc /*F.DATA_SCADENTEI,f.factura*/) as nrp,
+		ROW_NUMBER() OVER (ORDER BY l.idPozCor) as nrp,
 		RTRIM(p.Factura_dreapta) as factura, 
 		p.Data_fact as data_factura,
 		p.Data_scad as data_scadentei,
-		rtrim(l.furnizor) as furnizor, rtrim(t.Denumire) as denfurnizor,
+		--rtrim(l.tert) as furnizor, rtrim(t.Denumire) as denfurnizor,
 		p.loc_munca,p.comanda,p.valuta,p.curs,
 		p.suma as valoare,
-		p.TVA22, 0 as selectat, 0 as factnoua,space(20) as cod,space(80) as denumire,convert(float,0.00) as cantitate
+		p.TVA22, 0 as selectat, 0 as factnoua,
+		l.cod_articol, rtrim(f.denumire) as denumire,l.cantitate as cantitate
 		--a.Valoare+a.Tva_22-a.Achitat AS sold
 	into #coduri
-	from yso_Articole_corectii_furnizori l 
+	from yso_Articole_corectii l 
 		inner join pozadoc p on p.idPozadoc = l.idPozADoc
 		inner join nomencl f on l.cod_articol = f.Cod
-		inner join terti t on t.Subunitate=l.subunit and t.Tert=l.furnizor 
+		--inner join terti t on t.Subunitate=l.subunit and t.Tert=l.tert 
 	where l.idPozADoc=@idpozadoc 
-	order by l.cod_articol
+	order by l.idPozCor
 
 	set @dentert=(select RTRIM(denumire)from terti where tert=@tert and Subunitate=@sub)
 	
@@ -93,30 +94,11 @@ BEGIN TRY
 	SELECT --1 as areDetaliiXml,
 		(SELECT
 			row_number() over (order by p.nrp) as nrcrt,
-			RTRIM(@tert) as furnizor,
-			RTRIM(@factura) as factFurniz,
-			RTRIM(p.sub) as sub,
-			--RTRIM(p.tip) as tip,
-			--CONVERT(varchar(10),p.data,101) as data,
-			--rtrim(p.numar) as numar,
-			--@tip as subtip,
-			rtrim(p.Factura) as factBenef,
-			--p.furnizor , p.denfurnizor,
-			CONVERT(varchar(10),p.data_factura,101) as data_factura,
-			CONVERT(varchar(10),p.Data_scadentei,101) as data_scadentei,
-			convert(decimal(17,2),p.Valoare+p.TVA22) as valoare,
-			convert(decimal(17,2),p.Valoare) as valftva,
-			convert(decimal(17,2),p.suma) as suma,
-			--convert(decimal(17,2),(CASE WHEN p.sold >=0.r01 THEN p.sold END)) as sold,
-			CONVERT(decimal(12,5),@curs) as curs,
-			@valuta as valuta,
-			case when ISNULL(@valuta,'')='' then 'RON' else @valuta end as denvaluta,
-			convert(int,selectat) as selectat,
-			convert(int,factnoua) as factnoua,
-			convert(decimal(17,2),@suma) as sumaFixaPoz,
-			ltrim(p.denumire) as denumire,
-			convert(decimal(12,2),cantitate) as cantitate,
-			@lm as lm
+			cod_articol , denumire,
+			convert(decimal(17,2),p.cantitate) as cantitate,
+			convert(decimal(17,2),p.pret) as pret,
+			convert(decimal(17,4),p.pret_valuta) as pret_valuta,
+			convert(int,selectat) as selectat
 		FROM  #coduri p 
 		order by p.nrp
 		FOR XML RAW, TYPE
@@ -124,7 +106,6 @@ BEGIN TRY
 	FOR XML PATH('DateGrid'), ROOT('Mesaje')
 	
 	select 1 as areDetaliiXml for xml raw, root('Mesaje')
-	
 END TRY
 
 BEGIN CATCH
