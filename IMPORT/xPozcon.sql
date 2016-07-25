@@ -194,15 +194,15 @@ begin try
 	delete v
 	from pozcon v 
 		inner join ##importXlsDifTmp t
-			on v.Tip=t.tip and v.Contract=t.numar and v.Tert=t.tert and v.Data=t.data and v.cod=t.cod
+			on v.Tip=t.tip and v.Contract=t.numar --and v.cod=t.cod --and v.Tert=t.tert and v.Data=t.data 
 	where t._nrdif=@_nrdif 
 	
 	delete v
 	from con v 
 		inner join ##importXlsDifTmp t
-			on v.Tip=t.tip and v.Contract=t.numar and v.Tert=t.tert and v.Data=t.data 
+			on v.Tip=t.tip and v.Contract=t.numar --and v.Tert=t.tert and v.Data=t.data 
 		outer apply (select top 1 cod from pozcon p 
-			where  v.Tip=p.tip and v.Contract=p.Contract and v.Tert=p.tert and v.Data=p.data) p
+			where  v.Tip=p.tip and v.Contract=p.Contract /*and v.Tert=p.tert and v.Data=p.data*/) p
 	where t._nrdif=@_nrdif 
 		and p.Cod is null
 end try
