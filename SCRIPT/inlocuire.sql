@@ -7,12 +7,12 @@ declare @tabela varchar(30), @camp varchar(50), @cond varchar(500)
 	,@comanda nvarchar(max), @camp1 varchar(50), @camp2 varchar(50)
 	,@datajos datetime, @idindex int, @idobject int, @condjoinidxunic varchar(max)
 	,@nrcrt int, @nrcrtmax int, @tipinl int, @nrcod int, @nrcodmax int
-	,@setupdidxunic varchar(max), @selupdidxunic varchar(max)
+	,@setupdidxunic varchar(max), @selupdidxunic varchar(max), @selcoltab varchar(max)
 --alter database tet set multi_user with rollback immediate
 --select * from sys.databases d where d.database_id=7
 --select * from sys.dm_tran_locks l where l.resource_database_id=7
 --kill 64
-set transaction isolation level read uncommiTted
+set transaction isolation level read uncommitted
 begin try
 --select * from rulaje r where '7588' in (r.cont) and r.data<'2015-01-01'
 --select * from pozadoc p where '7588' in (p.Cont_deb,p.Cont_cred,p.Cont_dif)
@@ -70,17 +70,18 @@ begin try
 		
 		while @nrcrt<=@nrcrtmax
 		begin--/*
-			select @idindex=null,@idobject=null, @condjoinidxunic=null, @setupdidxunic=null, @selupdidxunic=null
+			select @idindex=null,@idobject=null, @condjoinidxunic=null, @setupdidxunic=null, @selupdidxunic=null,
+				@selcoltab=null
 			select @tabela=tabela,@camp=camp,@cond=cond,@camp1=camp1,@camp2=camp2
 			from #campuri c where c.nrcrt=@nrcrt
 			
-			
-			select top 1 @idindex=i.index_id, @idobject=i.object_id
+			select top 1 @idindex=i.index_id, @idobject=o.object_id
 				from sys.index_columns ic 
 					inner join sys.columns c on c.object_id=ic.object_id and c.column_id=ic.column_id
 					inner join sys.indexes i on i.object_id=ic.object_id and i.index_id=ic.index_id 
 					inner join sys.objects o on o.object_id=c.object_id
-				where i.is_unique=1 and o.name=@tabela and c.name=@camp order by i.index_id 
+				where i.is_unique=1 and o.name=@tabela and c.name=@camp and c.is_identity=0
+				order by i.index_id 
 			print 'tabela: '+rtrim(@tabela)+', index:'+rtrim(@idindex)+', idobject: '+rtrim(@idobject)
 			if isnull(@idindex,0)<>0 --and 1=0
 			begin 
@@ -89,7 +90,8 @@ begin try
 					inner join sys.columns c on c.object_id=ic.object_id and c.column_id=ic.column_id
 					inner join sys.indexes i on i.object_id=ic.object_id and i.index_id=ic.index_id 
 					inner join sys.objects o on o.object_id=c.object_id
-				where i.is_unique=1 and i.object_id=@idobject and i.index_id=@idindex and c.name<>@camp order by ic.key_ordinal
+				where i.is_unique=1 and i.object_id=@idobject and i.index_id=@idindex and c.name<>@camp 
+				order by ic.key_ordinal
 				print 'fac cond join:'+@condjoinidxunic
 
 				select @setupdidxunic=case when c.collation_name is null 
@@ -107,13 +109,24 @@ begin try
 				where o.object_id=@idobject and ic.index_id is null and t.name not like 'date%' and c.is_identity=0
 					and t.name not like 'xml%' and c.name not like 'id%'
 				order by c.column_id
+				
+				select @selcoltab=case when c.collation_name is null 
+							then ISNULL(@selcoltab+', v.','v.')+rtrim(c.name)								
+							else @selcoltab end
+				from sys.columns c 
+					inner join sys.types t on t.system_type_id=c.system_type_id
+					inner join sys.objects o on o.object_id=c.object_id
+				where o.object_id=@idobject and c.is_identity=0
+				order by c.column_id
+				print 'selcoltab:'+@selcoltab
+				
 				print 'fac set upd:'+@setupdidxunic
 				
 				set @comanda='if OBJECT_ID(''tempdb..#'+@tabela+''') is not null drop table #'+@tabela
-				set @comanda+=CHAR(10)+'select top 0 *'/*+rtrim(@selupdidxunic)*/+' into #'+@tabela+' from '+@tabela+' v'
+				set @comanda+=CHAR(10)+'select top 0 '+rtrim(@selcoltab)+' into #'+@tabela+' from '+@tabela+' v'
 				
 				set @comanda+=CHAR(10)+'delete v '
-					+char(10)+'output deleted.*'/*+replace(rtrim(@selupdidxunic),'v.','deleted.')*/+' into #'+@tabela
+					+char(10)+'output '+replace(rtrim(@selcoltab),'v.','deleted.')+' into #'+@tabela
 					+char(10)+'from '+@tabela+' v cross apply (select '+@camp
 					+char(10)+'from '+@tabela+' n where n.'+@camp+' = @codnou '+isnull(CHAR(10)+' and '+nullif(@condjoinidxunic,''),'')+') n ' 
 					+char(10)+'where v.'+@camp+' = @codvechi'--' like N''%[a-z]%''' COLLATE Latin1_General_BIN'

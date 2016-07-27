@@ -7,8 +7,8 @@ ALTER procedure [dbo].[tet_rapVanzariTargetMarja]
 	,@Doar_pachete bit=null,@Echipa nvarchar(4000)=null,@Grupa_terti nvarchar(4000)=null
 
 --/* si comenteaza aici
-select @Data_doc_de_la='2012-01-01 00:00:00',@Data_doc_pana_la='2013-06-30 00:00:00'
-	,@Loc_de_munca=null,@Tert=NULL,@Grupa_articole=null,@Cod_articol=NULL,@Doar_pachete=0,@Echipa=null
+select @Data_doc_de_la='2016-07-25',@Data_doc_pana_la='2016-07-27'
+	,@Loc_de_munca=null,@Tert=NULL,@Grupa_articole=null,@Cod_articol='98624703',@Doar_pachete=0,@Echipa=null
 --*/as
 
 set transaction isolation level read uncommitted
@@ -20,6 +20,7 @@ select @subunitate=(case when parametru='SUBPRO' then val_alfanumerica else @sub
 if OBJECT_ID('tempdb..#coduri') is not null drop table #coduri
 
 --begin try
+--/*
 ;with 
 consumuri as
 	(select p.Subunitate, p.Numar, p.Data
@@ -42,13 +43,44 @@ consumuri as
 		,Nivel=0
 	from predari p
 	union all
-	select c.Subunitate, c.data, c.Cod, p.Gestiune_primitoare, p.Cod_intrare_primitor
+	select c.Subunitate, c.data, c.Cod, p.Gestiune_primitoare, convert(char(20),p.Cod_intrare_primitor)
 		,c.pret_intrare
 		,Nivel=c.Nivel+1
 	from coduri c 
 		cross apply yso_fTransferuriPachete(c.Subunitate,c.Cod,c.Gestiune,c.Cod_intrare,c.data) p
 	where c.Nivel<=10)
-
+--*/
+/*
+;with 
+predari as
+	(select p.Subunitate, p.Numar, p.Data, p.Cod, p.Gestiune, p.Cod_intrare
+		,cant_predare=SUM(p.Cantitate),val_predare=SUM(p.Cantitate*p.Pret_de_stoc)
+		,cant_predare_doc=sum(sum(p.Cantitate)) over(partition by p.subunitate,p.numar,p.data)
+		,nr_codi_doc=ROW_NUMBER() over(partition by p.subunitate,p.numar,p.data)	
+	from pozdoc p where p.Subunitate='1' and p.Tip='PP'
+	group by p.Subunitate, p.Numar, p.Data, p.Cod, p.Gestiune, p.Cod_intrare)
+,consumuri as
+	(select c.Subunitate, c.Numar, c.Data
+		,cant_consum=SUM(c.Cantitate)
+		,val_consum=SUM(c.Cantitate*c.Pret_de_stoc)	
+		,pret_intrare=SUM(c.Cantitate*c.Pret_de_stoc)/sum(p.cant_predare_doc) over(partition by p.subunitate,p.numar,p.data)	
+	from pozdoc c 
+		inner join predari p on p.Subunitate=c.Subunitate and p.Numar=c.Numar and p.Data=c.Data and p.nr_codi_doc=1
+	where c.Subunitate='1' and c.Tip='CM' --and p.idPozDoc=38631
+	group by c.Subunitate, c.Numar, c.Data)
+,coduri as
+	(select p.Subunitate, p.data, p.Cod, Gestiune=convert(char(13),p.Gestiune), p.Cod_intrare
+		,p.pret_intrare
+		,Nivel=0
+	from predari p
+	union all
+	select c.Subunitate, c.data, c.Cod, p.Gestiune_primitoare, convert(char(20),p.Cod_intrare_primitor)
+		,c.pret_intrare
+		,Nivel=c.Nivel+1
+	from coduri c 
+		cross apply yso_fTransferuriPachete(c.Subunitate,c.Cod,c.Gestiune,c.Cod_intrare,c.data) p
+	where c.Nivel<=10)
+*/
 select * 
 into #coduri
 from coduri c 
@@ -146,10 +178,8 @@ from pozdoc p
 where p.tip in ('AP','AC','AS')
 	 and p.data>=@Data_doc_de_la and p.data<=@Data_doc_pana_la
 	 and left(p.Cont_venituri,3) in ('707','709')
-	--and p.Cantitate!=0
 	AND (isnull(@Loc_de_munca,  '') = '' OR p.Loc_de_munca = rtrim(rtrim(@Loc_de_munca)))
 	AND (isnull(@tert,  '') = '' OR p.tert = rtrim(rtrim(@tert)))
-	--AND (isnull(@grupa,  '') = '' OR n.grupa = rtrim(rtrim(@grupa)))
 	AND (isnull(@Cod_articol,  '') = '' OR p.cod = rtrim(rtrim(@Cod_articol)))
 	and (@Doar_pachete=0 or n.tip='P')
 --union all

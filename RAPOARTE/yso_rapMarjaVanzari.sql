@@ -77,7 +77,7 @@ consumuri as
 		,Nivel=0
 	from predari p
 	union all
-	select c.Subunitate, c.data, c.Cod, p.Gestiune_primitoare, p.Cod_intrare_primitor
+	select c.Subunitate, c.data, c.Cod, p.Gestiune_primitoare, convert(char(20),p.Cod_intrare_primitor)
 		,c.pret_intrare
 		,Nivel=c.Nivel+1
 	from coduri c 
