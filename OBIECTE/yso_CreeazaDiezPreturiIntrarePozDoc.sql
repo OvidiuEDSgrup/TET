@@ -5,8 +5,10 @@ GO
 CREATE PROCEDURE yso_CreeazaDiezPreturiIntrarePozDoc 
 AS
 BEGIN TRY
-	alter table #PreturiIntrarePozDoc
-		add pret_stoc decimal(12,5), valuta varchar(6), curs decimal(12,5), tipPret char(1), calculat int default 0	
+
+	if not exists (select 1 from tempdb.sys.columns c where c.name='yso_pret_intrare' and c.object_id=object_id('tempdb..#yso_PreturiIntrarePozDoc'))
+			alter table #yso_PreturiIntrarePozDoc add yso_pret_intrare float NULL
+			
 END TRY
 BEGIN CATCH
 	declare
