@@ -74,7 +74,8 @@ BEGIN TRY
 		from (select i.idCon, i.stare
 				,tip=(case i.Tip when 'BF' then 'CB' when 'BK' then 'CL' when 'FA' then 'CF' when 'FC' then 'CA' end)
 			from inserted i left join deleted d on d.idCon=i.idCon
-			where coalesce(i.Stare,-900)<>coalesce(d.Stare,-900) ) c 
+			--where coalesce(i.Stare,-900)<>coalesce(d.Stare,-900) 
+			) c 
 			join StariContracte s on s.tipContract=c.tip and s.stare=c.stare
 			outer apply (select top 1 stare from JurnalContracte j where j.idContract=c.idCon 
 				order by j.data desc, j.idJurnal desc) j

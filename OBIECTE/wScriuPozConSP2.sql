@@ -262,6 +262,8 @@ begin try
 				, @detalii_poz	for xml raw, type )
 			--select @docDetalii
 			exec wScriuDetaliiSP2 @parXML=@docDetalii
+			
+			--EXEC dbo.DefalcTermeneBK @sub, @tip, @contract, @data, @tert
 		end
 		if @sesiune='' select docDetalii=@docDetalii
 	

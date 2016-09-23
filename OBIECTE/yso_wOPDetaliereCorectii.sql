@@ -44,7 +44,7 @@ BEGIN TRY
 	
 	SELECT cod_articol as cod_articol, selectat as selectat
 	INTO #xmlDoc
-	FROM OPENXML(@iDoc, '/parametri/DateGrid/row')
+	FROM OPENXML(@iDoc, '/*/DateGrid/row')
 	WITH
 	(	
 		cod_articol varchar(20) '@cod_articol'
@@ -62,11 +62,17 @@ select * --*/ delete f
 	SET @dateInitializare='<row idpozadoc="'+ltrim(str(@idpozadoc))+'" />'
 
 	set @parXML.modify('delete /*/*')
+	set @parXML.modify('delete /*/@cod')
+	set @parXML.modify('delete /*/@cantitate')
+	set @parXML.modify('delete /*/@pret')
+	set @parXML.modify('delete /*/@pret_valuta')
+
 	set @parXML=dbo.fInlocuireDenumireElementXML(@parXML,'row')
+
 	set @parXML.modify('insert sql:variable("@dateInitializare") as last into (/row)[1]')
 
 	SELECT 'Detaliere corectii ' nume, 'AD' codmeniu, 'D' tipmacheta, 'FF' tip,'DC' subtip,'O' fel,
-		(SELECT @parXML ) dateInitializare
+		(SELECT @parXML FOR XML RAW, TYPE) dateInitializare
 	FOR XML RAW('deschideMacheta'), ROOT('Mesaje')	
 
 END TRY

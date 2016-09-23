@@ -172,16 +172,16 @@ begin try
 		soldi_valuta, valoare_valuta, tva_valuta, total_valuta, achitat_valuta, soldf_valuta, sold_cumulat_valuta,
 		ordonare, achitat_efect, indicator, grupare1, denumire1, grupare2, denumire2)
 	select 'C' sursa
-	, t.denumire, l.oras, 'B' furn_benef, p.subunitate subunitate, p.tert, p.Factura, p.tip, p.numar, p.data
-	, 0 soldi, round(convert(decimal(18,5),cantitate*p.pret_vanzare),2) valoare, p.TVA_deductibil tva 
-	, round(convert(decimal(18,5),cantitate*p.pret_vanzare),2)+p.TVA_deductibil total
-	, round(convert(decimal(18,5),cantitate*p.pret_vanzare),2)+p.TVA_deductibil achitat
-	, p.valuta,	p.curs, p.loc_de_munca, p.comanda, p.Cont_factura cont_de_tert, '2' fel, p.Cont_de_stoc cont_coresp,rtrim(n.Denumire) explicatii, p.numar_pozitie
-	, p.Gestiune, p.Data_facturii, p.data_scadentei as data_scadentei, '' nr_dvi, p.Barcod, p.idPozDoc
-	, 0 peSold
-	, 0 soldf
-	, 0 sold_cumulat, 0 soldi_valuta, 0 valoare_valuta, 0 tva_valuta, 0 total_valuta, 0 achitat_valuta, 0 soldf_valuta, 0 sold_cumulat_valuta
-	, '' ordonare,0 achitat_efect, substring(p.comanda,21,20), '', '', '', ''
+		, t.denumire, l.oras, 'B' furn_benef, p.subunitate subunitate, p.tert, p.Factura, p.tip, p.numar, p.data
+		, 0 soldi, round(convert(decimal(18,5),cantitate*p.pret_vanzare),2) valoare, p.TVA_deductibil tva 
+		, round(convert(decimal(18,5),cantitate*p.pret_vanzare),2)+p.TVA_deductibil total
+		, round(convert(decimal(18,5),cantitate*p.pret_vanzare),2)+p.TVA_deductibil achitat
+		, p.valuta,	p.curs, p.loc_de_munca, p.comanda, p.Cont_factura cont_de_tert, '2' fel, p.Cont_de_stoc cont_coresp,rtrim(n.Denumire) explicatii, p.numar_pozitie
+		, p.Gestiune, p.Data_facturii, p.data_scadentei as data_scadentei, '' nr_dvi, p.Barcod, p.idPozDoc
+		, 0 peSold
+		, 0 soldf
+		, 0 sold_cumulat, 0 soldi_valuta, 0 valoare_valuta, 0 tva_valuta, 0 total_valuta, 0 achitat_valuta, 0 soldf_valuta, 0 sold_cumulat_valuta
+		, '' ordonare,0 achitat_efect, substring(p.comanda,21,20), '', '', '', ''
 	from pozdoc p 
 		left outer join lmfiltrare pr on pr.cod=p.loc_de_munca and pr.utilizator=@q_utilizator
 		left outer join terti t on p.subunitate=t.subunitate and p.tert=t.tert 
@@ -249,7 +249,8 @@ begin try
 				when 'Alte_operatii' then 100
 				else 200 end)
 	from #fisa f;
-	WITH Fisa AS (
+
+	;WITH Fisa AS (
 	select sursa,
 			rtrim(f.denumire) denumire, oras, furn_benef, f.subunitate, f.tert, rtrim(factura) factura, tip,
 			rtrim(numar) numar, data,
@@ -285,26 +286,26 @@ begin try
 			left join lm l on f.loc_de_munca=l.cod
 			left join infotert i on i.subunitate=t.subunitate and i.tert=f.tert and i.identificator=f.nr_dvi
 		where (@cuefecte=1 and abs(achitat_efect)>0.001)
-		union all --/* anulez valoarea facturilor de avans (cont coresp 472)
-		select sursa,
-			rtrim(f.denumire) denumire, oras, furn_benef, f.subunitate, f.tert, rtrim(factura) factura, tip,
-			rtrim(numar) numar, data,
-			soldi,0 valoare,0 tva,0 total,0 achitat, valuta, curs, rtrim(loc_de_munca) loc_de_munca,
-			left(comanda,20) comanda, rtrim(cont_de_tert) cont_de_tert, fel, rtrim(cont_coresp) cont_coresp
-			, rtrim(explicatii) explicatii,
-			numar_pozitie,
-			gestiune, data_facturii, data_scadentei, nr_dvi, barcod, pozitie, peSold, -total soldf, sold_cumulat,
-			soldi_valuta, valoare_valuta, tva_valuta, total_valuta, achitat_valuta, soldf_valuta,
-			sold_cumulat_valuta, ordonare, f.indicator indicator,
-			rtrim(t.grupa) as gtert, rtrim(g.denumire) dengtert, rtrim(l.denumire) as denlm,
-			rtrim(t.grupa) as grupa, rtrim(i.descriere) as den_pctlivrare, grupare1, denumire1,
-			grupare2, denumire2
-			, f.categ_yso, f.ord_categ_yso
-		from #fisa f left join terti t on t.subunitate=f.subunitate and f.tert=t.tert
-			left join gterti g on t.grupa=g.grupa
-			left join lm l on f.loc_de_munca=l.cod
-			left join infotert i on i.subunitate=t.subunitate and i.tert=f.tert and i.identificator=f.nr_dvi
-		where f.cont_coresp like '472%' --*/
+		--union all --/* anulez valoarea facturilor de avans (cont coresp 472)
+		--select sursa,
+		--	rtrim(f.denumire) denumire, oras, furn_benef, f.subunitate, f.tert, rtrim(factura) factura, tip,
+		--	rtrim(numar) numar, data,
+		--	soldi,0 valoare,0 tva,0 total,0 achitat, valuta, curs, rtrim(loc_de_munca) loc_de_munca,
+		--	left(comanda,20) comanda, rtrim(cont_de_tert) cont_de_tert, fel, rtrim(cont_coresp) cont_coresp
+		--	, rtrim(explicatii) explicatii,
+		--	numar_pozitie,
+		--	gestiune, data_facturii, data_scadentei, nr_dvi, barcod, pozitie, peSold, -total soldf, sold_cumulat,
+		--	soldi_valuta, valoare_valuta, tva_valuta, total_valuta, achitat_valuta, soldf_valuta,
+		--	sold_cumulat_valuta, ordonare, f.indicator indicator,
+		--	rtrim(t.grupa) as gtert, rtrim(g.denumire) dengtert, rtrim(l.denumire) as denlm,
+		--	rtrim(t.grupa) as grupa, rtrim(i.descriere) as den_pctlivrare, grupare1, denumire1,
+		--	grupare2, denumire2
+		--	, f.categ_yso, f.ord_categ_yso
+		--from #fisa f left join terti t on t.subunitate=f.subunitate and f.tert=t.tert
+		--	left join gterti g on t.grupa=g.grupa
+		--	left join lm l on f.loc_de_munca=l.cod
+		--	left join infotert i on i.subunitate=t.subunitate and i.tert=f.tert and i.identificator=f.nr_dvi
+		--where f.cont_coresp like '472%' --*/
 		)
 		SELECT * 
 		FROM (SELECT *, total AS total_pivot, achitat AS achitat_pivot, RTRIM(categ_yso)+'_total' AS categ_pivot_total, RTRIM(categ_yso)+'_achitat' AS categ_pivot_achitat

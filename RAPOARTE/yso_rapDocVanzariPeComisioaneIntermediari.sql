@@ -312,7 +312,8 @@ begin
 			OUTER APPLY (select TOP (1) bf.Tert, bf.Data, bf.Contract, bf.Mod_de_plata, bf.Cod, bf.Discount
 					--nrCrtBf = ROW_NUMBER() OVER(PARTITION BY bf.Subunitate, bf.tip, bf.Tert, bf.Contract, bf.cod ORDER BY (case bf.Contract when bk.Contract_coresp then 0 else 1 end),bf.Data desc,bf.Contract desc,bf.Cod desc,bf.Discount desc)
 				from pozcon bf --left join con cn on cn.Subunitate=bf.Subunitate and cn.Tip=bf.Tip and cn.Tert=bf.Tert and cn.Contract=bf.Contract and cn.Data=bf.Data 
-				where bf.Subunitate=@subunitate and bf.Tip='BF' and bf.Tert=P.Tert and bf.Data<=P.Data and bf.Mod_de_plata='G' and n.Grupa like RTRIM(bf.Cod)+'%' 
+				where bf.Subunitate=@subunitate and bf.Tip='BF' and bf.Tert=P.Tert and bf.Data<=P.Data 
+					and (bf.Mod_de_plata='G' and n.Grupa like RTRIM(bf.Cod)+'%' OR bf.Mod_de_plata='' and p.Cod=bf.Cod)
 				ORDER BY (case bf.Contract when bk.Contract_coresp then 0 else 1 end),bf.Data desc,bf.Contract desc,bf.Cod desc,bf.Discount desc) bf 
 			OUTER APPLY (select TOP (1) disc_max_grupa=(CASE ISNUMERIC(valoare) when 1 then CONVERT(float,replace(Valoare,',','')) else null end)
 				from proprietati Pr

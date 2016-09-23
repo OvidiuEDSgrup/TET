@@ -127,15 +127,16 @@ select @subunitate='1', @rotunjire='2',
    
 --select * from #date d --where d.tip in ('BC') --factura like '9010001%'
 
- select rtrim(d.Factura) as Factura, max(d.Data) as data, nr_doc=MAX(d.nr_doc)
+ select rtrim(d.Factura) as Factura, max(d.Data) as data, nr_doc=(CASE COUNT(DISTINCT d.nr_doc) WHEN 1 THEN MAX(d.nr_doc) ELSE '' END)
 	, rtrim(d.Tert) as Tert,  
    max(rtrim(isnull(t.Denumire,'<Neidentificat>'))) as den_tert, sum(d.valoare) valoare, sum(d.TVA) TVA,   
    max(rtrim(d.lm)) as loc_de_munca, max(rtrim(lm.Denumire)) as den_lm, --max(gestiune),  
    sum(d.greutate) greutate, d.data_facturii, max(d.Cont_factura) as cont_factura, d.Tip as tip_doc
    ,case d.Tip when 'AP' then (case max(aviznefacturat) when 1 then 'Aviz nefacturat' else 'Aviz facturat' end)
-		when 'IF' then 'Intocmire factura aviz nefacturat '/*+isnull(nullif(replace((select distinct RTRIM(e.nrdocprimar) [data()] from #date e 
+		when 'IF' then 'Intocmire factura avize nefacturate '+(CASE COUNT(DISTINCT d.nr_doc) WHEN 1 THEN '' 
+			ELSE stuff((select ','+RTRIM(e.nr_doc) AS nr from #date e 
 			where e.Subunitate=d.Subunitate and e.tip=d.tip and e.factura=d.factura and e.Tert=d.Tert 
-				and e.Data_facturii=d.Data_facturii and e.lm=d.lm for xml path('')),' ',';'),max(d.nrdocprimar)),'')*/
+				and e.Data_facturii=d.Data_facturii and e.lm=MAX(d.lm) GROUP BY e.nr_doc for xml path(''), type).value('.[1]','nvarchar(max)'),1,1,'') END)
 		when 'BC' then 'Factura chitanta bon casa'--+RTRIM(max(d.nrdocprimar))
 		when 'AC' then 'Aviz chitanta' 
 		when 'AS' then 'Aviz servicii'
@@ -143,7 +144,8 @@ select @subunitate='1', @rotunjire='2',
  from #date d   
    left join terti t on t.Subunitate=d.Subunitate and d.Tert=t.Tert  
    left join lm on d.lm=lm.Cod  
-  group by d.Subunitate, d.tert, d.factura, d.data_facturii, d.tip, d.nr_doc, d.Data--, d.lm  
+  group by d.Subunitate, d.tert, d.factura, d.data_facturii, d.tip, 
+	(CASE d.tip WHEN 'IF' THEN '' ELSE d.nr_doc END), (CASE d.tip WHEN 'IF' THEN '' ELSE d.Data END)--, d.lm  
   order by max(ordonare)  
  if object_id('tempdb.dbo.#date') is not null drop table #date  
 end try  

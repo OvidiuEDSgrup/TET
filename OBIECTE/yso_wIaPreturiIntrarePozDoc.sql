@@ -2,7 +2,7 @@ IF EXISTS (SELECT * FROM sysobjects WHERE NAME = 'yso_wIaPreturiIntrarePozDoc')
 	DROP PROCEDURE yso_wIaPreturiIntrarePozDoc
 GO
 
-CREATE PROCEDURE yso_wIaPreturiIntrarePozDoc --@sesiune VARCHAR(50), @parXML XML
+CREATE PROCEDURE yso_wIaPreturiIntrarePozDoc @sesiune VARCHAR(50)=NULL, @parXML XML=NULL
 AS
 BEGIN TRY
 	set transaction isolation level read uncommitted

@@ -6,8 +6,11 @@ CREATE PROCEDURE yso_CreeazaDiezPreturiIntrarePozDoc
 AS
 BEGIN TRY
 
-	if not exists (select 1 from tempdb.sys.columns c where c.name='yso_pret_intrare' and c.object_id=object_id('tempdb..#yso_PreturiIntrarePozDoc'))
-			alter table #yso_PreturiIntrarePozDoc add yso_pret_intrare float NULL
+	IF OBJECT_ID('tempdb..#yso_PreturiIntrarePozDoc') IS NOT NULL
+		AND NOT EXISTS (SELECT 1 FROM tempdb.sys.columns c WHERE c.name='yso_pret_intrare' and c.object_id=object_id('tempdb..#yso_PreturiIntrarePozDoc'))
+			ALTER TABLE #yso_PreturiIntrarePozDoc ADD yso_pret_intrare float NULL
+	ELSE 
+		PRINT '#yso_PreturiIntrarePozDoc (idPozDoc, subunitate, tip, data, cod, gestiune, cod_intrare, yso_pret_intrare)'
 			
 END TRY
 BEGIN CATCH
